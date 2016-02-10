@@ -330,9 +330,70 @@ It corresponds to the free fall energy:
 
 The available power is:
 
-\begin{equation}
-P =\frac{dE}{dt} \approx \frac{GM_*}{R} \frac{dm}{dt} = \frac{GM_*}{R} \dot{M}_{acc}
+\begin{equation} 
+\begin{split}
+P & = \frac{dE}{dt} \approx \frac{GM_*}{R} \frac{dm}{dt} = \frac{GM_*}{R} \dot{M}_{acc}
+    \\  
+    &\approx 10^{38} (\frac{\dot{M}_{acc}}{10^{18} g/s})(\frac{M}{2.10^{33} g})(\frac{7.10^{10}cm}{R}) erg/s
+    \\    
+    &\approx 10^{38} (\frac{\dot{M}_{acc}}{10^{-8} M/yr})(\frac{M}{M_{\odot}})(\frac{R_{\odot}}{R}) erg/s  
+\end{split}
 \end{equation}
+with
+   $M_{\odot} = 2.10^{33} g$
+   \\
+   $R_{\odot} = 7.10^{10} cm$
+   \\
+   $R_{NS}    = 10 km = 10^{6} cm = 10^{-4} R_{\odot}$
+\\
+Thus the available power depends on the accretion rate and the compactness M/R. The efficiency is the conversion rate,
+\begin{equation}
+ \frac{dE}{dt} = \varepsilon \dot{M} c^{2} \Rightarrow \varepsilon = \frac{GM_*}{c^{2}R} 
+\end{equation}
+\\
+\\
+In the Newtonian regime, we obtain an efficiency of $\varepsilon = 0.15$ for an object with a radius of 10 km, 1 $M_{\odot}$, typical for a neutron star or a non rotating galactic black hole.
+\\
+\\
+In the relativistic regime for a black hole in maximum rotation we have a larger range of efficiency $\varepsilon \approx 0.059-0.42$
+\\
+\\
+We can compare the efficiency in various fields in Physics :
+\begin{itemize}
+  \item In Chemistry the typical energy is $\approx 13 eV$, energy of ionization, therefore $\varepsilon < 10^{-8}$ thus
+  \begin{equation}
+  \frac{dE}{dt} \approx \frac{1 eV}{m_{p}c^{2}} m_{p}c^{2}\dot{M}  
+  \end{equation}
+  \item In nuclear fusion $\approx$ 1 MeV, $4H \rightarrow He$ , $\varepsilon < 10^{-2}$
+  \begin{equation}
+  \frac {\Delta E_{4H \rightarrow He}}{mc^{2}} \approx \dfrac{4m_{H}-m_{He}}{4m_{H}c^{2}} c^{2}\dot{M}
+  \end{equation}
+\end{itemize}
+
+Accretion is ten times more efficient per mass unit to convert energy with a compact object.
+\begin{itemize}
+  \item If it is a galactic Black Hole we get
+  \begin{equation}
+  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3 km \frac{M_{BH}}{R_{S}} = 10^{5}\frac{M_{\odot}}{R_{\odot}} , \varepsilon = 0.5
+  \end{equation}
+  \item This is similar for a Neutron Star
+  \item For a Supermassive Black Hole the compactness and the efficiency are identical, only the radius differs
+  \begin{equation}
+  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3.10^{11}-10^{14} cm  
+  \end{equation}
+  \item For a White Dwarf
+  \begin{equation}
+  \frac {M_{WD}}{R_{*}} =10^{2}\frac{M_{\odot}}{R_{\odot}} , M_{WD} = M_{\odot}, R_{*}=10^{-2}R_{\odot} = 10^{9} cm  
+  \end{equation}
+  \item For a Young Star
+  \begin{equation}
+  \frac {M_{YSO}}{R_{*}} \approx \frac{M_{*}}{R_{*}} , M_{YSO} = M_{\odot}, R_{*}=2R_{\odot} = 2.10^{11} cm  
+  \end{equation}
+  \item For Jupiter
+  \begin{equation}
+  \frac {M_{J}}{R_{*}} = 10^{-2}\frac{M_{\odot}}{R_{\odot}} , M_{J} = 10^{-3}M_{\odot}, R_{*}=0.1R_{\odot} = 10^{10} cm  
+  \end{equation}
+\end{itemize}
 
 \subsubsection{Eddington Luminosity}
 \subsubsection{The disk spectrum}
