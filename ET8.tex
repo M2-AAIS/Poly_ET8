@@ -1,25 +1,125 @@
-\documentclass[10pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{lmodern}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\documentclass[10pt,a4paper,english]{article}
 
-\author{Christophe Sauty}
-\parindent=0mm
-\title{Accrétion et Jets}
+% Document layout
+%\usepackage[xetex,
+\usepackage[a4paper,
+            margin=2cm,
+            headheight=0.4cm,
+            headsep=0.8cm,
+            footskip=1.2cm,
+            nomarginpar,
+            ]{geometry}
+
+% Must be before mathspec
+\usepackage{amsmath}
+%\usepackage{amsfonts} Not used currently
+%\usepackage{amssymb}  Not used currently
+
+% Fonts settings            
+%\usepackage{mathspec}
+%\defaultfontfeatures{Ligatures=TeX,RawFeature={-calt,+tnum,+lnum}}
+%\setmainfont{EB Garamond}
+%\newfontfamily\DejaSans{DejaVu Sans}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% [english] is set globaly above
+\usepackage{babel}
+
+% Define some colors
+\usepackage{xcolor}
+\definecolor{linkcolor}{rgb}{0, 0, 0.6}
+\definecolor{brandeisblue}{rgb}{0, 0.44, 1.0}
+\definecolor{capri}{rgb}{0, 0.75, 1.0}
+\definecolor{dgreen}{rgb}{0.1, 0.6, 0.1}
+\definecolor{caribbeangreen}{rgb}{0, 0.8, 0.6}
+ 
+% And use them for sections titles
+\usepackage{sectsty}
+\sectionfont{\color{blue}}
+\subsectionfont{\color{brandeisblue}}
+\subsubsectionfont{\color{capri}}
+\paragraphfont{\color{dgreen}}
+
+% PDF properties
+%\usepackage[xetex,
+\usepackage[unicode=true,
+            pdfstartview=FitV,
+            colorlinks=true,
+            citecolor=linkcolor,
+            linkcolor=linkcolor,
+            urlcolor=linkcolor,
+            hyperindex=true,
+            ]{hyperref}
+
+\hypersetup{pdfauthor={Christophe Sauty},
+            pdftitle={Accretion and Jets},
+            pdfsubject={Paris -- M2 AAIS ET8 / Porto -- Doctorate},
+            pdfkeywords={accretion, jets}}
+
+% Custom header & footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\scriptsize\textsc{Paris -- M2 AAIS ET8 / Porto -- Doctorate}}
+\fancyhead[R]{\scriptsize\textsc{2015--2016 C. Sauty}}
+\fancyfoot[C]{\thepage}
+
+% Cross-link references
+\usepackage[nameinlink]{cleveref}
+
+% Figures
+\usepackage{graphicx}
+%\usepackage[abs]{overpic}
+\graphicspath{{figures/}}
+ 
+% Units display
+\usepackage{siunitx}
+\sisetup{
+number-unit-product = \,,
+inter-unit-product = \ensuremath{{}\cdot{}},
+separate-uncertainty = true,
+multi-part-units = single}
+\DeclareSIUnit\cgs{cgs}
+
+% Advanced tables
+\usepackage{tabularx}
+
+% References
+\usepackage{natbib}
+
+% Better inline fractions
+\usepackage{nicefrac}
+ 
+% Fix spacing around \left and \right
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\newcommand\FIXME[1]{{\color{red}FIXME #1}}
+
+\title{\textsc{Accretion and Jets}}
+\author{\textsc{Christophe Sauty}}
+\date{\today} 
 
 \begin{document}
 
+% First pages : i, ii, iii, iv, ...
+\pagenumbering{roman}
+ 
 \maketitle
 
-\tableofcontents
-\newpage
+\begin{center}
+    $M_{\odot}$ %C'est ironique, non? -Un peu oui!
+%    $M_{\DejaSans ☺}$ 
+\end{center}
 
-$M_{\odot}$ %C'est ironique, non? -Un peu oui!
+\tableofcontents
+
+% Beginning of the proper content
+\newpage
+\pagenumbering{arabic} % 1, 2, 3, ...
 
 \section{The necessity of the Accretion-Jet Mechanism}
 \subsection{Active Galactic Nuclei}
@@ -186,4 +286,17 @@ In conclusion, the system we have is rotating in the disk and the central object
 \section{Young Stars}
 \section{Extra-Galactic Nuclei}
 \section{X-ray binaries and microquasars}
+
+\appendix
+
+\makeatletter
+\def\@seccntformat#1{Appendix~\csname the#1\endcsname:\quad}
+\makeatother
+
+\newpage
+
+\bibliographystyle{plainnat}
+\bibliography{ET8}
+\addcontentsline{toc}{section}{References}
+
 \end{document}
