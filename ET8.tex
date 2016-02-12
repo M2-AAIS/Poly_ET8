@@ -665,6 +665,7 @@ By deriving this equation or directly from Euler equation,
 \end{align}
 
 \begin{equation}
+  \label{eq:speed_eq}
   \tcboxmath{
     \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)
   }
@@ -701,6 +702,40 @@ We see that close to the star, the fluid is in free fall. The mass accretion rat
   \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
 \end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
+We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vec{v} = \vec{v}(r)$. 
+
+Even if the fluid is magnetized, the assumption of spherical symmetry implied that the magnetic field parallel to the stream does not give any contribution. The Poynting flux is zero.
+
+For the sake of simplicity, we'll assume again that the flow is isothermal. The original Parker model for the solar wind already contained all the necessary ingredients ; it assumed the flow to be isothermal close to the sun and adiabatic farther away where the wind is accelerated.
+
+The final set of equation is the same. Basically we solve:
+\begin{equation}
+  \tcboxmath{
+    \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)\quad \textrm{or} \quad
+    \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c }- 4 \frac{r_c}{r} = C
+  }
+\end{equation}
+The topology of the solutions is the same as previously but with a new interpretation. We can also plot in 3D the energy versus distance and velocity to make clear the critical point is sitting on a saddle. We still have $M = \frac{v}{c_s}$ the Mach number. We see that the r.h.s. of \eqref{eq:speed_eq} vanishes for $r=r_c$ and the l.h.s. for $v=v_s$ except if the flow has reached super sonic speed at the critical radius. Thus solutions have an horizontal or a vertical tangent except for the two critical solutions where there is \textbf{a fixed or critical point}. This is a \textbf{saddle} point\footnote{The two slopes of the critical solutions at the critical point can be determined using l'Hospital's rule, i.e. expanding $\frac{v}{c_s} = 1 + \delta$ and $\frac{r}{r_c} = 1 + \varepsilon$ to first order. We obtain a second algebraic equation for the slope $\delta/\varepsilon$ which solutions are the slopes at the saddle point,
+\begin{equation*}
+  \frac{\delta}{\varepsilon} = \frac{\d (v/c_s)}{\d (r/r_c)} = \frac{2 \frac{r_c }{r}\left( 1 - \frac{r_c }{r} \right) }{\frac{v}{c_s} - \frac{c_s}{v}} = \frac{2 \frac{1}{1+\varepsilon} \left( 1 - \frac{1}{1+\varepsilon} \right) }{1 + \delta - \frac{1}{1+\delta}} \approx \frac{2(1-\varepsilon)\varepsilon}{1 + \delta - 1 + \delta} \approx \frac{2\varepsilon}{2\delta} \Rightarrow \frac{\delta}{\varepsilon} = \pm 1
+\end{equation*}} with two slopes. The saddle nature of the point is better seen in the 3D plot of the energy in phase space ($r, v$).
+
+\subsubsection{Solar wind (Parker 1958}
+The breeze solutions have zero velocity asymptotically, but the pressure is non zero and cannot match the interstellar pressure :
+\begin{equation}
+  v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0,\Rightarrow \rho_\infty = \rho_s e^{-3/2} \neq 0 \Rightarrow \rho_\infty \neq 0
+\end{equation}
+Thus they are very similar in behavior to the static solutions, which we have shown to be excluded. Parker showed that the only valid solution is the critical solution that becomes super sonic with zero pressure at infinity. It has then been confirmed observationnaly. Parker also showed studying the polytropic wind that acceleration can be obtained only if the polytropic index is $\gamma < \frac{3}{2}$. $\frac{c_p}{c_s} = \frac{5}{3}$ being the adiabatic value for a monoatomic gas, this means that the exists only because there is enough extended heating at the base of the solar corona.
+
+There are some breeze solutions with heat conduction, which have zero pressure at infinity. Thus the debate was really strong during the 60s, until observations confirmed Parker's theory. Nowadays, the problem has slightly shifted. In fact for a temperature of one million Kelvin, the speed at the earth orbit is of the order of \SI{500}{\km\per\s} with this model. From the measurements of Ulysses spacecraft, we know that this is effectively the speed of the slow equatorial wind, but this model is not sufficient to explain the \SI{800}{\km\per\s} of the fast polar wind. Thus, series of models have been developed which involve sophisticated not-so-well-known coronal heating, kinetic theories, etc... is still an open debate.
+
+Similarly to the accretion rate, one can calculate the mass loss rate from the star through the wind:
+\begin{align}
+  \dot{M} & = 4\pi r^2\rho v = 4\pi r^2_c\rho_sc_s \\
+  \dot{M}_\odot & = \SI{e-14}{M_\odot\per\s} \\
+  \dot{M}_\mathrm{TTauri} &= \SI{e-8}{M_\odot\per\s}
+\end{align}
+
 \subsection{More on 1D models}
 \subsubsection{Critical surfaces and Horizons}
 \subsubsection{De Laval Nozzle}
