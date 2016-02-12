@@ -84,15 +84,19 @@
 % Units display
 \usepackage{siunitx}
 \sisetup{
-number-unit-product = \,,
-inter-unit-product = \ensuremath{{}\cdot{}},
-separate-uncertainty = true,
-multi-part-units = single}
+  number-unit-product = \,,
+  inter-unit-product = \ensuremath{{}\cdot{}},
+  separate-uncertainty = true,
+  multi-part-units = single,
+  range-phrase = -
+}
 \DeclareSIUnit\cgs{cgs}
 \DeclareSIUnit\erg{erg}
 \DeclareSIUnit\yr{yr}
 \DeclareSIUnit\year{yr}
 \DeclareSIUnit\pc{pc}
+\DeclareSIUnit\kpc{kpc}
+\DeclareSIUnit\Mpc{Mpc}
 % Advanced tables
 \usepackage{tabularx}
 
@@ -439,10 +443,16 @@ and the effective temperature of the equivalent black body is given by:
 \end{align}
 Then if all the radiation is converted into energy:
 \begin{align}
-  \frac{3}{2}\dot{M}\frac{k_b T_{bb}}{\mu m_H} & \approx \frac{GM_\star}{R}\dot{M_\mathrm{acc}} \\
-  \frac{3}{2}k_bT_{bb} & \approx \mu m_H \frac{GM_\star}{R} \\
-                                               & \approx \num{90} \left( \frac{M}{M_\odot} \right) \left( \frac{R}{\SI{e6}{cm}} \right)^{-1} \si{MeV}
+  \frac{3}{2}\dot{M}\frac{k_b T_{bb}}{\mu m_H} & \approx \frac{GM_\star}{R}\dot{M_\mathrm{acc}}
 \end{align}
+\begin{equation} \tcboxmath{
+  \begin{split}
+    \frac{3}{2}k_bT_{bb} & \approx \mu m_H \frac{GM_\star}{R} \\
+                         & \approx\num{90} \left( \frac{M}{M_\odot} \right) \left( \frac{R}{\SI{e6}{cm}} \right)^{-1} \si{MeV}
+  \end{split}
+}
+\end{equation}
+
 \fxnote{it is highlighted in the original text}
 
 We get for:
@@ -462,7 +472,7 @@ We get for:
     \SI{20}{eV} < kT < \SI{90}{MeV}
   \end{equation}
   The spectrum is from UV to gamma, softer than stellar BHs
-\item \textbf{a young low mass star} $M = M_\odot$, a mass loss rate of $\num{e-7}-\SI{e-6}{M_\odot\per\year}$, the radiation spans :
+\item \textbf{a young low mass star} $M = M_\odot$, a mass loss rate of $\SIrange{e-7}{e-6}{M_\odot\per\year}$, the radiation spans :
   \begin{equation}
     0.3-\SI{3}{eV} < kT < \SI{4.5}{keV}
   \end{equation}
@@ -483,7 +493,7 @@ The luminosity observed in AGNs is of the order of $\SI{e46}{\erg\per\s}$. If th
 
 The luminosity could be due to nuclear reactions, if we have a large population of star burst. This implies a burst rate of $\dot{M} \sim \SI{10}{M_\odot\per\yr}$. Considering that the galaxy has $M_\mathrm{galaxy} \sim \SI{e11}{M_\odot} \sim \SI{e11}{stars}$, it would be emptied in 10 billion years. This is too short and excludes the scenario of AGN being star burst galaxies.
 
-Conversely, if the luminosity is due to accretion, the accretion rate required is $\dot{M} \sim \si{M_\odot\per\yr}$. The mass luminosity ratio is $M/L \sim 10$. Thus the luminosity of a standard galaxy is $L_\mathrm{galaxy} \sim \SI{e43}{\erg\per\s}$ and the luminosity of a quasar is a thousand times higher : $L_\mathrm{quasar}\sim 1000 L_\mathrm{galaxy}$. \textbf{For Seyfert galaxies, the luminosity is typically around $\num{e43}-\SI{e45}{\erg\per\s}$ while for quasars it is between $\num{e45}-\SI{e48}{\erg\per\s}$}.
+Conversely, if the luminosity is due to accretion, the accretion rate required is $\dot{M} \sim \si{M_\odot\per\yr}$. The mass luminosity ratio is $M/L \sim 10$. Thus the luminosity of a standard galaxy is $L_\mathrm{galaxy} \sim \SI{e43}{\erg\per\s}$ and the luminosity of a quasar is a thousand times higher : $L_\mathrm{quasar}\sim 1000 L_\mathrm{galaxy}$. \textbf{For Seyfert galaxies, the luminosity is typically around $\SIrange{e43}{e45}{\erg\per\s}$ while for quasars it is between $\SIrange{e45}{e48}{\erg\per\s}$}.
 
 The observed variability is typically of one week $\Delta t \sim \SI{6e5}{s}$. Considering that the speed of light is the upper speed limit, the causality principle implies that the emission region cannot be larger than $R \leq c\Delta t \sim \SI{2e16}{cm} \sim \SI{0.01}{pc}$. This means that the emission comes from a very narrow region with a rather high density. To satisfy this, it is difficult to have stellar clusters (e.g. Sgr A : $\SI{4e16}{M_\odot\per\pc^3}$).
 
