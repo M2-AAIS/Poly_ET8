@@ -427,6 +427,56 @@ Thus, it defines a luminosity called \emph{Eddington Luminosity} where the radia
 \end{align}
 
 \subsubsection{The disk spectrum}
+Gas heating implies a balance between matter and radiation. This can be expressed under the form of a black body such that:
+\begin{equation}
+  \frac{\d E}{\d t} = \frac{GM_\star}{R}\dot{M}_\mathrm{acc} = 4\pi R^2\sigma T^4
+\end{equation}
+and the effective temperature of the equivalent black body is given by:
+\begin{align}
+  k_b T_{bb} & \approx \SI{2}{kEv} \left( \frac{\dot{M}}{\SI{e-8}{M\per\yr}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4} R_\odot} \right)^{-3/4} \\
+  k_b T_{bb} & \approx \SI{1.5}{keV} \left( \frac{L_\mathrm{Edd}}{\SI{e38}{\erg\per\s}} \right)^{1/4} \left( \frac{R}{\SI{e6}{\cm}} \right)^{-1/2}
+\end{align}
+Then if all the radiation is converted into energy:
+\begin{align}
+  \frac{3}{2}\dot{M}\frac{k_b T_{bb}}{\mu m_H} & \approx \frac{GM_\star}{R}\dot{M_\mathrm{acc}} \\
+  \frac{3}{2}k_bT_{bb} & \approx \mu m_H \frac{GM_\star}{R} \\
+                                               & \approx \num{90} \left( \frac{M}{M_\odot} \right) \left( \frac{R}{\SI{e6}{cm}} \right)^{-1} \si{MeV}
+\end{align}
+\fxnote{it is highlighted in the original text}
+
+We get for:
+\begin{itemize}
+\item \textbf{a galactic black hole}
+  \begin{equation}
+    \SI{2}{kEv}\left( \frac{\dot{M}}{\SI{e-8}{M_\odot\per\year}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-3/4} < kT < \SI{90}{MEv}\left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-1}
+  \end{equation}
+  For a mass loss rate of $\dot{M} = \SI{e-8}{M_\odot\per\year}$, the spectrum spans from soft X to gamma rays.
+\item \textbf{a white dwarf}
+  \begin{equation}
+    \SI{10}{eV} < kT < \SI{45}{keV}
+  \end{equation}
+  The spectrum is from $\SI{1000}{\angstrom}$ to hard X rays.
+\item \textbf{a $\SI{e8}{M_\odot}$ super-massive black hole} and an accretion rate $\dot{M} = 0.1-\SI{1}{M_\odot\per\yr}$,
+  \begin{equation}
+    \SI{20}{eV} < kT < \SI{90}{MeV}
+  \end{equation}
+  The spectrum is from UV to gamma, softer than stellar BHs
+\item \textbf{a young low mass star} $M = M_\odot$, a mass loss rate of $\num{e-7}-\SI{e-6}{M_\odot\per\year}$, the radiation spans :
+  \begin{equation}
+    0.3-\SI{3}{eV} < kT < \SI{4.5}{keV}
+  \end{equation}
+  corresponding to radiations from IR, visible to X rays.
+\item \textbf{a Jupiter}, the range is 
+  \begin{equation}
+    \SI{e-3}{eV} < kT < \SI{5}{eV}
+  \end{equation}
+  from far IR to optical
+
+\end{itemize}
+
+As a matter of fact the range of spectrum we just deduced coincides with the observed spectrum for accretion disks around these objects.
+
+
 \subsubsection{AGN Luminosity and Spectra}
 
 \subsection{Need for Jets}
