@@ -97,7 +97,7 @@ multi-part-units = single}
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
 \renewcommand{\right}{\aftergroup\egroup\originalright}
 
-\newcommand\FIXME[1]{{\color{red}FIXME #1}}
+\include{macros}
 
 \title{\textsc{Accretion and Jets}}
 \author{\textsc{Christophe Sauty}}
@@ -223,16 +223,16 @@ shocks and the proper motion of the shocks is not directly the speed of the
 underlying jets though similar velocities are measured by other means.
 
 These premain stars have accretion-ejection systems with typical accretion
-rates of $\dot{M}_{accr}=10^{-7}M_{\odot} /yr$ to $10^{-6}M_{\odot} /yr$.
+rates of $\dot{M}_{accr}=10^{-7}M_{\odot}\mathrm{yr^{-1}}$ to $10^{-6}M_{\odot} \mathrm{yr^{-1}}$.
 Around $30\%$ of these objects also have jets with typical wind mass loss rates
-of $\dot{M}_{jet}=10^{-8}M_{\odot} /yr$ to $10^{-7}M_{\odot} /yr$, densities
-$n_{jet}=10^3$ to $10^7$ cm$^{-3}$ (this is strongly model dependent) and
-temperatures around $10^3$ to $10^4$ K. Of course the density in the accretion
+of $\dot{M}_{jet}=10^{-8}M_{\odot}\mathrm{yr^{-1}}$ to $10^{-7}M_{\odot}\mathrm{yr^{-1}}$, densities
+$n_{jet}=10^3$ to $10^7\un{cm^{-3}}$ (this is strongly model dependent) and
+temperatures around $10^3$ to $10^4 \un{K}$. Of course the density in the accretion
 disk is much higher and the temperature much lower.
 
 \subsubsection{\texorpdfstring{Molecular flows $H_2$, $CO$}{Molecular flows H2, CO}}
 
-Next picture of the HST is called "Birth and death of the Milky Way". It shows
+Next picture of the HST is called ``Birth and death of the Milky Way''. It shows
 a multi-wavelength picture with dark clouds illuminated and ionized by stars.
 Clouds are clumps resulting from the Parker instability in the Milky Way. They
 are themselves unstable and because of gravitational collapse they contract
@@ -241,9 +241,9 @@ forming accretion torii and disks.
 Some disks (seen in infra red, red contours in next figure) show very powerful
 molecular outflows sometimes associated with the previous HH objects and
 Optical jets but not always. Molecular outflows with mass loss rates of
-$\dot{M}_{jet}=10^{-5}M_{\odot} /yr$, velocity a few 10 km/s and cold
+$\dot{M}_{jet}=10^{-5}M_{\odot}\mathrm{yr^{-1}}$, velocity a few 10 km/s and cold
 temperatures of a tens of Kelvin. The underlying accretion disks have accretion
-rates higher than typically $\dot{M}_{acrr}=10^{-4}M_{\odot} /yr$.
+rates higher than typically $\dot{M}_{acrr}=10^{-4}M_{\odot}\mathrm{yr^{-1}}$.
 
 HH211: Another nice example of a powerful molecular outflow with its inner
 accretion disk. Note that the inner structure is not very different from some
@@ -265,15 +265,15 @@ Before having disk images, the presence of an accretion disk was deduced from
 the infrared excess measured by the Spectral Index. \[\text{Spectral
 Index:}\quad \alpha=\frac{d\log(\nu F)}{d \log(\nu)}\quad\text{where}\quad
 F_{\nu}\quad\text{is the flux density.}\] For disks in YSO, the spectral index
-is calculated in the wavelength interval of $2.2-10 \mu$m (near infrared
+is calculated in the wavelength interval of $2.2-10 \un{\mu m}$ (near infrared
 region).
 
 In 1986 Lada C.J. and Wilking B.A. were the first to established the existence
 of various classes now known as Class I,II,III. In 1993 Andre et al. discovered
 a younger class called class 0, with a strong sub-millimeter emission, but very
-faint at $\lambda<10\mu$m. In summary the classes are:
+faint at $\lambda<10\un{\mu m}$. In summary the classes are:
 \begin{itemize}
-    \item \textbf{Class 0} sources: undetectable at $\lambda<10\mu$m
+    \item \textbf{Class 0} sources: undetectable at $\lambda<10\un{\mu m}$
     \item \textbf{Class I} sources: $\alpha>0.3$
     \item \textbf{Flat spectrum} sources: $0.3>\alpha>-0.3$
     \item \textbf{Class II} sources: $-0.3>\alpha>-1.6$
@@ -330,22 +330,20 @@ It corresponds to the free fall energy:
 
 The available power is:
 
-\begin{equation} 
-\begin{split}
+\begin{align} 
 P & = \frac{dE}{dt} \approx \frac{GM_*}{R} \frac{dm}{dt} = \frac{GM_*}{R} \dot{M}_{acc}
     \\  
-    &\approx 10^{38} (\frac{\dot{M}_{acc}}{10^{18} g/s})(\frac{M}{2.10^{33} g})(\frac{7.10^{10}cm}{R}) erg/s
+    &\approx 10^{38} \left(\frac{\dot{M}_{acc}}{10^{18} \un{g/s}}\right) \left(\frac{M}{2\E{33}\un{g}}\right) \left(\frac{7\E{10}\un{cm}}{R}\right) \un{erg/s}
     \\    
-    &\approx 10^{38} (\frac{\dot{M}_{acc}}{10^{-8} M/yr})(\frac{M}{M_{\odot}})(\frac{R_{\odot}}{R}) erg/s  
-\end{split}
-\end{equation}
+    &\approx 10^{38} \left(\frac{\dot{M}_{acc}}{10^{-8} \un{M/yr}}\right) \left(\frac{M}{M_{\odot}}\right) \left(\frac{R_{\odot}}{R}\right) \un{erg/s}
+\end{align}
 with
-   $M_{\odot} = 2.10^{33} g$
-   \\
-   $R_{\odot} = 7.10^{10} cm$
-   \\
-   $R_{NS}    = 10 km = 10^{6} cm = 10^{-4} R_{\odot}$
-\\
+\begin{align}
+  M_{\odot} &= 2 \E{33}\un{g} \\
+  R_{\odot} &= 7 \E{10}\un{cm} \\
+  R_{NS}   &= 10 \un{km} = 10^{6} \un{cm} = 10^{-4} R_{\odot}
+\end{align}
+
 Thus the available power depends on the accretion rate and the compactness M/R. The efficiency is the conversion rate,
 \begin{equation}
  \frac{dE}{dt} = \varepsilon \dot{M} c^{2} \Rightarrow \varepsilon = \frac{GM_*}{c^{2}R} 
@@ -360,9 +358,9 @@ In the relativistic regime for a black hole in maximum rotation we have a larger
 \\
 We can compare the efficiency in various fields in Physics :
 \begin{itemize}
-  \item In Chemistry the typical energy is $\approx 13 eV$, energy of ionization, therefore $\varepsilon < 10^{-8}$ thus
+  \item In Chemistry the typical energy is $\approx 13\un{eV}$, energy of ionization, therefore $\varepsilon < 10^{-8}$ thus
   \begin{equation}
-  \frac{dE}{dt} \approx \frac{1 eV}{m_{p}c^{2}} m_{p}c^{2}\dot{M}  
+  \frac{dE}{dt} \approx \frac{1 eV}{m_{p}c^{2}} m_{p}c^{2}\dot{M}
   \end{equation}
   \item In nuclear fusion $\approx$ 1 MeV, $4H \rightarrow He$ , $\varepsilon < 10^{-2}$
   \begin{equation}
@@ -374,24 +372,24 @@ Accretion is ten times more efficient per mass unit to convert energy with a com
 \begin{itemize}
   \item If it is a galactic Black Hole we get
   \begin{equation}
-  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3 km \frac{M_{BH}}{R_{S}} = 10^{5}\frac{M_{\odot}}{R_{\odot}} , \varepsilon = 0.5
+  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3 \un{km} \frac{M_{BH}}{R_{S}} = 10^{5}\frac{M_{\odot}}{R_{\odot}} , \varepsilon = 0.5
   \end{equation}
   \item This is similar for a Neutron Star
   \item For a Supermassive Black Hole the compactness and the efficiency are identical, only the radius differs
   \begin{equation}
-  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3.10^{11}-10^{14} cm  
+  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3\E{11}-10^{14} \un{cm}
   \end{equation}
   \item For a White Dwarf
   \begin{equation}
-  \frac {M_{WD}}{R_{*}} =10^{2}\frac{M_{\odot}}{R_{\odot}} , M_{WD} = M_{\odot}, R_{*}=10^{-2}R_{\odot} = 10^{9} cm  
+  \frac {M_{WD}}{R_{*}} =10^{2}\frac{M_{\odot}}{R_{\odot}} , M_{WD} = M_{\odot}, R_{*}=10^{-2}R_{\odot} = 10^{9} \un{cm}
   \end{equation}
   \item For a Young Star
   \begin{equation}
-  \frac {M_{YSO}}{R_{*}} \approx \frac{M_{*}}{R_{*}} , M_{YSO} = M_{\odot}, R_{*}=2R_{\odot} = 2.10^{11} cm  
+  \frac {M_{YSO}}{R_{*}} \approx \frac{M_{*}}{R_{*}} , M_{YSO} = M_{\odot}, R_{*}=2R_{\odot} = 2\E{11} \un{cm}
   \end{equation}
   \item For Jupiter
   \begin{equation}
-  \frac {M_{J}}{R_{*}} = 10^{-2}\frac{M_{\odot}}{R_{\odot}} , M_{J} = 10^{-3}M_{\odot}, R_{*}=0.1R_{\odot} = 10^{10} cm  
+  \frac {M_{J}}{R_{*}} = 10^{-2}\frac{M_{\odot}}{R_{\odot}} , M_{J} = 10^{-3}M_{\odot}, R_{*}=0.1R_{\odot} = 10^{10}\un{cm}
   \end{equation}
 \end{itemize}
 
