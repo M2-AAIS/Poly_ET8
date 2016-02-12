@@ -92,6 +92,7 @@ multi-part-units = single}
 \DeclareSIUnit\erg{erg}
 \DeclareSIUnit\yr{yr}
 \DeclareSIUnit\year{yr}
+\DeclareSIUnit\pc{pc}
 % Advanced tables
 \usepackage{tabularx}
 
@@ -478,7 +479,21 @@ As a matter of fact the range of spectrum we just deduced coincides with the obs
 
 
 \subsubsection{AGN Luminosity and Spectra}
+The luminosity observed in AGNs is of the order of $\SI{e46}{\erg\per\s}$. If the total luminosity is lower than the Eddington luminosity, which is reasonable, the mass of the central black hole has to be larger than $M > \SI{e8}{M_\odot}$.
 
+The luminosity could be due to nuclear reactions, if we have a large population of star burst. This implies a burst rate of $\dot{M} \sim \SI{10}{M_\odot\per\yr}$. Considering that the galaxy has $M_\mathrm{galaxy} \sim \SI{e11}{M_\odot} \sim \SI{e11}{stars}$, it would be emptied in 10 billion years. This is too short and excludes the scenario of AGN being star burst galaxies.
+
+Conversely, if the luminosity is due to accretion, the accretion rate required is $\dot{M} \sim \si{M_\odot\per\yr}$. The mass luminosity ratio is $M/L \sim 10$. Thus the luminosity of a standard galaxy is $L_\mathrm{galaxy} \sim \SI{e43}{\erg\per\s}$ and the luminosity of a quasar is a thousand times higher : $L_\mathrm{quasar}\sim 1000 L_\mathrm{galaxy}$. \textbf{For Seyfert galaxies, the luminosity is typically around $\num{e43}-\SI{e45}{\erg\per\s}$ while for quasars it is between $\num{e45}-\SI{e48}{\erg\per\s}$}.
+
+The observed variability is typically of one week $\Delta t \sim \SI{6e5}{s}$. Considering that the speed of light is the upper speed limit, the causality principle implies that the emission region cannot be larger than $R \leq c\Delta t \sim \SI{2e16}{cm} \sim \SI{0.01}{pc}$. This means that the emission comes from a very narrow region with a rather high density. To satisfy this, it is difficult to have stellar clusters (e.g. Sgr A : $\SI{4e16}{M_\odot\per\pc^3}$).
+
+The figure bellow \fxnote{put the figure} displays a typical \textbf{BL Lac Spectral Distribution}. \textbf{BL Lac} are typical radio loud AGNs. Nowadays, we have a good knowledge of the multi-wavelength spectrum from radio to gamma rays.
+
+\textbf{Seyfert and Quasar Spectral Distributions} are quite similar to BL Lac. Each component is explained by the composition of the disk and the jet. The central BH is surrounded by a cold accretion disk of gas and dust. On top of the disk, close to the central object, a hot corona must be present. The radio levels depend on the presence or of a central jet.
+\fxnote{Missing figure here}
+
+The cascade model explains how the different frequencies are emitted and how they are correlated in space and time as shown in the following figure.
+\fxnote{missing figure here}
 \subsection{Need for Jets}
 \subsubsection{Energy in the extended lobes}
 \subsubsection{Synchrotron emission}
