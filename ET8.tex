@@ -606,8 +606,100 @@ object. The plasma is ionized. We have all the ingredients to have a complex
 structure involving rotation and magnetic field.
 
 \section{Thermal Accretion and Winds}
+Because of rotation and magnetic fields, accretion and ejection are 3-dimensional and close to axisymmetry. However, some of the basic features can be under understood by looking a 1-dimensional processes and especially spherically-symmetric accretion and wind.
 \subsection{Spherical Accretion and Wind}
 \subsubsection{Bondi Accretion}
+Let's consider an ideal fluid around a star in-falling (accretion), with a spherical symmetry. Using spherical coordinates $(r,\theta,\phi)$ we write the physical variables describing the fluid :
+\begin{equation}
+  \rho = \rho(r),\quad P = P(r), \quad \vec{v} = \vec{v}(r)
+\end{equation}
+The conservation of energy gives:
+\begin{equation}
+  E = \frac{1}{2}v^2 + h + \Phi_\mathrm{grav}
+\end{equation}
+For the sake of simplicity, let's assume the flow is isothermal. The gravitational potential is
+\begin{equation}
+  \Phi_\mathrm{grav} = - \frac{GM_\star}{r},\quad \textrm{$M_\star$ is the mass of the star}
+\end{equation}
+and the enthalpy is:
+\begin{equation}
+  h = \int \frac{\d p}{\rho} = c_s^2 \ln \rho
+\end{equation}
+because the flow is isothermal. Here, $c_s^2 = 2 \frac{k_b T}{m_H}$ is the sound speed.
+
+The conservation equations are written as follow:
+\begin{equation}
+  \tcboxmath{
+    \begin{split}
+      \vec{\nabla}\cdot \left( \rho\vec{v} \right) = 0, \quad& \textrm{Mass conservation}\\
+      \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
+      p = c_s^2 \rho,\quad & \textrm{Equation of state}
+    \end{split}
+  }
+\end{equation}
+The mass conservation equation gives:
+\begin{equation}
+  \rho v r^2 = \textrm{constant} = \dot{m}, \quad \textrm{$\dot{m}$ is the accretion rate}
+\end{equation}
+
+Rewriting the energy, we get :
+\begin{align}
+  E &= \frac{1}{2}v^2 + c_s^2 \ln \frac{\dot{m}}{vr^2} - \frac{GM}{r} \\
+    &= \frac{c_s^2}{2}\left[ \frac{v^2}{c_s^2} + 2\ln \frac{\dot{m}}{vr^2} - \frac{2GM}{c_s^2r}\right] \\
+    &= \frac{c_s^2}{2} \left[\frac{v^2}{c_s^2} + \ln \frac{c_s^2}{v^2} + 4\ln \frac{2GM}{c_s^2r} - \frac{2GM}{c_s^2r} + 2\ln \frac{\dot{m}c_s}{(2GM)^2} + 2\ln c_s^2\right]
+\end{align}
+Let $r_c = \frac{GM}{2c_s^2}$. The Bernoulli constant gives that the solutions are given implicitly by drawing the following isocontours:
+\begin{equation}
+  \tcboxmath{
+    \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c} - 4 \frac{r_c }{r} = C
+  }
+\end{equation}
+where $C$ is a constant.
+
+By deriving this equation or directly from Euler equation,
+\begin{align}
+  \rho v \frac{\d v}{\d r}  &= -c_s^2 \frac{\d \rho}{\d r} - \rho \frac{GM}{r^2} \\
+  r \frac{v}{c_s^2} \frac{\d v}{\d r} &= \underbrace{-\frac{r}{\rho}\frac{\d \rho}{\d r}}_\textrm{mass convervation} - \frac{GM}{c_s^2r} \\
+                            &= r \left( \frac{2}{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d r} \right) - \frac{2r_c }{r} \\
+  \frac{r}{r_c }\frac{v}{c_s }\frac{\d (v/c_s)}{\d (r/r_c)} & = \frac{r}{r_c} \left( \frac{2r_c }{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d(r/r_c )} \right) - \frac{2r_c }{r}
+\end{align}
+
+\begin{equation}
+  \tcboxmath{
+    \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)
+  }
+\end{equation}
+
+The set of solutions of the previous equation is displayed on the two following figures. This is the topology of the solutions.
+
+We note $M = \frac{v}{c_s}$ the Mach number.
+
+We could show that for polytropic winds ($p = Kp^\gamma$), the topology of the Mach number doesn't change even though the sound speed is no longer a constant but depends on distance :
+\begin{equation}
+  c_s^2 = \frac{\d p}{\d \rho}
+\end{equation}
+
+A few years before Parker, Bondi (1952) proposed that accretion onto a star or a black hole could become supersonic. This corresponds to one of the 2 critical solutions. Of course, supersonic accretion onto the star ends by a shock, which explains X-ray emissions of cataclysmic binaries.
+
+We can calculate for this solution the mass accretion rate, which is by definition
+\begin{equation}
+  \dot{M} = 4\pi r^2 \rho (-v) = 4\pi r_c^2 \rho_s c_s
+\end{equation}
+Evaluating the energy at the critical point :
+\begin{equation}
+  E = \textrm{constant} = \frac{1}{2}v^2 + c_s^2 \ln\rho - \frac{GM}{r} = \frac{1}{2}c_s^2 + c_s^2 \ln \rho_s - \frac{GM}{r_c}
+\end{equation}
+we get the velocity both at infinity and close to the star :
+\begin{align}
+  v^2 &= 2c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right)  + \frac{2GM}{r} \\
+      & \xrightarrow{r\to 0} \frac{2GM}{r} \\
+      & \xrightarrow{r\to\infty} 0, \Rightarrow \rho_S = \rho_\infty e^{3/2}
+\end{align}
+
+We see that close to the star, the fluid is in free fall. The mass accretion rate of the transsonic solution is thus:
+\begin{equation}
+  \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
+\end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
 \subsection{More on 1D models}
 \subsubsection{Critical surfaces and Horizons}
