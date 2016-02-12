@@ -88,7 +88,7 @@
   inter-unit-product = \ensuremath{{}\cdot{}},
   separate-uncertainty = true,
   multi-part-units = single,
-  range-phrase = -
+  range-phrase = \text{ -- }
 }
 \DeclareSIUnit\cgs{cgs}
 \DeclareSIUnit\erg{erg}
@@ -540,6 +540,30 @@ In AGN jets, we see apparent superluminal motions that can be explained only if 
 \fxnote{VLBA image + GRS 1915}
 \subsection{Rotation and the Angular Momentum transfer}
 \subsubsection{The Angular Momentum problems in YSO}
+The biggest obstacle to the formation of stars from diffuse gas is that a star can contain only a tiny fraction (less than \SI{e18}{\cm\per\s}) of the initial angular momentum of the gas from which it formed (\SI{e23}{\cm\square\per\s} for a molecular cloud of scale \SI{1}{pc}, \SI{e23}{\cm\squared\per\s}), so that nearly all of this angular momentum must be removed or redistributed during the formation process. The angular momentum from the cloud can be removed by ambipolar diffusion. Yet the problem to go from the core to the star remains.
+
+The specific angular momentum of typical star-forming molecular clouds are at least three orders of magnitude larger than the maximum speed at the equatorial plane of the star where the centrifugal force equals gravity. Thus, if we eguals the centrifugal force per unit mass and gravity, we get
+\begin{equation}
+  \frac{v^2_\textrm{break up}}{R_\star} = \frac{GM_\star}{R_\star^2}
+  \Rightarrow v_\textrm{break up} = R_\star \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star}}
+  \Rightarrow \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star^3}}
+\end{equation}
+
+For a typical T Tauri star, the break up value is one to a few hundreds \si{\km\per\s} while those stars rotate at around \SIrange{5}{20}{\km\per\s}. The stellar rotation is an order of magnitude bellow the break up velocity.
+
+Here are some recent \textbf{Kepler} mission measurements of rotation in clusters.
+\fxnote{Missing figure}
+These results can be compared to Bouvier et al. results hereafter, showing plots of the evolution of the rotation as a function of time for Fast Rotators (blue lines) and Slow Rotators (red lines). The envelope velocity is always slower than the core velocity. The circle on the right is the position of our Sun. The curves correspond to evolutionary tracks and are model dependant.
+
+\fxnote{Missing plots}
+
+In the case of a Keplerian disk, to the first order, the centrifugal force balances gravity $\rho \frac{v_\phi^2}{r} \approx \rho \frac{GM_\star}{r^2}$. Thus, similarly to the break up velocity we get the Keplerian velocity and angular frequency:
+\begin{equation}
+  v_\phi = \sqrt{\frac{GM_\star}{r}}, \quad \Omega = \frac{v_\phi}{r} = \sqrt{\frac{GM_\star}{r^3}}
+\end{equation}
+\fxnote{Missing scheme}
+
+If the disk edge is connected onto the star as on the above scheme, they should rotate at the same speed on the boundary layer and the star should thus rotate at its breakup velocity. As this is not the case, it is obvious that the star cannot be directly connected to the disk and that some mechanism should exist to evacuate the angular momentum. One solution to this problem is the disk-locking mechanism, where the angular momentum of the star is transferred to the disk \emph{via} the magnetosphere and then the viscosity of the disk removes the excess of angular momentum. Another solution is that the stellar wind itself carries away angular momentum while being braked by the magnetic field.
 \subsubsection{Rotation of AGN and Microquasar Central Black Hole}
 \subsubsection{Conclusion, The Global Picture of the Jet}
 
