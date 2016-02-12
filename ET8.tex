@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,english]{article}
+\documentclass[10pt,a4paper,english,draft]{article}
 
 % Document layout
 %\usepackage[xetex,
@@ -81,7 +81,9 @@ inter-unit-product = \ensuremath{{}\cdot{}},
 separate-uncertainty = true,
 multi-part-units = single}
 \DeclareSIUnit\cgs{cgs}
-
+\DeclareSIUnit\erg{erg}
+\DeclareSIUnit\yr{yr}
+\DeclareSIUnit\year{yr}
 % Advanced tables
 \usepackage{tabularx}
 
@@ -90,6 +92,10 @@ multi-part-units = single}
 
 % Better inline fractions
 \usepackage{nicefrac}
+
+% Package to insert fixmes
+\usepackage{fixme}
+
 
 % Fix spacing around \left and \right
 \let\originalleft\left
@@ -223,11 +229,11 @@ shocks and the proper motion of the shocks is not directly the speed of the
 underlying jets though similar velocities are measured by other means.
 
 These premain stars have accretion-ejection systems with typical accretion
-rates of $\dot{M}_{accr}=10^{-7}M_{\odot}\mathrm{yr^{-1}}$ to $10^{-6}M_{\odot} \mathrm{yr^{-1}}$.
+rates of $\dot{M}_{accr}=\SI{e7}{M_\odot.yr^{-1}}$ to $\SI{e-6}{M_{\odot}.yr^{-1}}$.
 Around $30\%$ of these objects also have jets with typical wind mass loss rates
-of $\dot{M}_{jet}=10^{-8}M_{\odot}\mathrm{yr^{-1}}$ to $10^{-7}M_{\odot}\mathrm{yr^{-1}}$, densities
-$n_{jet}=10^3$ to $10^7\un{cm^{-3}}$ (this is strongly model dependent) and
-temperatures around $10^3$ to $10^4 \un{K}$. Of course the density in the accretion
+of $\dot{M}_{jet}=\SI{e-8}{M_{\odot}.yr^{-1}}$ to $\SI{e-7}{M_{\odot}.yr^{-1}}$, densities
+$n_{jet}=10^3$ to $\SI{e7}{cm^{-3}}$ (this is strongly model dependent) and
+temperatures around $10^3$ to $\SI{e4}{K}$. Of course the density in the accretion
 disk is much higher and the temperature much lower.
 
 \subsubsection{\texorpdfstring{Molecular flows $H_2$, $CO$}{Molecular flows H2, CO}}
@@ -241,9 +247,9 @@ forming accretion torii and disks.
 Some disks (seen in infra red, red contours in next figure) show very powerful
 molecular outflows sometimes associated with the previous HH objects and
 Optical jets but not always. Molecular outflows with mass loss rates of
-$\dot{M}_{jet}=10^{-5}M_{\odot}\mathrm{yr^{-1}}$, velocity a few 10 km/s and cold
+$\dot{M}_{jet}=\SI{e-5}{M_{\odot}.yr^{-1}}$, velocity a few 10 km/s and cold
 temperatures of a tens of Kelvin. The underlying accretion disks have accretion
-rates higher than typically $\dot{M}_{acrr}=10^{-4}M_{\odot}\mathrm{yr^{-1}}$.
+rates higher than typically $\dot{M}_{acrr}=\SI{e-4}{M_{\odot}.yr^{-1}}$.
 
 HH211: Another nice example of a powerful molecular outflow with its inner
 accretion disk. Note that the inner structure is not very different from some
@@ -265,15 +271,15 @@ Before having disk images, the presence of an accretion disk was deduced from
 the infrared excess measured by the Spectral Index. \[\text{Spectral
 Index:}\quad \alpha=\frac{d\log(\nu F)}{d \log(\nu)}\quad\text{where}\quad
 F_{\nu}\quad\text{is the flux density.}\] For disks in YSO, the spectral index
-is calculated in the wavelength interval of $2.2-10 \un{\mu m}$ (near infrared
+is calculated in the wavelength interval of $2.2-\SI{10}{\um}$ (near infrared
 region).
 
 In 1986 Lada C.J. and Wilking B.A. were the first to established the existence
 of various classes now known as Class I,II,III. In 1993 Andre et al. discovered
 a younger class called class 0, with a strong sub-millimeter emission, but very
-faint at $\lambda<10\un{\mu m}$. In summary the classes are:
+faint at $\lambda<\SI{10}{\um}$. In summary the classes are:
 \begin{itemize}
-    \item \textbf{Class 0} sources: undetectable at $\lambda<10\un{\mu m}$
+    \item \textbf{Class 0} sources: undetectable at $\lambda<\SI{10}{\um}$
     \item \textbf{Class I} sources: $\alpha>0.3$
     \item \textbf{Flat spectrum} sources: $0.3>\alpha>-0.3$
     \item \textbf{Class II} sources: $-0.3>\alpha>-1.6$
@@ -333,20 +339,20 @@ The available power is:
 \begin{align}
 P & = \frac{dE}{dt} \approx \frac{GM_*}{R} \frac{dm}{dt} = \frac{GM_*}{R} \dot{M}_{acc}
     \\
-  &\approx 10^{38} \left(\frac{\dot{M}_{acc}}{10^{18} \un{g/s}}\right) \left(\frac{M}{2\E{33}\un{g}}\right) \left(\frac{7\E{10}\un{cm}}{R}\right) \un{erg/s}
+  &\approx \num{e38} \left(\frac{\dot{M}_{acc}}{\SI{e18}{\g\per\s}}\right) \left(\frac{M}{\SI{2e33}{\g}}\right) \left(\frac{\SI{7e10}{\cm}}{R}\right) \si{\erg\per\s}
     \\
-  &\approx 10^{38} \left(\frac{\dot{M}_{acc}}{10^{-8} \un{M/yr}}\right) \left(\frac{M}{M_{\odot}}\right) \left(\frac{R_{\odot}}{R}\right) \un{erg/s}
+  &\approx 10^{38} \left(\frac{\dot{M}_{acc}}{\SI{e-8}{M\per\yr}}\right) \left(\frac{M}{M_{\odot}}\right) \left(\frac{R_{\odot}}{R}\right) \si{\erg\per\s}
 \end{align}
 with
 \begin{align}
-  M_{\odot} &= 2 \E{33}\un{g} \\
-  R_{\odot} &= 7 \E{10}\un{cm} \\
-  R_{NS}   &= 10 \un{km} = 10^{6} \un{cm} = 10^{-4} R_{\odot}
+  M_{\odot} &= \SI{2e33}{g} \\
+  R_{\odot} &= \SI{7e10}{\cm} \\
+  R_{NS}   &= \SI{10}{\km} = \SI{e6}{\cm} = \SI{e-4}{R_\odot}
 \end{align}
 
 Thus the available power depends on the accretion rate and the compactness M/R. The efficiency is the conversion rate,
 \begin{equation}
- \frac{dE}{dt} = \varepsilon \dot{M} c^{2} \Rightarrow \varepsilon = \frac{GM_*}{c^{2}R} 
+ \frac{dE}{dt} = \varepsilon \dot{M} c^{2} \Rightarrow \varepsilon = \frac{GM_*}{c^{2}R}
 \end{equation}
 
 In the Newtonian regime, we obtain an efficiency of $\varepsilon = 0.15$ for an object with a radius of 10 km, 1 $M_{\odot}$, typical for a neutron star or a non rotating galactic black hole.
@@ -355,11 +361,11 @@ In the relativistic regime for a black hole in maximum rotation we have a larger
 
 We can compare the efficiency in various fields in Physics :
 \begin{itemize}
-  \item In Chemistry the typical energy is $\approx 13\un{eV}$, energy of ionization, therefore $\varepsilon < 10^{-8}$ thus
+  \item In Chemistry the typical energy is $\approx \SI{13}{eV}$, energy of ionization, therefore $\varepsilon < 10^{-8}$ thus
   \begin{equation}
-  \frac{dE}{dt} \approx \frac{1 eV}{m_{p}c^{2}} m_{p}c^{2}\dot{M}
+  \frac{dE}{dt} \approx \frac{\SI{1}{eV}}{m_{p}c^{2}} m_{p}c^{2}\dot{M}
   \end{equation}
-  \item In nuclear fusion $\approx$ 1 MeV, $4H \rightarrow He$ , $\varepsilon < 10^{-2}$
+  \item In nuclear fusion $\approx \SI{1}{MeV}$, $4H \rightarrow He$ , $\varepsilon < 10^{-2}$
   \begin{equation}
   \frac {\Delta E_{4H \rightarrow He}}{mc^{2}} \approx \dfrac{4m_{H}-m_{He}}{4m_{H}c^{2}} c^{2}\dot{M}
   \end{equation}
@@ -369,28 +375,49 @@ Accretion is ten times more efficient per mass unit to convert energy with a com
 \begin{itemize}
   \item If it is a galactic Black Hole we get
   \begin{equation}
-  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3 \un{km} \frac{M_{BH}}{R_{S}} = 10^{5}\frac{M_{\odot}}{R_{\odot}} , \varepsilon = 0.5
+  R_{S} =\frac{2GM_{BH}}{c^{2}} = \SI{3}{\km} \frac{M_{BH}}{R_{S}} = 10^5\frac{M_{\odot}}{R_{\odot}} , \varepsilon = 0.5
   \end{equation}
   \item This is similar for a Neutron Star
   \item For a Supermassive Black Hole the compactness and the efficiency are identical, only the radius differs
   \begin{equation}
-  R_{S} =\frac{2GM_{BH}}{c^{2}} = 3\E{11}-10^{14} \un{cm}
+  R_{S} =\frac{2GM_{BH}}{c^{2}} = \num{3e11}-\SI{e14}{cm}
   \end{equation}
   \item For a White Dwarf
   \begin{equation}
-  \frac {M_{WD}}{R_{*}} =10^{2}\frac{M_{\odot}}{R_{\odot}} , M_{WD} = M_{\odot}, R_{*}=10^{-2}R_{\odot} = 10^{9} \un{cm}
+  \frac {M_{WD}}{R_{*}} =10^{2}\frac{M_{\odot}}{R_{\odot}} ,\quad M_{WD} = M_{\odot},\quad R_{*}=10^{-2}R_{\odot} = \SI{e9}{cm}
   \end{equation}
   \item For a Young Star
   \begin{equation}
-  \frac {M_{YSO}}{R_{*}} \approx \frac{M_{*}}{R_{*}} , M_{YSO} = M_{\odot}, R_{*}=2R_{\odot} = 2\E{11} \un{cm}
+  \frac {M_{YSO}}{R_{*}} \approx \frac{M_{*}}{R_{*}} ,\quad M_{YSO} = M_{\odot},\quad R_{*}=2R_{\odot} = \SI{2e11}{cm}
   \end{equation}
   \item For Jupiter
   \begin{equation}
-  \frac {M_{J}}{R_{*}} = 10^{-2}\frac{M_{\odot}}{R_{\odot}} , M_{J} = 10^{-3}M_{\odot}, R_{*}=0.1R_{\odot} = 10^{10}\un{cm}
+  \frac {M_{J}}{R_{*}} = 10^{-2}\frac{M_{\odot}}{R_{\odot}} ,\quad M_{J} = \SI{e-3}{M_{\odot}},\quad R_{*}=\SI{0.1}{R_{\odot}} = \SI{e10}{cm}
   \end{equation}
 \end{itemize}
 
 \subsubsection{Eddington Luminosity}
+We can define the Eddington luminosity, assuming isotropy and equilibrium between radiative pressure and gravity:
+\begin{align}
+  F_{grav} & = F_{rad} \\
+  \frac{GMm_p}{R^2} &= P_{rad}\sigma_{T,\gamma/e^{-}} \\
+           & = \frac{u_{rad}}{3}\sigma_T \\
+           &= \frac{1}{3}\frac{LR}{\frac{4}{3}\pi R^3 c}\\
+  \frac{GMm_p}{R^2} &= \frac{L\sigma_T}{4\pi R^2 c}
+\end{align}
+\fxnote{Missing picture}
+
+We can rewrite the gravitational force:
+\begin{equation}
+  F_\mathrm{grav} = \frac{GMm_p}{R^2} = F_\mathrm{rad} = \sigma_T \frac{L}{4\pi R^2}\frac{1}{c}
+\end{equation}
+
+Thus, it defines a luminosity called \emph{Eddington Luminosity} where the radiative pressure gradient equals the gravitational force:
+\begin{align}
+  L_\mathrm{Edd} &\approx \num{e33} \left( \frac{M}{M_\odot} \right) \si{\erg\per\s} \\
+  \dot{M}_\mathrm{Edd} &\approx \num{e18} \left( \frac{\varepsilon}{0.1} \right) \left( \frac{M}{M_\odot} \right) \si{\g\per\s} = \SI{e-8}{M\per\yr}
+\end{align}
+
 \subsubsection{The disk spectrum}
 \subsubsection{AGN Luminosity and Spectra}
 
@@ -455,5 +482,7 @@ structure involving rotation and magnetic field.
 \bibliographystyle{plainnat}
 \bibliography{ET8}
 \addcontentsline{toc}{section}{References}
+
+\listoffixmes
 
 \end{document}
