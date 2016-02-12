@@ -565,10 +565,44 @@ In the case of a Keplerian disk, to the first order, the centrifugal force balan
 
 If the disk edge is connected onto the star as on the above scheme, they should rotate at the same speed on the boundary layer and the star should thus rotate at its breakup velocity. As this is not the case, it is obvious that the star cannot be directly connected to the disk and that some mechanism should exist to evacuate the angular momentum. One solution to this problem is the disk-locking mechanism, where the angular momentum of the star is transferred to the disk \emph{via} the magnetosphere and then the viscosity of the disk removes the excess of angular momentum. Another solution is that the stellar wind itself carries away angular momentum while being braked by the magnetic field.
 \subsubsection{Rotation of AGN and Microquasar Central Black Hole}
+The problem of the transfer of angular momentum to the black hole in the accretion disk is similar to the one in YSO. All black holes are surely not maximally rotating, for instance the Galactic Black Hole of the disk luminosity shown on next figure is rotating at 0.6 its maximum angular velocity.
+
+If the mass of a Kerr black hole is $M$, its angular momentum $J$, its Schwarzschild radius is
+\begin{equation}
+  R_s = \frac{2GM}{c^2}
+\end{equation}
+and the radius of the horizon is:
+\begin{equation}
+  R_\mathrm{Kerr} = \frac{Rs}{2} \left( 1 + \sqrt{1-\left( \frac{Jc}{GM^2} \right)^2 } \right)
+\end{equation}
+The angular momentum cannot be higher than the value that makes the square root negative, so
+\begin{equation}
+  J < J_\mathrm{max} = \frac{GM^2}{c} = MR_\mathrm{Kerr}c
+\end{equation}
+We define the rotation parameter as:
+\begin{equation}
+  \alpha = \frac{J}{J_\mathrm{max}} < 1
+\end{equation}
+
+How do we know the nature of the central black hole in AGNs? The main clue comes from the iron-K line which can be explained only with a central rotating black hole.
+
+\fxnote{Missing figure}
+
+The red component of the line is the signature of general relativity effects due to the BH. It is explained by the gravitational redshift (Einstein effect) in addition to special-relativity Doppler shift and beaming, as shown on the following figure of a synthetic Iron K Line produced by a rotating accretion disk around a BH.
+
+\fxnote{Missing figure}
+
+The line profile can be modelled using a Schwarzschild BH or a non rotating BH (below left). The discrepencies can be reduced by keeping the Schwarzschild BH, but taking into account the reflected continuum (below right).
+
+\fxnote{Missing figure}
+
+However, it seems the best fit is obtained by considering a rotating BH, or Kerr BH in maximal rotation.
+
+The last figure is generated for a maximally rotating Kerr BH. Note the absence of the dotted line on the right part.
 \subsubsection{Conclusion, The Global Picture of the Jet}
 
-In conclusion, the system we have is rotating in the disk and the central
-object. The plasma is ionized. We have all the ingredient to have a complex
+In conclusion, the system we have is a rotating disk and a central
+object. The plasma is ionized. We have all the ingredients to have a complex
 structure involving rotation and magnetic field.
 
 \section{Thermal Accretion and Winds}
