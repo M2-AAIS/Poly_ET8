@@ -720,7 +720,7 @@ The topology of the solutions is the same as previously but with a new interpret
   \frac{\delta}{\varepsilon} = \frac{\d (v/c_s)}{\d (r/r_c)} = \frac{2 \frac{r_c }{r}\left( 1 - \frac{r_c }{r} \right) }{\frac{v}{c_s} - \frac{c_s}{v}} = \frac{2 \frac{1}{1+\varepsilon} \left( 1 - \frac{1}{1+\varepsilon} \right) }{1 + \delta - \frac{1}{1+\delta}} \approx \frac{2(1-\varepsilon)\varepsilon}{1 + \delta - 1 + \delta} \approx \frac{2\varepsilon}{2\delta} \Rightarrow \frac{\delta}{\varepsilon} = \pm 1
 \end{equation*}} with two slopes. The saddle nature of the point is better seen in the 3D plot of the energy in phase space ($r, v$).
 
-\subsubsection{Solar wind (Parker 1958}
+\subsubsection{Solar wind (Parker 1958)}
 The breeze solutions have zero velocity asymptotically, but the pressure is non zero and cannot match the interstellar pressure :
 \begin{equation}
   v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0,\Rightarrow \rho_\infty = \rho_s e^{-3/2} \neq 0 \Rightarrow \rho_\infty \neq 0
@@ -755,6 +755,82 @@ If the star rotates, in addition to the sonic surface/horizon there is also an a
 
   
 \subsubsection{De Laval Nozzle}
+
+There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a 
+pipe with a variable cross section. It has a minimum and this minimum should coincide with the
+sonic point to have strong supersonic flow,
+
+\fxnote{Missing Figure}
+
+Mass conservation : 
+
+\begin{equation}
+\vec{\nabla}.(\rho\vec{v}) \Rightarrow \int \rho\vec{v}.d\vec{S} = cst \Rightarrow \rho vS = cst 
+\Rightarrow \frac{d\rho}{\rho} + \frac{d\nu}{\nu} + \frac{dS}{S} = 0
+\end{equation}
+
+Euler equation : \begin{equation} 
+\rho v \frac{dv}{dx} = -\frac{dp}{dx} 
+\end{equation}
+Equation of state (energy) :
+\begin{equation}
+p(x) = c_{s}^2\rho(x)
+\end{equation}  
+ It follows : 
+\begin{equation}
+v\frac{dv}{dx} = -c_s^2\frac{d\rho}{\rho dx} = c_s^2\bigg(\frac{dv}{vdx}+\frac{dS}{Sdx}\bigg)
+\Rightarrow \bigg( v - \frac{c_s^2}{v} \bigg)\frac{dv}{dx} = c_s^2\frac{dS}{Sdx}
+\end{equation}
+  
+The flow can be transonic only if $\frac{dS}{Sdx} = 0 $ which means that the cross section
+has an extremum. It is by default a minimum as at the entrance of the nozzle on the left,  $v<c_s$ and
+$\frac{dv}{dx} > 0$ thus $\frac{dS}{dx} > 0 $. If this minimum exists, to be transsonic the flow must
+attain the sound speed at the minimum cross section.
+  
+\paragraph{Spherical flow, Parker wind}
+  
+For a spherical wind we have : 
+\begin{equation}
+\bigg( v - \frac{c_s^2}{v}  \bigg)\frac{dv}{dr} = c_s^2\frac{dS}{Sdr} 
+= \frac{2c_s^2}{r} - \frac{GM}{r^2} \Rightarrow \frac{d \ln S}{dr} = 
+\frac{2}{r} - \frac{GM}{c_s^2 r2}   
+\Rightarrow \ln S = \ln r^2 +\frac{GM}{c_s^2r} + k
+\end{equation}
+
+And finally : 
+\begin{equation}
+ \tcboxmath{S = Cr^2 \exp\bigg(\frac{GM}{c_s^2 r}\bigg)}
+\end{equation}
+ 
+ Gravity plays the role of reducing the effective cross sectionas te radial flux tubes expands 
+ as $r^2$. There is no real throat just an effect of graviy.
+  
+\paragraph{Funnel ans 1D flow}
+The analogy has been used to explain jets both in the YSO  and the AGN contexts. The argument 
+is to use the presence of the surrounding thick disk close to the central object has shaped in 
+the form a funnel.
+
+This is the case of the famous \textbf{ Exhaust Model for AGN Jets} suggested by 
+Blandford  \&  Rees 1974 (see correct figure), used also in the Ion Supported Torus
+model of jet funnel by Phinney 1999 (see other correct figure).
+
+\fxnote{Missing Figure}
+
+Raga and Canto also used this model in 1989 for YSO, invoking a stellar wind to make 
+the cavity.
+
+\fxnote{Missing figure}
+
+These models suffer strong flaws. The shape of the funnel is somewhat given and 
+not the result of a really consistent resolution of the MHD equations. The strongest argument
+is however that the throat of the funnel is always too far from the central object to maintain 
+a very small opening angle for the jet.
+
+This leads us to next chapterand to consider axisymmetric models ans not only 1D solutions.
+
+
+
+ 
 \subsubsection{Vertical structure of a Thin Keplerian Disk}
 
 \section{Theory of Standard Accretion Disks}
