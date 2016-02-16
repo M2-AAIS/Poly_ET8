@@ -15,7 +15,7 @@
 
 % Must be before mathspec
 \usepackage{amsmath}
-%\usepackage{amsfonts} Not used currently
+\usepackage{amsfonts}
 %\usepackage{amssymb}  Not used currently
 
 % For boxed equations
@@ -97,14 +97,16 @@
 \DeclareSIUnit\pc{pc}
 \DeclareSIUnit\kpc{kpc}
 \DeclareSIUnit\Mpc{Mpc}
+
 % Advanced tables
 \usepackage{tabularx}
 
 % References
 \usepackage{natbib}
 
-% Better inline fractions
+% Better inline fractions, derivatives
 \usepackage{nicefrac}
+\usepackage{esdiff}
 
 % Package to insert fixmes
 \usepackage{fixme}
@@ -839,32 +841,34 @@ This leads us to next chapterand to consider axisymmetric models ans not only 1D
 
 \subsubsection{Thin Accretion Disk}
 
+\FIXME{Missing figure}
+
 We assume a thin disk as previously Keplerian to first order where the height
 can be neglected. In other words we integrate all equations on an annulus $R$
 over the height of the disk $H(R)$. First we write mass conservation,
 \begin{equation*}
-    \frac{\partial \rho}{\partial t} + \vec{\nabla}.(\rho \vec{v}) = 0
+    \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) = 0
 \end{equation*}
 
 Introducing the surface mass density defined as
 \begin{equation*}
-    \Sigma = \int_{-H}^H \rho dz \approx 2 \rho H
+    \Sigma = \int_{-H}^H \rho \d{z} \approx 2 \rho H
 \end{equation*}
 
 so that $2 \pi R \Sigma$ is the mass density per unit length. Integrating the
 mass conservation over H (the integral and the derivative being linear and here
 independant operators, they can be inverted),
 \begin{align*}
-    \int_{-H}^H \left( \frac{\partial \rho}{\partial t} + \vec{\nabla}.(\rho \vec{v}) \right) = 0 % Not a mistake, just for code readability
-    &= \frac{\partial \int_{-H}^H \rho dz}{\partial t} + \vec{\nabla}.\left( \int_{-H}^H \rho \vec{v} dz \right) \\
-    &= \frac{\partial \int_{-H}^H \rho dz}{\partial t} + \vec{\nabla}.\left( \vec{v} \int_{-H}^H \rho dz \right) \\
-    &= \frac{\partial \Sigma z}{\partial t} + \vec{\nabla}.(\Sigma V_R)
+    \int_{-H}^H \left( \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) \right) = 0 % Not a mistake, just for code readability
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \int_{-H}^H \rho \vec{v} \d{z} \right) \\
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \vec{v} \int_{-H}^H \rho \d{z} \right) \\
+    &= \diffp{\Sigma z}{t} + \vec{\nabla}.(\Sigma V_R)
 \end{align*}
 
 we get mass conservation on each annulus:
 \begin{equation}
     \tcboxmath{
-        \frac{\partial \Sigma}{\partial t} + \frac{\partial(R \Sigma V_R)}{R \partial R} = 0
+        \diffp{\Sigma}{t} + \frac{1}{R} \diffp{(R \Sigma V_R)}{R} = 0
     }
 \end{equation}
 
@@ -874,10 +878,52 @@ M}{R}}$. In reality rotation is slightly sub-Keplerian to allow accretion.
 We then use the Angular Momentum conservation, which comes from the global
 momentum equation,
 \begin{equation*}
-    \rho \frac{\partial \vec{v}}{\partial t} + \rho (\vec{v}.\vec{\nabla})\vec{v} = \rho \vec{g} - \vec{\nabla} p - \vec{\nabla}.(\rho ) \text{with} V_\varphi \leq R \Omega_K
+    \rho \diffp{\vec{v}}{t} + \rho (\vec{v}.\vec{\nabla})\vec{v} = \rho \vec{g} - \vec{\nabla} p - \vec{\nabla}.\left(\rho \overline{\vec{v'} \otimes \vec{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
 \end{equation*}
 
-\FIXME{Missing the tensorial product in last parenthesis, display of text missing space}
+Momentum equation can be written with a turbulent pressure tensor
+\begin{equation*}
+    \diffp{}{t}(\rho \vec{v}) + \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) = \rho \vec{g}
+\end{equation*}
+
+\FIXME{Need of a better tensorial notation for Pturb}
+
+with the turbulent pressure being
+\begin{align*}
+    \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vec{v'} \otimes \vec{v'}} \\
+    \left(\overline{\vec{v'} \otimes \vec{v'}}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
+    \Leftrightarrow \left(\overline{\vec{v'} \otimes \vec{v'}}\right) &= - \nu_T \left(\vec{\nabla} \otimes \vec{v} + \vec{v} \otimes \vec{\nabla}\right)
+\end{align*}
+
+\FIXME{Same as above}
+
+The molecular viscosity is completely inefficient and cannot explain the source
+of viscosity essential to have accretion,
+\begin{equation*}
+    \mathfrak{R}_\mathrm{e} = \frac{L^2}{\nu T} = \frac{L V}{\nu} \approx \num{e11}
+\end{equation*}
+
+Shakura \& Sunyaev suggested then (1971) that the source of viscosity is
+turbulence giving an anomalous coefficient for the viscosity.
+\begin{equation*}
+    \mathfrak{R}_\mathrm{eT} = \frac{L^2}{\nu_T T} = \frac{L V}{\nu_T} \approx \num{e4}
+\end{equation*}
+
+\FIXME{Make it a reference}
+
+To explain this turbulence one needs the disk to develop instabilities. Since
+Balbus \& Hawley (1991), the instability most favorable seems to be the
+Magneto-Rotational-Instabililty (MRI hereafter).
+
+\FIXME{Make it a reference}
+
+To get the angular momentum conservation on $\phi$, we can multiply by $\vec{R} \times$, and integrate over height,
+\begin{align*}
+    &\int_{-H}^H \vec{R} \times \diffp{}{t}(\rho \vec{v}) \d{z} + \int_{-H}^H \vec{R} \times \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) \d{z}
+    = \\
+    &\Rightarrow =
+\end{align*}
+
 
 \subsubsection{Steady Accretion Disk}
 \subsubsection{Self-consistency}
