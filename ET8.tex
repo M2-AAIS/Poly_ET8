@@ -1011,6 +1011,38 @@ The are different analytical models:
 \fxnote{Missing figure}
 \end{itemize}
 \subsubsection{Numerical simulations are Time-dependent}
+Many different AMR MHD codes are available:
+\begin{itemize}
+\item AMRVAC (Toth 1996; Nool \& Keppens 2002)
+\item BATSRUS (Powell et al. 1999)
+\item RIEMANN (Balsara 2000)
+\item FLASH (Fryxell et al. 2002)
+\item Nirvana (Zeigler 2005)
+\item RAMSES (Fromang et al. 2006)
+\item PLUTO (Mignone et al. 2007)
+\item AstroBEAR (Cunnigham et al. 2008)
+\item ZEUS, ATHENA (Stone et al., 199?)
+\end{itemize}
+To quote Stone, ``we use Athena which implements slightly different algorithms from all of these. These differences can be important. Diversity of methods is good.''.
+
+\paragraph{Steady solution:}
+
+In order to obtain real steady solution, self similarity is a necessary hypothesis so far. This might be a problem with the boundary conditions and the ersatz for scaling as they are not always compatible, realistically.
+
+\paragraph{Time dependant solutions:}
+
+Numerical simulations cannot last forever because they empty the disk. They also use large numerical diffusivity and have various problems in scaling.
+
+Here after are a few examples of such simulations showing the collation by magnetic hoop stress.
+
+\fxnote{Missing figures}
+Time dependant schemes are also good to study the origin of the instabilities, the effects of star or magnetospheric variability and the origin of knots and shocks.
+
+\fxnote{Missing figures}
+
+Here is an example of a Kelvin Helmholtz instability in a simulation of a double component AGN relativistic jet using AMRVAC, by Meliani et al.
+
+\fxnote{missing nice figure here}
 
 \section{Young Stars}
 \section{Extra-Galactic Nuclei}
