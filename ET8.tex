@@ -741,21 +741,22 @@ Similarly to the accretion rate, one can calculate the mass loss rate from the s
 \subsection{More on 1D models}
 \subsubsection{Critical surfaces and Horizons}
 
-The critical point corresponds to sonic waves . The stellar surface losses mass in a steady
-way only if the mass flux  adapts itself to cross the critical surface. The sonic waves going
-upstream will make the ejection to evolve until it reaches the steady state. This critical suface
-is analogous to the event horizon around black holes. Beyons this surface, the wind is unable
-to propagate sound waves back to the source.
+The critical point corresponds to sonic waves . The stellar surface losses mass
+in a steady way only if the mass flux  adapts itself to cross the critical
+surface. The sonic waves going upstream will make the ejection to evolve until
+it reaches the steady state. This critical suface is analogous to the event
+horizon around black holes. Beyons this surface, the wind is unable to
+propagate sound waves back to the source.
 
-There is a strong analogy between the soncic surface and apparent horizon in black holes, 
-except that the sound speed  replaces the speed of light. This is illustrated in the following
-figures. 
+There is a strong analogy between the soncic surface and apparent horizon in
+black holes, except that the sound speed  replaces the speed of light. This is
+illustrated in the following figures. 
 
 \fxnote{Missing figure}
 
-If the star rotates, in addition to the sonic surface/horizon there is also an accoustic ergosphere.
-
-  
+If the star rotates, in addition to the sonic surface/horizon there is also an
+accoustic ergosphere.
+ 
 \subsubsection{De Laval Nozzle}
 
 There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a 
@@ -878,7 +879,11 @@ M}{R}}$. In reality rotation is slightly sub-Keplerian to allow accretion.
 We then use the Angular Momentum conservation, which comes from the global
 momentum equation,
 \begin{equation*}
+<<<<<<< 29d38d2474d4dd8d7bab891319795f6cf61458d6
     \rho \diffp{\vec{v}}{t} + \rho (\vec{v}.\vec{\nabla})\vec{v} = \rho \vec{g} - \vec{\nabla} p - \vec{\nabla}.\left(\rho \overline{\vec{v'} \otimes \vec{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
+=======
+    \rho \diffp{\vv{v}}{t} + \rho (\vv{v}.\vv{\nabla})\vv{v} = \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}.\left(\rho \overline{\vv{v}' \otimes \vv{v}'}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
+>>>>>>> More work in III.1
 \end{equation*}
 
 Momentum equation can be written with a turbulent pressure tensor
@@ -890,9 +895,9 @@ Momentum equation can be written with a turbulent pressure tensor
 
 with the turbulent pressure being
 \begin{align*}
-    \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vec{v'} \otimes \vec{v'}} \\
-    \left(\overline{\vec{v'} \otimes \vec{v'}}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
-    \Leftrightarrow \left(\overline{\vec{v'} \otimes \vec{v'}}\right) &= - \nu_T \left(\vec{\nabla} \otimes \vec{v} + \vec{v} \otimes \vec{\nabla}\right)
+    \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vv{v}' \otimes \vv{v}'} \\
+    \left(\overline{\vv{v}' \otimes \vv{v}'}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
+    \Leftrightarrow \left(\overline{\vv{v}' \otimes \vv{v}'}\right) &= - \nu_T \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla}\right)
 \end{align*}
 
 \FIXME{Same as above}
@@ -919,11 +924,43 @@ Magneto-Rotational-Instabililty (MRI hereafter).
 
 To get the angular momentum conservation on $\phi$, we can multiply by $\vec{R} \times$, and integrate over height,
 \begin{align*}
-    &\int_{-H}^H \vec{R} \times \diffp{}{t}(\rho \vec{v}) \d{z} + \int_{-H}^H \vec{R} \times \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) \d{z}
-    = \\
-    &\Rightarrow =
+    &\int_{-H}^H \vv{R} \times \diffp{}{t}(\rho \vv{v}) \d{z} +
+    \int_{-H}^H \vv{R} \times \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) \d{z} =
+    \underbrace{\int_{-H}^H \vv{R} \times \rho \vv{\nabla} \nabla_{grav} \d{z}}_{= 0} \\
+    &\Rightarrow \diffp{}{t} \int_{-H}^H \vv{R} \times (\rho \vv{v}) \d{z} +
+    \vv{\nabla}.\int_{-H}^H \vv{R} \times \left( \rho \vv{v} \otimes \vv{v} \right) \d{z} +
+    \underbrace{\int_{-H}^H \vv{R} \times \vv{\nabla} p \d{z}}_{= 0} =
+    - \vv{\nabla}.\int_{-H}^H \vv{R} \times \left(\overline{\rho \vv{v}' \otimes \vv{v}'}\right) \d{z}
 \end{align*}
 
+See the appendix for the correctness of operators inversion.
+
+\FIXME{Add this appendix, link it}
+
+\begin{equation*}
+    \Rightarrow \diffp{}{t} \int_{-H}^H \rho R V_\varphi \d{z} + \frac{1}{R} \diffp{}{R} \left( R \int_{-H}^H R \rho V_R V_\varphi \d{z} \right) =
+    \frac{1}{R} \diffp{}{R} \left( R G \right)
+\end{equation*}
+
+We get,
+\begin{equation*}
+    \diffp{\left(\Sigma R V_\varphi\right)}{t} + \frac{1}{R} \diffp{R V_R \Sigma R V_\varphi}{R} = \frac{1}{R} \diffp{RG}{R}
+\end{equation*}
+
+We replace the rotational speed with the Keplerian laws as the flow is supposed to be quasi-Keplerian,
+
+\begin{equation}
+    \tcboxmath{
+        \diffp{\Sigma R^2 \Omega}{t} + \frac{1}{R} \diffp{R V_R \Sigma R^2 \Omega}{R} = \frac{1}{R} \diffp{RG}{R}
+    }
+\end{equation}
+
+The turbulence viscous torque is given by,
+\begin{align*}
+    & \overleftrightarrow{G} = - \int_{-H}^H \vv{R} \times \left( \overline{\rho \vv{v}' \otimes \vv{v}'} \right) \d{z} =
+    \nu_T \vv{R} \times \int_{-H}^H \rho \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla} \right) \d{z} \\
+    & \Rightarrow G = \nu_T R \int_{-H}^{H} \rho R \diffp{}{R} \frac{V_\varphi}{R}
+\end{align*}
 
 \subsubsection{Steady Accretion Disk}
 \subsubsection{Self-consistency}
