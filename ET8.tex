@@ -104,9 +104,10 @@
 % References
 \usepackage{natbib}
 
-% Better inline fractions, derivatives
+% Better inline fractions, derivatives, vectors
 \usepackage{nicefrac}
 \usepackage{esdiff}
+\usepackage[c]{esvect}
 
 % Package to insert fixmes
 \usepackage{fixme}
@@ -615,7 +616,7 @@ Because of rotation and magnetic fields, accretion and ejection are 3-dimensiona
 \subsubsection{Bondi Accretion}
 Let's consider an ideal fluid around a star in-falling (accretion), with a spherical symmetry. Using spherical coordinates $(r,\theta,\phi)$ we write the physical variables describing the fluid :
 \begin{equation}
-  \rho = \rho(r),\quad P = P(r), \quad \vec{v} = \vec{v}(r)
+  \rho = \rho(r),\quad P = P(r), \quad \vv{v} = \vv{v}(r)
 \end{equation}
 The conservation of energy gives:
 \begin{equation}
@@ -635,7 +636,7 @@ The conservation equations are written as follow:
 \begin{equation}
   \tcboxmath{
     \begin{split}
-      \vec{\nabla}\cdot \left( \rho\vec{v} \right) = 0, \quad& \textrm{Mass conservation}\\
+      \vv{\nabla}\cdot \left( \rho\vv{v} \right) = 0, \quad& \textrm{Mass conservation}\\
       \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
       p = c_s^2 \rho,\quad & \textrm{Equation of state}
     \end{split}
@@ -850,7 +851,7 @@ We assume a thin disk as previously Keplerian to first order where the height
 can be neglected. In other words we integrate all equations on an annulus $R$
 over the height of the disk $H(R)$. First we write mass conservation,
 \begin{equation*}
-    \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) = 0
+    \diffp{\rho}{t} + \vv{\nabla}.(\rho \vv{v}) = 0
 \end{equation*}
 
 Introducing the surface mass density defined as
@@ -862,10 +863,10 @@ so that $2 \pi R \Sigma$ is the mass density per unit length. Integrating the
 mass conservation over H (the integral and the derivative being linear and here
 independant operators, they can be inverted),
 \begin{align*}
-    \int_{-H}^H \left( \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) \right) = 0 % Not a mistake, just for code readability
-    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \int_{-H}^H \rho \vec{v} \d{z} \right) \\
-    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \vec{v} \int_{-H}^H \rho \d{z} \right) \\
-    &= \diffp{\Sigma z}{t} + \vec{\nabla}.(\Sigma V_R)
+    \int_{-H}^H \left( \diffp{\rho}{t} + \vv{\nabla}.(\rho \vv{v}) \right) = 0 % Not a mistake, just for code readability
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vv{\nabla}.\left( \int_{-H}^H \rho \vv{v} \d{z} \right) \\
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vv{\nabla}.\left( \vv{v} \int_{-H}^H \rho \d{z} \right) \\
+    &= \diffp{\Sigma z}{t} + \vv{\nabla}.(\Sigma V_R)
 \end{align*}
 
 we get mass conservation on each annulus:
@@ -888,7 +889,7 @@ momentum equation,
 
 Momentum equation can be written with a turbulent pressure tensor
 \begin{equation*}
-    \diffp{}{t}(\rho \vec{v}) + \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) = \rho \vec{g}
+    \diffp{}{t}(\rho \vv{v}) + \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) = \rho \vv{g}
 \end{equation*}
 
 \FIXME{Need of a better tensorial notation for Pturb}
@@ -924,7 +925,7 @@ Magneto-Rotational-Instabililty (MRI hereafter).
 
 \FIXME{Make it a reference}
 
-To get the angular momentum conservation on $\phi$, we can multiply by $\vec{R} \times$, and integrate over height,
+To get the angular momentum conservation on $\phi$, we can multiply by $\vv{R} \times$, and integrate over height,
 \begin{align*}
     &\int_{-H}^H \vv{R} \times \diffp{}{t}(\rho \vv{v}) \d{z} +
     \int_{-H}^H \vv{R} \times \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) \d{z} =
