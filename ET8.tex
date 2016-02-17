@@ -104,9 +104,10 @@
 % References
 \usepackage{natbib}
 
-% Better inline fractions, derivatives
+% Better inline fractions, derivatives, vectors
 \usepackage{nicefrac}
 \usepackage{esdiff}
+\usepackage[c]{esvect}
 
 % Package to insert fixmes
 \usepackage{fixme}
@@ -613,7 +614,7 @@ Because of rotation and magnetic fields, accretion and ejection are 3-dimensiona
 \subsubsection{Bondi Accretion}
 Let's consider an ideal fluid around a star in-falling (accretion), with a spherical symmetry. Using spherical coordinates $(r,\theta,\phi)$ we write the physical variables describing the fluid :
 \begin{equation}
-  \rho = \rho(r),\quad P = P(r), \quad \vec{v} = \vec{v}(r)
+  \rho = \rho(r),\quad P = P(r), \quad \vv{v} = \vv{v}(r)
 \end{equation}
 The conservation of energy gives:
 \begin{equation}
@@ -633,7 +634,7 @@ The conservation equations are written as follow:
 \begin{equation}
   \tcboxmath{
     \begin{split}
-      \vec{\nabla}\cdot \left( \rho\vec{v} \right) = 0, \quad& \textrm{Mass conservation}\\
+      \vv{\nabla}\cdot \left( \rho\vv{v} \right) = 0, \quad& \textrm{Mass conservation}\\
       \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
       p = c_s^2 \rho,\quad & \textrm{Equation of state}
     \end{split}
@@ -704,7 +705,7 @@ We see that close to the star, the fluid is in free fall. The mass accretion rat
   \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
 \end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
-We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vec{v} = \vec{v}(r)$. 
+We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vv{v} = \vv{v}(r)$. 
 
 Even if the fluid is magnetized, the assumption of spherical symmetry implied that the magnetic field parallel to the stream does not give any contribution. The Poynting flux is zero.
 
@@ -767,7 +768,7 @@ sonic point to have strong supersonic flow,
 Mass conservation : 
 
 \begin{equation}
-\vec{\nabla}.(\rho\vec{v}) \Rightarrow \int \rho\vec{v}.d\vec{S} = cst \Rightarrow \rho vS = cst 
+\vv{\nabla}.(\rho\vv{v}) \Rightarrow \int \rho\vv{v}.d\vv{S} = cst \Rightarrow \rho vS = cst 
 \Rightarrow \frac{d\rho}{\rho} + \frac{d\nu}{\nu} + \frac{dS}{S} = 0
 \end{equation}
 
@@ -847,7 +848,7 @@ We assume a thin disk as previously Keplerian to first order where the height
 can be neglected. In other words we integrate all equations on an annulus $R$
 over the height of the disk $H(R)$. First we write mass conservation,
 \begin{equation*}
-    \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) = 0
+    \diffp{\rho}{t} + \vv{\nabla}.(\rho \vv{v}) = 0
 \end{equation*}
 
 Introducing the surface mass density defined as
@@ -859,10 +860,10 @@ so that $2 \pi R \Sigma$ is the mass density per unit length. Integrating the
 mass conservation over H (the integral and the derivative being linear and here
 independant operators, they can be inverted),
 \begin{align*}
-    \int_{-H}^H \left( \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) \right) = 0 % Not a mistake, just for code readability
-    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \int_{-H}^H \rho \vec{v} \d{z} \right) \\
-    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \vec{v} \int_{-H}^H \rho \d{z} \right) \\
-    &= \diffp{\Sigma z}{t} + \vec{\nabla}.(\Sigma V_R)
+    \int_{-H}^H \left( \diffp{\rho}{t} + \vv{\nabla}.(\rho \vv{v}) \right) = 0 % Not a mistake, just for code readability
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vv{\nabla}.\left( \int_{-H}^H \rho \vv{v} \d{z} \right) \\
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vv{\nabla}.\left( \vv{v} \int_{-H}^H \rho \d{z} \right) \\
+    &= \diffp{\Sigma z}{t} + \vv{\nabla}.(\Sigma V_R)
 \end{align*}
 
 we get mass conservation on each annulus:
@@ -878,21 +879,21 @@ M}{R}}$. In reality rotation is slightly sub-Keplerian to allow accretion.
 We then use the Angular Momentum conservation, which comes from the global
 momentum equation,
 \begin{equation*}
-    \rho \diffp{\vec{v}}{t} + \rho (\vec{v}.\vec{\nabla})\vec{v} = \rho \vec{g} - \vec{\nabla} p - \vec{\nabla}.\left(\rho \overline{\vec{v'} \otimes \vec{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
+    \rho \diffp{\vv{v}}{t} + \rho (\vv{v}.\vv{\nabla})\vv{v} = \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}.\left(\rho \overline{\vv{v'} \otimes \vv{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
 \end{equation*}
 
 Momentum equation can be written with a turbulent pressure tensor
 \begin{equation*}
-    \diffp{}{t}(\rho \vec{v}) + \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) = \rho \vec{g}
+    \diffp{}{t}(\rho \vv{v}) + \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) = \rho \vv{g}
 \end{equation*}
 
 \FIXME{Need of a better tensorial notation for Pturb}
 
 with the turbulent pressure being
 \begin{align*}
-    \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vec{v'} \otimes \vec{v'}} \\
-    \left(\overline{\vec{v'} \otimes \vec{v'}}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
-    \Leftrightarrow \left(\overline{\vec{v'} \otimes \vec{v'}}\right) &= - \nu_T \left(\vec{\nabla} \otimes \vec{v} + \vec{v} \otimes \vec{\nabla}\right)
+    \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vv{v'} \otimes \vv{v'}} \\
+    \left(\overline{\vv{v'} \otimes \vv{v'}}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
+    \Leftrightarrow \left(\overline{\vv{v'} \otimes \vv{v'}}\right) &= - \nu_T \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla}\right)
 \end{align*}
 
 \FIXME{Same as above}
@@ -917,9 +918,9 @@ Magneto-Rotational-Instabililty (MRI hereafter).
 
 \FIXME{Make it a reference}
 
-To get the angular momentum conservation on $\phi$, we can multiply by $\vec{R} \times$, and integrate over height,
+To get the angular momentum conservation on $\phi$, we can multiply by $\vv{R} \times$, and integrate over height,
 \begin{align*}
-    &\int_{-H}^H \vec{R} \times \diffp{}{t}(\rho \vec{v}) \d{z} + \int_{-H}^H \vec{R} \times \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) \d{z}
+    &\int_{-H}^H \vv{R} \times \diffp{}{t}(\rho \vv{v}) \d{z} + \int_{-H}^H \vv{R} \times \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) \d{z}
     = \\
     &\Rightarrow =
 \end{align*}
