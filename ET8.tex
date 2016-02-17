@@ -926,12 +926,12 @@ Magneto-Rotational-Instabililty (MRI hereafter).
 To get the angular momentum conservation on $\phi$, we can multiply by $\vv{R} \times$, and integrate over height,
 \begin{align*}
     &\int_{-H}^H \vv{R} \times \diffp{}{t}(\rho \vv{v}) \d{z} +
-    \int_{-H}^H \vv{R} \times \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) \d{z} =
+    \int_{-H}^H \vv{R} \times \vv{\nabla} \cdot \left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) \d{z} =
     \underbrace{\int_{-H}^H \vv{R} \times \rho \vv{\nabla} \nabla_{grav} \d{z}}_{= 0} \\
     &\Rightarrow \diffp{}{t} \int_{-H}^H \vv{R} \times (\rho \vv{v}) \d{z} +
-    \vv{\nabla}.\int_{-H}^H \vv{R} \times \left( \rho \vv{v} \otimes \vv{v} \right) \d{z} +
+    \vv{\nabla} \cdot \int_{-H}^H \vv{R} \times \left( \rho \vv{v} \otimes \vv{v} \right) \d{z} +
     \underbrace{\int_{-H}^H \vv{R} \times \vv{\nabla} p \d{z}}_{= 0} =
-    - \vv{\nabla}.\int_{-H}^H \vv{R} \times \left(\overline{\rho \vv{v}' \otimes \vv{v}'}\right) \d{z}
+    - \vv{\nabla} \cdot \int_{-H}^H \vv{R} \times \left(\overline{\rho \vv{v}' \otimes \vv{v}'}\right) \d{z}
 \end{align*}
 
 See the appendix for the correctness of operators inversion.
@@ -964,7 +964,7 @@ The turbulence viscous torque is given by,
 \end{align*}
 
 The second line being the $\varphi$ compound, only interesting one regarding
-$\vv{\nabla}.\overleftrightarrow{G}.\vv*{e}{z}$, which reduces in our simple
+$\vv{\nabla} \cdot \overleftrightarrow{G} \cdot \vv*{e}{z}$, which reduces in our simple
 case to the following scalar,
 \begin{equation*}
     \Rightarrow G = \nu_T R \int_{-H}^H R \diffp{}{R} \left( \frac{V_\varphi}{R} \right) \rho \d{z} \diffp{}{R} \left(\frac{R \Omega}{R}\right)
