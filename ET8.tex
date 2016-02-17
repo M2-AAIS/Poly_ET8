@@ -104,10 +104,9 @@
 % References
 \usepackage{natbib}
 
-% Better inline fractions, derivatives, vectors
+% Better inline fractions, derivatives
 \usepackage{nicefrac}
 \usepackage{esdiff}
-\usepackage[c]{esvect}
 
 % Package to insert fixmes
 \usepackage{fixme}
@@ -614,7 +613,7 @@ Because of rotation and magnetic fields, accretion and ejection are 3-dimensiona
 \subsubsection{Bondi Accretion}
 Let's consider an ideal fluid around a star in-falling (accretion), with a spherical symmetry. Using spherical coordinates $(r,\theta,\phi)$ we write the physical variables describing the fluid :
 \begin{equation}
-  \rho = \rho(r),\quad P = P(r), \quad \vv{v} = \vv{v}(r)
+  \rho = \rho(r),\quad P = P(r), \quad \vec{v} = \vec{v}(r)
 \end{equation}
 The conservation of energy gives:
 \begin{equation}
@@ -634,7 +633,7 @@ The conservation equations are written as follow:
 \begin{equation}
   \tcboxmath{
     \begin{split}
-      \vv{\nabla}\cdot \left( \rho\vv{v} \right) = 0, \quad& \textrm{Mass conservation}\\
+      \vec{\nabla}\cdot \left( \rho\vec{v} \right) = 0, \quad& \textrm{Mass conservation}\\
       \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
       p = c_s^2 \rho,\quad & \textrm{Equation of state}
     \end{split}
@@ -705,7 +704,7 @@ We see that close to the star, the fluid is in free fall. The mass accretion rat
   \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
 \end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
-We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vv{v} = \vv{v}(r)$. 
+We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vec{v} = \vec{v}(r)$. 
 
 Even if the fluid is magnetized, the assumption of spherical symmetry implied that the magnetic field parallel to the stream does not give any contribution. The Poynting flux is zero.
 
@@ -750,25 +749,25 @@ to propagate sound waves back to the source.
 
 There is a strong analogy between the soncic surface and apparent horizon in black holes, 
 except that the sound speed  replaces the speed of light. This is illustrated in the following
-figures.
+figures. 
 
 \fxnote{Missing figure}
 
 If the star rotates, in addition to the sonic surface/horizon there is also an accoustic ergosphere.
 
-
+  
 \subsubsection{De Laval Nozzle}
 
-There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a
+There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a 
 pipe with a variable cross section. It has a minimum and this minimum should coincide with the
 sonic point to have strong supersonic flow,
 
 \fxnote{Missing Figure}
 
-Mass conservation :
+Mass conservation : 
 
 \begin{equation}
-\vv{\nabla}.(\rho\vv{v}) \Rightarrow \int \rho\vv{v}.d\vv{S} = cst \Rightarrow \rho vS = cst 
+\vec{\nabla}.(\rho\vec{v}) \Rightarrow \int \rho\vec{v}.d\vec{S} = cst \Rightarrow \rho vS = cst 
 \Rightarrow \frac{d\rho}{\rho} + \frac{d\nu}{\nu} + \frac{dS}{S} = 0
 \end{equation}
 
@@ -778,13 +777,13 @@ Euler equation : \begin{equation}
 Equation of state (energy) :
 \begin{equation}
 p(x) = c_{s}^2\rho(x)
-\end{equation}
- It follows :
+\end{equation}  
+ It follows : 
 \begin{equation}
 v\frac{dv}{dx} = -c_s^2\frac{d\rho}{\rho dx} = c_s^2\bigg(\frac{dv}{vdx}+\frac{dS}{Sdx}\bigg)
 \Rightarrow \bigg( v - \frac{c_s^2}{v} \bigg)\frac{dv}{dx} = c_s^2\frac{dS}{Sdx}
 \end{equation}
-
+  
 The flow can be transonic only if $\frac{dS}{Sdx} = 0 $ which means that the cross section
 has an extremum. It is by default a minimum as at the entrance of the nozzle on the left,  $v<c_s$ and
 $\frac{dv}{dx} > 0$ thus $\frac{dS}{dx} > 0 $. If this minimum exists, to be transsonic the flow must
@@ -835,64 +834,7 @@ This leads us to next chapterand to consider axisymmetric models ans not only 1D
 
  
 \subsubsection{Vertical structure of a Thin Keplerian Disk}
-We consider first negligible accretion. In this case the horizontal equilibrium is just the balance between gravity and the centrifugal foce. This leads to Keplerian rotation of the disk, which gives its name. We can calculate the vertical equilibrium and deduce the vertical structure of the disk atmosphere. The basic features are kept even if there is accretion because in a thin disk rotation if much larger than the speed of accretion. This is not the case in thick disk where advection dominates.
 
-\fxnote{Missing figure}
-
-\paragraph{Horizontally} Rotation (centrifugal force $\vec{f}_\mathrm{centrifugal}$) balances gravity ($\rho\vec{g}$). In cylindrical coordinates ($r,\phi,z$), projecting horizontally gives the zeroth order:
-\begin{equation}
-  \rho \frac{v_\phi^2}{r}\approx \rho \frac{Gm_\star}{r^2}
-\end{equation}
-assuming a thin disk ($z < H \ll r$).
-
-The Keplerian velocity is $\tcboxmath{v_\phi = \sqrt{\frac{Gm_\star}{r}}}$ and the angular frequency is $\Omega = \frac{v_\phi}{r} = \sqrt{\frac{Gm_\star}{r^3}}$
-
-\paragraph{Vertically}
-
-vertical balance is of first order compared to the zeroth order of the horizontal equilibrium. The vertical component of gravity balances gas pressure. At point $M(r,z)$ :
-\begin{align}
-  -\frac{\d p}{\d z} - \rho \frac{Gm_\star}{r^2 + z^2}\sin\theta = 0 \\
-  \frac{\d p }{\d z} = -\rho \frac{Gm_\star z}{\left( r^2 + 2^2 \right)^{3/2}} \approx -\rho \frac{Gm_\star z}{r^3}
-\end{align}
-
-\subsubsection*{Isothermal disk}
-Isothermal ideal gas $p = \frac{\rho}{m_n}k_b T$, where $T$ is a constant. Denoting $\rho_0$ the density in the equatorial plane, we have (to the lowest order $z < H \ll r$) :
-\begin{equation}
-  \tcboxmath{
-    \rho \approx \rho_0 \exp \left( -\frac{Gm_\star}{2c_s^2} \frac{z^2}{r^3} \right) \approx \rho_0 \exp \left( -\frac{z^2}{H^2} \right), \quad \textrm{with $H = \sqrt{\frac{2c_s^2r^3}{Gm_\star}}$ }
-  }
-\end{equation}
-
-The scale height varies like $r^{3/2}$ \emph{but} is valid only for $H \ll r$. Thus the thin disk approximation is only valid to some distance within the disk.
-
-\fxnote{Missing figures here}
-
-\subsubsection{Adiabatic disk (isothermal in the equatorial plane)}
-
-The vertical equilibrium is the same for an adiabatic. At a point $M(r, z)$ we have,
-\begin{equation}
-  \frac{\d p}{\d z} \approx \rho \frac{Gm_\star z}{r^3}
-\end{equation}
-Is the disk is adiabatic $p = K\rho^\gamma$ with the same EOS $p = \rho \frac{k_b T}{m}$ then
-\begin{equation}
-  \frac{\d p}{\rho} = \frac{k_b}{m}\frac{\gamma}{\gamma-1}\d T = c_p \d T = \d h
-\end{equation}
-We then get
-\begin{equation}
-  \frac{k_b}{m} \frac{\gamma}{\gamma - 1} \frac{\d T}{\d z} \approx -GM_\star \frac{z}{r^3} \Rightarrow T = T_0 - \frac{\gamma- 1}{\gamma}\frac{m }{k_b} \frac{Gm_\star}{r^3} \frac{z^2}{2}
-\end{equation}
-This gives the temperature, density and pressure profiles:
-\begin{align}
-  T &\approx T_0 \left( 1 - \frac{z^2}{H^2} \right) \\
-  \rho &\approx \rho_0 \left( 1 - \frac{z^2}{H^2} \right)^{\frac{1}{\gamma-1}} \\
-  P & \approx P_0 \left( 1 - \frac{z^2}{H^2} \right)^{\frac{\gamma}{\gamma -1}}
-\end{align}
-The shape of the disk is the same as the scale height varies in the same way
-\begin{equation}
-  H = r^{3/2} \sqrt{\frac{\gamma}{\gamma - 1} \frac{2k_bT_0}{GM_\star m}}
-\end{equation}
-
-However the disk vertical size is finite as for any atmosphere with a realistic transport of energy (i.e. non isothermal!).
 \section{Theory of Standard Accretion Disks}
 
 \subsection{Shakura Sunyaev Standard Thin Disk}
@@ -905,7 +847,7 @@ We assume a thin disk as previously Keplerian to first order where the height
 can be neglected. In other words we integrate all equations on an annulus $R$
 over the height of the disk $H(R)$. First we write mass conservation,
 \begin{equation*}
-    \diffp{\rho}{t} + \vv{\nabla}.(\rho \vv{v}) = 0
+    \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) = 0
 \end{equation*}
 
 Introducing the surface mass density defined as
@@ -917,10 +859,10 @@ so that $2 \pi R \Sigma$ is the mass density per unit length. Integrating the
 mass conservation over H (the integral and the derivative being linear and here
 independant operators, they can be inverted),
 \begin{align*}
-    \int_{-H}^H \left( \diffp{\rho}{t} + \vv{\nabla}.(\rho \vv{v}) \right) = 0 % Not a mistake, just for code readability
-    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vv{\nabla}.\left( \int_{-H}^H \rho \vv{v} \d{z} \right) \\
-    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vv{\nabla}.\left( \vv{v} \int_{-H}^H \rho \d{z} \right) \\
-    &= \diffp{\Sigma z}{t} + \vv{\nabla}.(\Sigma V_R)
+    \int_{-H}^H \left( \diffp{\rho}{t} + \vec{\nabla}.(\rho \vec{v}) \right) = 0 % Not a mistake, just for code readability
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \int_{-H}^H \rho \vec{v} \d{z} \right) \\
+    &= \diffp{\int_{-H}^H \rho \d{z}}{t} + \vec{\nabla}.\left( \vec{v} \int_{-H}^H \rho \d{z} \right) \\
+    &= \diffp{\Sigma z}{t} + \vec{\nabla}.(\Sigma V_R)
 \end{align*}
 
 we get mass conservation on each annulus:
@@ -936,21 +878,21 @@ M}{R}}$. In reality rotation is slightly sub-Keplerian to allow accretion.
 We then use the Angular Momentum conservation, which comes from the global
 momentum equation,
 \begin{equation*}
-    \rho \diffp{\vv{v}}{t} + \rho (\vv{v}.\vv{\nabla})\vv{v} = \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}.\left(\rho \overline{\vv{v'} \otimes \vv{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
+    \rho \diffp{\vec{v}}{t} + \rho (\vec{v}.\vec{\nabla})\vec{v} = \rho \vec{g} - \vec{\nabla} p - \vec{\nabla}.\left(\rho \overline{\vec{v'} \otimes \vec{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
 \end{equation*}
 
 Momentum equation can be written with a turbulent pressure tensor
 \begin{equation*}
-    \diffp{}{t}(\rho \vv{v}) + \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) = \rho \vv{g}
+    \diffp{}{t}(\rho \vec{v}) + \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) = \rho \vec{g}
 \end{equation*}
 
 \FIXME{Need of a better tensorial notation for Pturb}
 
 with the turbulent pressure being
 \begin{align*}
-    \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vv{v'} \otimes \vv{v'}} \\
-    \left(\overline{\vv{v'} \otimes \vv{v'}}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
-    \Leftrightarrow \left(\overline{\vv{v'} \otimes \vv{v'}}\right) &= - \nu_T \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla}\right)
+    \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vec{v'} \otimes \vec{v'}} \\
+    \left(\overline{\vec{v'} \otimes \vec{v'}}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
+    \Leftrightarrow \left(\overline{\vec{v'} \otimes \vec{v'}}\right) &= - \nu_T \left(\vec{\nabla} \otimes \vec{v} + \vec{v} \otimes \vec{\nabla}\right)
 \end{align*}
 
 \FIXME{Same as above}
@@ -975,9 +917,9 @@ Magneto-Rotational-Instabililty (MRI hereafter).
 
 \FIXME{Make it a reference}
 
-To get the angular momentum conservation on $\phi$, we can multiply by $\vv{R} \times$, and integrate over height,
+To get the angular momentum conservation on $\phi$, we can multiply by $\vec{R} \times$, and integrate over height,
 \begin{align*}
-    &\int_{-H}^H \vv{R} \times \diffp{}{t}(\rho \vv{v}) \d{z} + \int_{-H}^H \vv{R} \times \vv{\nabla}.\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) \d{z}
+    &\int_{-H}^H \vec{R} \times \diffp{}{t}(\rho \vec{v}) \d{z} + \int_{-H}^H \vec{R} \times \vec{\nabla}.\left(\rho \vec{v} \otimes \vec{v} + \tens{P}_{turb}\right) \d{z}
     = \\
     &\Rightarrow =
 \end{align*}
@@ -1014,6 +956,32 @@ Fig b). The poynting flux is converted into kinetic acceleration. This mechanism
 in order to have  a large mass loading, and it is not available on the axis where rotation ceased. 
 
 \subsubsection{Thermal or Pressure Acceleration}
+\FIXME{missing figure}
+
+Another way to obtain strongly accelerated jet is to invoke the presence of pressure gradients 
+like in the solar wind. A purely thermally driven wind gives temperatures too high.
+
+\begin{align*}
+  & T \sim 10V^2 \\
+  &  10^7 K \leftrightarrow	  \SI{1000}{\km\per \s } \\ 
+  & 10^6 K \leftrightarrow \SI{20}{\km \per\s}  \\
+  &10 ^{12-13} K \leftrightarrow  \SI{300000}{\km \per \s} \\ 
+  & \Gamma \sim 3 \text{ - } 10
+\end{align*}
+
+However to solve this problem, one can invoke the fact that as in the solar wind where the 
+effective temperature is ten times higher than the kinetic wind pressure, we may also argue
+for jets that in addition to the kinetic temperature, the total pressure includes Ram, Alfven
+or other wave pressure.
+
+
+All this is consistant if the variation $\sim$ magnitude are reasonable.
+
+\begin{equation}
+P_{ram} \sim \frac{\delta V^2}{V^2} \qquad
+P_{Alfven}	\sim \frac{\delta B^2}{b^2} \qquad
+\frac{\delta V}{V } \text{ or } \frac{\delta B}{B} \sim 1
+\end{equation}
 \subsubsection{Pressure of thermal Collimation}
 \subsubsection{Magnetic Collimation}
 \subsection{Steady vs Time dependent, Analytical vs Simulations}
