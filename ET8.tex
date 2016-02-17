@@ -479,7 +479,7 @@ We get for:
     0.3-\SI{3}{eV} < kT < \SI{4.5}{keV}
   \end{equation}
   corresponding to radiations from IR, visible to X rays.
-\item \textbf{a Jupiter}, the range is 
+\item \textbf{a Jupiter}, the range is
   \begin{equation}
     \SI{e-3}{eV} < kT < \SI{5}{eV}
   \end{equation}
@@ -704,7 +704,7 @@ We see that close to the star, the fluid is in free fall. The mass accretion rat
   \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
 \end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
-We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vec{v} = \vec{v}(r)$. 
+We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vv{v} = \vv{v}(r)$.
 
 Even if the fluid is magnetized, the assumption of spherical symmetry implied that the magnetic field parallel to the stream does not give any contribution. The Poynting flux is zero.
 
@@ -750,90 +750,90 @@ propagate sound waves back to the source.
 
 There is a strong analogy between the soncic surface and apparent horizon in
 black holes, except that the sound speed  replaces the speed of light. This is
-illustrated in the following figures. 
+illustrated in the following figures.
 
 \fxnote{Missing figure}
 
 If the star rotates, in addition to the sonic surface/horizon there is also an
 accoustic ergosphere.
- 
+
 \subsubsection{De Laval Nozzle}
 
-There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a 
+There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a
 pipe with a variable cross section. It has a minimum and this minimum should coincide with the
 sonic point to have strong supersonic flow,
 
 \fxnote{Missing Figure}
 
-Mass conservation : 
+Mass conservation :
 
 \begin{equation}
-\vec{\nabla}.(\rho\vec{v}) \Rightarrow \int \rho\vec{v}.d\vec{S} = cst \Rightarrow \rho vS = cst 
+\vv{\nabla}.(\rho\vv{v}) \Rightarrow \int \rho\vv{v}.d\vv{S} = cst \Rightarrow \rho vS = cst
 \Rightarrow \frac{d\rho}{\rho} + \frac{d\nu}{\nu} + \frac{dS}{S} = 0
 \end{equation}
 
-Euler equation : \begin{equation} 
-\rho v \frac{dv}{dx} = -\frac{dp}{dx} 
+Euler equation : \begin{equation}
+\rho v \frac{dv}{dx} = -\frac{dp}{dx}
 \end{equation}
 Equation of state (energy) :
 \begin{equation}
 p(x) = c_{s}^2\rho(x)
-\end{equation}  
- It follows : 
+\end{equation}
+ It follows :
 \begin{equation}
 v\frac{dv}{dx} = -c_s^2\frac{d\rho}{\rho dx} = c_s^2\bigg(\frac{dv}{vdx}+\frac{dS}{Sdx}\bigg)
 \Rightarrow \bigg( v - \frac{c_s^2}{v} \bigg)\frac{dv}{dx} = c_s^2\frac{dS}{Sdx}
 \end{equation}
-  
+
 The flow can be transonic only if $\frac{dS}{Sdx} = 0 $ which means that the cross section
 has an extremum. It is by default a minimum as at the entrance of the nozzle on the left,  $v<c_s$ and
 $\frac{dv}{dx} > 0$ thus $\frac{dS}{dx} > 0 $. If this minimum exists, to be transsonic the flow must
 attain the sound speed at the minimum cross section.
-  
+
 \paragraph{Spherical flow, Parker wind}
-  
-For a spherical wind we have : 
+
+For a spherical wind we have :
 \begin{equation}
-\bigg( v - \frac{c_s^2}{v}  \bigg)\frac{dv}{dr} = c_s^2\frac{dS}{Sdr} 
-= \frac{2c_s^2}{r} - \frac{GM}{r^2} \Rightarrow \frac{d \ln S}{dr} = 
-\frac{2}{r} - \frac{GM}{c_s^2 r2}   
+\bigg( v - \frac{c_s^2}{v}  \bigg)\frac{dv}{dr} = c_s^2\frac{dS}{Sdr}
+= \frac{2c_s^2}{r} - \frac{GM}{r^2} \Rightarrow \frac{d \ln S}{dr} =
+\frac{2}{r} - \frac{GM}{c_s^2 r2}
 \Rightarrow \ln S = \ln r^2 +\frac{GM}{c_s^2r} + k
 \end{equation}
 
-And finally : 
+And finally :
 \begin{equation}
  \tcboxmath{S = Cr^2 \exp\bigg(\frac{GM}{c_s^2 r}\bigg)}
 \end{equation}
- 
- Gravity plays the role of reducing the effective cross sectionas te radial flux tubes expands 
+
+ Gravity plays the role of reducing the effective cross sectionas te radial flux tubes expands
  as $r^2$. There is no real throat just an effect of graviy.
-  
+
 \paragraph{Funnel ans 1D flow}
-The analogy has been used to explain jets both in the YSO  and the AGN contexts. The argument 
-is to use the presence of the surrounding thick disk close to the central object has shaped in 
+The analogy has been used to explain jets both in the YSO  and the AGN contexts. The argument
+is to use the presence of the surrounding thick disk close to the central object has shaped in
 the form a funnel.
 
-This is the case of the famous \textbf{ Exhaust Model for AGN Jets} suggested by 
+This is the case of the famous \textbf{ Exhaust Model for AGN Jets} suggested by
 Blandford  \&  Rees 1974 (see correct figure), used also in the Ion Supported Torus
 model of jet funnel by Phinney 1999 (see other correct figure).
 
 \fxnote{Missing Figure}
 
-Raga and Canto also used this model in 1989 for YSO, invoking a stellar wind to make 
+Raga and Canto also used this model in 1989 for YSO, invoking a stellar wind to make
 the cavity.
 
 \fxnote{Missing figure}
 
-These models suffer strong flaws. The shape of the funnel is somewhat given and 
+These models suffer strong flaws. The shape of the funnel is somewhat given and
 not the result of a really consistent resolution of the MHD equations. The strongest argument
-is however that the throat of the funnel is always too far from the central object to maintain 
+is however that the throat of the funnel is always too far from the central object to maintain
 a very small opening angle for the jet.
 
 This leads us to next chapterand to consider axisymmetric models ans not only 1D solutions.
 
 
 
- 
+
 \subsubsection{Vertical structure of a Thin Keplerian Disk}
 
 \section{Theory of Standard Accretion Disks}
@@ -879,11 +879,7 @@ M}{R}}$. In reality rotation is slightly sub-Keplerian to allow accretion.
 We then use the Angular Momentum conservation, which comes from the global
 momentum equation,
 \begin{equation*}
-<<<<<<< 29d38d2474d4dd8d7bab891319795f6cf61458d6
-    \rho \diffp{\vec{v}}{t} + \rho (\vec{v}.\vec{\nabla})\vec{v} = \rho \vec{g} - \vec{\nabla} p - \vec{\nabla}.\left(\rho \overline{\vec{v'} \otimes \vec{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
-=======
     \rho \diffp{\vv{v}}{t} + \rho (\vv{v}.\vv{\nabla})\vv{v} = \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}.\left(\rho \overline{\vv{v}' \otimes \vv{v}'}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
->>>>>>> More work in III.1
 \end{equation*}
 
 Momentum equation can be written with a turbulent pressure tensor
