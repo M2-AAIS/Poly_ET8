@@ -142,6 +142,8 @@
 \newpage
 \pagenumbering{arabic} % 1, 2, 3, ...
 
+\FIXME{We need to harmonize notation of $v$ vs $V$, $r$ vs $R$}
+
 \section{The necessity of the Accretion-Jet Mechanism}
 
 \subsection{Active Galactic Nuclei}
@@ -868,6 +870,7 @@ independant operators, they can be inverted),
 
 we get mass conservation on each annulus:
 \begin{equation}
+    \label{eq:alpha_mass}
     \tcboxmath{
         \diffp{\Sigma}{t} + \frac{1}{R} \diffp{(R \Sigma V_R)}{R} = 0
     }
@@ -879,7 +882,8 @@ M}{R}}$. In reality rotation is slightly sub-Keplerian to allow accretion.
 We then use the Angular Momentum conservation, which comes from the global
 momentum equation,
 \begin{equation*}
-    \rho \diffp{\vv{v}}{t} + \rho (\vv{v}.\vv{\nabla})\vv{v} = \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}.\left(\rho \overline{\vv{v}' \otimes \vv{v}'}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
+    \rho \diffp{\vv{v}}{t} + \rho (\vv{v}.\vv{\nabla})\vv{v} =
+    \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}.\left(\rho \overline{\vv{v}' \otimes \vv{v}'}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
 \end{equation*}
 
 Momentum equation can be written with a turbulent pressure tensor
@@ -892,8 +896,10 @@ Momentum equation can be written with a turbulent pressure tensor
 with the turbulent pressure being
 \begin{align*}
     \tens{P}_{turb} &= p_{gas} \tens{I} + \rho \overline{\vv{v}' \otimes \vv{v}'} \\
-    \left(\overline{\vv{v}' \otimes \vv{v}'}\right)_{ij} &= \overline{v_i' v_j'} = - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
-    \Leftrightarrow \left(\overline{\vv{v}' \otimes \vv{v}'}\right) &= - \nu_T \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla}\right)
+    \left(\overline{\vv{v}' \otimes \vv{v}'}\right)_{ij} &= \overline{v_i' v_j'} =
+    - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
+    \Leftrightarrow \left(\overline{\vv{v}' \otimes \vv{v}'}\right) &=
+    - \nu_T \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla}\right)
 \end{align*}
 
 \FIXME{Same as above}
@@ -944,8 +950,8 @@ We get,
 \end{equation*}
 
 We replace the rotational speed with the Keplerian laws as the flow is supposed to be quasi-Keplerian,
-
 \begin{equation}
+    \label{eq:alpha_moment}
     \tcboxmath{
         \diffp{\Sigma R^2 \Omega}{t} + \frac{1}{R} \diffp{R V_R \Sigma R^2 \Omega}{R} = \frac{1}{R} \diffp{RG}{R}
     }
@@ -955,8 +961,52 @@ The turbulence viscous torque is given by,
 \begin{align*}
     & \overleftrightarrow{G} = - \int_{-H}^H \vv{R} \times \left( \overline{\rho \vv{v}' \otimes \vv{v}'} \right) \d{z} =
     \nu_T \vv{R} \times \int_{-H}^H \rho \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla} \right) \d{z} \\
-    & \Rightarrow G = \nu_T R \int_{-H}^{H} \rho R \diffp{}{R} \frac{V_\varphi}{R}
+    & \Rightarrow G = \nu_T R \int_{-H}^{H} \rho R \diffp{}{R} \frac{V_\varphi}{R} \d{z}
 \end{align*}
+
+The second line being the $\varphi$ compound, only interesting one regarding
+$\vv{\nabla}.\overleftrightarrow{G}.\vv*{e}{z}$, which reduces in our simple
+case to the following scalar,
+\begin{equation*}
+    \Rightarrow G = \nu_T R \int_{-H}^H R \diffp{}{R} \left( \frac{V_\varphi}{R} \right) \rho \d{z} \diffp{}{R} \left(\frac{R \Omega}{R}\right)
+\end{equation*}
+\begin{equation}
+    \tcboxmath{
+        G(R,t) = \nu_T \Sigma R^2 \diffp{\Omega}{R}
+    }
+\end{equation}
+
+The anomalous coefficient of viscosity if coming from turbulence should be
+proportional to the sound speed at which instabilities propagate and to the
+local scale height of the disk,
+\begin{equation}
+    \tcboxmath{
+        \nu_T = \alpha c_s H
+    }
+\end{equation}
+
+The $\alpha$ coefficient explan the name $\alpha$-disk given to these disks.
+
+Combining \cref{eq:alpha_mass,eq:alpha_moment} with the Keplerian law,
+$V_\varphi \approx R \Omega_K$, we finally obtain,
+\begin{align*}
+    \diffp{\Sigma}{t} &= \frac{3}{R} \diffp{}{R} \left( R^\frac{1}{2} \diffp{}{R} \left( \nu_T \Sigma R^\frac{1}{2} \right) \right) \\
+    \nu_T &= \nu_T(\Omega,R,t)
+\end{align*}
+
+This is a non-linear diffusion equation with the typical viscous time and
+accrection speed,
+\begin{equation*}
+    t_{vis} \approx \frac{R^2}{\nu_T} ; V_R = \frac{R}{t_{vis}} \approx \frac{\nu_T}{R}
+\end{equation*}
+
+The two previous equation must be finally combined to the $R$-component or
+radial component of the momentum equation to get the pressure profile,
+\begin{equation}
+    \tcboxmath{
+        \diffp{V_R}{t} + V_R \diffp{V_R}{R} - \frac{V_\varphi^2}{R^2} = - \frac{GM}{R^2} - \frac{1}{\rho} \diffp{P}{R}
+    }
+\end{equation}
 
 \subsubsection{Steady Accretion Disk}
 \subsubsection{Self-consistency}
