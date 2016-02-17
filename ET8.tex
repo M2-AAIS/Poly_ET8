@@ -1010,6 +1010,80 @@ radial component of the momentum equation to get the pressure profile,
 \subsubsection{Steady Accretion Disk}
 \subsubsection{Self-consistency}
 \subsection{Origin of Turbulence in Standard Thin Disks}
+turbulence comes from instabilities, For a weakly magnetized disk, magneto-rotational instability is a good candidate.
+This instability was first studied bu Balbus and Hawley  (1991) in the context of accretion disk, though the
+magneto-rotational was already formally described earlier by Russain groups. in the context of disks, 
+it is a rather important instability because it may explain the origin of turbulence and allows to estimate 
+the turbulent vicosity  and the turbulent magnetic diffusity in those objects. 
+
+\FIXME{fix references in next paragraph}
+
+The system is an accretion disk around a star as seen on Fig.XXX below, thread by a vertical homogeneous field
+$\vec{B_o} = B_z\vec{e_z}$ such that the Lorents force is zero, using cylindrical coordinates $[r,\theta,\phi]$.
+Thus gravity is balanced only by the centrifugal force. The disk rotates  at the Keplerian speed. The angular 
+velocity is thus $\Omega = \frac{v_{\phi}}{r} = \sqrt{\frac{Gm_*}{r^3}}$  (see III.2.2.3). The magnetic fiels 
+is frozen  in the plasma. it is easy to verify that the induction equation is trivially satisfied.
+
+\FIXME{Missing figure}
+
+In the initial non pertubed state, let consider three distanes sorted as follow $r_1 < r_0 < r_2 $. At 
+each point, gravity balances the centrifugal fore  such that we can writte : 
+\begin{equation}
+\underbrace{\frac{Gm}{r_1^2} = \frac{r_1^2\Omega_1^2}{r_1}}_{\text{at positon  } r_1} > 
+\underbrace{\frac{Gm}{r_0^2} = \frac{r_0^2\Omega_0^2}{r_0}}_{\text{at position }r_0 > r_1}	>
+\underbrace{\frac{Gm}{r_2^2} = \frac{r_2^2\Omega_2^2}{r_2}}_{\text{at position }r_2 > r_0}	
+\end{equation}
+
+This just expresses that gravity decreases outward, thus the rotational speed as well. The gravitational 
+force pushing inward (i.e $-\vec{e_r}$), and the centrifugal force  outward as it can be seen in the vector
+form of the force balance :
+\begin{equation}
+-\rho\frac{Gm}{r^2}\vec{e_r} + \rho\frac{v_{\phi}^2}{r}\vec{e_r} = \vec{0}
+\end{equation}
+
+Now  on b) the system is perturbed. Point 1 comes from $r_0$ to $r_1$ and point 2 from 
+$r_0$ to $r_2$. The key point here, contrarily to the centrifugal instability explaines in 
+IV.3.3, is the flux freezing . It implies thath for sufficiently strong vertial fields this is not 
+the angular momentum $ L$ which is conserved because it can be exchanged with the magnetic field,
+but the angular velocity $\Omega$. Thus point 1 is pushed inwards toward the star where 
+gravity is stronger but keeping its initial angular speed $\Omega_0$. Thus we immediatly get 
+for point 1 : 
+\begin{equation}
+f_{gravity,1} = \frac{Gm}{r_1^2} = \frac{r_1^2\Omega_1^2	}{r_1} > 
+\frac{r_1^2\Omega_0^2}{r_1} = f_{centrifugal,1}
+\end{equation}
+
+There, gravity is larger than the centrifugal force and pushes 1 further  down toward the centre. 
+Conversely point 2 is pushed further out because there the opposite holds : 
+
+\begin{equation}
+f_{gravity,2} = \frac{Gm}{r_2^2} = \frac{r_2^2\Omega_2^2	}{r_2} < 
+\frac{r_2^2\Omega_0^2}{r_2} = f_{centrifugal,2}
+\end{equation}
+
+\FIXME{Missing figure}
+
+The end result is that the system is unstable and the perturbation develops. Of course the magnetic
+tension of the poloidal field will limit the growth of the instability. This is why the unstability is usually
+quoted to be efficient in weakly magnetized disks
+
+A more quantitative analysis shows that the system  is unstable if : 
+\begin{equation}
+\tcboxmath{\frac{d\Omega^2}{dr} < 0 \Rightarrow \text{unstable}}
+\end{equation}
+
+Thus, the rotation in a star is usuallly such that the star is not affected, while Keplerian
+disk are likely to be highly unstable  to this unstability. This unstability as a source of 
+turbulence gives a  nice ans natural explanation of the alpha vicosity  used in the standard
+Shakura-Sunyaev thin accretion disk model. In such a case,  the origin of turbulence is also 
+the origin of the magnetic diffusity and the magnetic Prandtl number (The ratio of the viscosity to magnetic
+diffusity) should be close to one. In which case, the magnetic field cannot be accreted with matter because it
+diffuses through the lines. However it may still be accreted if angular momentum is removed not by viscosity
+but by an outflowing  magneto-centrifugally driven disk wind. For those interested, the original paper by Balbus
+and Hawley, ApJ, 1991, is easy to read anf gives details on both the qualitative as well as the linear 
+analysis of the instability.
+
+
 \subsection{Radiation Supported Thin Disk}
 \subsection{Advection Dominated disks and slim disks}
 \subsection{Magnetized Accretion disks}
