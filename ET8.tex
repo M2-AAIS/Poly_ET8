@@ -749,22 +749,22 @@ to propagate sound waves back to the source.
 
 There is a strong analogy between the soncic surface and apparent horizon in black holes, 
 except that the sound speed  replaces the speed of light. This is illustrated in the following
-figures. 
+figures.
 
 \fxnote{Missing figure}
 
 If the star rotates, in addition to the sonic surface/horizon there is also an accoustic ergosphere.
 
-  
+
 \subsubsection{De Laval Nozzle}
 
-There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a 
+There is a strong analogy between the parker wind and a flow through a nozzle. A nozzle is a
 pipe with a variable cross section. It has a minimum and this minimum should coincide with the
 sonic point to have strong supersonic flow,
 
 \fxnote{Missing Figure}
 
-Mass conservation : 
+Mass conservation :
 
 \begin{equation}
 \vec{\nabla}.(\rho\vec{v}) \Rightarrow \int \rho\vec{v}.d\vec{S} = cst \Rightarrow \rho vS = cst 
@@ -777,13 +777,13 @@ Euler equation : \begin{equation}
 Equation of state (energy) :
 \begin{equation}
 p(x) = c_{s}^2\rho(x)
-\end{equation}  
- It follows : 
+\end{equation}
+ It follows :
 \begin{equation}
 v\frac{dv}{dx} = -c_s^2\frac{d\rho}{\rho dx} = c_s^2\bigg(\frac{dv}{vdx}+\frac{dS}{Sdx}\bigg)
 \Rightarrow \bigg( v - \frac{c_s^2}{v} \bigg)\frac{dv}{dx} = c_s^2\frac{dS}{Sdx}
 \end{equation}
-  
+
 The flow can be transonic only if $\frac{dS}{Sdx} = 0 $ which means that the cross section
 has an extremum. It is by default a minimum as at the entrance of the nozzle on the left,  $v<c_s$ and
 $\frac{dv}{dx} > 0$ thus $\frac{dS}{dx} > 0 $. If this minimum exists, to be transsonic the flow must
@@ -834,7 +834,64 @@ This leads us to next chapterand to consider axisymmetric models ans not only 1D
 
  
 \subsubsection{Vertical structure of a Thin Keplerian Disk}
+We consider first negligible accretion. In this case the horizontal equilibrium is just the balance between gravity and the centrifugal foce. This leads to Keplerian rotation of the disk, which gives its name. We can calculate the vertical equilibrium and deduce the vertical structure of the disk atmosphere. The basic features are kept even if there is accretion because in a thin disk rotation if much larger than the speed of accretion. This is not the case in thick disk where advection dominates.
 
+\fxnote{Missing figure}
+
+\paragraph{Horizontally} Rotation (centrifugal force $\vec{f}_\mathrm{centrifugal}$) balances gravity ($\rho\vec{g}$). In cylindrical coordinates ($r,\phi,z$), projecting horizontally gives the zeroth order:
+\begin{equation}
+  \rho \frac{v_\phi^2}{r}\approx \rho \frac{Gm_\star}{r^2}
+\end{equation}
+assuming a thin disk ($z < H \ll r$).
+
+The Keplerian velocity is $\tcboxmath{v_\phi = \sqrt{\frac{Gm_\star}{r}}}$ and the angular frequency is $\Omega = \frac{v_\phi}{r} = \sqrt{\frac{Gm_\star}{r^3}}$
+
+\paragraph{Vertically}
+
+vertical balance is of first order compared to the zeroth order of the horizontal equilibrium. The vertical component of gravity balances gas pressure. At point $M(r,z)$ :
+\begin{align}
+  -\frac{\d p}{\d z} - \rho \frac{Gm_\star}{r^2 + z^2}\sin\theta = 0 \\
+  \frac{\d p }{\d z} = -\rho \frac{Gm_\star z}{\left( r^2 + 2^2 \right)^{3/2}} \approx -\rho \frac{Gm_\star z}{r^3}
+\end{align}
+
+\subsubsection*{Isothermal disk}
+Isothermal ideal gas $p = \frac{\rho}{m_n}k_b T$, where $T$ is a constant. Denoting $\rho_0$ the density in the equatorial plane, we have (to the lowest order $z < H \ll r$) :
+\begin{equation}
+  \tcboxmath{
+    \rho \approx \rho_0 \exp \left( -\frac{Gm_\star}{2c_s^2} \frac{z^2}{r^3} \right) \approx \rho_0 \exp \left( -\frac{z^2}{H^2} \right), \quad \textrm{with $H = \sqrt{\frac{2c_s^2r^3}{Gm_\star}}$ }
+  }
+\end{equation}
+
+The scale height varies like $r^{3/2}$ \emph{but} is valid only for $H \ll r$. Thus the thin disk approximation is only valid to some distance within the disk.
+
+\fxnote{Missing figures here}
+
+\subsubsection{Adiabatic disk (isothermal in the equatorial plane)}
+
+The vertical equilibrium is the same for an adiabatic. At a point $M(r, z)$ we have,
+\begin{equation}
+  \frac{\d p}{\d z} \approx \rho \frac{Gm_\star z}{r^3}
+\end{equation}
+Is the disk is adiabatic $p = K\rho^\gamma$ with the same EOS $p = \rho \frac{k_b T}{m}$ then
+\begin{equation}
+  \frac{\d p}{\rho} = \frac{k_b}{m}\frac{\gamma}{\gamma-1}\d T = c_p \d T = \d h
+\end{equation}
+We then get 
+\begin{equation}
+  \frac{k__b }{m} \frac{\gamma}{\gamma - 1} \frac{\d T}{\d z} \approx -GM_\star \frac{z}{r^3} \Rightarrow T = T_0 - \frac{\gamma- 1}{\gamma}\frac{m }{k_b} \frac{Gm_\star}{r^3} \frac{z^2}{2}
+\end{equation}
+This gives the temperature, density and pressure profiles:
+\begin{align}
+  T &\approx T_0 \left( 1 - \frac{z^2}{H^2} \right) \\
+  \rho &\approx \rho_0 \left( 1 - \frac{z^2}{H^2} \right)^{\frac{1}{\gamma-1}} \\
+  P & \approx P_0 \left( 1 - \frac{z^2}{H^2} \right)^{\frac{\gamma}{\gamma -1}}
+\end{align}
+The shape of the disk is the same as the scale height varies in the same way
+\begin{equation}
+  H = r^{3/2} \sqrt{\frac{\gamma}{\gamma - 1} \frac{2k_bT_0}{GM_\star m}}
+\end{equation}
+
+However the disk vertical size is finite as for any atmosphere with a realistic transport of energy (i.e. non isothermal!).
 \section{Theory of Standard Accretion Disks}
 
 \subsection{Shakura Sunyaev Standard Thin Disk}
