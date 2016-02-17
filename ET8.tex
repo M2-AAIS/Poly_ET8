@@ -1092,9 +1092,59 @@ of such a disk provided taht it is entirely supported by radiation from the disk
 We use the following notation for the mass density and the temperature on the equatorial  plane : 
 
 \begin{align}
-   +  & \rho_c = \rho(z=0) = \frac{\Sigma}{2H}
-   +  & T-c = T(z=0)
-\end{align} 
+	& \rho_c = \rho(z=0) = \frac{\Sigma}{2H} \\
+	& T-c = T(z=0)
+\end{align}
+
+The sound speed is : $c_s^2 = \frac{p}{\rho}$ with a total (scalar) pressure : 
+\begin{equation}
+P = P_{gas} + P_{rad}  = \rho \frac{k_b T_c}{\mu m_H} + \frac{4\sigma}{3 c}T_c^4
+\end{equation}
+
+if radiation dominates over the plasma gas pressure then we get : 
+\begin{equation}
+P_{gas} = \rho \frac{k_b T_c}{\mu m_H} << P_{rad} = \frac{u_{rad}}{3} = \frac{4\sigma}{3 c}T_c^4`
+\end{equation}
+
+The ful energy equation gives : 
+\begin{equation}
+\frac{\partial}{\partial t } \bigg (
+\frac{1}{2}\rho v^2 + u + \rho \Phi_{grav} + u_{rad} \bigg) + 
+\vec{\nabla}.\bigg(  
+\frac{1}{2}\rho v^2 \vec{v} + (u + p)\vec{v} + \rho \Phi_{grav}\vec{v} + 
+\vec{q} - \tens{\sigma}_{visc}.\vec{v} + \vec{S}_{rad}
+\bigg) = 0
+\end{equation}
+
+Assume steady state and radiatively dominated. if the disk is thin, the horizontal gradients
+are negligible compared to horizontal ones.
+
+\begin{equation}	
+\diff{p}{R} << \diff{p}{z}, \diff{T}{R} << \diff{T}{z}\text{  etc}
+\end{equation}
+Thus we have : 
+\begin{equation}
+ \left.
+    \begin{array}{ll}
+        & \vec{\nabla}.\big( \vec{q}+\vec{S}_{rad}-\tens{\sigma}_{visc}\cdot\vec{v}\big)\\
+        & \vec{q} << \vec{S}_{rad}
+    \end{array}
+\right \}\Rightarrow \vec{\nabla}\cdot\big(\vec{S}_{rad}-\tens{\sigma}_{visc}\cdot\vec{v}\big) 
+\end{equation}
+\begin{equation}
+\vec{S}_{rad}(H) - \tens{\sigma}_{visc}\cdot\vec{v}(H) = \vec{S}_{rad}(0) - \tens{\sigma}_{visc}\cdot\vec{v}(0) \Leftrightarrow
+S_{rad}(H) = D
+\end{equation}
+were : 
+\begin{equation}
+D(R) = G(R)\frac{1}{4\pi R}\frac{\partial \Omega}{\partial R } = 
+\frac{1}{2}v_T \Sigma\bigg(   R\frac{\partial \Omega}{\partial R }\bigg)^2 \underset{\mathrm{\Omega = \Omega_K}}{\approx}
+\frac{3GM\dot{M}}{8\pi R^3}\Bigg( 1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\Bigg)
+\end{equation}
+
+
+
+
 
 \subsection{Advection Dominated disks and slim disks}
 \subsection{Magnetized Accretion disks}
