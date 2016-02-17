@@ -1076,6 +1076,45 @@ sufficient and there is no need for collimation.
 
 \subsubsection{Self-consistency}
 
+In the following by looking at the order of magnitude in the vertical and
+radial equilibrium, we verify that our assumptions are at least
+self-consistent.
+
+Along $z$, we write the vertical momentum equation
+\begin{equation}
+    0 = - \frac{G M z} {R^3} - \frac{1}{\rho} \diffp{P}{z} \Rightarrow \frac{H}{R} \approx c_s \sqrt{\frac{R}{G M}} \approx \frac{c_s}{V_K}
+\end{equation}
+
+This equation implies that the Keplerian speed of the rotation should be supersonic.
+\begin{equation}
+    \tcboxmath{
+        \Rightarrow V_K \gg c_s
+    }
+\end{equation}
+
+Along $R$, we wirte the radial momentum equation
+\begin{equation}
+    \diffp{V_R}{t} + V_R \diffp{V_R}{R} - \frac{V_\varphi^2}{R^2} = - \frac{G M}{R^2} - \frac{1}{\rho} \diffp{P}{R}
+\end{equation}
+
+This,
+\begin{align*}
+    & \frac{1}{\rho} \diffp{P}{R} = \frac{c_s^2}{R} \ll \frac{G M}{R^2} = \frac{V_\varphi^2}{R^2} \\
+    & V_R \approx \frac{\nu_T}{R} = \frac{\alpha c_s H}{R} \\
+    & V_R \diffp{V_R}{R} \approx \frac{V_R^2}{R} \approx \alpha^2 \frac{c_s^2}{R} \left(\frac{H}{R}\right)^2 \ll 1\\
+    & V_\varphi = R \Omega_K \left(1 + \mathcal{O}\left(\frac{c_s^2}{V_\varphi^2}\right) \right) \\
+    & \frac{H}{R} \approx \frac{c_s}{V_\varphi}
+\end{align*}
+
+This implies that the radial speed of the accretion is subsonic.
+\begin{equation}
+    \tcboxmath{
+        \Rightarrow \frac{V_R}{c_s} \approx \alpha \frac{H}{R} \approx \alpha \frac{c_s}{V_\varphi} \ll 1
+    }
+\end{equation}
+
+And % Yes, the course stop here like that. Asking the teacher…
+
 \subsection{Origin of Turbulence in Standard Thin Disks}
 
 turbulence comes from instabilities, For a weakly magnetized disk, magneto-rotational instability is a good candidate.
