@@ -1269,6 +1269,38 @@ These model seem to be better explanations of the velocity profiles because of t
 Beside the fact that the MHD equations are not completely solved in a consistent way, The major problem of this X-wind scenario is the stability and the lack of power. The fan \fxnote{ventilateur ?} configuration is shown to be highly unstable. An alternative could be that X-winds are the unstable components as shown in the numeric simulations of Romanova et al..
 \fxnote{Missing figures}
 \subsubsection{Stellar wind and magnetic braking}
+Stellar winds got out of fashion because the thermal driving is not sufficient to explain the high mass loss rates and velocities observed. However, a complete description of the jet cannot exclude this inner part and moreover the stellar outflow is nowadays the only issue to the angular momentum problem.
+\fxnote{Figure}
+T-Tauri stars are rotation at 10\% of their breakup speed. Classical T-Tauri stars are rotating more slowly than weak T-Tauri stars. It was originally thought that the difference could come from the connection between the CTTS and its disk, which is absent for WTTS.
+
+This is the so-called disk locking. A magnetic line of the star rooted in the disk beyond the co-rotation radius spins down the rotation of the star, while a line rooted below the co-rotation radius will spin it up. However simulations shown that the disk locking is inefficient because most of the lines are below the co-rotation radius in a stable configuration.
+
+Magnetic braking (see \ref{fix ref} next section) from the magnetized stellar wind is more efficient. The following figures \fxnote{put them} illustrate a stellar jet solution collimating on large distances, adapted for low mass accretion rates as in RY Tau. The mass loss rate from the stellar wind is $\SI{e-9}{M_\odot\per\year}$. Collimation is magnetic but the outflow is pressure driven.
+
+THe density profile is compatible with observations in the jet of RY Tau. The temperature calculated as the ratio of the pressure to density is high. However, if the wind is pressure driven, it does mean that the total pressure is the kinetic component only. The pressure is the sum of various contributions (ram pressure, Alfvén waves, etc…). This the plotted temperature is an effective temperature larger than the real temperature.
+
+\fxnote{Figures}
+
+These analytical solution can be used as initial condition. The magnetosphere can be treated as a dead zone.
+
+\fxnote{Figures}
+
+The end result is to obtain sporadic X-wind but with steady accretion and stellar jet conversely to previously.
+
+\paragraph{Braking time}
+
+We can easily estimate the braking time of the central object (Schatzmann 1957, Weber \& Davis 1967, Mestel 1968). The angular momentum loss extracted by the wind is:
+\begin{equation}
+  \dot{J}_\star = \frac{2}{3}\varepsilon_A^2\Omega \dot{M}_\mathrm{wind}
+\end{equation}
+The total stellar angular momentum is
+\begin{equation}
+  J_\star = kr^2_\star \Omega M_\star
+\end{equation}
+$k$ depends on the stellar structure, \num{0.06} for the sun up to \num{0.2} for a fully convective star. This to remove the angular momentum of the star, it takes:
+\begin{equation}
+  \tau \approx \frac{J_\star}{\dot{J}_\star} \approx \frac{3kr^2_\star \Omega M_\star}{2\varepsilon_A^2\Omega\dot{M}_\mathrm{wind}}
+\end{equation}
 
 \section{Counter rotation}
 \label{sec:counter_rotation}
