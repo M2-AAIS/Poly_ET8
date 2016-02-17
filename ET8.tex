@@ -1008,8 +1008,76 @@ radial component of the momentum equation to get the pressure profile,
 \end{equation}
 
 \subsubsection{Steady Accretion Disk}
+
+Assuming now that we have a steady state, we get the mass loss rate,
+\begin{equation}
+    \diffp{R \Sigma V_R}{R} = 0 \Leftrightarrow 2 \pi R \Sigma (- V_R) = cst = \dot{M}
+\end{equation}
+
+The angular momentum conservation that can be integrated
+\begin{equation}
+    \diffp{2 \pi R V_R \Sigma R^2 \Omega}{R} = \diffp{(2 \pi R G)}{R} \Leftrightarrow 2 \pi R V_R \Sigma R^2 \Omega = 2 \pi R G(R) + 2 \pi C
+\end{equation}
+\begin{equation*}
+    R G(R) = - \frac{\dot{M}}{2 \pi} R^2 \Omega - C = - \frac{\dot{M}}{2 \pi} l - C
+\end{equation*}
+
+$l = R^2 \Omega$ is the specific angular momentum.
+\begin{align*}
+    & RG(R) = - \frac{\dot{M}}{2 \pi} (l - l_{in}) = R \nu_T \Sigma R^2 \diffp{\Omega}{R} \\
+    & \Rightarrow \nu_T \Sigma = \frac{\dot{M}}{3 \pi} \left(1 - \frac{l_{in}}{l}\right) =
+    \frac{\dot{M}}{3 \pi} \left(1 - \left(\frac{R_{in}}{R}\right)^\frac{1}{2}\right) \\
+    &G(R_{in}) = 0 \Rightarrow C = - \frac{\dot{M}}{2 \pi} l_{in}
+\end{align*}
+
+Thus the accretion velocity is given by,
+\begin{equation}
+    \tcboxmath{
+        \Rightarrow V_R = - \frac{3 \nu_T}{2 R} \left(1 - \left(\frac{R_{in}}{R}\right)^\frac{1}{2}\right)^{-1}
+    }
+\end{equation}
+
+In a steady state, the energy diissipation occurs at the surface. The kinetic
+energy of rotation is given by
+\begin{equation*}
+    \diff{E_c}{t} = \diff{\frac{1}{2} J \Omega^2}{t} = \frac{1}{2} G \Omega
+\end{equation*}
+
+The dissipation is the energy lost per unit surface and unit time
+\begin{equation*}
+    D(R) = \diff{E_c(R+\d{R}) - \d{E_c(R)}}{R \d{t}} = \frac{\frac{1}{2} G \Omega(R+\d{R}) - \frac{1}{2} G \Omega(R)}{\d{R}} = \frac{G(R)}{2} \diffp{\Omega}{R}
+\end{equation*}
+
+Thus,
+\begin{equation*}
+    D(R) = \frac{1}{2} G(R) \diffp{\Omega}{R} = \frac{1}{2} \nu_T \Sigma \left( R \diffp{\Omega}{R} \right)^2 \underset{\Omega = \Omega_K}{\approx}
+    \frac{3 G M \dot{M}}{8 \pi R^3} \left(1 - \left(\frac{R_{in}}{R}\right)^\frac{1}{2}\right)
+\end{equation*}
+
+The total luminosity carries only half of the total gravitational energy. The
+conversion is only \SI{50}{\percent}.
+\begin{equation}
+    \tcboxmath{
+        L_D = 2 \int_{R_{in}}^{\infty} 2 \pi R D(R) \d{R} = \frac{G M \dot{M}}{2 R_{in}} = \frac{1}{2} L_{acc}
+    }
+\end{equation}
+
+The fate of the other \SI{50}{\percent} of energy depends on the nature of the
+central object. If there is a real star (YSO, White Dwarf, Neutron Star…) the
+other \SI{50}{\percent} is dissipated in the boundary layer in the form of a
+shock. This is usually seen as bright spot (hot spot, X-rays, etc.). If the
+central object is a Black Hole, this energy is lost by absorption.
+
+Or…
+
+In fact there is another way to dissipate this \SI{50}{\percent} left which is
+the presence of an outflow, collimated or not into a jet. An outflow might be
+sufficient and there is no need for collimation.
+
 \subsubsection{Self-consistency}
+
 \subsection{Origin of Turbulence in Standard Thin Disks}
+
 turbulence comes from instabilities, For a weakly magnetized disk, magneto-rotational instability is a good candidate.
 This instability was first studied bu Balbus and Hawley  (1991) in the context of accretion disk, though the
 magneto-rotational was already formally described earlier by Russain groups. in the context of disks, 
