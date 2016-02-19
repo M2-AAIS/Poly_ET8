@@ -1,14 +1,26 @@
 \documentclass[10pt,a4paper,english]{article}
 
+% Necessary to be able to compile with either xelatex or pdflatex
+\usepackage{ifxetex}
+
 % Document layout
-%\usepackage[xetex,
-\usepackage[a4paper,
+\ifxetex
+\usepackage[xetex,
             margin=2cm,
             headheight=0.4cm,
             headsep=0.8cm,
             footskip=1.2cm,
             nomarginpar,
             ]{geometry}
+\else
+\usepackage[pdftex,
+            margin=2cm,
+            headheight=0.4cm,
+            headsep=0.8cm,
+            footskip=1.2cm,
+            nomarginpar,
+            ]{geometry}
+\fi
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
@@ -26,14 +38,18 @@
 \usepackage[version=3]{mhchem}
 
 % Fonts settings
-%\usepackage{mathspec}
-%\defaultfontfeatures{Ligatures=TeX,RawFeature={-calt,+tnum,+lnum}}
-%\setmainfont[BoldFont={Adobe Garamond Pro Semibold},BoldItalicFont={Adobe Garamond Pro Semibold Italic}]{EB Garamond}
-%\setmainfont{EB Garamond}
-%\newfontfamily\NotoSans{Noto Sans}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\ifxetex
+    \usepackage{mathspec}
+    \defaultfontfeatures{Ligatures=TeX,RawFeature={-calt,+tnum,+lnum}}
+    \setmainfont[BoldFont={Adobe Garamond Pro Semibold},BoldItalicFont={Adobe Garamond Pro Semibold Italic}]{EB Garamond}
+    \setmathfont(Digits){EB Garamond}
+    \newfontfamily\NotoSans{Noto Sans}
+    \newfontfamily\LatinModern{Latin Modern Math}
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{lmodern}
+\fi
 
 % [english] is set globaly above
 \usepackage{babel}
@@ -54,7 +70,6 @@
 \paragraphfont{\color{dgreen}}
 
 % PDF properties
-%\usepackage[xetex,
 \usepackage[unicode=true,
             pdfstartview=FitV,
             colorlinks=true,
@@ -140,8 +155,11 @@
 \maketitle
 
 \begin{center}
-    $M_{\odot}$ %C'est ironique, non? -Un peu oui!
-%    $M_\text{\NotoSans ☺}$
+    \ifxetex
+        {\LatinModern M\textsubscript{\NotoSans ☺}}
+    \else
+        $M_{\odot}$ % C’est ironique, non ? – Un peu oui !
+    \fi
 \end{center}
 
 \section*{Preamble}
