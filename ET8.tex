@@ -102,12 +102,12 @@
 % Units display
 \usepackage{siunitx}
 \sisetup{
-  number-unit-product = \,,
-  inter-unit-product = \ensuremath{{}\cdot{}},
-  separate-uncertainty = true,
-  multi-part-units = single,
-  range-phrase = \text{ -- }
+    separate-uncertainty = true,
+    multi-part-units = single,
+    range-phrase = \text{ -- },
+    range-units = single
 }
+\newcommand\SIrangeto[2]{\SIrange[range-phrase=\,\text{to}\,]{#1}{#2}}
 \DeclareSIUnit\cgs{cgs}
 \DeclareSIUnit\erg{erg}
 \DeclareSIUnit\yr{yr}
@@ -186,7 +186,6 @@ terms of radiation and spectra.
 Various units are used depending on the system. In particular masses are
 usually given in solar mass unit. Discances are given either in solar radius,
 astronomical units or parsecs. The following correspondence is useful.
-
 \begin{align*}
     \si{\Msun} &= \SI{2e33}{\gram} \\
     \si{\Rsun} &= \SI{7e10}{\cm} \\
@@ -247,7 +246,7 @@ at low level.
 
 \begin{figure}[!ht]
     \noindent
-    \begin{minipage}{.495\textwidth}
+    \begin{minipage}{.49\textwidth}
         %\includegraphics[width=\textwidth]{}
         \FIXME{Missing figure?}
         %\caption{}
@@ -272,21 +271,21 @@ at low level.
         orbiting disk and ascertained the mass of the black hole, has enabled
         the scientists to make the distance determination.
 
-        Previous observations using Cepheid variable stars and the Hubble
-        Space Telescope had set the distance at 27 or 29 million light years.
-        The difference in these two distance determinations will make a
-        significant impact on future calculations of the size and age of the
-        Universe.
+        Previous observations using Cepheid variable stars and the Hubble Space
+        Telescope had set the distance at 27 or 29 million light years. The
+        difference in these two distance determinations will make a significant
+        impact on future calculations of the size and age of the Universe.
+
     \end{minipage}%
     \hfill
-    \begin{minipage}{.495\textwidth}
+    \begin{minipage}{.49\textwidth}
         \includegraphics[width=\textwidth]{ngc4258_combo_hst_hi.jpg}
+    \end{minipage}
         \caption{
             NGC4258 Massive Black Hole \& Accretion Disk. Image courtesy of
             NRAO/AUI and L. Greenhill (Harvard-Smithsonian Center for
             Astrophysics).
         }
-    \end{minipage}
 \end{figure}
 
 \subsubsection{Radio Loud, Narrow Line Radio Galaxies}
@@ -301,12 +300,13 @@ types.
 
 \begin{figure}[!ht]
     \noindent
-    \begin{minipage}{.66\textwidth}
-        \includegraphics[width=\textwidth]{eso0903a.jpg}
+    \begin{minipage}{.6\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{eso0903a.jpg}
         %\label{fig:}
     \end{minipage}%
     \hfill
-    \begin{minipage}{.33\textwidth}
+    \begin{minipage}{.4\textwidth}
         Colour composite image of Centaurus A, revealing the lobes and jets
         emanating from the active galaxy’s central black hole. This is a
         composite of images obtained with three instruments, operating at very
@@ -324,7 +324,7 @@ types.
 \end{figure}
 
 Radio loud sources and quasars have relativistic jets in addition to the
-accretion disk, with bulk Lorentz factor $\Gamma=\dfrac{1}{\sqrt{1-V^2/c^2}}$
+accretion disk, with bulk Lorentz factor $\Gamma=\nicefrac{1}{\sqrt{1-V^2/c^2}}$
 of 3 to 10 or possibly higher.
 
 \begin{figure}[!ht]
@@ -335,8 +335,8 @@ of 3 to 10 or possibly higher.
             3C31 radio galaxy, VLA (\SI{20}{\cm}), 1999.
             Image courtesy of NRAO/AUI.
         }
-
         %\label{fig:}
+
         This image shows the radio morphology of the radio galaxy 3C31 (NGC
         383), the dominant galaxy of a prominent chain of galaxies. This system
         is a powerful radio source, with conical inner jets developing into
@@ -379,8 +379,8 @@ The other radio sources belong to the wider class of quasars (quasi-stellar
 objects). They are radio quiet as well as radio loud quasars (QSOs). As for
 radio galaxies, proper motions could be measured in some quasars with jets. In
 all cases high relativistic velocities are deduced. Quasars, BL Lac and QSO
-appear to be pointing towards us, which explains - because of the Doppler
-effect - that they are more luminous than radio galaxies.
+appear to be pointing towards us, which explains – because of the Doppler
+effect – that they are more luminous than radio galaxies.
 
 \subsection{Young Stellar Objects}
 
@@ -391,8 +391,8 @@ not yet reached the main sequence. In the following we shall consider mainly
 loss mass stars with mass less or equal to two solar masses. High mass pre-main
 sequence star exhibits strong outflows and winds but not well structure jets at
 least at the present stage of observations. Loss mass stars go through the
-stage of T-Tauri star or FU Orionis star ($<\SI{2}{M_\odot}$). High mass stars are
-usually Herbig Ae/Be stars (\SIrange{2}{8}{M_\odot}).
+stage of T-Tauri star or FU Orionis star ($<\SI{2}{\Msun}$). High mass stars
+are usually Herbig Ae/Be stars (\SIrange{2}{8}{\Msun}).
 
 \subsubsection{\texorpdfstring{HH objects and $CO$ Outflows}{HH objects and CO Outflows}}
 
@@ -409,16 +409,16 @@ shocks and the proper motion of the shocks is not directly the speed of the
 underlying jets though similar velocities are measured by other means.
 
 These premain stars have accretion-ejection systems with typical accretion
-rates of $\dot{M}_{accr}=\SI{e7}{M_\odot.yr^{-1}}$ to $\SI{e-6}{M_{\odot}.yr^{-1}}$.
-Around $30\%$ of these objects also have jets with typical wind mass loss rates
-of $\dot{M}_{jet}=\SI{e-8}{M_{\odot}.yr^{-1}}$ to $\SI{e-7}{M_{\odot}.yr^{-1}}$, densities
-$n_{jet}=10^3$ to $\SI{e7}{cm^{-3}}$ (this is strongly model dependent) and
-temperatures around $10^3$ to $\SI{e4}{K}$. Of course the density in the accretion
-disk is much higher and the temperature much lower.
+rates of $\dot{M}_{accr}=\SIrangeto{e-7}{e-6}{\Msun\per\yr}$. Around
+\SI{30}{\percent} of these objects also have jets with typical wind mass loss
+rates of $\dot{M}_{jet}=\SIrangeto{e-8}{e-7}{\Msun\per\yr}$, densities
+$n_{jet}=\SIrangeto{e3}{e7}{\per\cubic\cm}$ (this is strongly model dependent)
+and temperatures around $\SIrangeto{e3}{e4}{\kelvin}$. Of course the density in
+the accretion disk is much higher and the temperature much lower.
 
 \subsubsection{\texorpdfstring{Molecular flows $H_2$, $CO$}{Molecular flows H2, CO}}
 
-Next picture of the HST is called ``Birth and death of the Milky Way''. It shows
+Next picture of the HST is called “Birth and death of the Milky Way”. It shows
 a multi-wavelength picture with dark clouds illuminated and ionized by stars.
 Clouds are clumps resulting from the Parker instability in the Milky Way. They
 are themselves unstable and because of gravitational collapse they contract
@@ -427,9 +427,9 @@ forming accretion torii and disks.
 Some disks (seen in infra red, red contours in next figure) show very powerful
 molecular outflows sometimes associated with the previous HH objects and
 Optical jets but not always. Molecular outflows with mass loss rates of
-$\dot{M}_{jet}=\SI{e-5}{M_{\odot}.yr^{-1}}$, velocity a few 10 km/s and cold
+$\dot{M}_{jet}=\SI{e-5}{\Msun\per\yr}$, velocity a few 10 km/s and cold
 temperatures of a tens of Kelvin. The underlying accretion disks have accretion
-rates higher than typically $\dot{M}_{accr}=\SI{e-4}{M_{\odot}.yr^{-1}}$.
+rates higher than typically $\dot{M}_{accr}=\SI{e-4}{\Msun\per\yr}$.
 
 HH211: Another nice example of a powerful molecular outflow with its inner
 accretion disk. Note that the inner structure is not very different from some
@@ -448,11 +448,17 @@ either that the ejection is episodic or (more likely) that accretion does not
 necessarily require all the time the formation of a collimated source.
 
 Before having disk images, the presence of an accretion disk was deduced from
-the infrared excess measured by the Spectral Index. \[\text{Spectral
-Index:}\quad \alpha=\frac{\d\log(\nu F)}{\d \log(\nu)}\quad\text{where}\quad
-F_{\nu}\quad\text{is the flux density.}\] For disks in YSO, the spectral index
-is calculated in the wavelength interval of $2.2-\SI{10}{\um}$ (near infrared
-region).
+the infrared excess measured by the Spectral Index.
+
+\[
+    \text{Spectral Index:}\quad \alpha=\frac{\d{\log(\nu F)}}{\d{
+    \log(\nu)}}\quad\text{where}\quad F_{\nu}\quad\text{is the flux density.}
+\]
+
+\FIXME{$F_\nu$ instead of $\nu F$ maybe?}
+
+For disks in YSO, the spectral index is calculated in the wavelength interval
+of \SIrange{2.2}{10}{\um} (near infrared region).
 
 In 1986 Lada C.J. and Wilking B.A. were the first to established the existence
 of various classes now known as Class I,II,III. In 1993 Andre et al. discovered
@@ -468,6 +474,8 @@ faint at $\lambda<\SI{10}{\um}$. In summary the classes are:
 
 The following figure gives a schematic view of the spectrum and the role of the
 accretion disk (from André, 1996).
+
+\FIXME{Make all the references proper ones}
 
 More information on accretion disks is expected from next generation of
 instruments like ALMA and Herschell (HIFI).
@@ -509,146 +517,154 @@ Accretion,
 
 In order to quantify accretion we can estimate the specific available energy.
 It corresponds to the free fall energy:
-
-\begin{equation}
-  \frac{E}{m} \approx \frac{GM_*}{R}
-\end{equation}
+\begin{equation*}
+    \frac{E}{m} \approx \frac{GM_*}{R}
+\end{equation*}
 
 The available power is:
-
-\begin{align}
-P & = \frac{dE}{dt} \approx \frac{GM_*}{R} \frac{\d m}{\d t} = \frac{GM_*}{R} \dot{M}_{acc}
-    \\
-  &\approx \num{e38} \left(\frac{\dot{M}_{acc}}{\SI{e18}{\g\per\s}}\right) \left(\frac{M}{\SI{2e33}{\g}}\right) \left(\frac{\SI{7e10}{\cm}}{R}\right) \si{\erg\per\s}
-    \\
-  &\approx 10^{38} \left(\frac{\dot{M}_{acc}}{\SI{e-8}{M\per\yr}}\right) \left(\frac{M}{M_{\odot}}\right) \left(\frac{R_{\odot}}{R}\right) \si{\erg\per\s}
-\end{align}
+\begin{align*}
+    P & = \frac{\d{E}}{\d{t}} \approx \frac{GM_*}{R} \frac{\d{m}}{\d{t}} = \frac{GM_*}{R} \dot{M}_{acc} \\
+      & \approx \num{e38} \left(\frac{\dot{M}_{acc}}{\SI{e18}{\g\per\s}}\right) \left(\frac{M}{\SI{2e33}{\g}}\right) \left(\frac{\SI{7e10}{\cm}}{R}\right) \si{\erg\per\s} \\
+      & \approx \num{e38} \left(\frac{\dot{M}_{acc}}{\SI{e-8}{\Msun\per\yr}}\right) \left(\frac{M}{\si{\Msun}}\right) \left(\frac{\si{\Rsun}}{R}\right) \si{\erg\per\s}
+\end{align*}
 with
-\begin{align}
-  M_{\odot} &= \SI{2e33}{g} \\
-  R_{\odot} &= \SI{7e10}{\cm} \\
-  R_{NS}   &= \SI{10}{\km} = \SI{e6}{\cm} = \SI{e-4}{R_\odot}
-\end{align}
+\begin{align*}
+    \si{\Msun} &= \SI{2e33}{\g} \\
+    \si{\Rsun} &= \SI{7e10}{\cm} \\
+    R_{NS}   &= \SI{10}{\km} = \SI{e6}{\cm} = \SI{e-4}{\Rsun}
+\end{align*}
 
-Thus the available power depends on the accretion rate and the compactness M/R. The efficiency is the conversion rate,
-\begin{equation}
- \frac{\d E}{\d t} = \varepsilon \dot{M} c^{2} \Rightarrow \varepsilon = \frac{GM_*}{c^{2}R}
-\end{equation}
+Thus the available power depends on the accretion rate and the compactness M/R.
+The efficiency is the conversion rate,
+\begin{equation*}
+    \frac{\d{E}}{\d{t}} = \varepsilon \dot{M} c^{2} \Rightarrow \varepsilon = \frac{GM_*}{c^{2}R}
+\end{equation*}
 
-In the Newtonian regime, we obtain an efficiency of $\varepsilon = 0.15$ for an object with a radius of 10 km, 1 $M_{\odot}$, typical for a neutron star or a non rotating galactic black hole.
+In the Newtonian regime, we obtain an efficiency of $\varepsilon = 0.15$ for an
+object with a radius of \SI{10}{km}, \SI{1}{\Msun}, typical for a neutron star
+or a non rotating galactic black hole.
 
-In the relativistic regime for a black hole in maximum rotation we have a larger range of efficiency $\varepsilon \approx 0.059-0.42$
+In the relativistic regime for a black hole in maximum rotation we have a
+larger range of efficiency $\varepsilon \approx \numrange{0.059}{0.42}$.
 
 We can compare the efficiency in various fields in Physics :
 \begin{itemize}
-  \item In Chemistry the typical energy is $\approx \SI{13}{eV}$, energy of ionization, therefore $\varepsilon < 10^{-8}$ thus
-  \begin{equation}
-  \frac{\d E}{\d t} \approx \frac{\SI{1}{eV}}{m_{p}c^{2}} m_{p}c^{2}\dot{M}
-  \end{equation}
-  \item In nuclear fusion $\approx \SI{1}{MeV}$, $4H \rightarrow He$ , $\varepsilon < 10^{-2}$
-  \begin{equation}
-    \frac {\Delta E_{4 \mathrm{H} \rightarrow \mathrm{He}}}{mc^{2}} \approx \dfrac{4m_\mathrm{H}-m_\mathrm{He}}{4m_\mathrm{H}c^{2}} c^{2}\dot{M}
-  \end{equation}
+    \item In Chemistry the typical energy is $\approx \SI{13}{\electronvolt}$,
+          energy of ionization, therefore $\varepsilon < 10^{-8}$ thus
+          \begin{equation*}
+              \frac{\d{E}}{\d{t}} \approx \frac{\SI{1}{\electronvolt}}{m_p c^2} m_p c^2 \dot{M}
+          \end{equation*}
+    \item In nuclear fusion $\approx \SI{1}{\mega\electronvolt}$, $4H \rightarrow He$ , $\varepsilon < 10^{-2}$
+          \begin{equation*}
+              \frac{\Delta E_{4 \mathrm{H} \rightarrow \mathrm{He}}}{m c^2} \approx \frac{4 m_\mathrm{H} - m_\mathrm{He}}{4 m_\mathrm{H} c^2} c^2 \dot{M}
+          \end{equation*}
 \end{itemize}
 
 Accretion is ten times more efficient per mass unit to convert energy with a compact object.
 \begin{itemize}
-  \item If it is a galactic Black Hole we get
-  \begin{equation}
-  R_{S} =\frac{2GM_{BH}}{c^{2}} = \SI{3}{\km} \frac{M_{BH}}{R_{S}} = 10^5\frac{M_{\odot}}{R_{\odot}} , \varepsilon = 0.5
-  \end{equation}
-  \item This is similar for a Neutron Star
-  \item For a Supermassive Black Hole the compactness and the efficiency are identical, only the radius differs
-  \begin{equation}
-  R_{S} =\frac{2GM_{BH}}{c^{2}} = \num{3e11}-\SI{e14}{cm}
-  \end{equation}
-  \item For a White Dwarf
-  \begin{equation}
-  \frac {M_{WD}}{R_{*}} =10^{2}\frac{M_{\odot}}{R_{\odot}} ,\quad M_{WD} = M_{\odot},\quad R_{*}=10^{-2}R_{\odot} = \SI{e9}{cm}
-  \end{equation}
-  \item For a Young Star
-  \begin{equation}
-  \frac {M_{YSO}}{R_{*}} \approx \frac{M_{*}}{R_{*}} ,\quad M_{YSO} = M_{\odot},\quad R_{*}=2R_{\odot} = \SI{2e11}{cm}
-  \end{equation}
-  \item For Jupiter
-  \begin{equation}
-  \frac {M_{J}}{R_{*}} = 10^{-2}\frac{M_{\odot}}{R_{\odot}} ,\quad M_{J} = \SI{e-3}{M_{\odot}},\quad R_{*}=\SI{0.1}{R_{\odot}} = \SI{e10}{cm}
-  \end{equation}
+    \item If it is a galactic Black Hole we get
+          \begin{align*}
+              R_{S} &=\frac{2 G M_{BH}}{c^2} = \SI{3}{\km} \\
+              \frac{M_{BH}}{R_{S}} &= 10^5 \frac{\si{\Msun}}{\si{\Rsun}}, \quad \varepsilon = 0.5
+          \end{align*}
+    \item This is similar for a Neutron Star
+    \item For a Supermassive Black Hole the compactness and the efficiency are identical, only the radius differs
+          \begin{equation*}
+              R_{S} =\frac{2 G M_{BH}}{c^2} = \SIrange{3e11}{e14}{\cm}
+          \end{equation*}
+    \item For a White Dwarf
+          \begin{equation*}
+              \frac{M_{WD}}{R_{WD}} = 10^2 \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_{WD} = \si{\Msun}, \quad R_{WD} = \SI{e-2}{\Rsun} = \SI{e9}{\cm}
+          \end{equation*}
+    \item For a Young Star
+          \begin{equation*}
+              \frac{M_{YSO}}{R_{YSO}} \approx \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_{YSO} = \si{\Msun}, \quad R_{YSO} = \SI{2}{\Rsun} = \SI{2e11}{\cm}
+          \end{equation*}
+    \item For Jupiter
+          \begin{equation*}
+              \frac{M_J}{R_J} = 10^{-2} \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_{J} = \SI{e-3}{\Msun}, \quad R_J = \SI{0.1}{\Rsun} = \SI{e10}{\cm}
+          \end{equation*}
 \end{itemize}
 
 \subsubsection{Eddington Luminosity}
+
 We can define the Eddington luminosity, assuming isotropy and equilibrium between radiative pressure and gravity:
-\begin{align}
-  F_{grav} & = F_{rad} \\
-  \frac{GMm_p}{R^2} &= P_{rad}\sigma_{T,\gamma/e^{-}} \\
-           & = \frac{u_{rad}}{3}\sigma_T \\
-           &= \frac{1}{3}\frac{LR}{\frac{4}{3}\pi R^3 c}\\
-  \frac{GMm_p}{R^2} &= \frac{L\sigma_T}{4\pi R^2 c}
-\end{align}
+\begin{align*}
+    F_{grav} & = F_{rad} \\
+    \frac{G M m_p}{R^2} &= P_{rad}\sigma_{T,\gamma/e^-} \\
+                        &= \frac{u_{rad}}{3}\sigma_T \\
+                        &= \frac{1}{3}\frac{L R}{\frac{4}{3}\pi R^3 c}\\
+    \frac{G M m_p}{R^2} &= \frac{L\sigma_T}{4\pi R^2 c}
+\end{align*}
+
 \fxnote{Missing picture}
 
 We can rewrite the gravitational force:
-\begin{equation}
-  F_\mathrm{grav} = \frac{GMm_p}{R^2} = F_\mathrm{rad} = \sigma_T \frac{L}{4\pi R^2}\frac{1}{c}
-\end{equation}
+\begin{equation*}
+    F_\mathrm{grav} = \frac{G M m_p}{R^2} = F_\mathrm{rad} = \sigma_T \frac{L}{4 \pi R^2}\frac{1}{c}
+\end{equation*}
 
-Thus, it defines a luminosity called \emph{Eddington Luminosity} where the radiative pressure gradient equals the gravitational force:
+Thus, it defines a luminosity called \emph{Eddington Luminosity} where the
+radiative pressure gradient equals the gravitational force:
 \begin{align}
-  L_\mathrm{Edd} &\approx \num{e33} \left( \frac{M}{M_\odot} \right) \si{\erg\per\s} \\
-  \dot{M}_\mathrm{Edd} &\approx \num{e18} \left( \frac{\varepsilon}{0.1} \right) \left( \frac{M}{M_\odot} \right) \si{\g\per\s} = \SI{e-8}{M\per\yr}
+    L_\mathrm{Edd} &\approx \num{e33} \left( \frac{M}{\si{\Msun}} \right) \si{\erg\per\s} \\
+    \dot{M}_\mathrm{Edd} &\approx \num{e18} \left( \frac{\varepsilon}{0.1} \right) \left( \frac{M}{\si{\Msun}} \right) \si{\g\per\s} = \SI{e-8}{\Msun\per\yr}
 \end{align}
 
 \subsubsection{The disk spectrum}
+
 Gas heating implies a balance between matter and radiation. This can be expressed under the form of a black body such that:
 \begin{equation}
-  \frac{\d E}{\d t} = \frac{GM_\star}{R}\dot{M}_\mathrm{acc} = 4\pi R^2\sigma T^4
+    \frac{\d E}{\d t} = \frac{GM_\star}{R}\dot{M}_\mathrm{acc} = 4\pi R^2\sigma T^4
 \end{equation}
 and the effective temperature of the equivalent black body is given by:
 \begin{align}
-  k_b T_{bb} & \approx \SI{2}{keV} \left( \frac{\dot{M}}{\SI{e-8}{M\per\yr}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4} R_\odot} \right)^{-3/4} \\
-  k_b T_{bb} & \approx \SI{1.5}{keV} \left( \frac{L_\mathrm{Edd}}{\SI{e38}{\erg\per\s}} \right)^{1/4} \left( \frac{R}{\SI{e6}{\cm}} \right)^{-1/2}
+    k_b T_{bb} & \approx \SI{2}{keV} \left( \frac{\dot{M}}{\SI{e-8}{M\per\yr}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4} R_\odot} \right)^{-3/4} \\
+    k_b T_{bb} & \approx \SI{1.5}{keV} \left( \frac{L_\mathrm{Edd}}{\SI{e38}{\erg\per\s}} \right)^{1/4} \left( \frac{R}{\SI{e6}{\cm}} \right)^{-1/2}
 \end{align}
 Then if all the radiation is converted into energy:
 \begin{align}
-  \frac{3}{2}\dot{M}\frac{k_b T_{bb}}{\mu m_H} & \approx \frac{GM_\star}{R}\dot{M_\mathrm{acc}}
+    \frac{3}{2}\dot{M}\frac{k_b T_{bb}}{\mu m_H} & \approx \frac{GM_\star}{R}\dot{M_\mathrm{acc}}
 \end{align}
-\begin{equation} \tcboxmath{
-  \begin{split}
-    \frac{3}{2}k_bT_{bb} & \approx \mu m_H \frac{GM_\star}{R} \\
-                         & \approx\num{90} \left( \frac{M}{M_\odot} \right) \left( \frac{R}{\SI{e6}{cm}} \right)^{-1} \si{MeV}
-  \end{split}
-}
+
+\begin{equation}
+    \tcboxmath{
+        \begin{aligned}
+            \frac{3}{2}k_bT_{bb} & \approx \mu m_H \frac{GM_\star}{R} \\
+                                 & \approx \num{90} \left( \frac{M}{M_\odot} \right) \left( \frac{R}{\SI{e6}{cm}} \right)^{-1} \si{MeV}
+        \end{aligned}
+    }
 \end{equation}
 
 \fxnote{it is highlighted in the original text}
 
 We get for:
 \begin{itemize}
-\item \textbf{a galactic black hole}
-  \begin{equation}
-    \SI{2}{keV}\left( \frac{\dot{M}}{\SI{e-8}{M_\odot\per\year}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-3/4} < kT < \SI{90}{MeV}\left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-1}
-  \end{equation}
-  For a mass loss rate of $\dot{M} = \SI{e-8}{M_\odot\per\year}$, the spectrum spans from soft X to gamma rays.
-\item \textbf{a white dwarf}
-  \begin{equation}
-    \SI{10}{eV} < kT < \SI{45}{keV}
-  \end{equation}
-  The spectrum is from $\SI{1000}{\angstrom}$ to hard X rays.
-\item \textbf{a $\SI{e8}{M_\odot}$ super-massive black hole} and an accretion rate $\dot{M} = 0.1-\SI{1}{M_\odot\per\yr}$,
-  \begin{equation}
-    \SI{20}{eV} < kT < \SI{90}{MeV}
-  \end{equation}
-  The spectrum is from UV to gamma, softer than stellar BHs
-\item \textbf{a young low mass star} $M = M_\odot$, a mass loss rate of $\SIrange{e-7}{e-6}{M_\odot\per\year}$, the radiation spans :
-  \begin{equation}
-    0.3-\SI{3}{eV} < kT < \SI{4.5}{keV}
-  \end{equation}
-  corresponding to radiations from IR, visible to X rays.
-\item \textbf{a Jupiter}, the range is
-  \begin{equation}
-    \SI{e-3}{eV} < kT < \SI{5}{eV}
-  \end{equation}
-  from far IR to optical
+    \item \textbf{a galactic black hole}
+        \begin{equation}
+            \SI{2}{keV}\left( \frac{\dot{M}}{\SI{e-8}{M_\odot\per\year}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-3/4} < kT < \SI{90}{MeV}\left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-1}
+        \end{equation}
+        For a mass loss rate of $\dot{M} = \SI{e-8}{M_\odot\per\year}$, the spectrum spans from soft X to gamma rays.
+    \item \textbf{a white dwarf}
+        \begin{equation}
+            \SI{10}{eV} < kT < \SI{45}{keV}
+        \end{equation}
+        The spectrum is from $\SI{1000}{\angstrom}$ to hard X rays.
+    \item \textbf{a $\SI{e8}{M_\odot}$ super-massive black hole} and an accretion rate $\dot{M} = 0.1-\SI{1}{M_\odot\per\yr}$,
+        \begin{equation}
+            \SI{20}{eV} < kT < \SI{90}{MeV}
+        \end{equation}
+        The spectrum is from UV to gamma, softer than stellar BHs
+    \item \textbf{a young low mass star} $M = M_\odot$, a mass loss rate of $\SIrange{e-7}{e-6}{M_\odot\per\year}$, the radiation spans :
+        \begin{equation}
+            0.3-\SI{3}{eV} < kT < \SI{4.5}{keV}
+        \end{equation}
+        corresponding to radiations from IR, visible to X rays.
+    \item \textbf{a Jupiter}, the range is
+        \begin{equation}
+            \SI{e-3}{eV} < kT < \SI{5}{eV}
+        \end{equation}
+        from far IR to optical
 
 \end{itemize}
 
@@ -679,22 +695,22 @@ Considering that the lobe size is of the order of magnitude $d_\mathrm{lobe}\sim
 
 We observe radio emission both in extended and compact sources. In extended sources, the radio spectrum goes like $F_v \sim v^{-0.5} \textrm{ or } v^{-1}$, while in compact sources it is $F_v \sim \mathrm{cst}$. The nature of the emission is not obvious and was in question for sometimes \fxnote{not really English there}:
 \begin{itemize}
-\item Thermal emission was immediately excluded for the radio component as it would have implied too high temperatures
-\item \emph{Bremstrahlung} emission could have been a reasonable candidate, but because of absorption, one expects this process to be limited.
-\item The observed high polarization could be the signature of a Compton emission but this would imply an extremely low temperature $T < \SI{3}{K}$.
+    \item Thermal emission was immediately excluded for the radio component as it would have implied too high temperatures
+    \item \emph{Bremstrahlung} emission could have been a reasonable candidate, but because of absorption, one expects this process to be limited.
+    \item The observed high polarization could be the signature of a Compton emission but this would imply an extremely low temperature $T < \SI{3}{K}$.
 \end{itemize}
 
 Finally it turned out that \textbf{synchrotron} emission was the best candidate to explain the radio excess and the slope of the spectral emission.
 \subsubsection{Synchrotron emission}
 The total energy density in the lobes is
 \begin{equation}
-  U \sim \frac{10^{60}}{10^{69}} \approx \SI{e-9}{\erg\per\s}
+    U \sim \frac{10^{60}}{10^{69}} \approx \SI{e-9}{\erg\per\s}
 \end{equation}
 If we make a hypothesis of equipartition, which is completely arbitrary in the case of jets but the simplest assumption one can make, then $\frac{B^2}{8\pi} \sim \SI{e-9}{\erg\per\cm\cubed}$ and therefore $B \sim \SI{100}{\micro G}$. The synchrotron frequency is given by $\nu = \num{4.3e6} B\gamma^2 \sin\alpha\ \si{\Hz}$. At \SI{46}{Hz}, we have a Lorentz factors of $\gamma \sim \numrange{e3}{e4}$. This means that the synchrotron emission comes from relativistic electrons. The cooling time is of the order of \SI{1}{Myr}, which is much less than the life time. It has several consequences on the emission region:
 \begin{itemize}
-\item there must be an \emph{in situ} continuous production of highly relativistic electrons
-\item only a jet can inject matter so far from the central core
-\item there are shocks where electrons are re-accelerated
+    \item there must be an \emph{in situ} continuous production of highly relativistic electrons
+    \item only a jet can inject matter so far from the central core
+    \item there are shocks where electrons are re-accelerated
 \end{itemize}
 
 A large fraction of the total energy is not visible and must be in the form of kinetic energy. Only a jet that feeds the lobe can provide this energy, even if it is not visible.
@@ -705,15 +721,25 @@ Proper motion of knots is now measured in all the objects. These are the motion 
 
 In AGN jets, we see apparent superluminal motions that can be explained only if the shocks and the jets are moving at (nearly) the speed of light. Superluminal motions are also observed in microquasars.
 \fxnote{VLBA image + GRS 1915}
+
 \subsection{Rotation and the Angular Momentum transfer}
+
 \subsubsection{The Angular Momentum problems in YSO}
-The biggest obstacle to the formation of stars from diffuse gas is that a star can contain only a tiny fraction (less than \SI{e18}{\cm\per\s}) of the initial angular momentum of the gas from which it formed (\SI{e23}{\cm\square\per\s} for a molecular cloud of scale \SI{1}{pc}, \SI{e23}{\cm\squared\per\s}), so that nearly all of this angular momentum must be removed or redistributed during the formation process. The angular momentum from the cloud can be removed by ambipolar diffusion. Yet the problem to go from the core to the star remains.
+
+The biggest obstacle to the formation of stars from diffuse gas is that a star
+can contain only a tiny fraction (less than \SI{e18}{\square\cm\per\s}) of the
+initial angular momentum of the gas from which it formed
+(\SI{e23}{\square\cm\per\s} for a molecular cloud of scale \SI{1}{\pc},
+\SI{e21}{\square\cm\per\s} for a dense core of scale \SI{0.1}{\pc}), so that
+nearly all of this angular momentum must be removed or redistributed during the
+formation process. The angular momentum from the cloud can be removed by
+ambipolar diffusion. Yet the problem to go from the core to the star remains.
 
 The specific angular momentum of typical star-forming molecular clouds are at least three orders of magnitude larger than the maximum speed at the equatorial plane of the star where the centrifugal force equals gravity. Thus, if we equals the centrifugal force per unit mass and gravity, we get
 \begin{equation}
-  \frac{v^2_\textrm{break up}}{R_\star} = \frac{GM_\star}{R_\star^2}
-  \Rightarrow v_\textrm{break up} = R_\star \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star}}
-  \Rightarrow \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star^3}}
+    \frac{v^2_\textrm{break up}}{R_\star} = \frac{GM_\star}{R_\star^2}
+    \Rightarrow v_\textrm{break up} = R_\star \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star}}
+    \Rightarrow \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star^3}}
 \end{equation}
 
 For a typical T Tauri star, the break up value is one to a few hundreds \si{\km\per\s} while those stars rotate at around \SIrange{5}{20}{\km\per\s}. The stellar rotation is an order of magnitude bellow the break up velocity.
@@ -726,7 +752,7 @@ These results can be compared to Bouvier et al. results hereafter, showing plots
 
 In the case of a Keplerian disk, to the first order, the centrifugal force balances gravity $\rho \frac{v_\phi^2}{r} \approx \rho \frac{GM_\star}{r^2}$. Thus, similarly to the break up velocity we get the Keplerian velocity and angular frequency:
 \begin{equation}
-  v_\phi = \sqrt{\frac{GM_\star}{r}}, \quad \Omega = \frac{v_\phi}{r} = \sqrt{\frac{GM_\star}{r^3}}
+    v_\phi = \sqrt{\frac{GM_\star}{r}}, \quad \Omega = \frac{v_\phi}{r} = \sqrt{\frac{GM_\star}{r^3}}
 \end{equation}
 \fxnote{Missing scheme}
 
@@ -736,19 +762,19 @@ The problem of the transfer of angular momentum to the black hole in the accreti
 
 If the mass of a Kerr black hole is $M$, its angular momentum $J$, its Schwarzschild radius is
 \begin{equation}
-  R_s = \frac{2GM}{c^2}
+    R_s = \frac{2GM}{c^2}
 \end{equation}
 and the radius of the horizon is:
 \begin{equation}
-  R_\mathrm{Kerr} = \frac{Rs}{2} \left( 1 + \sqrt{1-\left( \frac{Jc}{GM^2} \right)^2 } \right)
+    R_\mathrm{Kerr} = \frac{Rs}{2} \left( 1 + \sqrt{1-\left( \frac{Jc}{GM^2} \right)^2 } \right)
 \end{equation}
 The angular momentum cannot be higher than the value that makes the square root negative, so
 \begin{equation}
-  J < J_\mathrm{max} = \frac{GM^2}{c} = MR_\mathrm{Kerr}c
+    J < J_\mathrm{max} = \frac{GM^2}{c} = MR_\mathrm{Kerr}c
 \end{equation}
 We define the rotation parameter as:
 \begin{equation}
-  \alpha = \frac{J}{J_\mathrm{max}} < 1
+    \alpha = \frac{J}{J_\mathrm{max}} < 1
 \end{equation}
 
 How do we know the nature of the central black hole in AGNs? The main clue comes from the iron-K line which can be explained only with a central rotating black hole.
@@ -778,64 +804,64 @@ Because of rotation and magnetic fields, accretion and ejection are 3-dimensiona
 \subsubsection{Bondi Accretion}
 Let's consider an ideal fluid around a star in-falling (accretion), with a spherical symmetry. Using spherical coordinates $(r,\theta,\phi)$ we write the physical variables describing the fluid :
 \begin{equation}
-  \rho = \rho(r),\quad P = P(r), \quad \vv{v} = \vv{v}(r)
+    \rho = \rho(r),\quad P = P(r), \quad \vv{v} = \vv{v}(r)
 \end{equation}
 The conservation of energy gives:
 \begin{equation}
-  E = \frac{1}{2}v^2 + h + \Phi_\mathrm{grav}
+    E = \frac{1}{2}v^2 + h + \Phi_\mathrm{grav}
 \end{equation}
 For the sake of simplicity, let's assume the flow is isothermal. The gravitational potential is
 \begin{equation}
-  \Phi_\mathrm{grav} = - \frac{GM_\star}{r},\quad \textrm{$M_\star$ is the mass of the star}
+    \Phi_\mathrm{grav} = - \frac{GM_\star}{r},\quad \textrm{$M_\star$ is the mass of the star}
 \end{equation}
 and the enthalpy is:
 \begin{equation}
-  h = \int \frac{\d p}{\rho} = c_s^2 \ln \rho
+    h = \int \frac{\d p}{\rho} = c_s^2 \ln \rho
 \end{equation}
 because the flow is isothermal. Here, $c_s^2 = 2 \frac{k_b T}{m_H}$ is the sound speed.
 
 The conservation equations are written as follow:
 \begin{equation}
-  \tcboxmath{
-    \begin{split}
-      \vv{\nabla}\cdot \left( \rho\vv{v} \right) = 0, \quad& \textrm{Mass conservation}\\
-      \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
-      p = c_s^2 \rho,\quad & \textrm{Equation of state}
-    \end{split}
-  }
+    \tcboxmath{
+        \begin{aligned}
+            \vv{\nabla}\cdot \left( \rho\vv{v} \right) = 0, \quad& \textrm{Mass conservation}\\
+            \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
+            p = c_s^2 \rho,\quad & \textrm{Equation of state}
+        \end{aligned}
+    }
 \end{equation}
 The mass conservation equation gives:
 \begin{equation}
-  \rho v r^2 = \textrm{constant} = \dot{m}, \quad \textrm{$\dot{m}$ is the accretion rate}
+    \rho v r^2 = \textrm{constant} = \dot{m}, \quad \textrm{$\dot{m}$ is the accretion rate}
 \end{equation}
 
 Rewriting the energy, we get :
 \begin{align}
-  E &= \frac{1}{2}v^2 + c_s^2 \ln \frac{\dot{m}}{vr^2} - \frac{GM}{r} \\
-    &= \frac{c_s^2}{2}\left[ \frac{v^2}{c_s^2} + 2\ln \frac{\dot{m}}{vr^2} - \frac{2GM}{c_s^2r}\right] \\
-    &= \frac{c_s^2}{2} \left[\frac{v^2}{c_s^2} + \ln \frac{c_s^2}{v^2} + 4\ln \frac{2GM}{c_s^2r} - \frac{2GM}{c_s^2r} + 2\ln \frac{\dot{m}c_s}{(2GM)^2} + 2\ln c_s^2\right]
+    E &= \frac{1}{2}v^2 + c_s^2 \ln \frac{\dot{m}}{vr^2} - \frac{GM}{r} \\
+      &= \frac{c_s^2}{2}\left[ \frac{v^2}{c_s^2} + 2\ln \frac{\dot{m}}{vr^2} - \frac{2GM}{c_s^2r}\right] \\
+      &= \frac{c_s^2}{2} \left[\frac{v^2}{c_s^2} + \ln \frac{c_s^2}{v^2} + 4\ln \frac{2GM}{c_s^2r} - \frac{2GM}{c_s^2r} + 2\ln \frac{\dot{m}c_s}{(2GM)^2} + 2\ln c_s^2\right]
 \end{align}
 Let $r_c = \frac{GM}{2c_s^2}$. The Bernoulli constant gives that the solutions are given implicitly by drawing the following isocontours:
 \begin{equation}
-  \tcboxmath{
-    \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c} - 4 \frac{r_c }{r} = C
-  }
+    \tcboxmath{
+        \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c} - 4 \frac{r_c }{r} = C
+    }
 \end{equation}
 where $C$ is a constant.
 
 By deriving this equation or directly from Euler equation,
 \begin{align}
-  \rho v \frac{\d v}{\d r}  &= -c_s^2 \frac{\d \rho}{\d r} - \rho \frac{GM}{r^2} \\
-  r \frac{v}{c_s^2} \frac{\d v}{\d r} &= \underbrace{-\frac{r}{\rho}\frac{\d \rho}{\d r}}_\textrm{mass conservation} - \frac{GM}{c_s^2r} \\
-                            &= r \left( \frac{2}{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d r} \right) - \frac{2r_c }{r} \\
-  \frac{r}{r_c }\frac{v}{c_s }\frac{\d (v/c_s)}{\d (r/r_c)} & = \frac{r}{r_c} \left( \frac{2r_c }{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d(r/r_c )} \right) - \frac{2r_c }{r}
+    \rho v \frac{\d v}{\d r}  &= -c_s^2 \frac{\d \rho}{\d r} - \rho \frac{GM}{r^2} \\
+    r \frac{v}{c_s^2} \frac{\d v}{\d r} &= \underbrace{-\frac{r}{\rho}\frac{\d \rho}{\d r}}_\textrm{mass conservation} - \frac{GM}{c_s^2r} \\
+                                        &= r \left( \frac{2}{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d r} \right) - \frac{2r_c }{r} \\
+    \frac{r}{r_c }\frac{v}{c_s }\frac{\d (v/c_s)}{\d (r/r_c)} & = \frac{r}{r_c} \left( \frac{2r_c }{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d(r/r_c )} \right) - \frac{2r_c }{r}
 \end{align}
 
 \begin{equation}
-  \label{eq:speed_eq}
-  \tcboxmath{
-    \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)
-  }
+    \label{eq:speed_eq}
+    \tcboxmath{
+        \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)
+    }
 \end{equation}
 
 The set of solutions of the previous equation is displayed on the two following figures. This is the topology of the solutions.
@@ -844,29 +870,29 @@ We note $M = \frac{v}{c_s}$ the Mach number.
 
 We could show that for polytropic winds ($p = Kp^\gamma$), the topology of the Mach number doesn't change even though the sound speed is no longer a constant but depends on distance :
 \begin{equation}
-  c_s^2 = \frac{\d p}{\d \rho}
+    c_s^2 = \frac{\d p}{\d \rho}
 \end{equation}
 
 A few years before Parker, Bondi (1952) proposed that accretion onto a star or a black hole could become supersonic. This corresponds to one of the 2 critical solutions. Of course, supersonic accretion onto the star ends by a shock, which explains X-ray emissions of cataclysmic binaries.
 
 We can calculate for this solution the mass accretion rate, which is by definition
 \begin{equation}
-  \dot{M} = 4\pi r^2 \rho (-v) = 4\pi r_c^2 \rho_s c_s
+    \dot{M} = 4\pi r^2 \rho (-v) = 4\pi r_c^2 \rho_s c_s
 \end{equation}
 Evaluating the energy at the critical point :
 \begin{equation}
-  E = \textrm{constant} = \frac{1}{2}v^2 + c_s^2 \ln\rho - \frac{GM}{r} = \frac{1}{2}c_s^2 + c_s^2 \ln \rho_s - \frac{GM}{r_c}
+    E = \textrm{constant} = \frac{1}{2}v^2 + c_s^2 \ln\rho - \frac{GM}{r} = \frac{1}{2}c_s^2 + c_s^2 \ln \rho_s - \frac{GM}{r_c}
 \end{equation}
 we get the velocity both at infinity and close to the star :
 \begin{align}
-  v^2 &= 2c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right)  + \frac{2GM}{r} \\
-      & \xrightarrow{r\to 0} \frac{2GM}{r} \\
-      & \xrightarrow{r\to\infty} 0\ \Rightarrow \rho_S = \rho_\infty e^{3/2}
+    v^2 &= 2c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right)  + \frac{2GM}{r} \\
+        & \xrightarrow{r\to 0} \frac{2GM}{r} \\
+        & \xrightarrow{r\to\infty} 0\ \Rightarrow \rho_S = \rho_\infty e^{3/2}
 \end{align}
 
 We see that close to the star, the fluid is in free fall. The mass accretion rate of the transsonic solution is thus:
 \begin{equation}
-  \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
+    \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
 \end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
 We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vv{v} = \vv{v}(r)$.
@@ -877,20 +903,20 @@ For the sake of simplicity, we'll assume again that the flow is isothermal. The 
 
 The final set of equation is the same. Basically we solve:
 \begin{equation}
-  \tcboxmath{
-    \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)\quad \textrm{or} \quad
-    \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c }- 4 \frac{r_c}{r} = C
-  }
+    \tcboxmath{
+        \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)\quad \textrm{or} \quad
+        \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c }- 4 \frac{r_c}{r} = C
+    }
 \end{equation}
 The topology of the solutions is the same as previously but with a new interpretation. We can also plot in 3D the energy versus distance and velocity to make clear the critical point is sitting on a saddle. We still have $M = \frac{v}{c_s}$ the Mach number. We see that the r.h.s. of \eqref{eq:speed_eq} vanishes for $r=r_c$ and the l.h.s. for $v=v_s$ except if the flow has reached super sonic speed at the critical radius. Thus solutions have an horizontal or a vertical tangent except for the two critical solutions where there is \textbf{a fixed or critical point}. This is a \textbf{saddle} point\footnote{The two slopes of the critical solutions at the critical point can be determined using l'Hospital's rule, i.e. expanding $\frac{v}{c_s} = 1 + \delta$ and $\frac{r}{r_c} = 1 + \varepsilon$ to first order. We obtain a second algebraic equation for the slope $\delta/\varepsilon$ which solutions are the slopes at the saddle point,
-\begin{equation*}
-  \frac{\delta}{\varepsilon} = \frac{\d (v/c_s)}{\d (r/r_c)} = \frac{2 \frac{r_c }{r}\left( 1 - \frac{r_c }{r} \right) }{\frac{v}{c_s} - \frac{c_s}{v}} = \frac{2 \frac{1}{1+\varepsilon} \left( 1 - \frac{1}{1+\varepsilon} \right) }{1 + \delta - \frac{1}{1+\delta}} \approx \frac{2(1-\varepsilon)\varepsilon}{1 + \delta - 1 + \delta} \approx \frac{2\varepsilon}{2\delta} \Rightarrow \frac{\delta}{\varepsilon} = \pm 1
+    \begin{equation*}
+        \frac{\delta}{\varepsilon} = \frac{\d (v/c_s)}{\d (r/r_c)} = \frac{2 \frac{r_c }{r}\left( 1 - \frac{r_c }{r} \right) }{\frac{v}{c_s} - \frac{c_s}{v}} = \frac{2 \frac{1}{1+\varepsilon} \left( 1 - \frac{1}{1+\varepsilon} \right) }{1 + \delta - \frac{1}{1+\delta}} \approx \frac{2(1-\varepsilon)\varepsilon}{1 + \delta - 1 + \delta} \approx \frac{2\varepsilon}{2\delta} \Rightarrow \frac{\delta}{\varepsilon} = \pm 1
 \end{equation*}} with two slopes. The saddle nature of the point is better seen in the 3D plot of the energy in phase space ($r, v$).
 
 \subsubsection{Solar wind (Parker 1958)}
 The breeze solutions have zero velocity asymptotically, but the pressure is non zero and cannot match the interstellar pressure :
 \begin{equation}
-  v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0\Rightarrow \rho_\infty = \rho_s e^{-3/2} \neq 0 \Rightarrow \rho_\infty \neq 0
+    v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0\Rightarrow \rho_\infty = \rho_s e^{-3/2} \neq 0 \Rightarrow \rho_\infty \neq 0
 \end{equation}
 Thus they are very similar in behavior to the static solutions, which we have shown to be excluded. Parker showed that the only valid solution is the critical solution that becomes super sonic with zero pressure at infinity. It has then been confirmed observationnaly. Parker also showed studying the polytropic wind that acceleration can be obtained only if the polytropic index is $\gamma < \frac{3}{2}$. $\frac{c_p}{c_s} = \frac{5}{3}$ being the adiabatic value for a monoatomic gas, this means that the exists only because there is enough extended heating at the base of the solar corona.
 
@@ -898,9 +924,9 @@ There are some breeze solutions with heat conduction, which have zero pressure a
 
 Similarly to the accretion rate, one can calculate the mass loss rate from the star through the wind:
 \begin{align}
-  \dot{M} & = 4\pi r^2\rho v = 4\pi r^2_c\rho_sc_s \\
-  \dot{M}_\odot & = \SI{e-14}{M_\odot\per\s} \\
-  \dot{M}_\mathrm{TTauri} &= \SI{e-8}{M_\odot\per\s}
+    \dot{M} & = 4\pi r^2\rho v = 4\pi r^2_c\rho_sc_s \\
+    \dot{M}_\odot & = \SI{e-14}{M_\odot\per\s} \\
+    \dot{M}_\mathrm{TTauri} &= \SI{e-8}{M_\odot\per\s}
 \end{align}
 
 \subsection{More on 1D models}
@@ -932,22 +958,22 @@ sonic point to have strong supersonic flow,
 Mass conservation :
 
 \begin{equation}
-  \vv{\nabla}\cdot(\rho\vv{v}) \Rightarrow \int \rho\vv{v}\cdot \d \vv{S} = cst \Rightarrow \rho vS = cst
-  \Rightarrow \frac{\d \rho}{\rho} + \frac{\d \nu}{\nu} + \frac{\d S}{S} = 0
+    \vv{\nabla}\cdot(\rho\vv{v}) \Rightarrow \int \rho\vv{v}\cdot \d \vv{S} = cst \Rightarrow \rho vS = cst
+    \Rightarrow \frac{\d \rho}{\rho} + \frac{\d \nu}{\nu} + \frac{\d S}{S} = 0
 \end{equation}
 
 Euler equation:
- \begin{equation}
-  \rho v \frac{\d v}{\d x} = -\frac{\d p}{\d x}
+\begin{equation}
+    \rho v \frac{\d v}{\d x} = -\frac{\d p}{\d x}
 \end{equation}
 Equation of state (energy) :
 \begin{equation}
-  p(x) = c_{s}^2\rho(x)
+    p(x) = c_{s}^2\rho(x)
 \end{equation}
- It follows:
+It follows:
 \begin{equation}
-  v\frac{\d v}{\d x} = -c_s^2\frac{\d\rho}{\rho \d x} = c_s^2\left(\frac{\d v}{v\d x}+\frac{\d S}{S\d x}\right)
-  \Rightarrow \left( v - \frac{c_s^2}{v} \right)\frac{\d v}{\d x} = c_s^2\frac{\d S}{S \d x}
+    v\frac{\d v}{\d x} = -c_s^2\frac{\d\rho}{\rho \d x} = c_s^2\left(\frac{\d v}{v\d x}+\frac{\d S}{S\d x}\right)
+    \Rightarrow \left( v - \frac{c_s^2}{v} \right)\frac{\d v}{\d x} = c_s^2\frac{\d S}{S \d x}
 \end{equation}
 
 The flow can be transonic only if $\frac{\d S}{S\d x} = 0 $ which means that the cross section
@@ -959,16 +985,16 @@ attain the sound speed at the minimum cross section.
 
 For a spherical wind we have:
 \begin{equation}
-  \left( v - \frac{c_s^2}{v}  \right)\frac{\d v}{\d r} = c_s^2\frac{\d S}{S\d r}
-  = \frac{2c_s^2}{r} - \frac{GM}{r^2} \Rightarrow \frac{\d \ln S}{\d r} =
-  \frac{2}{r} - \frac{GM}{c_s^2 r2}
-  \Rightarrow \ln S = \ln r^2 +\frac{GM}{c_s^2r} + k
+    \left( v - \frac{c_s^2}{v}  \right)\frac{\d v}{\d r} = c_s^2\frac{\d S}{S\d r}
+    = \frac{2c_s^2}{r} - \frac{GM}{r^2} \Rightarrow \frac{\d \ln S}{\d r} =
+    \frac{2}{r} - \frac{GM}{c_s^2 r2}
+    \Rightarrow \ln S = \ln r^2 +\frac{GM}{c_s^2r} + k
 \end{equation}
 
 And finally:
 
 \begin{equation}
-  \tcboxmath{S = Cr^2 \exp\left(\frac{GM}{c_s^2 r}\right)}
+    \tcboxmath{S = Cr^2 \exp\left(\frac{GM}{c_s^2 r}\right)}
 \end{equation}
 
 Gravity plays the role of reducing the effective cross sectionas te radial flux tubes expands
@@ -1011,7 +1037,7 @@ We assume a thin disk as previously Keplerian to first order where the height
 can be neglected. In other words we integrate all equations on an annulus $R$
 over the height of the disk $H(R)$. First we write mass conservation,
 \begin{equation*}
-  \diffp{\rho}{t} + \vv{\nabla}\cdot(\rho \vv{v}) = 0
+    \diffp{\rho}{t} + \vv{\nabla}\cdot(\rho \vv{v}) = 0
 \end{equation*}
 
 Introducing the surface mass density defined as
@@ -1043,13 +1069,13 @@ M}{R}}$. In reality rotation is slightly sub-Keplerian to allow accretion.
 We then use the Angular Momentum conservation, which comes from the global
 momentum equation,
 \begin{equation*}
-  \rho \diffp{\vv{v}}{t} + \rho (\vv{v}\cdot\vv{\nabla})\vv{v} =
-  \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}\cdot\left(\rho \overline{\vv{v'} \otimes \vv{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
+    \rho \diffp{\vv{v}}{t} + \rho (\vv{v}\cdot\vv{\nabla})\vv{v} =
+    \rho \vv{g} - \vv{\nabla} p - \vv{\nabla}\cdot\left(\rho \overline{\vv{v'} \otimes \vv{v'}}\right) \quad \text{with} \quad V_\varphi \leq R \Omega_K
 \end{equation*}
 
 Momentum equation can be written with a turbulent pressure tensor
 \begin{equation*}
-  \diffp{}{t}(\rho \vv{v}) + \vv{\nabla}\cdot\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) = \rho \vv{g}
+    \diffp{}{t}(\rho \vv{v}) + \vv{\nabla}\cdot\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) = \rho \vv{g}
 \end{equation*}
 
 \FIXME{Need of a better tensorial notation for Pturb}
@@ -1298,16 +1324,16 @@ is frozen  in the plasma. it is easy to verify that the induction equation is tr
 In the initial non pertubed state, let consider three distanes sorted as follow $r_1 < r_0 < r_2 $. At 
 each point, gravity balances the centrifugal fore  such that we can writte : 
 \begin{equation}
-\underbrace{\frac{Gm}{r_1^2} = \frac{r_1^2\Omega_1^2}{r_1}}_{\text{at positon  } r_1} > 
-\underbrace{\frac{Gm}{r_0^2} = \frac{r_0^2\Omega_0^2}{r_0}}_{\text{at position }r_0 > r_1}	>
-\underbrace{\frac{Gm}{r_2^2} = \frac{r_2^2\Omega_2^2}{r_2}}_{\text{at position }r_2 > r_0}	
+    \underbrace{\frac{Gm}{r_1^2} = \frac{r_1^2\Omega_1^2}{r_1}}_{\text{at positon  } r_1} > 
+    \underbrace{\frac{Gm}{r_0^2} = \frac{r_0^2\Omega_0^2}{r_0}}_{\text{at position }r_0 > r_1}	>
+    \underbrace{\frac{Gm}{r_2^2} = \frac{r_2^2\Omega_2^2}{r_2}}_{\text{at position }r_2 > r_0}	
 \end{equation}
 
 This just expresses that gravity decreases outward, thus the rotational speed as well. The gravitational 
 force pushing inward (i.e $-\vec{e_r}$), and the centrifugal force  outward as it can be seen in the vector
 form of the force balance :
 \begin{equation}
--\rho\frac{Gm}{r^2}\vec{e_r} + \rho\frac{v_{\phi}^2}{r}\vec{e_r} = \vec{0}
+    -\rho\frac{Gm}{r^2}\vec{e_r} + \rho\frac{v_{\phi}^2}{r}\vec{e_r} = \vec{0}
 \end{equation}
 
 Now  on b) the system is perturbed. Point 1 comes from $r_0$ to $r_1$ and point 2 from 
@@ -1318,16 +1344,16 @@ but the angular velocity $\Omega$. Thus point 1 is pushed inwards toward the sta
 gravity is stronger but keeping its initial angular speed $\Omega_0$. Thus we immediatly get 
 for point 1 : 
 \begin{equation}
-f_{gravity,1} = \frac{Gm}{r_1^2} = \frac{r_1^2\Omega_1^2	}{r_1} > 
-\frac{r_1^2\Omega_0^2}{r_1} = f_{centrifugal,1}
+    f_{gravity,1} = \frac{Gm}{r_1^2} = \frac{r_1^2\Omega_1^2	}{r_1} > 
+    \frac{r_1^2\Omega_0^2}{r_1} = f_{centrifugal,1}
 \end{equation}
 
 There, gravity is larger than the centrifugal force and pushes 1 further  down toward the centre. 
 Conversely point 2 is pushed further out because there the opposite holds : 
 
 \begin{equation}
-f_{gravity,2} = \frac{Gm}{r_2^2} = \frac{r_2^2\Omega_2^2	}{r_2} < 
-\frac{r_2^2\Omega_0^2}{r_2} = f_{centrifugal,2}
+    f_{gravity,2} = \frac{Gm}{r_2^2} = \frac{r_2^2\Omega_2^2	}{r_2} < 
+    \frac{r_2^2\Omega_0^2}{r_2} = f_{centrifugal,2}
 \end{equation}
 
 \FIXME{Missing figure}
@@ -1338,7 +1364,7 @@ quoted to be efficient in weakly magnetized disks
 
 A more quantitative analysis shows that the system  is unstable if : 
 \begin{equation}
-\tcboxmath{\frac{d\Omega^2}{dr} < 0 \Rightarrow \text{unstable}}
+    \tcboxmath{\frac{d\Omega^2}{dr} < 0 \Rightarrow \text{unstable}}
 \end{equation}
 
 Thus, the rotation in a star is usuallly such that the star is not affected, while Keplerian
@@ -1361,39 +1387,39 @@ of such a disk provided taht it is entirely supported by radiation from the disk
 We use the following notation for the mass density and the temperature on the equatorial  plane : 
 
 \begin{align}
-	& \rho_c = \rho(z=0) = \frac{\Sigma}{2H} \\
-	& T-c = T(z=0)
+    & \rho_c = \rho(z=0) = \frac{\Sigma}{2H} \\
+       & T-c = T(z=0)
 \end{align}
 
 The sound speed is : $c_s^2 = \frac{p}{\rho}$ with a total (scalar) pressure : 
 \begin{equation}
-P = P_{gas} + P_{rad}  = \rho \frac{k_b T_c}{\mu m_H} + \frac{4\sigma}{3 c}T_c^4
+    P = P_{gas} + P_{rad}  = \rho \frac{k_b T_c}{\mu m_H} + \frac{4\sigma}{3 c}T_c^4
 \end{equation}
 
 if radiation dominates over the plasma gas pressure then we get : 
 \begin{equation}
-P_{gas} = \rho \frac{k_b T_c}{\mu m_H} << P_{rad} = \frac{u_{rad}}{3} = \frac{4\sigma}{3 c}T_c^4`
+    P_{gas} = \rho \frac{k_b T_c}{\mu m_H} << P_{rad} = \frac{u_{rad}}{3} = \frac{4\sigma}{3 c}T_c^4`
 \end{equation}
 
 The ful energy equation gives : 
 \begin{equation}
-\frac{\partial}{\partial t } \bigg (
-\frac{1}{2}\rho v^2 + u + \rho \Phi_{grav} + u_{rad} \bigg) + 
-\vec{\nabla}.\bigg(  
-\frac{1}{2}\rho v^2 \vec{v} + (u + p)\vec{v} + \rho \Phi_{grav}\vec{v} + 
-\vec{q} - \tens{\sigma}_{visc}.\vec{v} + \vec{S}_{rad}
-\bigg) = 0
+    \frac{\partial}{\partial t } \bigg (
+    \frac{1}{2}\rho v^2 + u + \rho \Phi_{grav} + u_{rad} \bigg) + 
+    \vec{\nabla}.\bigg(  
+    \frac{1}{2}\rho v^2 \vec{v} + (u + p)\vec{v} + \rho \Phi_{grav}\vec{v} + 
+    \vec{q} - \tens{\sigma}_{visc}.\vec{v} + \vec{S}_{rad}
+    \bigg) = 0
 \end{equation}
 
 Assume steady state and radiatively dominated. if the disk is thin, the horizontal gradients
 are negligible compared to horizontal ones.
 
 \begin{equation}	
-\diff{p}{R} << \diff{p}{z}, \diff{T}{R} << \diff{T}{z}\text{  etc}
+    \diff{p}{R} << \diff{p}{z}, \diff{T}{R} << \diff{T}{z}\text{  etc}
 \end{equation}
 Thus we have : 
 \begin{equation}
- \left.
+    \left.
     \begin{array}{ll}
         & \vec{\nabla}.\big( \vec{q}+\vec{S}_{rad}-\tens{\sigma}_{visc}\cdot\vec{v}\big)\\
         & \vec{q} << \vec{S}_{rad}
@@ -1401,19 +1427,19 @@ Thus we have :
 \right \}\Rightarrow \vec{\nabla}\cdot\big(\vec{S}_{rad}-\tens{\sigma}_{visc}\cdot\vec{v}\big) 
 \end{equation}
 \begin{equation}
-\vec{S}_{rad}(H) - \tens{\sigma}_{visc}\cdot\vec{v}(H) = \vec{S}_{rad}(0) - \tens{\sigma}_{visc}\cdot\vec{v}(0) \Leftrightarrow
-S_{rad}(H) = D
+    \vec{S}_{rad}(H) - \tens{\sigma}_{visc}\cdot\vec{v}(H) = \vec{S}_{rad}(0) - \tens{\sigma}_{visc}\cdot\vec{v}(0) \Leftrightarrow
+    S_{rad}(H) = D
 \end{equation}
 where : 
 \begin{equation}
-D(R) = G(R)\frac{1}{4\pi R}\frac{\partial \Omega}{\partial R } = 
-\frac{1}{2}v_T \Sigma\bigg(   R\frac{\partial \Omega}{\partial R }\bigg)^2 \underset{\mathrm{\Omega = \Omega_K}}{\approx}
-\frac{3GM\dot{M}}{8\pi R^3}\Bigg( 1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\Bigg)
+    D(R) = G(R)\frac{1}{4\pi R}\frac{\partial \Omega}{\partial R } = 
+    \frac{1}{2}v_T \Sigma\bigg(   R\frac{\partial \Omega}{\partial R }\bigg)^2 \underset{\mathrm{\Omega = \Omega_K}}{\approx}
+    \frac{3GM\dot{M}}{8\pi R^3}\Bigg( 1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\Bigg)
 \end{equation}
 
 Radiative energy flux in the diffusion approximation 
 \begin{equation}
-S_{rad}(z) = -\frac{4\sigma}{3\kappa_R \rho}\frac{\partial T^4}{\partial	z}
+    S_{rad}(z) = -\frac{4\sigma}{3\kappa_R \rho}\frac{\partial T^4}{\partial	z}
 \end{equation}
 Note that $\displaystyle S_{rad}(z) = \chi_{rad} \frac{\partial T }{\partial z } $ with $\displaystyle\chi_{rad} = \frac{16 \sigma T^3}{3\kappa_R \rho}$ 
 
@@ -1421,72 +1447,72 @@ $\kappa_R$ is the Rosseland opacity. This is valid only for optically thick disk
 
 The optical thickness is given by : 
 \begin{equation}
-\tau = \rho H \kappa_R(\rho ,T) = \frac{\Sigma}{2} \kappa_R
+    \tau = \rho H \kappa_R(\rho ,T) = \frac{\Sigma}{2} \kappa_R
 \end{equation}
 We can then calculate the radiative flux : 
 \begin{align}
-& S_{rad}(0) = 0 \text{  ;  } T(H)<<T(0) = T_c = max  \\
-& S_{rad}(H) = -\frac{4\sigma}{3\kappa_R \rho}\frac{T^4(H)-T^4(0)}{H} 
-\approx   \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H} \\
-& S_{rad}(H) \approx  \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H} =
-\frac{4\sigma}{3\tau}T_c^4 = D(R) \\
-& \frac{4\sigma}{3\kappa_R \rho}T^4_c\underset{\mathrm{\Omega = \Omega_K}}{\approx}
-\frac{3GM\dot{M}}{8\pi R^3}\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg) \\
-&c_s^2 = \frac{p}{\rho} = H^2\Omega^2 \Rightarrow H = \frac{3\dot{M}\sigma}{8\pi m_H c }
-\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2} \bigg)
+    & S_{rad}(0) = 0 \text{  ;  } T(H)<<T(0) = T_c = max  \\
+    & S_{rad}(H) = -\frac{4\sigma}{3\kappa_R \rho}\frac{T^4(H)-T^4(0)}{H} 
+    \approx   \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H} \\
+    & S_{rad}(H) \approx  \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H} =
+    \frac{4\sigma}{3\tau}T_c^4 = D(R) \\
+    & \frac{4\sigma}{3\kappa_R \rho}T^4_c\underset{\mathrm{\Omega = \Omega_K}}{\approx}
+    \frac{3GM\dot{M}}{8\pi R^3}\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg) \\
+    &c_s^2 = \frac{p}{\rho} = H^2\Omega^2 \Rightarrow H = \frac{3\dot{M}\sigma}{8\pi m_H c }
+    \bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2} \bigg)
 \end{align}
 
 Each annulus of the disk radiates at the effective temperature
 \begin{equation}
-\tcboxmath{
- \frac{4\sigma}{3\tau}T^4_c\underset{\mathrm{\Omega = \Omega_K}}{\approx}
- \frac{3GM\dot{M}}{8\pi R^3}\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg) = 
- \sigma T_{eff}^4 
-}
+    \tcboxmath{
+        \frac{4\sigma}{3\tau}T^4_c\underset{\mathrm{\Omega = \Omega_K}}{\approx}
+        \frac{3GM\dot{M}}{8\pi R^3}\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg) = 
+        \sigma T_{eff}^4 
+    }
 \end{equation}
 The effective temperature is obtained from the following equation : 
 \begin{equation}
-\tcboxmath{
-T_{eff} = \Bigg( \frac{3GM\dot{M}}{8\pi \sigma R^3}
-\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg)\Bigg)^{1/4}
-\underset{\mathrm{R >>R_{in}}}{\rightarrow} T_{in}\bigg(\frac{R}{R_{in}}\bigg)^{-3/4}
-}
+    \tcboxmath{
+        T_{eff} = \Bigg( \frac{3GM\dot{M}}{8\pi \sigma R^3}
+        \bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg)\Bigg)^{1/4}
+        \underset{\mathrm{R >>R_{in}}}{\rightarrow} T_{in}\bigg(\frac{R}{R_{in}}\bigg)^{-3/4}
+    }
 \end{equation}
 
 \begin{align}
-& T_{in} = \frac{3GM\dot{M}}{8\pi\sigma R^3}^{1/4} \\
-& T^{max}_{eff} = T_{in} \bigg(\frac{49 R_{in}}{36}\bigg) = 0.488T_{in} \\ 
-& \sim 0.488\times7.5.10^3 \bigg( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\bigg)^{1/4}
-\bigg( \frac{M}{M_{\odot}}\bigg)^{1/4} 
-\bigg(  \frac{R}{\SI{e11}{\cm}}\bigg)^{1/4} \quad \text{K(YSO)}     \\
-& \sim 0.488\times 4.1.10^4 \bigg( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\bigg)^{1/4}
-\bigg( \frac{M}{M_{\odot}}\bigg)^{1/4} 
-\bigg(  \frac{R}{\SI{e9}{\cm}}\bigg)^{1/4} \quad \text{K(WD)}     \\
-& \sim 0.488\times 5.10^6  \bigg( \frac{\dot{M}}{\SI{e17}{\gram \per \s}}\bigg)^{1/4}
-\bigg( \frac{M}{M_{\odot}}\bigg)^{1/4} 
-\bigg(  \frac{R}{\SI{e6}{\cm}}\bigg)^{1/4} \quad \text{K(NS)}     \\
-&\sim 0.488 \times 10^5 \bigg(  \frac{\dot{M}}{\dot{M}_{Edd}}\bigg)^{1/4} 
-\bigg( \frac{M}{10^6 M_{\odot}}\bigg)^{1/4}
-\bigg(  \frac{R}{R_G}\bigg)^{1/4} \text{K(AGN)}
+    & T_{in} = \frac{3GM\dot{M}}{8\pi\sigma R^3}^{1/4} \\
+    & T^{max}_{eff} = T_{in} \bigg(\frac{49 R_{in}}{36}\bigg) = 0.488T_{in} \\ 
+    & \sim 0.488\times7.5.10^3 \bigg( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\bigg)^{1/4}
+    \bigg( \frac{M}{M_{\odot}}\bigg)^{1/4} 
+    \bigg(  \frac{R}{\SI{e11}{\cm}}\bigg)^{1/4} \quad \text{K(YSO)}     \\
+    & \sim 0.488\times 4.1.10^4 \bigg( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\bigg)^{1/4}
+    \bigg( \frac{M}{M_{\odot}}\bigg)^{1/4} 
+    \bigg(  \frac{R}{\SI{e9}{\cm}}\bigg)^{1/4} \quad \text{K(WD)}     \\
+    & \sim 0.488\times 5.10^6  \bigg( \frac{\dot{M}}{\SI{e17}{\gram \per \s}}\bigg)^{1/4}
+    \bigg( \frac{M}{M_{\odot}}\bigg)^{1/4} 
+    \bigg(  \frac{R}{\SI{e6}{\cm}}\bigg)^{1/4} \quad \text{K(NS)}     \\
+    &\sim 0.488 \times 10^5 \bigg(  \frac{\dot{M}}{\dot{M}_{Edd}}\bigg)^{1/4} 
+    \bigg( \frac{M}{10^6 M_{\odot}}\bigg)^{1/4}
+    \bigg(  \frac{R}{R_G}\bigg)^{1/4} \text{K(AGN)}
 \end{align}
 
 The Eddington accretion rate luminosity can be calculated accordingly by : 
 \begin{equation}
-\dot{M}_{Edd} = \frac{L_{Edd}}{c^2} \text{ ; } L_{Edd} = \frac{4\pi GMm_Hc}{\sigma_T}
-\bigg( \frac{M}{10^6M_{\odot}}\bigg) \si{\erg \per \s}
+    \dot{M}_{Edd} = \frac{L_{Edd}}{c^2} \text{ ; } L_{Edd} = \frac{4\pi GMm_Hc}{\sigma_T}
+    \bigg( \frac{M}{10^6M_{\odot}}\bigg) \si{\erg \per \s}
 \end{equation}
 The black body flux corresponding to that solution is : 
 \begin{equation}	
-F_{\nu} = \frac{2\pi \cos (i)}{D^2} \int_{R_{in}}^{R_{out}} I_{\nu}RdR \text{  ;  }
-I_{\nu} = B_{\nu}\big[ T(R)\big] \\ 
+    F_{\nu} = \frac{2\pi \cos (i)}{D^2} \int_{R_{in}}^{R_{out}} I_{\nu}RdR \text{  ;  }
+    I_{\nu} = B_{\nu}\big[ T(R)\big] \\ 
 \end{equation}
 
 \begin{align}
-F_{\nu} = \frac{4\pi \cos (i)h\nu}{c^2D^2} \int_{R_{in}}^{R_{out}}
-\frac{RdR}{\exp^{h\nu/kT(R)}-1}
-&\xrightarrow[\nu << \frac{kT(R_{out})}{h}]{} \nu^2  \\
-& \xrightarrow[\nu >> \frac{kT(R_{in})}{h}]{} \frac{2\pi h \nu^3}{c^2}\exp ^{-h\nu/kT(R)}  \\
-& \xrightarrow[\frac{kT(R_{out})}{h}<<\nu << \frac{kT(R_{in})}{h}]{} \nu^{1/3}
+    F_{\nu} = \frac{4\pi \cos (i)h\nu}{c^2D^2} \int_{R_{in}}^{R_{out}}
+    \frac{RdR}{\exp^{h\nu/kT(R)}-1}
+    &\xrightarrow[\nu << \frac{kT(R_{out})}{h}]{} \nu^2  \\
+    & \xrightarrow[\nu >> \frac{kT(R_{in})}{h}]{} \frac{2\pi h \nu^3}{c^2}\exp ^{-h\nu/kT(R)}  \\
+    & \xrightarrow[\frac{kT(R_{out})}{h}<<\nu << \frac{kT(R_{in})}{h}]{} \nu^{1/3}
 \end{align}
 
 
@@ -1527,11 +1553,11 @@ Another way to obtain strongly accelerated jet is to invoke the presence of pres
 like in the solar wind. A purely thermally driven wind gives temperatures too high.
 
 \begin{align*}
-  & T \sim \SI{10}{V^2} \\
-  & \SI{e7}{K} \leftrightarrow	  \SI{1000}{\km\per \s } \\
-  & \SI{e6}{K} \leftrightarrow \SI{20}{\km \per\s}  \\
-  &\SIrange{e12}{e13}{K} \leftrightarrow  \SI{300000}{\km \per \s} \\
-  & \Gamma \sim \numrange{3}{10}
+    & T \sim \SI{10}{V^2} \\
+    & \SI{e7}{K} \leftrightarrow	  \SI{1000}{\km\per \s } \\
+    & \SI{e6}{K} \leftrightarrow \SI{20}{\km \per\s}  \\
+    &\SIrange{e12}{e13}{K} \leftrightarrow  \SI{300000}{\km \per \s} \\
+    & \Gamma \sim \numrange{3}{10}
 \end{align*}
 
 However to solve this problem, one can invoke the fact that as in the solar wind where the
@@ -1543,9 +1569,9 @@ or other wave pressure.
 All this is consistant if the variation $\sim$ magnitude are reasonable.
 
 \begin{equation}
-P_\mathrm{ram} \sim \frac{\delta V^2}{V^2} \qquad
-P_\mathrm{Alfven}	\sim \frac{\delta B^2}{b^2} \qquad
-\frac{\delta V}{V } \text{ or } \frac{\delta B}{B} \sim 1
+    P_\mathrm{ram} \sim \frac{\delta V^2}{V^2} \qquad
+    P_\mathrm{Alfven}	\sim \frac{\delta B^2}{b^2} \qquad
+    \frac{\delta V}{V } \text{ or } \frac{\delta B}{B} \sim 1
 \end{equation}
 \subsubsection{Pressure of thermal Collimation}
 Collimtation can be the result of externa pressure onto the jet.
@@ -1561,7 +1587,7 @@ Because of rotation, the build-up of azimuthal magnetic field creates a pinching
 
 Basically the Lorentz force is given at large distances from the source by the curvature R of the line.
 \begin{equation}
-\vv{j} \times \vv{B} = \frac{B^2_{\phi}}{R}
+    \vv{j} \times \vv{B} = \frac{B^2_{\phi}}{R}
 \end{equation}
 
 Usually the hoop-stress gives a TOO efficient collimation and a very narrow jet, especially if there is only a disk wind.
@@ -1573,24 +1599,24 @@ two component jets with a spine component  from the central part and outer disk 
 \subsubsection{Analytical models are Steady}
 The are different analytical models:
 \begin{itemize}
-\item \textbf{Meridional Self Similar} models have a dipolar magnetic flux, $A \propto \sin^2\theta$ They are necessarily thermally or pressure driven but well adapted to describe the jet axis and are usually an expansion with colatitiude of the equations.
-\item \textbf{X-Wind} the come from the intermediate zone between the disk and the star. They are magnetocentrifugally driven. The disk should produce a fan wind which seems rather unstable.
- \item \textbf{Radial Self Similar} models use power laws, in particular for the magnetic flux $A \propto r^{-5/4}$. They are adapted for the external part of the jet and especially for Keplerian Disk Winds. They correspond to the case where boundaries can be neglected (in particular the inner and outer parts of the disk).
+    \item \textbf{Meridional Self Similar} models have a dipolar magnetic flux, $A \propto \sin^2\theta$ They are necessarily thermally or pressure driven but well adapted to describe the jet axis and are usually an expansion with colatitiude of the equations.
+    \item \textbf{X-Wind} the come from the intermediate zone between the disk and the star. They are magnetocentrifugally driven. The disk should produce a fan wind which seems rather unstable.
+    \item \textbf{Radial Self Similar} models use power laws, in particular for the magnetic flux $A \propto r^{-5/4}$. They are adapted for the external part of the jet and especially for Keplerian Disk Winds. They correspond to the case where boundaries can be neglected (in particular the inner and outer parts of the disk).
 
-\fxnote{Missing figure}
+        \fxnote{Missing figure}
 \end{itemize}
 \subsubsection{Numerical simulations are Time-dependent}
 Many different AMR MHD codes are available:
 \begin{itemize}
-\item AMRVAC (Toth 1996; Nool \& Keppens 2002)
-\item BATSRUS (Powell et al. 1999)
-\item RIEMANN (Balsara 2000)
-\item FLASH (Fryxell et al. 2002)
-\item Nirvana (Zeigler 2005)
-\item RAMSES (Fromang et al. 2006)
-\item PLUTO (Mignone et al. 2007)
-\item AstroBEAR (Cunnigham et al. 2008)
-\item ZEUS, ATHENA (Stone et al., 199?)
+    \item AMRVAC (Toth 1996; Nool \& Keppens 2002)
+    \item BATSRUS (Powell et al. 1999)
+    \item RIEMANN (Balsara 2000)
+    \item FLASH (Fryxell et al. 2002)
+    \item Nirvana (Zeigler 2005)
+    \item RAMSES (Fromang et al. 2006)
+    \item PLUTO (Mignone et al. 2007)
+    \item AstroBEAR (Cunnigham et al. 2008)
+    \item ZEUS, ATHENA (Stone et al., 199?)
 \end{itemize}
 To quote Stone, ``we use Athena which implements slightly different algorithms from all of these. These differences can be important. Diversity of methods is good.''.
 
@@ -1618,7 +1644,7 @@ Here is an example of a Kelvin Helmholtz instability in a simulation of a double
 \subsection{Disk classification}
 The first classification of low mass YSOs was based on their spectral index:
 \begin{equation}
-  \alpha = \frac{\d \log (\nu F)}{\d \log \nu}
+    \alpha = \frac{\d \log (\nu F)}{\d \log \nu}
 \end{equation}
 where $F_\nu$ is the flux density.
 \fxnote{Missing $\lambda = f(\lambda F_\lambda)$}
@@ -1628,11 +1654,11 @@ This spectral index is computed in the wavelength interval of \SIrange{2.2}{10}{
 
 Following Lad C.J. and Wiling B.A. (1986) and Andre et al. (1993), we split the sources in four classes:
 \begin{itemize}
-\item \textbf{Class 0} sources, undetectable at $\lambda < \SI{10}{\micro\m}$
-\item \textbf{Class I} sources have $\alpha < 0.3$
-\item \textbf{Flat spectrum} sources have $0.3 > \alpha > -0.3$
-\item \textbf{Class II} sources have $-0.3 > \alpha > -1.6$
-\item \textbf{Class III} sources have $\alpha < -1.6$
+    \item \textbf{Class 0} sources, undetectable at $\lambda < \SI{10}{\micro\m}$
+    \item \textbf{Class I} sources have $\alpha < 0.3$
+    \item \textbf{Flat spectrum} sources have $0.3 > \alpha > -0.3$
+    \item \textbf{Class II} sources have $-0.3 > \alpha > -1.6$
+    \item \textbf{Class III} sources have $\alpha < -1.6$
 \end{itemize}
 
 The accretion rate is not continuous during the life of the YS and various episodes are probably observed as Fu Ori and EXor outburst in the early stages (Class I phase or Class II).
@@ -1644,11 +1670,11 @@ The accretion rate is not continuous during the life of the YS and various episo
 This classifications obtained for disks can be associated to our present knowledge of outflows.
 \fxnote{Missing figure}
 \begin{itemize}
-\item Class 0, disk driven jet -- not star ? The stellar core is there but the star may not be formed yet and brightening. Circulation models or outer disk driven winds are most likely
-\item Class I, disk driven jet. Keplerian inner disks play a major role in magentocentrifugally driving the jet
-\item Class II, classical T-Tauri YSO jet. Depending on the power of the jet, the inner Keplerian disk, the star/disk boundary or the star itself may drive the jet.
-\item Class III, YSO weak (line) T-Tauri stars may drive a stellar wind (as main sequence stars) or an invisible jet. The (gas) disk is no longer connected to the star but may still be present
-\item Main sequence stars drive stellar winds
+    \item Class 0, disk driven jet -- not star ? The stellar core is there but the star may not be formed yet and brightening. Circulation models or outer disk driven winds are most likely
+    \item Class I, disk driven jet. Keplerian inner disks play a major role in magentocentrifugally driving the jet
+    \item Class II, classical T-Tauri YSO jet. Depending on the power of the jet, the inner Keplerian disk, the star/disk boundary or the star itself may drive the jet.
+    \item Class III, YSO weak (line) T-Tauri stars may drive a stellar wind (as main sequence stars) or an invisible jet. The (gas) disk is no longer connected to the star but may still be present
+    \item Main sequence stars drive stellar winds
 \end{itemize}
 
 \subsection{The classification as a signature of the evolution}
@@ -1733,12 +1759,12 @@ As the source is the extended disk, it ensures the possibility of producing a la
 
 Models are able to produce large mass loss rate and sufficient collimation, provided that a hot or warm corona exists on top of the disk, see figure … \fxnote{fix ref}. In analytical disk wind models, the accretion rate and the mass loss rate follow a power law:
 \begin{equation}
-  \dot{M} \propto r^\xi
+    \dot{M} \propto r^\xi
 \end{equation}
 The ejection index is directly linked to the logarithmic mass loss. Typical values are:
 \begin{align}
-  \xi \sim 0.01 \quad \textrm{cold jet} \\
-  \xi \sim 0.5 \quad \textrm{warm jet}
+    \xi \sim 0.01 \quad \textrm{cold jet} \\
+    \xi \sim 0.5 \quad \textrm{warm jet}
 \end{align}
 Various simulations of disk winds reproduce the same structure.
 \fxnote{Missing figure}
@@ -1774,15 +1800,15 @@ The end result is to obtain sporadic X-wind but with steady accretion and stella
 
 We can easily estimate the braking time of the central object (Schatzmann 1957, Weber \& Davis 1967, Mestel 1968). The angular momentum loss extracted by the wind is:
 \begin{equation}
-  \dot{J}_\star = \frac{2}{3}\varpi_A^2\Omega \dot{M}_\mathrm{wind}
+    \dot{J}_\star = \frac{2}{3}\varpi_A^2\Omega \dot{M}_\mathrm{wind}
 \end{equation}
 The total stellar angular momentum is
 \begin{equation}
-  J_\star = kr^2_\star \Omega M_\star
+    J_\star = kr^2_\star \Omega M_\star
 \end{equation}
 $k$ depends on the stellar structure, \num{0.06} for the sun up to \num{0.2} for a fully convective star. This to remove the angular momentum of the star, it takes:
 \begin{equation}
-  \tau \approx \frac{J_\star}{\dot{J}_\star} \approx \frac{3kr^2_\star \Omega M_\star}{2\varpi_A^2\Omega\dot{M}_\mathrm{wind}} \approx \frac{3 kr_\star^2 M_\star}{2\varpi_A^2\dot{M}_\mathrm{wind}}
+    \tau \approx \frac{J_\star}{\dot{J}_\star} \approx \frac{3kr^2_\star \Omega M_\star}{2\varpi_A^2\Omega\dot{M}_\mathrm{wind}} \approx \frac{3 kr_\star^2 M_\star}{2\varpi_A^2\dot{M}_\mathrm{wind}}
 \end{equation}
 
 \section{Counter rotation}
@@ -1802,8 +1828,8 @@ $k$ depends on the stellar structure, \num{0.06} for the sun up to \num{0.2} for
 \subsubsection{Superluminal motions}
 \subsubsection{Doppler boosting}
 \subsection{Multicomponent Radio Jets}
-\subsubsection{Pair creation $e^-e^+:\quad\gamma\gamma \rightarrow e^+ + e^-$}
-\subsubsection{Pair creation $e^- e^+$ versus hadronic jets}
+\subsubsection{\texorpdfstring{Pair creation $e^+ e^-: \quad \gamma\gamma \rightarrow e^+ + e^-$}{Pair creation e⁺e⁻: γγ → e⁺ + e⁻}}
+\subsubsection{\texorpdfstring{Pair creation $e^+ e^-$ versus hadronic jets}{Pair creation e⁺e⁻ versus hadronic jets}}
 \subsubsection{Spine Jet and Disk Jet}
 \subsubsection{Magnetization and Counter rotation}
 
@@ -1820,8 +1846,8 @@ For LMXB the eclipse rate is low, the disk is THICK and not thin. Thus the disk 
 GRS 1915+105 is a Low Mass X-ray Binary which is also a very well known micro-quasar. It is in fact the first galactic object where knots with relativistic motion (Mirabel, 1992) where measured. It appears as a down scaled version of a quasar. The spectrum undergoes various phases. Conversely to AGNs these can be interpreted in terms of evolution because we see a single object going through the various phases,
 
 \begin{itemize}
-\item A low X-ray emission with a Hard spectral index (low/hard X-rays). This is thought to correspond to a phase where the disk build up and the plasma ejection is low.
-\item A high X-ray emission with a Soft spectral index (high/soft X-rays). In this phase the disk has disrupted and the central corona emits a strong wind that collimates into a jet.
+    \item A low X-ray emission with a Hard spectral index (low/hard X-rays). This is thought to correspond to a phase where the disk build up and the plasma ejection is low.
+    \item A high X-ray emission with a Soft spectral index (high/soft X-rays). In this phase the disk has disrupted and the central corona emits a strong wind that collimates into a jet.
 \end{itemize}
 
 In fact a continuous jet is known to exist even between two emission of blobs.
@@ -1831,12 +1857,12 @@ The analogy of microquasars with quasars can be seen in the comparison of the fo
 \subsubsection{High Mass X-ray Binaries, Micro Quasar Pulsar}
 Another class of X-ray Binaries are the HMXB or High Mass X-ray binaries. Cygnus X-3 is a good example with a central black hole:
 \begin{itemize}
-\item High Mass XB
-\item Wolf-Rayet Companion
-\item 4.8 hr Orbital Period
-\item Strong Stellar Wind
-\item 2 X-ray States: (a) low/hard, (b) high/soft
-\item Relativistic Radio Jets
+    \item High Mass XB
+    \item Wolf-Rayet Companion
+    \item 4.8 hr Orbital Period
+    \item Strong Stellar Wind
+    \item 2 X-ray States: (a) low/hard, (b) high/soft
+    \item Relativistic Radio Jets
 \end{itemize}
 
 (figure)
