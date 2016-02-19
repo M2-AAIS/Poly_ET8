@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,english,draft]{article}
+\documentclass[10pt,a4paper,english]{article}
 
 % Document layout
 %\usepackage[xetex,
@@ -102,6 +102,8 @@
 \DeclareSIUnit\pc{pc}
 \DeclareSIUnit\kpc{kpc}
 \DeclareSIUnit\Mpc{Mpc}
+\DeclareSIUnit\Msun{M_\odot}
+\DeclareSIUnit\Rsun{R_\odot}
 
 % Advanced tables
 \usepackage{tabularx}
@@ -168,8 +170,8 @@ usually given in solar mass unit. Discances are given either in solar radius,
 astronomical units or parsecs. The following correspondence is useful.
 
 \begin{align*}
-    M_\odot &= \SI{2e33}{\gram} \\
-    R_\odot &= \SI{7e10}{\cm} \\
+    \si{\Msun} &= \SI{2e33}{\gram} \\
+    \si{\Rsun} &= \SI{7e10}{\cm} \\
     \SI{1}{\au} &= 215 R_\odot = \SI{1.5e13}{\cm} \\
     \SI{1}{\pc} &= \SI{2.06e5}{\au} = \SI{3e18}{\cm} = \SI{3.26}{\ly}
 \end{align*}
@@ -200,12 +202,17 @@ alive and make it yours.
 
 The first spectrum of a Seyfert galaxy was taken in 1943.
 
+\FIXME{Missing figure}
+
 In the catalogue of 3C sources, it was first observed that there was a large
-population of highly blue "stars" with unknown large lines (8000 km/s), like in
-3C48 (Matthews et al., 1961, AAS, Dec1960). Moreover it was noticed that those
-objects where redshifted. Greenstein and Schmidt, in 1964, for 3C48 and 3C273,
-measured redshifts of $z=0.45$ and $0.16$. Thus those objects have to be at
-cosmological distances but with very high luminosity.
+population of highly blue “stars” with unknown large lines
+(\SI{8000}{\km\per\s}), like in 3C48 (Matthews et al., 1961, AAS, Dec1960).
+Moreover it was noticed that those objects where redshifted. Greenstein and
+Schmidt, in 1964, for 3C48 and 3C273, measured redshifts of $z=0.45$ and
+$0.16$. Thus those objects have to be at cosmological distances but with very
+high luminosity.
+
+\FIXME{Make Matthews et al. a reference + missing figure x2}
 
 Seyfert galaxies are usually spiral galaxies. They have a radio core, which
 fluctuates in brightness. Because of the intense radio core they are classified
@@ -216,15 +223,53 @@ multi-wavelength observations) is understood as the result of the emission of
 an accretion disk with or without outflows around a central supermassive black
 hole.
 
-As radio-quiet objects represent $\sim 90 \% $ of the 'average' AGN, they also
-represent a very large source for the gamma ray background emission at low
-level.
+As radio-quiet objects represent $\sim \SI{90}{\percent}$ of the “average” AGN,
+they also represent a very large source for the gamma ray background emission
+at low level.
 
-Illustrations: NGC 4258, Seyfert galaxy in Ursa major. Supermassive black hole
-of 39 million Sun mass. Warped disk, two light years in diameter.
+\begin{figure}[!ht]
+    \noindent
+    \begin{minipage}{.495\textwidth}
+        %\includegraphics[width=\textwidth]{}
+        \FIXME{Missing figure?}
+        %\caption{}
+        %\label{fig:}
 
-\ce{H2O} masers amplify the microwave radio emission disk edge-on orbits 2 million
-miles per hour.
+        NGC 4258 is a Seyfert galaxy in the constellation Ursa major. It is
+        generally agreed to have at its heart a supermassive black hole some
+        39 million times more massive than the Sun. Gas orbiting this black
+        hole has formed a warped disk nearly two light years in diameter. By
+        measuring extremely small shifts in the positions of \ce{H2O} masers
+        (water vapor that amplifies microwave radio emissions) located in this
+        disk, scientists have been able to measure the distance to this galaxy
+        as 23.5 million light years, a measurement the scientists say is
+        accurate to within a million light years.
+
+        The disk is viewed nearly edge-on from Earth and orbits the black hole
+        at a speed of more than 2 million miles per hour. Using the Very Long
+        Baseline Array, the astronomers observed the Doppler shift of the
+        masers at the disk's sides at 4 to 8 month intervals over more than
+        three years. This shift, or “proper motion”, combined with previous
+        observations in which astronomers had measured the speed of the
+        orbiting disk and ascertained the mass of the black hole, has enabled
+        the scientists to make the distance determination.
+
+        Previous observations using Cepheid variable stars and the Hubble
+        Space Telescope had set the distance at 27 or 29 million light years.
+        The difference in these two distance determinations will make a
+        significant impact on future calculations of the size and age of the
+        Universe.
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{.495\textwidth}
+        \includegraphics[width=\textwidth]{ngc4258_combo_hst_hi.jpg}
+        \caption{
+            NGC4258 Massive Black Hole \& Accretion Disk. Image courtesy of
+            NRAO/AUI and L. Greenhill (Harvard-Smithsonian Center for
+            Astrophysics).
+        }
+    \end{minipage}
+\end{figure}
 
 \subsubsection{Radio Loud, Narrow Line Radio Galaxies}
 
@@ -235,13 +280,65 @@ the most powerful sources as such are of course quasars and BL Lac objects.
 However the most striking structure is seen in radio galaxies of Fanaroff Riley
 types.
 
-Colour composite image of Centaurus A, revealing the lobes and jets emanating
-from the central black hole of the galaxy. This is a composite of images
-obtained with three instruments, operating at very different wavelengths.[...]
+
+\begin{figure}[!ht]
+    \noindent
+    \begin{minipage}{.66\textwidth}
+        \includegraphics[width=\textwidth]{eso0903a.jpg}
+        %\label{fig:}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{.33\textwidth}
+        Colour composite image of Centaurus A, revealing the lobes and jets
+        emanating from the active galaxy’s central black hole. This is a
+        composite of images obtained with three instruments, operating at very
+        different wavelengths. The 870-micron submillimetre data, from LABOCA
+        on APEX, are shown in orange. X-ray data from the Chandra X-ray
+        Observatory are shown in blue. Visible light data from the Wide Field
+        Imager (WFI) on the MPG/ESO \SI{2.2}{\m} telescope located at La Silla, Chile,
+        show the stars and the galaxy’s characteristic dust lane in close to
+        “true colour”.
+    \end{minipage}
+    \caption{
+        Centaurus A*. ESO/WFI (Optical); MPIfR/ESO/APEX/A.Weiss et al.
+        (Submillimetre); NASA/CXC/CfA/R.Kraft et al. (X-ray).
+    }
+\end{figure}
 
 Radio loud sources and quasars have relativistic jets in addition to the
 accretion disk, with bulk Lorentz factor $\Gamma=\dfrac{1}{\sqrt{1-V^2/c^2}}$
 of 3 to 10 or possibly higher.
+
+\begin{figure}[!ht]
+    \noindent
+    \begin{minipage}{.495\textwidth}
+        \includegraphics[width=\textwidth]{3c31lbcd_6in_hi.jpg}
+        \caption{
+            3C31 radio galaxy, VLA (\SI{20}{\cm}), 1999.
+            Image courtesy of NRAO/AUI.
+        }
+
+        %\label{fig:}
+        This image shows the radio morphology of the radio galaxy 3C31 (NGC
+        383), the dominant galaxy of a prominent chain of galaxies. This system
+        is a powerful radio source, with conical inner jets developing into
+        distorted plumes, which stretch to a distance of 300 kpc from the
+        center of the galaxy (980,000 light years, for a Hubble constant of 100
+        km/s/Mpc). The radio emission is due to relativistic streams of high
+        energy particles generated by the radio source at the center of the
+        radio galaxy. Astronomers believe that the jets are fueled by material
+        accreting onto a super-massive black hole. The high energy particles
+        are shot into extragalactic space at speeds approaching the speed of
+        light, where they eventually balloon into massive radio plumes.
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{.495\textwidth}
+        %\includegraphics[width=\textwidth]{ngc4258_combo_hst_hi.jpg}
+        %\caption{Image courtesy of NRAO/AUI and L. Greenhill
+        %(Harvard-Smithsonian Center for Astrophysics)}
+    \end{minipage}
+\end{figure}
+
 
 They are two types of radio loud galaxies, FRI and FRII.
 \begin{itemize}
