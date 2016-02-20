@@ -1813,9 +1813,61 @@ $k$ depends on the stellar structure, \num{0.06} for the sun up to \num{0.2} for
 
 \section{Counter rotation}
 \label{sec:counter_rotation}
+Some jets seem to counter-rotate with respect to the underlying accretion disk or at least part of it. This phenomenom may be transitory. The observations are however really difficult to carry out and the measurements are always the limit of the resolution. One such good example is the optical receding jet RW Aur, although the approaching jet seems to rotate in the same direction as the disk.
 
+Several measurements have been carried out by Coffey et al.. The difficulty is such that the author said ``Indeed, given the renowned complexity and variability of this system, it now seems likely that any rotation signature is confused by other influences, with the inevitable conclusion that RW Aur is not suited to a jet rotation study''. But this comment comes also because it was thought that counter rotation would contradict the basics of MHD.
 
+However, the rotation of the solar wind as measured by Ulysses also shows some strange behavior The sign of rotation in the Southern hemisphere seems to be opposite to the Northern one.
 
+Real or fake, this is not really incompatible with conservation laws in ideal MHD, as we shall show. The controversy was raised because it seemed at first glance to be incompatible with magneto-centrifugal launching.
+
+\fxnote{Figure}
+
+If we use the conservation laws of chapter (\FIXME{ref to chapter 'III'}), for a steady, axisymmetric flow, we can express the toroidal components of the magnetic and velocity fields. We note with $\varpi$ the cylindrical radius and $\varpi_*$ the cylindrical radius at the Alfvén surface where $V_p = V_A$.
+
+\begin{equation}
+  \frac{B_\phi}{\sqrt{4\pi\rho}} = - \frac{L}{\varpi}\frac{V_p}{V_A}\frac{\frac{\varpi^2}{\varpi_*^2}-1}{\frac{V_p^2}{V_A^2} - 1} \quad \mathrm{and} \quad
+  V_\phi = \frac{L}{\varpi}\frac{\frac{V_P^2}{V_A^2} - \frac{\varpi^2}{\varpi_*^2}}{\frac{V_P^2}{V_A^2}-1}
+\end{equation}
+For a flow that remains super-Alfvénic $\left(\frac{V_P^2}{V_A^2}-1 > 1\right)$, the sign of rotation is given by the sign of the numerator:
+\begin{equation}
+  \frac{V_P^2}{V_A^2}- 1 > 0 \Rightarrow \mathrm{sign}\left( V_\phi \right) = \left( \frac{V_P^2}{V_A^2} - \frac{\varpi^2}{\varpi_*^2} \right)
+\end{equation}
+Using mass and magnetic flux conservation across the thin flux tube sketched above (\FIXME{sketch!}), we get
+\begin{align}
+  \vv{\nabla}\cdot \left( \rho\vv{V} \right) = 0 &\Rightarrow 4\pi\rho V_p\delta S = \mathrm{constant} = 4\pi\rho_*V_*\delta S_* \\
+  \vv{\nabla}\cdot\vv{B} = 0 & \Rightarrow B_P \delta S = \mathrm{constant} = B_*\delta S_*
+\end{align}
+Thus
+\begin{align}
+  \frac{V_P^2}{V_A^2} - \frac{\varpi^2}{\varpi_*^2}
+  & = \frac{4\pi\rho V_P^2}{B_P^2} - \frac{\varpi^2}{\varpi_*^2} \\
+  & = \frac{4\pi\rho_*V_* \frac{\delta S_*}{\delta S}}{B_*^2 \frac{\delta S_*^2}{\delta S^2}}V_P - \frac{\varpi^2}{\varpi_*^2} \\
+  & = \frac{4\pi\rho_*V_*^2}{B_*^2}\frac{\delta S}{\delta S_*} \frac{V_P}{V_*} - \frac{\varpi^2}{\varpi_*^2} \\
+  & = \frac{\delta S}{\delta S_*} \frac{V_P}{V_*} - \frac{\varpi^2}{\varpi_*^2}
+\end{align}
+So the sign of rotation is simply given by:
+\begin{equation}
+  \mathrm{sign}\left( V_\phi \right) = \mathrm{sign}\left( \frac{V_P}{V_*} - \frac{\varpi^2}{\varpi_*^2} \frac{\delta S_*}{\delta S} \right) 
+\end{equation}
+and the jet can counter rotate if the jet velocity is below some threshold value
+\begin{equation}
+  V_\phi < 0 \Rightarrow V_P < V_* \frac{\varpi^2}{\varpi_*^2} \frac{\delta S_*}{\delta S} = V_\mathrm{threshold}
+\end{equation}
+On the sketch below (\FIXME{put the sketch}) we see that if the flow along the flux tube decreases due to deceleration, then the flow's rotation will change sign.
+
+For the sun (spherically symmetric):
+\begin{equation}
+  V_\mathrm{threshold} = V_* \frac{\varpi^2}{\varpi_*^2}\frac{\delta S_*}{\delta S} \approx V_*
+\end{equation}
+For an homogeneous jet, we also get:
+\begin{equation}
+  \bar{V} = \frac{\int V_P \delta S}{\int \delta S} = \frac{\int V_P \delta S}{4\pi\varpi^2} < \frac{\int V_* \delta S}{\varpi^2_*} = \frac{\int V_* \delta S}{\int \delta S_*} = \bar{V_*} = V_\mathrm{threshold}
+\end{equation}
+Counter rotation can also be seen in numerical simulations. Again, it is associated with deceleration in the jet, although there, counter rotation is variable in time. The tricky point is that the magnetic field can store angular momentum and this is highly not straightforward.
+\FIXME{Missing figure}
+
+Counter rotation may occur locally and sporadically in a jet. It will thus always be difficult to measure. In any case, this does not contradict the basic laws of ideal MHD and is not a valid evidence to contradict the magnetocentrifugal acceleration seen in Chapter III (\FIXME{ref}).
 \section{Extra-Galactic Nuclei}
 \subsection{AGN Unified Scheme}
 \subsubsection{The zoology (before Urry \& Padovani)}
