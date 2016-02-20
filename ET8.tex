@@ -409,10 +409,10 @@ shocks and the proper motion of the shocks is not directly the speed of the
 underlying jets though similar velocities are measured by other means.
 
 These premain stars have accretion-ejection systems with typical accretion
-rates of $\dot{M}_{accr}=\SIrangeto{e-7}{e-6}{\Msun\per\yr}$. Around
+rates of $\dot{M}_\mathrm{accr}=\SIrangeto{e-7}{e-6}{\Msun\per\yr}$. Around
 \SI{30}{\percent} of these objects also have jets with typical wind mass loss
-rates of $\dot{M}_{jet}=\SIrangeto{e-8}{e-7}{\Msun\per\yr}$, densities
-$n_{jet}=\SIrangeto{e3}{e7}{\per\cubic\cm}$ (this is strongly model dependent)
+rates of $\dot{M}_\mathrm{jet}=\SIrangeto{e-8}{e-7}{\Msun\per\yr}$, densities
+$n_\mathrm{jet}=\SIrangeto{e3}{e7}{\per\cubic\cm}$ (this is strongly model dependent)
 and temperatures around $\SIrangeto{e3}{e4}{\kelvin}$. Of course the density in
 the accretion disk is much higher and the temperature much lower.
 
@@ -427,9 +427,9 @@ forming accretion torii and disks.
 Some disks (seen in infra red, red contours in next figure) show very powerful
 molecular outflows sometimes associated with the previous HH objects and
 Optical jets but not always. Molecular outflows with mass loss rates of
-$\dot{M}_{jet}=\SI{e-5}{\Msun\per\yr}$, velocity a few 10 km/s and cold
+$\dot{M}_\mathrm{jet}=\SI{e-5}{\Msun\per\yr}$, velocity a few 10 km/s and cold
 temperatures of a tens of Kelvin. The underlying accretion disks have accretion
-rates higher than typically $\dot{M}_{accr}=\SI{e-4}{\Msun\per\yr}$.
+rates higher than typically $\dot{M}_\mathrm{accr}=\SI{e-4}{\Msun\per\yr}$.
 
 HH211: Another nice example of a powerful molecular outflow with its inner
 accretion disk. Note that the inner structure is not very different from some
@@ -523,15 +523,15 @@ It corresponds to the free fall energy:
 
 The available power is:
 \begin{align*}
-    P & = \frac{\d{E}}{\d{t}} \approx \frac{GM_*}{R} \frac{\d{m}}{\d{t}} = \frac{GM_*}{R} \dot{M}_{acc} \\
-      & \approx \num{e38} \left(\frac{\dot{M}_{acc}}{\SI{e18}{\g\per\s}}\right) \left(\frac{M}{\SI{2e33}{\g}}\right) \left(\frac{\SI{7e10}{\cm}}{R}\right) \si{\erg\per\s} \\
-      & \approx \num{e38} \left(\frac{\dot{M}_{acc}}{\SI{e-8}{\Msun\per\yr}}\right) \left(\frac{M}{\si{\Msun}}\right) \left(\frac{\si{\Rsun}}{R}\right) \si{\erg\per\s}
+    P & = \frac{\d{E}}{\d{t}} \approx \frac{GM_*}{R} \frac{\d{m}}{\d{t}} = \frac{GM_*}{R} \dot{M}_\mathrm{acc} \\
+      & \approx \num{e38} \left(\frac{\dot{M}_\mathrm{acc}}{\SI{e18}{\g\per\s}}\right) \left(\frac{M}{\SI{2e33}{\g}}\right) \left(\frac{\SI{7e10}{\cm}}{R}\right) \si{\erg\per\s} \\
+      & \approx \num{e38} \left(\frac{\dot{M}_\mathrm{acc}}{\SI{e-8}{\Msun\per\yr}}\right) \left(\frac{M}{\si{\Msun}}\right) \left(\frac{\si{\Rsun}}{R}\right) \si{\erg\per\s}
 \end{align*}
 with
 \begin{align*}
     \si{\Msun} &= \SI{2e33}{\g} \\
     \si{\Rsun} &= \SI{7e10}{\cm} \\
-    R_{NS}   &= \SI{10}{\km} = \SI{e6}{\cm} = \SI{e-4}{\Rsun}
+    R_\mathrm{NS}   &= \SI{10}{\km} = \SI{e6}{\cm} = \SI{e-4}{\Rsun}
 \end{align*}
 
 Thus the available power depends on the accretion rate and the compactness M/R.
@@ -564,25 +564,25 @@ Accretion is ten times more efficient per mass unit to convert energy with a com
 \begin{itemize}
     \item If it is a galactic Black Hole we get
           \begin{align*}
-              R_{S} &=\frac{2 G M_{BH}}{c^2} = \SI{3}{\km} \\
-              \frac{M_{BH}}{R_{S}} &= 10^5 \frac{\si{\Msun}}{\si{\Rsun}}, \quad \varepsilon = 0.5
+              R_\mathrm{S} &=\frac{2 G M_\mathrm{BH}}{c^2} = \SI{3}{\km} \\
+              \frac{M_\mathrm{BH}}{R_\mathrm{S}} &= 10^5 \frac{\si{\Msun}}{\si{\Rsun}}, \quad \varepsilon = 0.5
           \end{align*}
     \item This is similar for a Neutron Star
     \item For a Supermassive Black Hole the compactness and the efficiency are identical, only the radius differs
           \begin{equation*}
-              R_{S} =\frac{2 G M_{BH}}{c^2} = \SIrange{3e11}{e14}{\cm}
+              R_\mathrm{S} =\frac{2 G M_\mathrm{BH}}{c^2} = \SIrange{3e11}{e14}{\cm}
           \end{equation*}
     \item For a White Dwarf
           \begin{equation*}
-              \frac{M_{WD}}{R_{WD}} = 10^2 \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_{WD} = \si{\Msun}, \quad R_{WD} = \SI{e-2}{\Rsun} = \SI{e9}{\cm}
+              \frac{M_\mathrm{WD}}{R_\mathrm{WD}} = 10^2 \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_\mathrm{WD} = \si{\Msun}, \quad R_\mathrm{WD} = \SI{e-2}{\Rsun} = \SI{e9}{\cm}
           \end{equation*}
     \item For a Young Star
           \begin{equation*}
-              \frac{M_{YSO}}{R_{YSO}} \approx \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_{YSO} = \si{\Msun}, \quad R_{YSO} = \SI{2}{\Rsun} = \SI{2e11}{\cm}
+              \frac{M_\mathrm{YSO}}{R_\mathrm{YSO}} \approx \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_\mathrm{YSO} = \si{\Msun}, \quad R_\mathrm{YSO} = \SI{2}{\Rsun} = \SI{2e11}{\cm}
           \end{equation*}
     \item For Jupiter
           \begin{equation*}
-              \frac{M_J}{R_J} = 10^{-2} \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_{J} = \SI{e-3}{\Msun}, \quad R_J = \SI{0.1}{\Rsun} = \SI{e10}{\cm}
+              \frac{M_J}{R_J} = 10^{-2} \frac{\si{\Msun}}{\si{\Rsun}}, \quad M_\mathrm{J} = \SI{e-3}{\Msun}, \quad R_J = \SI{0.1}{\Rsun} = \SI{e10}{\cm}
           \end{equation*}
 \end{itemize}
 
@@ -590,9 +590,9 @@ Accretion is ten times more efficient per mass unit to convert energy with a com
 
 We can define the Eddington luminosity, assuming isotropy and equilibrium between radiative pressure and gravity:
 \begin{align*}
-    F_{grav} & = F_{rad} \\
-    \frac{G M m_p}{R^2} &= P_{rad}\sigma_{T,\gamma/e^-} \\
-                        &= \frac{u_{rad}}{3}\sigma_T \\
+    F_\mathrm{grav} & = F_\mathrm{rad} \\
+    \frac{G M m_p}{R^2} &= P_\mathrm{rad}\sigma_{T,\gamma/e^-} \\
+                        &= \frac{u_\mathrm{rad}}{3}\sigma_T \\
                         &= \frac{1}{3}\frac{L R}{\frac{4}{3}\pi R^3 c}\\
     \frac{G M m_p}{R^2} &= \frac{L\sigma_T}{4\pi R^2 c}
 \end{align*}
@@ -619,18 +619,18 @@ Gas heating implies a balance between matter and radiation. This can be expresse
 \end{equation}
 and the effective temperature of the equivalent black body is given by:
 \begin{align}
-    k_b T_{bb} & \approx \SI{2}{keV} \left( \frac{\dot{M}}{\SI{e-8}{M\per\yr}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4} R_\odot} \right)^{-3/4} \\
-    k_b T_{bb} & \approx \SI{1.5}{keV} \left( \frac{L_\mathrm{Edd}}{\SI{e38}{\erg\per\s}} \right)^{1/4} \left( \frac{R}{\SI{e6}{\cm}} \right)^{-1/2}
+    k_b T_\mathrm{bb} & \approx \SI{2}{keV} \left( \frac{\dot{M}}{\SI{e-8}{M\per\yr}} \right)^{\nicefrac{1}{4}} \left( \frac{M}{M_\odot} \right)^{\nicefrac{1}{4}} \left( \frac{R}{\SI{e-4} R_\odot} \right)^{-\nicefrac{3}{4}} \\
+    k_b T_\mathrm{bb} & \approx \SI{1.5}{keV} \left( \frac{L_\mathrm{Edd}}{\SI{e38}{\erg\per\s}} \right)^{\nicefrac{1}{4}} \left( \frac{R}{\SI{e6}{\cm}} \right)^{-\nicefrac{1}{2}}
 \end{align}
 Then if all the radiation is converted into energy:
 \begin{align}
-    \frac{3}{2}\dot{M}\frac{k_b T_{bb}}{\mu m_H} & \approx \frac{GM_\star}{R}\dot{M_\mathrm{acc}}
+    \frac{3}{2}\dot{M}\frac{k_b T_\mathrm{bb}}{\mu m_H} & \approx \frac{GM_\star}{R}\dot{M_\mathrm{acc}}
 \end{align}
 
 \begin{equation}
     \tcboxmath{
         \begin{aligned}
-            \frac{3}{2}k_bT_{bb} & \approx \mu m_H \frac{GM_\star}{R} \\
+            \frac{3}{2}k_bT_\mathrm{bb} & \approx \mu m_H \frac{GM_\star}{R} \\
                                  & \approx \num{90} \left( \frac{M}{M_\odot} \right) \left( \frac{R}{\SI{e6}{cm}} \right)^{-1} \si{MeV}
         \end{aligned}
     }
@@ -642,7 +642,7 @@ We get for:
 \begin{itemize}
     \item \textbf{a galactic black hole}
         \begin{equation}
-            \SI{2}{keV}\left( \frac{\dot{M}}{\SI{e-8}{M_\odot\per\year}} \right)^{1/4} \left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-3/4} < kT < \SI{90}{MeV}\left( \frac{M}{M_\odot} \right)^{1/4} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-1}
+            \SI{2}{keV}\left( \frac{\dot{M}}{\SI{e-8}{M_\odot\per\year}} \right)^{\nicefrac{1}{4}} \left( \frac{M}{M_\odot} \right)^{\nicefrac{1}{4}} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-\nicefrac{3}{4}} < kT < \SI{90}{MeV}\left( \frac{M}{M_\odot} \right)^{\nicefrac{1}{4}} \left( \frac{R}{\SI{e-4}{R_\odot}} \right)^{-1}
         \end{equation}
         For a mass loss rate of $\dot{M} = \SI{e-8}{M_\odot\per\year}$, the spectrum spans from soft X to gamma rays.
     \item \textbf{a white dwarf}
@@ -887,12 +887,12 @@ we get the velocity both at infinity and close to the star :
 \begin{align}
     v^2 &= 2c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right)  + \frac{2GM}{r} \\
         & \xrightarrow{r\to 0} \frac{2GM}{r} \\
-        & \xrightarrow{r\to\infty} 0\ \Rightarrow \rho_S = \rho_\infty e^{3/2}
+        & \xrightarrow{r\to\infty} 0\ \Rightarrow \rho_S = \rho_\infty e^{\nicefrac{3}{2}}
 \end{align}
 
 We see that close to the star, the fluid is in free fall. The mass accretion rate of the trans-sonic solution is thus:
 \begin{equation}
-    \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{3/2} \frac{\rho_\infty}{c_s^3}
+    \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{\nicefrac{3}{2}} \frac{\rho_\infty}{c_s^3}
 \end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
 We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vv{v} = \vv{v}(r)$.
@@ -916,7 +916,7 @@ The topology of the solutions is the same as previously but with a new interpret
 \subsubsection{Solar wind (Parker 1958)}
 The breeze solutions have zero velocity asymptotically, but the pressure is non zero and cannot match the interstellar pressure :
 \begin{equation}
-    v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0\Rightarrow \rho_\infty = \rho_s e^{-3/2} \neq 0 \Rightarrow \rho_\infty \neq 0
+    v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0\Rightarrow \rho_\infty = \rho_s e^{-\nicefrac{3}{2}} \neq 0 \Rightarrow \rho_\infty \neq 0
 \end{equation}
 Thus they are very similar in behavior to the static solutions, which we have shown to be excluded. Parker showed that the only valid solution is the critical solution that becomes super sonic with zero pressure at infinity. It has then been confirmed observationnaly. Parker also showed studying the polytropic wind that acceleration can be obtained only if the polytropic index is $\gamma < \frac{3}{2}$. $\frac{c_p}{c_s} = \frac{5}{3}$ being the adiabatic value for a monoatomic gas, this means that the exists only because there is enough extended heating at the base of the solar corona.
 
@@ -968,7 +968,7 @@ Euler equation:
 \end{equation}
 Equation of state (energy) :
 \begin{equation}
-    p(x) = c_{s}^2\rho(x)
+    p(x) = c_\mathrm{s}^2\rho(x)
 \end{equation}
 It follows:
 \begin{equation}
@@ -1075,7 +1075,7 @@ momentum equation,
 
 Momentum equation can be written with a turbulent pressure tensor
 \begin{equation*}
-    \diffp{}{t}(\rho \vv{v}) + \vv{\nabla}\cdot\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) = \rho \vv{g}
+    \diffp{}{t}(\rho \vv{v}) + \vv{\nabla}\cdot\left(\rho \vv{v} \otimes \vv{v} + \tens{P}_\mathrm{turb}\right) = \rho \vv{g}
 \end{equation*}
 
 \FIXME{Need of a better tensorial notation for Pturb}
@@ -1083,7 +1083,7 @@ Momentum equation can be written with a turbulent pressure tensor
 with the turbulent pressure being
 \begin{align*}
     \tens{P}_\mathrm{turb} &= p_\mathrm{gas} \tens{I} + \rho \overline{\vv{v}' \otimes \vv{v}'} \\
-    \left(\overline{\vv{v}' \otimes \vv{v}'}\right)_{ij} &= \overline{v_i' v_j'} =
+    \left(\overline{\vv{v}' \otimes \vv{v}'}\right)_\mathrm{ij} &= \overline{v_i' v_j'} =
     - \nu_T \left( \diffp{\overline{v_i}}{{x_j}} + \diffp{\overline{v_j}}{{x_i}} \right) \\
     \Leftrightarrow \left(\overline{\vv{v}' \otimes \vv{v}'}\right) &=
     - \nu_T \left(\vv{\nabla} \otimes \vv{v} + \vv{v} \otimes \vv{\nabla}\right)
@@ -1114,8 +1114,8 @@ Magneto-Rotational-Instability (MRI hereafter).
 To get the angular momentum conservation on $\phi$, we can multiply by $\vv{R} \times$, and integrate over height,
 \begin{align*}
     &\int_{-H}^H \vv{R} \times \diffp{}{t}(\rho \vv{v}) \d{z} +
-    \int_{-H}^H \vv{R} \times \vv{\nabla} \cdot \left(\rho \vv{v} \otimes \vv{v} + \tens{P}_{turb}\right) \d{z} =
-    \underbrace{\int_{-H}^H \vv{R} \times \rho \vv{\nabla} \nabla_{grav} \d{z}}_{= 0} \\
+    \int_{-H}^H \vv{R} \times \vv{\nabla} \cdot \left(\rho \vv{v} \otimes \vv{v} + \tens{P}_\mathrm{turb}\right) \d{z} =
+    \underbrace{\int_{-H}^H \vv{R} \times \rho \vv{\nabla} \nabla_\mathrm{grav} \d{z}}_{= 0} \\
     &\Rightarrow \diffp{}{t} \int_{-H}^H \vv{R} \times (\rho \vv{v}) \d{z} +
     \vv{\nabla} \cdot \int_{-H}^H \vv{R} \times \left( \rho \vv{v} \otimes \vv{v} \right) \d{z} +
     \underbrace{\int_{-H}^H \vv{R} \times \vv{\nabla} p \d{z}}_{= 0} =
@@ -1184,7 +1184,7 @@ $V_\varphi \approx R \Omega_K$, we finally obtain,
 This is a non-linear diffusion equation with the typical viscous time and
 accretion speed,
 \begin{equation*}
-    t_{vis} \approx \frac{R^2}{\nu_T} ; V_R = \frac{R}{t_{vis}} \approx \frac{\nu_T}{R}
+    t_\mathrm{vis} \approx \frac{R^2}{\nu_T} ; V_R = \frac{R}{t_\mathrm{vis}} \approx \frac{\nu_T}{R}
 \end{equation*}
 
 The two previous equation must be finally combined to the $R$-component or
@@ -1212,16 +1212,16 @@ The angular momentum conservation that can be integrated
 
 $l = R^2 \Omega$ is the specific angular momentum.
 \begin{align*}
-    & RG(R) = - \frac{\dot{M}}{2 \pi} (l - l_{in}) = R \nu_T \Sigma R^2 \diffp{\Omega}{R} \\
-    & \Rightarrow \nu_T \Sigma = \frac{\dot{M}}{3 \pi} \left(1 - \frac{l_{in}}{l}\right) =
-    \frac{\dot{M}}{3 \pi} \left(1 - \left(\frac{R_{in}}{R}\right)^\frac{1}{2}\right) \\
-    &G(R_{in}) = 0 \Rightarrow C = - \frac{\dot{M}}{2 \pi} l_{in}
+    & RG(R) = - \frac{\dot{M}}{2 \pi} (l - l_\mathrm{in}) = R \nu_T \Sigma R^2 \diffp{\Omega}{R} \\
+    & \Rightarrow \nu_T \Sigma = \frac{\dot{M}}{3 \pi} \left(1 - \frac{l_\mathrm{in}}{l}\right) =
+    \frac{\dot{M}}{3 \pi} \left(1 - \left(\frac{R_\mathrm{in}}{R}\right)^\frac{1}{2}\right) \\
+    &G(R_\mathrm{in}) = 0 \Rightarrow C = - \frac{\dot{M}}{2 \pi} l_\mathrm{in}
 \end{align*}
 
 Thus the accretion velocity is given by,
 \begin{equation}
     \tcboxmath{
-        \Rightarrow V_R = - \frac{3 \nu_T}{2 R} \left(1 - \left(\frac{R_{in}}{R}\right)^\frac{1}{2}\right)^{-1}
+        \Rightarrow V_R = - \frac{3 \nu_T}{2 R} \left(1 - \left(\frac{R_\mathrm{in}}{R}\right)^\frac{1}{2}\right)^{-1}
     }
 \end{equation}
 
@@ -1239,14 +1239,14 @@ The dissipation is the energy lost per unit surface and unit time
 Thus,
 \begin{equation*}
     D(R) = \frac{1}{2} G(R) \diffp{\Omega}{R} = \frac{1}{2} \nu_T \Sigma \left( R \diffp{\Omega}{R} \right)^2 \underset{\Omega = \Omega_K}{\approx}
-    \frac{3 G M \dot{M}}{8 \pi R^3} \left(1 - \left(\frac{R_{in}}{R}\right)^\frac{1}{2}\right)
+    \frac{3 G M \dot{M}}{8 \pi R^3} \left(1 - \left(\frac{R_\mathrm{in}}{R}\right)^\frac{1}{2}\right)
 \end{equation*}
 
 The total luminosity carries only half of the total gravitational energy. The
 conversion is only \SI{50}{\percent}.
 \begin{equation}
     \tcboxmath{
-        L_D = 2 \int_{R_{in}}^{\infty} 2 \pi R D(R) \d{R} = \frac{G M \dot{M}}{2 R_{in}} = \frac{1}{2} L_{acc}
+        L_D = 2 \int_{R_\mathrm{in}}^{\infty} 2 \pi R D(R) \d{R} = \frac{G M \dot{M}}{2 R_\mathrm{in}} = \frac{1}{2} L_\mathrm{acc}
     }
 \end{equation}
 
@@ -1393,55 +1393,55 @@ We use the following notation for the mass density and the temperature on the eq
 
 The sound speed is : $c_s^2 = \frac{p}{\rho}$ with a total (scalar) pressure :
 \begin{equation}
-    P = P_{gas} + P_{rad}  = \rho \frac{k_b T_c}{\mu m_H} + \frac{4\sigma}{3 c}T_c^4
+    P = P_\mathrm{gas} + P_\mathrm{rad}  = \rho \frac{k_b T_c}{\mu m_H} + \frac{4\sigma}{3 c}T_c^4
 \end{equation}
 
 if radiation dominates over the plasma gas pressure then we get :
 \begin{equation}
-    P_{gas} = \rho \frac{k_b T_c}{\mu m_H} << P_{rad} = \frac{u_{rad}}{3} = \frac{4\sigma}{3 c}T_c^4`
+    P_\mathrm{gas} = \rho \frac{k_b T_c}{\mu m_H} \ll P_\mathrm{rad} = \frac{u_\mathrm{rad}}{3} = \frac{4\sigma}{3 c}T_c^4`
 \end{equation}
 
 The full energy equation gives :
 \begin{equation}
-    \frac{\partial}{\partial t } \bigg (
-    \frac{1}{2}\rho v^2 + u + \rho \Phi_{grav} + u_{rad} \bigg) +
-    \vec{\nabla}.\bigg(
-    \frac{1}{2}\rho v^2 \vec{v} + (u + p)\vec{v} + \rho \Phi_{grav}\vec{v} +
-    \vec{q} - \tens{\sigma}_{visc}.\vec{v} + \vec{S}_{rad}
-    \bigg) = 0
+    \frac{\partial}{\partial t } \left(
+    \frac{1}{2}\rho v^2 + u + \rho \Phi_\mathrm{grav} + u_\mathrm{rad} \right) +
+    \vec{\nabla}\cdot\left(
+    \frac{1}{2}\rho v^2 \vec{v} + (u + p)\vec{v} + \rho \Phi_\mathrm{grav}\vec{v} +
+    \vec{q} - \tens{\sigma}_\mathrm{visc}\cdot\vec{v} + \vec{S}_\mathrm{rad}
+    \right) = 0
 \end{equation}
 
 Assume steady state and radiatively dominated. if the disk is thin, the horizontal gradients
 are negligible compared to horizontal ones.
 
 \begin{equation}
-    \diff{p}{R} << \diff{p}{z}, \diff{T}{R} << \diff{T}{z}\text{  etc}
+    \diff{p}{R} \ll \diff{p}{z}, \diff{T}{R} \ll \diff{T}{z}\text{  etc}
 \end{equation}
 Thus we have :
 \begin{equation}
     \left.
     \begin{array}{ll}
-        & \vec{\nabla}.\big( \vec{q}+\vec{S}_{rad}-\tens{\sigma}_{visc}\cdot\vec{v}\big)\\
-        & \vec{q} << \vec{S}_{rad}
+        & \vec{\nabla}.\left( \vec{q}+\vec{S}_\mathrm{rad}-\tens{\sigma}_\mathrm{visc}\cdot\vec{v}\right)\\
+        & \vec{q} \ll \vec{S}_\mathrm{rad}
     \end{array}
-\right \}\Rightarrow \vec{\nabla}\cdot\big(\vec{S}_{rad}-\tens{\sigma}_{visc}\cdot\vec{v}\big)
+\right \}\Rightarrow \vec{\nabla}\cdot\left(\vec{S}_\mathrm{rad}-\tens{\sigma}_\mathrm{visc}\cdot\vec{v}\right)
 \end{equation}
 \begin{equation}
-    \vec{S}_{rad}(H) - \tens{\sigma}_{visc}\cdot\vec{v}(H) = \vec{S}_{rad}(0) - \tens{\sigma}_{visc}\cdot\vec{v}(0) \Leftrightarrow
-    S_{rad}(H) = D
+    \vec{S}_\mathrm{rad}(H) - \tens{\sigma}_\mathrm{visc}\cdot\vec{v}(H) = \vec{S}_\mathrm{rad}(0) - \tens{\sigma}_\mathrm{visc}\cdot\vec{v}(0) \Leftrightarrow
+    S_\mathrm{rad}(H) = D
 \end{equation}
 where :
 \begin{equation}
     D(R) = G(R)\frac{1}{4\pi R}\frac{\partial \Omega}{\partial R } =
-    \frac{1}{2}v_T \Sigma\bigg(   R\frac{\partial \Omega}{\partial R }\bigg)^2 \underset{\mathrm{\Omega = \Omega_K}}{\approx}
-    \frac{3GM\dot{M}}{8\pi R^3}\Bigg( 1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\Bigg)
+    \frac{1}{2}v_T \Sigma\left(   R\frac{\partial \Omega}{\partial R }\right)^2 \underset{\mathrm{\Omega = \Omega_K}}{\approx}
+    \frac{3GM\dot{M}}{8\pi R^3}\left( 1-\left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right)
 \end{equation}
 
 Radiative energy flux in the diffusion approximation
 \begin{equation}
-    S_{rad}(z) = -\frac{4\sigma}{3\kappa_R \rho}\frac{\partial T^4}{\partial	z}
+    S_\mathrm{rad}(z) = -\frac{4\sigma}{3\kappa_R \rho}\frac{\partial T^4}{\partial	z}
 \end{equation}
-Note that $\displaystyle S_{rad}(z) = \chi_{rad} \frac{\partial T }{\partial z } $ with $\displaystyle\chi_{rad} = \frac{16 \sigma T^3}{3\kappa_R \rho}$
+Note that $\displaystyle S_\mathrm{rad}(z) = \chi_\mathrm{rad} \frac{\partial T }{\partial z } $ with $\displaystyle\chi_\mathrm{rad} = \frac{16 \sigma T^3}{3\kappa_R \rho}$
 
 $\kappa_R$ is the Rosseland opacity. This is valid only for optically thick disks obviously.
 
@@ -1451,68 +1451,68 @@ The optical thickness is given by :
 \end{equation}
 We can then calculate the radiative flux :
 \begin{align}
-    & S_{rad}(0) = 0 \text{  ;  } T(H)<<T(0) = T_c = max  \\
-    & S_{rad}(H) = -\frac{4\sigma}{3\kappa_R \rho}\frac{T^4(H)-T^4(0)}{H}
-    \approx   \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H} \\
-    & S_{rad}(H) \approx  \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H} =
-    \frac{4\sigma}{3\tau}T_c^4 = D(R) \\
-    & \frac{4\sigma}{3\kappa_R \rho}T^4_c\underset{\mathrm{\Omega = \Omega_K}}{\approx}
-    \frac{3GM\dot{M}}{8\pi R^3}\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg) \\
-    &c_s^2 = \frac{p}{\rho} = H^2\Omega^2 \Rightarrow H = \frac{3\dot{M}\sigma}{8\pi m_H c }
-    \bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2} \bigg)
+    S_\mathrm{rad}(0)   & = 0 \ \mathrm{;}\quad T(H) \ll T(0) = T_c = \mathrm{max}  \\
+    S_\mathrm{rad}(H) & = -\frac{4\sigma}{3\kappa_R \rho}\frac{T^4(H)-T^4(0)}{H} \\
+                        & \approx \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H} \\
+    S_\mathrm{rad}(H) & \approx  \frac{4\sigma}{3\kappa_R \rho}\frac{T^4_c}{H}  \\
+                        & = \frac{4\sigma}{3\tau}T_c^4 = D(R) \\
+    \frac{4\sigma}{3\kappa_R \rho}T^4_c & \underset{\mathrm{\Omega = \Omega_K}}{\approx}
+    \frac{3GM\dot{M}}{8\pi R^3}\left( 1-\left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right) \\
+    c_s^2 & = \frac{p}{\rho} = H^2\Omega^2 \Rightarrow H = \frac{3\dot{M}\sigma}{8\pi m_H c }
+    \left(  1-\left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}} \right)
 \end{align}
 
 Each annulus of the disk radiates at the effective temperature
 \begin{equation}
     \tcboxmath{
         \frac{4\sigma}{3\tau}T^4_c\underset{\mathrm{\Omega = \Omega_K}}{\approx}
-        \frac{3GM\dot{M}}{8\pi R^3}\bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg) =
-        \sigma T_{eff}^4
+        \frac{3GM\dot{M}}{8\pi R^3}\left(  1-\left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right) =
+        \sigma T_\mathrm{eff}^4
     }
 \end{equation}
 The effective temperature is obtained from the following equation :
 \begin{equation}
     \tcboxmath{
-        T_{eff} = \Bigg( \frac{3GM\dot{M}}{8\pi \sigma R^3}
-        \bigg(  1-\bigg(\frac{R_{in}}{R}\bigg)^{1/2}\bigg)\Bigg)^{1/4}
-        \underset{\mathrm{R >>R_{in}}}{\rightarrow} T_{in}\bigg(\frac{R}{R_{in}}\bigg)^{-3/4}
+        T_\mathrm{eff} = \left[ \frac{3GM\dot{M}}{8\pi \sigma R^3}
+        \left(  1-\left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right)\right]^{\nicefrac{1}{4}}
+        \xrightarrow[R \gg R_\mathrm{in}]{}  T_\mathrm{in}\left(\frac{R}{R_\mathrm{in}}\right)^{-\nicefrac{3}{4}}
     }
 \end{equation}
 
 \begin{align}
-    & T_{in} = \frac{3GM\dot{M}}{8\pi\sigma R^3}^{1/4} \\
-    & T^{max}_{eff} = T_{in} \bigg(\frac{49 R_{in}}{36}\bigg) = 0.488T_{in} \\
-    & \sim 0.488\times7.5.10^3 \bigg( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\bigg)^{1/4}
-    \bigg( \frac{M}{M_{\odot}}\bigg)^{1/4}
-    \bigg(  \frac{R}{\SI{e11}{\cm}}\bigg)^{1/4} \quad \text{K(YSO)}     \\
-    & \sim 0.488\times 4.1.10^4 \bigg( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\bigg)^{1/4}
-    \bigg( \frac{M}{M_{\odot}}\bigg)^{1/4}
-    \bigg(  \frac{R}{\SI{e9}{\cm}}\bigg)^{1/4} \quad \text{K(WD)}     \\
-    & \sim 0.488\times 5.10^6  \bigg( \frac{\dot{M}}{\SI{e17}{\gram \per \s}}\bigg)^{1/4}
-    \bigg( \frac{M}{M_{\odot}}\bigg)^{1/4}
-    \bigg(  \frac{R}{\SI{e6}{\cm}}\bigg)^{1/4} \quad \text{K(NS)}     \\
-    &\sim 0.488 \times 10^5 \bigg(  \frac{\dot{M}}{\dot{M}_{Edd}}\bigg)^{1/4}
-    \bigg( \frac{M}{10^6 M_{\odot}}\bigg)^{1/4}
-    \bigg(  \frac{R}{R_G}\bigg)^{1/4} \text{K(AGN)}
+    & T_\mathrm{in} = \frac{3GM\dot{M}}{8\pi\sigma R^3}^{\nicefrac{1}{4}} \\
+    & T^\mathrm{max}_\mathrm{eff} = T_\mathrm{in} \left(\frac{49 R_\mathrm{in}}{36}\right) = 0.488T_\mathrm{in} \\
+    & \sim 0.488\times7.5.10^3 \left( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\right)^{\nicefrac{1}{4}}
+    \left( \frac{M}{M_{\odot}}\right)^{\nicefrac{1}{4}}
+    \left(  \frac{R}{\SI{e11}{\cm}}\right)^{\nicefrac{1}{4}} \quad \text{K(YSO)}     \\
+    & \sim 0.488\times 4.1.10^4 \left( \frac{\dot{M}}{\SI{e16}{\gram \per \s}}\right)^{\nicefrac{1}{4}}
+    \left( \frac{M}{M_{\odot}}\right)^{\nicefrac{1}{4}}
+    \left(  \frac{R}{\SI{e9}{\cm}}\right)^{\nicefrac{1}{4}} \quad \text{K(WD)}     \\
+    & \sim 0.488\times 5.10^6  \left( \frac{\dot{M}}{\SI{e17}{\gram \per \s}}\right)^{\nicefrac{1}{4}}
+    \left( \frac{M}{M_{\odot}}\right)^{\nicefrac{1}{4}}
+    \left(  \frac{R}{\SI{e6}{\cm}}\right)^{\nicefrac{1}{4}} \quad \text{K(NS)}     \\
+    &\sim 0.488 \times 10^5 \left(  \frac{\dot{M}}{\dot{M}_\mathrm{Edd}}\right)^{\nicefrac{1}{4}}
+    \left( \frac{M}{10^6 M_{\odot}}\right)^{\nicefrac{1}{4}}
+    \left(  \frac{R}{R_G}\right)^{\nicefrac{1}{4}} \text{K(AGN)}
 \end{align}
 
 The Eddington accretion rate luminosity can be calculated accordingly by :
 \begin{equation}
-    \dot{M}_{Edd} = \frac{L_{Edd}}{c^2} \text{ ; } L_{Edd} = \frac{4\pi GMm_Hc}{\sigma_T}
-    \bigg( \frac{M}{10^6M_{\odot}}\bigg) \si{\erg \per \s}
+    \dot{M}_\mathrm{Edd} = \frac{L_\mathrm{Edd}}{c^2} \text{ ; } L_\mathrm{Edd} = \frac{4\pi GMm_Hc}{\sigma_T}
+    \left( \frac{M}{10^6M_{\odot}}\right) \si{\erg \per \s}
 \end{equation}
 The black body flux corresponding to that solution is :
 \begin{equation}
-    F_{\nu} = \frac{2\pi \cos (i)}{D^2} \int_{R_{in}}^{R_{out}} I_{\nu}RdR \text{  ;  }
+    F_{\nu} = \frac{2\pi \cos (i)}{D^2} \int_{R_\mathrm{in}}^{R_\mathrm{out}} I_{\nu}RdR \text{  ;  }
     I_{\nu} = B_{\nu}\big[ T(R)\big] \\
 \end{equation}
 
 \begin{align}
-    F_{\nu} = \frac{4\pi \cos (i)h\nu}{c^2D^2} \int_{R_{in}}^{R_{out}}
-    \frac{RdR}{\exp^{h\nu/kT(R)}-1}
-    &\xrightarrow[\nu << \frac{kT(R_{out})}{h}]{} \nu^2  \\
-    & \xrightarrow[\nu >> \frac{kT(R_{in})}{h}]{} \frac{2\pi h \nu^3}{c^2}\exp ^{-h\nu/kT(R)}  \\
-    & \xrightarrow[\frac{kT(R_{out})}{h}<<\nu << \frac{kT(R_{in})}{h}]{} \nu^{1/3}
+    F_{\nu} = \frac{4\pi \cos (i)h\nu}{c^2D^2} \int_{R_\mathrm{in}}^{R_\mathrm{out}}
+    \frac{RdR}{e^{h\nu/kT(R)}-1}
+    &\xrightarrow[\nu \ll \frac{kT(R_\mathrm{out})}{h}]{} \nu^2  \\
+    & \xrightarrow[\nu \gg \frac{kT(R_\mathrm{in})}{h}]{} \frac{2\pi h \nu^3}{c^2} e^{-h\nu/kT(R)}  \\
+    & \xrightarrow[\frac{kT(R_\mathrm{out})}{h}\ll\nu \ll \frac{kT(R_\mathrm{in})}{h}]{} \nu^{\nicefrac{1}{3}}
 \end{align}
 
 
@@ -1535,7 +1535,7 @@ Magnetic acceleration can take two forms as illustrated. Either the magnetic is 
 azimuthal (roped) and then uncoils itself as a spring. This corresponds to Fig (Fig XXX)
 and the plasma gun model where this is the uncoiling of the magnetic spring (magnetic pressure gradient)
 which provokes the acceleration. The second possibility (Fig XXX) is the Blandford Payne mechanism, where the magnetic field
-is strong enough to maintain the plasma frozen at least up to the Alfven surface. As it rotates the effect is similar to a bead
+is strong enough to maintain the plasma frozen at least up to the Alfvén surface. As it rotates the effect is similar to a bead
 on a wire and if the line is sufficiently inclined the plasma is accelerated.
 
 \FIXME{missing figure}
@@ -1562,7 +1562,7 @@ like in the solar wind. A purely thermally driven wind gives temperatures too hi
 
 However to solve this problem, one can invoke the fact that as in the solar wind where the
 effective temperature is ten times higher than the kinetic wind pressure, we may also argue
-for jets that in addition to the kinetic temperature, the total pressure includes Ram, Alfven
+for jets that in addition to the kinetic temperature, the total pressure includes Ram, Alfvén
 or other wave pressure.
 
 
@@ -1570,7 +1570,7 @@ All this is consistent if the variation $\sim$ magnitude are reasonable.
 
 \begin{equation}
     P_\mathrm{ram} \sim \frac{\delta V^2}{V^2} \qquad
-    P_\mathrm{Alfven}	\sim \frac{\delta B^2}{b^2} \qquad
+    P_\textrm{Alfvén}	\sim \frac{\delta B^2}{b^2} \qquad
     \frac{\delta V}{V } \text{ or } \frac{\delta B}{B} \sim 1
 \end{equation}
 \subsubsection{Pressure of thermal Collimation}
@@ -1581,7 +1581,7 @@ Collimation can be the result of external pressure onto the jet.
 Such collimation is not efficient on long distances from the sources, and we need help from the magnetic field.
 
 \subsubsection{Magnetic Collimation}
-Because of rotation, the build-up of azimuthal magnetic field creates a pinching or so-called "hoop=stress"
+Because of rotation, the build-up of azimuthal magnetic field creates a pinching or so-called ``hoop=stress''.
 
 \FIXME{Missing figure}
 
@@ -1601,7 +1601,7 @@ The are different analytical models:
 \begin{itemize}
     \item \textbf{Meridional Self Similar} models have a dipolar magnetic flux, $A \propto \sin^2\theta$ They are necessarily thermally or pressure driven but well adapted to describe the jet axis and are usually an expansion with colatitiude of the equations.
     \item \textbf{X-Wind} the come from the intermediate zone between the disk and the star. They are magnetocentrifugally driven. The disk should produce a fan wind which seems rather unstable.
-    \item \textbf{Radial Self Similar} models use power laws, in particular for the magnetic flux $A \propto r^{-5/4}$. They are adapted for the external part of the jet and especially for Keplerian Disk Winds. They correspond to the case where boundaries can be neglected (in particular the inner and outer parts of the disk).
+    \item \textbf{Radial Self Similar} models use power laws, in particular for the magnetic flux $A \propto r^{-\nicefrac{5}{4}}$. They are adapted for the external part of the jet and especially for Keplerian Disk Winds. They correspond to the case where boundaries can be neglected (in particular the inner and outer parts of the disk).
 
         \fxnote{Missing figure}
 \end{itemize}
@@ -1893,7 +1893,7 @@ Binary systems in our galaxy are long thought to be sources of accretion and als
 
 Again various classes of objects have been observed. One such class is the Low Mass X-ray Binaries (LMXB). They can be represented with the following sketch (image).
 
-For LMXB the eclipse rate is low, the disk is THICK and not thin. Thus the disk obscures the central compact object which remains invisible. X-ray emission is seen through the diffusion by the photoionized corona (ex. Sagittarius X-7, V691 CrA).
+For LMXB the eclipse rate is low, the disk is THICK and not thin. Thus the disk obscurs the central compact object which remains invisible. X-ray emission is seen through the diffusion by the photoionized corona (ex. Sagittarius X-7, V691 CrA).
 
 GRS 1915+105 is a Low Mass X-ray Binary which is also a very well known micro-quasar. It is in fact the first galactic object where knots with relativistic motion (Mirabel, 1992) where measured. It appears as a down scaled version of a quasar. The spectrum undergoes various phases. Conversely to AGNs these can be interpreted in terms of evolution because we see a single object going through the various phases,
 
