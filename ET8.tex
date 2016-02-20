@@ -41,10 +41,10 @@
 \ifxetex
     \usepackage{mathspec}
     \defaultfontfeatures{Ligatures=TeX,RawFeature={-calt,+tnum,+lnum}}
-    \setmainfont[BoldFont={Adobe Garamond Pro Semibold},BoldItalicFont={Adobe Garamond Pro Semibold Italic}]{EB Garamond}
-    \setmathfont(Digits){EB Garamond}
-    \newfontfamily\NotoSans{Noto Sans}
-    \newfontfamily\LatinModern{Latin Modern Math}
+    % \setmainfont[BoldFont={Adobe Garamond Pro Semibold},BoldItalicFont={Adobe Garamond Pro Semibold Italic}]{EB Garamond}
+    % \setmathfont(Digits){EB Garamond}
+    % \newfontfamily\NotoSans{Noto Sans}
+    % \newfontfamily\LatinModern{Latin Modern Math}
 \else
     \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
@@ -156,7 +156,7 @@
 
 \begin{center}
     \ifxetex
-        {\LatinModern M\textsubscript{\NotoSans ☺}}
+        % {\LatinModern M\textsubscript{\NotoSans ☺}}
     \else
         $M_{\odot}$ % C’est ironique, non ? – Un peu oui !
     \fi
@@ -672,126 +672,242 @@ As a matter of fact the range of spectrum we just deduced coincides with the obs
 
 
 \subsubsection{AGN Luminosity and Spectra}
-The luminosity observed in AGNs is of the order of $\SI{e46}{\erg\per\s}$. If the total luminosity is lower than the Eddington luminosity, which is reasonable, the mass of the central black hole has to be larger than $M > \SI{e8}{M_\odot}$.
+The luminosity observed in AGNs is of the order of
+$\SI{e46}{\erg\per\s}$. If the total luminosity is lower than the
+Eddington luminosity, which is reasonable, the mass of the central
+black hole has to be larger than $M > \SI{e8}{M_\odot}$.
 
-The luminosity could be due to nuclear reactions, if we have a large population of star burst. This implies a burst rate of $\dot{M} \sim \SI{10}{M_\odot\per\yr}$. Considering that the galaxy has $M_\mathrm{galaxy} \sim \SI{e11}{M_\odot} \sim \SI{e11}{stars}$, it would be emptied in 10 billion years. This is too short and excludes the scenario of AGN being star burst galaxies.
+The luminosity could be due to nuclear reactions, if we have a large
+population of star burst. This implies a burst rate of
+$\dot{M} \sim \SI{10}{M_\odot\per\yr}$. Considering that the galaxy
+has $M_\mathrm{galaxy} \sim \SI{e11}{M_\odot} \sim \SI{e11}{stars}$,
+it would be emptied in 10 billion years. This is too short and
+excludes the scenario of AGN being star burst galaxies.
 
-Conversely, if the luminosity is due to accretion, the accretion rate required is $\dot{M} \sim \si{M_\odot\per\yr}$. The mass luminosity ratio is $M/L \sim 10$. Thus the luminosity of a standard galaxy is $L_\mathrm{galaxy} \sim \SI{e43}{\erg\per\s}$ and the luminosity of a quasar is a thousand times higher : $L_\mathrm{quasar}\sim 1000 L_\mathrm{galaxy}$. \textbf{For Seyfert galaxies, the luminosity is typically around $\SIrange{e43}{e45}{\erg\per\s}$ while for quasars it is between $\SIrange{e45}{e48}{\erg\per\s}$}.
+Conversely, if the luminosity is due to accretion, the accretion rate
+required is $\dot{M} \sim \si{M_\odot\per\yr}$. The mass luminosity
+ratio is $M/L \sim 10$. Thus the luminosity of a standard galaxy is
+$L_\mathrm{galaxy} \sim \SI{e43}{\erg\per\s}$ and the luminosity of a
+quasar is a thousand times higher :
+$L_\mathrm{quasar}\sim 1000 L_\mathrm{galaxy}$. \textbf{For Seyfert
+  galaxies, the luminosity is typically around
+  $\SIrange{e43}{e45}{\erg\per\s}$ while for quasars it is between
+  $\SIrange{e45}{e48}{\erg\per\s}$}.
 
-The observed variability is typically of one week $\Delta t \sim \SI{6e5}{s}$. Considering that the speed of light is the upper speed limit, the causality principle implies that the emission region cannot be larger than $R \leq c\Delta t \sim \SI{2e16}{cm} \sim \SI{0.01}{pc}$. This means that the emission comes from a very narrow region with a rather high density. To satisfy this, it is difficult to have stellar clusters (e.g. Sgr A : $\SI{4e16}{M_\odot\per\pc^3}$).
+The observed variability is typically of one week
+$\Delta t \sim \SI{6e5}{s}$. Considering that the speed of light is
+the upper speed limit, the causality principle implies that the
+emission region cannot be larger than
+$R \leq c\Delta t \sim \SI{2e16}{cm} \sim \SI{0.01}{pc}$. This means
+that the emission comes from a very narrow region with a rather high
+density. To satisfy this, it is difficult to have stellar clusters
+(e.g. Sgr A : $\SI{4e16}{M_\odot\per\pc^3}$).
 
-The figure bellow \fxnote{put the figure} displays a typical \textbf{BL Lac Spectral Distribution}. \textbf{BL Lac} are typical radio loud AGNs. Nowadays, we have a good knowledge of the multi-wavelength spectrum from radio to gamma rays.
+The figure bellow \fxnote{put the figure} displays a typical
+\textbf{BL Lac Spectral Distribution}. \textbf{BL Lac} are typical
+radio loud AGNs. Nowadays, we have a good knowledge of the
+multi-wavelength spectrum from radio to gamma rays.
 
-\textbf{Seyfert and Quasar Spectral Distributions} are quite similar to BL Lac. Each component is explained by the composition of the disk and the jet. The central BH is surrounded by a cold accretion disk of gas and dust. On top of the disk, close to the central object, a hot corona must be present. The radio levels depend on the presence or of a central jet.
-\fxnote{Missing figure here}
+\textbf{Seyfert and Quasar Spectral Distributions} are quite similar
+to BL Lac. Each component is explained by the composition of the disk
+and the jet. The central BH is surrounded by a cold accretion disk of
+gas and dust. On top of the disk, close to the central object, a hot
+corona must be present. The radio levels depend on the presence or of
+a central jet.  \fxnote{Missing figure here}
 
-The cascade model explains how the different frequencies are emitted and how they are correlated in space and time as shown in the following figure.
-\fxnote{missing figure here}
+The cascade model explains how the different frequencies are emitted
+and how they are correlated in space and time as shown in the
+following figure.  \fxnote{missing figure here}
 \subsection{Need for Jets}
 \subsubsection{Energy in the extended lobes}
-In radio loud galaxies and quasars, an extended emission into the lobes is observed. Such galaxies are at cosmological distances, typically $\SI{200}{\Mpc}$. As $d\sim z\frac{c }{H}$, we have a redshift of $z\sim 0.05$.
+In radio loud galaxies and quasars, an extended emission into the
+lobes is observed. Such galaxies are at cosmological distances,
+typically $\SI{200}{\Mpc}$. As $d\sim z\frac{c }{H}$, we have a
+redshift of $z\sim 0.05$.
 
-Considering that the lobe size is of the order of magnitude $d_\mathrm{lobe}\sim \SI{100}{\kpc}$, for a plasma that moves in the at speed $v\sim \SI{e8}{\cm\per\s} = \SI{1000}{\km\per\s}$, the time delay necessary to reach the lobe is $\Delta t_\mathrm{life} \sim \frac{\num{e5}\times\num{3e18}}{\num{e8}} \si{Myr} \sim \SI{100}{Myr}$. The observed luminosity begin $\SI{e44}{\erg\per\s}$ at $\SI{e9}{\Hz}$, the amount of total energy is huge and equal to $\num{e44}\times\SI{3e15}{\erg} \sim \SI{e60}{\erg}$. This is equivalent to $\SI{e6}{M_\odot}$.
+Considering that the lobe size is of the order of magnitude
+$d_\mathrm{lobe}\sim \SI{100}{\kpc}$, for a plasma that moves in the
+at speed $v\sim \SI{e8}{\cm\per\s} = \SI{1000}{\km\per\s}$, the time
+delay necessary to reach the lobe is
+$\Delta t_\mathrm{life} \sim \frac{\num{e5}\times\num{3e18}}{\num{e8}}
+\si{Myr} \sim \SI{100}{Myr}$. The observed luminosity begin
+$\SI{e44}{\erg\per\s}$ at $\SI{e9}{\Hz}$, the amount of total energy
+is huge and equal to
+$\num{e44}\times\SI{3e15}{\erg} \sim \SI{e60}{\erg}$. This is
+equivalent to $\SI{e6}{M_\odot}$.
 
-We observe radio emission both in extended and compact sources. In extended sources, the radio spectrum goes like $F_v \sim v^{-0.5} \textrm{ or } v^{-1}$, while in compact sources it is $F_v \sim \mathrm{cst}$. The nature of the emission is not obvious and was in question for sometimes \fxnote{not really English there}:
+We observe radio emission both in extended and compact sources. In
+extended sources, the radio spectrum goes like
+$F_v \sim v^{-0.5} \textrm{ or } v^{-1}$, while in compact sources it
+is $F_v \sim \mathrm{cst}$. The nature of the emission is not obvious
+and was in question for sometimes \fxnote{not really English there}:
 \begin{itemize}
-    \item Thermal emission was immediately excluded for the radio component as it would have implied too high temperatures
-    \item \emph{Bremstrahlung} emission could have been a reasonable candidate, but because of absorption, one expects this process to be limited.
-    \item The observed high polarization could be the signature of a Compton emission but this would imply an extremely low temperature $T < \SI{3}{K}$.
+\item Thermal emission was immediately excluded for the radio
+  component as it would have implied too high temperatures
+\item \emph{Bremstrahlung} emission could have been a reasonable
+  candidate, but because of absorption, one expects this process to be
+  limited.
+\item The observed high polarization could be the signature of a
+  Compton emission but this would imply an extremely low temperature
+  $T < \SI{3}{K}$.
 \end{itemize}
 
-Finally it turned out that \textbf{synchrotron} emission was the best candidate to explain the radio excess and the slope of the spectral emission.
+Finally it turned out that \textbf{synchrotron} emission was the best
+candidate to explain the radio excess and the slope of the spectral
+emission.
 \subsubsection{Synchrotron emission}
 The total energy density in the lobes is
 \begin{equation}
-    U \sim \frac{10^{60}}{10^{69}} \approx \SI{e-9}{\erg\per\s}
+  U \sim \frac{10^{60}}{10^{69}} \approx \SI{e-9}{\erg\per\s}
 \end{equation}
-If we make a hypothesis of equipartition, which is completely arbitrary in the case of jets but the simplest assumption one can make, then $\frac{B^2}{8\pi} \sim \SI{e-9}{\erg\per\cm\cubed}$ and therefore $B \sim \SI{100}{\micro G}$. The synchrotron frequency is given by $\nu = \num{4.3e6} B\gamma^2 \sin\alpha\ \si{\Hz}$. At \SI{46}{Hz}, we have a Lorentz factors of $\gamma \sim \numrange{e3}{e4}$. This means that the synchrotron emission comes from relativistic electrons. The cooling time is of the order of \SI{1}{Myr}, which is much less than the life time. It has several consequences on the emission region:
+If we make a hypothesis of equipartition, which is completely
+arbitrary in the case of jets but the simplest assumption one can
+make, then $\frac{B^2}{8\pi} \sim \SI{e-9}{\erg\per\cm\cubed}$ and
+therefore $B \sim \SI{100}{\micro G}$. The synchrotron frequency is
+given by $\nu = \num{4.3e6} B\gamma^2 \sin\alpha\ \si{\Hz}$. At
+\SI{46}{Hz}, we have a Lorentz factors of
+$\gamma \sim \numrange{e3}{e4}$. This means that the synchrotron
+emission comes from relativistic electrons. The cooling time is of the
+order of \SI{1}{Myr}, which is much less than the life time. It has
+several consequences on the emission region:
 \begin{itemize}
-    \item there must be an \emph{in situ} continuous production of highly relativistic electrons
-    \item only a jet can inject matter so far from the central core
-    \item there are shocks where electrons are re-accelerated
+\item there must be an \emph{in situ} continuous production of highly
+  relativistic electrons
+\item only a jet can inject matter so far from the central core
+\item there are shocks where electrons are re-accelerated
 \end{itemize}
 
-A large fraction of the total energy is not visible and must be in the form of kinetic energy. Only a jet that feeds the lobe can provide this energy, even if it is not visible.
+A large fraction of the total energy is not visible and must be in the
+form of kinetic energy. Only a jet that feeds the lobe can provide
+this energy, even if it is not visible.
 \subsubsection{Proper motion}
-Proper motion of knots is now measured in all the objects. These are the motion of the shocks so probably an underestimation of the jet speed itself. Nevertheless, the velocity is much higher than the local sonic speed and only jets can explain supersonic speeds. Typical values in YSO jets are a few hundreds of \si{\km\per\s}.
+Proper motion of knots is now measured in all the objects. These are
+the motion of the shocks so probably an underestimation of the jet
+speed itself. Nevertheless, the velocity is much higher than the local
+sonic speed and only jets can explain supersonic speeds. Typical
+values in YSO jets are a few hundreds of \si{\km\per\s}.
 
 \fxnote{Missing figure of proper motion}
 
-In AGN jets, we see apparent superluminal motions that can be explained only if the shocks and the jets are moving at (nearly) the speed of light. Superluminal motions are also observed in microquasars.
-\fxnote{VLBA image + GRS 1915}
+In AGN jets, we see apparent superluminal motions that can be
+explained only if the shocks and the jets are moving at (nearly) the
+speed of light. Superluminal motions are also observed in
+microquasars.  \fxnote{VLBA image + GRS 1915}
 
 \subsection{Rotation and the Angular Momentum transfer}
 
 \subsubsection{The Angular Momentum problems in YSO}
 
-The biggest obstacle to the formation of stars from diffuse gas is that a star
-can contain only a tiny fraction (less than \SI{e18}{\square\cm\per\s}) of the
-initial angular momentum of the gas from which it formed
-(\SI{e23}{\square\cm\per\s} for a molecular cloud of scale \SI{1}{\pc},
-\SI{e21}{\square\cm\per\s} for a dense core of scale \SI{0.1}{\pc}), so that
-nearly all of this angular momentum must be removed or redistributed during the
-formation process. The angular momentum from the cloud can be removed by
-ambipolar diffusion. Yet the problem to go from the core to the star remains.
+The biggest obstacle to the formation of stars from diffuse gas is
+that a star can contain only a tiny fraction (less than
+\SI{e18}{\square\cm\per\s}) of the initial angular momentum of the gas
+from which it formed (\SI{e23}{\square\cm\per\s} for a molecular cloud
+of scale \SI{1}{\pc}, \SI{e21}{\square\cm\per\s} for a dense core of
+scale \SI{0.1}{\pc}), so that nearly all of this angular momentum must
+be removed or redistributed during the formation process. The angular
+momentum from the cloud can be removed by ambipolar diffusion. Yet the
+problem to go from the core to the star remains.
 
-The specific angular momentum of typical star-forming molecular clouds are at least three orders of magnitude larger than the maximum speed at the equatorial plane of the star where the centrifugal force equals gravity. Thus, if we equals the centrifugal force per unit mass and gravity, we get
+The specific angular momentum of typical star-forming molecular clouds
+are at least three orders of magnitude larger than the maximum speed
+at the equatorial plane of the star where the centrifugal force equals
+gravity. Thus, if we equals the centrifugal force per unit mass and
+gravity, we get
 \begin{equation}
-    \frac{v^2_\textrm{break up}}{R_\star} = \frac{GM_\star}{R_\star^2}
-    \Rightarrow v_\textrm{break up} = R_\star \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star}}
-    \Rightarrow \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star^3}}
+  \frac{v^2_\textrm{break up}}{R_\star} = \frac{GM_\star}{R_\star^2}
+  \Rightarrow v_\textrm{break up} = R_\star \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star}}
+  \Rightarrow \Omega_\textrm{break up} = \sqrt{\frac{GM_\star}{R_\star^3}}
 \end{equation}
 
-For a typical T Tauri star, the break up value is one to a few hundreds \si{\km\per\s} while those stars rotate at around \SIrange{5}{20}{\km\per\s}. The stellar rotation is an order of magnitude bellow the break up velocity.
+For a typical T Tauri star, the break up value is one to a few
+hundreds \si{\km\per\s} while those stars rotate at around
+\SIrange{5}{20}{\km\per\s}. The stellar rotation is an order of
+magnitude bellow the break up velocity.
 
-Here are some recent \textbf{Kepler} mission measurements of rotation in clusters.
-\fxnote{Missing figure}
-These results can be compared to Bouvier et al. results hereafter, showing plots of the evolution of the rotation as a function of time for Fast Rotators (blue lines) and Slow Rotators (red lines). The envelope velocity is always slower than the core velocity. The circle on the right is the position of our Sun. The curves correspond to evolutionary tracks and are model dependent.
+Here are some recent \textbf{Kepler} mission measurements of rotation
+in clusters.  \fxnote{Missing figure} These results can be compared to
+Bouvier et al. results hereafter, showing plots of the evolution of
+the rotation as a function of time for Fast Rotators (blue lines) and
+Slow Rotators (red lines). The envelope velocity is always slower than
+the core velocity. The circle on the right is the position of our
+Sun. The curves correspond to evolutionary tracks and are model
+dependent.
 
 \fxnote{Missing plots}
 
-In the case of a Keplerian disk, to the first order, the centrifugal force balances gravity $\rho \frac{v_\phi^2}{r} \approx \rho \frac{GM_\star}{r^2}$. Thus, similarly to the break up velocity we get the Keplerian velocity and angular frequency:
+In the case of a Keplerian disk, to the first order, the centrifugal
+force balances gravity
+$\rho \frac{v_\phi^2}{r} \approx \rho \frac{GM_\star}{r^2}$. Thus,
+similarly to the break up velocity we get the Keplerian velocity and
+angular frequency:
 \begin{equation}
-    v_\phi = \sqrt{\frac{GM_\star}{r}}, \quad \Omega = \frac{v_\phi}{r} = \sqrt{\frac{GM_\star}{r^3}}
+  v_\phi = \sqrt{\frac{GM_\star}{r}}, \quad \Omega = \frac{v_\phi}{r} = \sqrt{\frac{GM_\star}{r^3}}
 \end{equation}
 \fxnote{Missing scheme}
 
-If the disk edge is connected onto the star as on the above scheme, they should rotate at the same speed on the boundary layer and the star should thus rotate at its breakup velocity. As this is not the case, it is obvious that the star cannot be directly connected to the disk and that some mechanism should exist to evacuate the angular momentum. One solution to this problem is the disk-locking mechanism, where the angular momentum of the star is transferred to the disk \emph{via} the magnetosphere and then the viscosity of the disk removes the excess of angular momentum. Another solution is that the stellar wind itself carries away angular momentum while being braked by the magnetic field.
+If the disk edge is connected onto the star as on the above scheme,
+they should rotate at the same speed on the boundary layer and the
+star should thus rotate at its breakup velocity. As this is not the
+case, it is obvious that the star cannot be directly connected to the
+disk and that some mechanism should exist to evacuate the angular
+momentum. One solution to this problem is the disk-locking mechanism,
+where the angular momentum of the star is transferred to the disk
+\emph{via} the magnetosphere and then the viscosity of the disk
+removes the excess of angular momentum. Another solution is that the
+stellar wind itself carries away angular momentum while being braked
+by the magnetic field.
 \subsubsection{Rotation of AGN and Microquasar Central Black Hole}
-The problem of the transfer of angular momentum to the black hole in the accretion disk is similar to the one in YSO. All black holes are surely not maximally rotating, for instance the Galactic Black Hole of the disk luminosity shown on next figure is rotating at 0.6 its maximum angular velocity.
+The problem of the transfer of angular momentum to the black hole in
+the accretion disk is similar to the one in YSO. All black holes are
+surely not maximally rotating, for instance the Galactic Black Hole of
+the disk luminosity shown on next figure is rotating at 0.6 its
+maximum angular velocity.
 
-If the mass of a Kerr black hole is $M$, its angular momentum $J$, its Schwarzschild radius is
+If the mass of a Kerr black hole is $M$, its angular momentum $J$, its
+Schwarzschild radius is
 \begin{equation}
-    R_s = \frac{2GM}{c^2}
+  R_s = \frac{2GM}{c^2}
 \end{equation}
 and the radius of the horizon is:
 \begin{equation}
-    R_\mathrm{Kerr} = \frac{Rs}{2} \left( 1 + \sqrt{1-\left( \frac{Jc}{GM^2} \right)^2 } \right)
+  R_\mathrm{Kerr} = \frac{Rs}{2} \left( 1 + \sqrt{1-\left( \frac{Jc}{GM^2} \right)^2 } \right)
 \end{equation}
-The angular momentum cannot be higher than the value that makes the square root negative, so
+The angular momentum cannot be higher than the value that makes the
+square root negative, so
 \begin{equation}
-    J < J_\mathrm{max} = \frac{GM^2}{c} = MR_\mathrm{Kerr}c
+  J < J_\mathrm{max} = \frac{GM^2}{c} = MR_\mathrm{Kerr}c
 \end{equation}
 We define the rotation parameter as:
 \begin{equation}
-    \alpha = \frac{J}{J_\mathrm{max}} < 1
+  \alpha = \frac{J}{J_\mathrm{max}} < 1
 \end{equation}
 
-How do we know the nature of the central black hole in AGNs? The main clue comes from the iron-K line which can be explained only with a central rotating black hole.
+How do we know the nature of the central black hole in AGNs? The main
+clue comes from the iron-K line which can be explained only with a
+central rotating black hole.
 
 \fxnote{Missing figure}
 
-The red component of the line is the signature of general relativity effects due to the BH. It is explained by the gravitational redshift (Einstein effect) in addition to special-relativity Doppler shift and beaming, as shown on the following figure of a synthetic Iron K Line produced by a rotating accretion disk around a BH.
+The red component of the line is the signature of general relativity
+effects due to the BH. It is explained by the gravitational redshift
+(Einstein effect) in addition to special-relativity Doppler shift and
+beaming, as shown on the following figure of a synthetic Iron K Line
+produced by a rotating accretion disk around a BH.
 
 \fxnote{Missing figure}
 
-The line profile can be modeled using a Schwarzschild BH or a non rotating BH (below left). The discrepancies can be reduced by keeping the Schwarzschild BH, but taking into account the reflected continuum (below right).
+The line profile can be modeled using a Schwarzschild BH or a non
+rotating BH (below left). The discrepancies can be reduced by keeping
+the Schwarzschild BH, but taking into account the reflected continuum
+(below right).
 
 \fxnote{Missing figure}
 
-However, it seems the best fit is obtained by considering a rotating BH, or Kerr BH in maximal rotation.
+However, it seems the best fit is obtained by considering a rotating
+BH, or Kerr BH in maximal rotation.
 
-The last figure is generated for a maximally rotating Kerr BH. Note the absence of the dotted line on the right part.
+The last figure is generated for a maximally rotating Kerr BH. Note
+the absence of the dotted line on the right part.
 \subsubsection{Conclusion, The Global Picture of the Jet}
 
 In conclusion, the system we have is a rotating disk and a central
@@ -802,97 +918,112 @@ structure involving rotation and magnetic field.
 Because of rotation and magnetic fields, accretion and ejection are 3-dimensional and close to axisymmetry. However, some of the basic features can be under understood by looking a 1-dimensional processes and especially spherically-symmetric accretion and wind.
 \subsection{Spherical Accretion and Wind}
 \subsubsection{Bondi Accretion}
-Let's consider an ideal fluid around a star in-falling (accretion), with a spherical symmetry. Using spherical coordinates $(r,\theta,\phi)$ we write the physical variables describing the fluid :
+Let's consider an ideal fluid around a star in-falling (accretion),
+with a spherical symmetry. Using spherical coordinates
+$(r,\theta,\phi)$ we write the physical variables describing the fluid
+:
 \begin{equation}
-    \rho = \rho(r),\quad P = P(r), \quad \vv{v} = \vv{v}(r)
+  \rho = \rho(r),\quad P = P(r), \quad \vv{v} = \vv{v}(r)
 \end{equation}
 The conservation of energy gives:
 \begin{equation}
-    E = \frac{1}{2}v^2 + h + \Phi_\mathrm{grav}
+  E = \frac{1}{2}v^2 + h + \Phi_\mathrm{grav}
 \end{equation}
-For the sake of simplicity, let's assume the flow is isothermal. The gravitational potential is
+For the sake of simplicity, let's assume the flow is isothermal. The
+gravitational potential is
 \begin{equation}
-    \Phi_\mathrm{grav} = - \frac{GM_\star}{r},\quad \textrm{$M_\star$ is the mass of the star}
+  \Phi_\mathrm{grav} = - \frac{GM_\star}{r},\quad \textrm{$M_\star$ is the mass of the star}
 \end{equation}
 and the enthalpy is:
 \begin{equation}
-    h = \int \frac{\d p}{\rho} = c_s^2 \ln \rho
+  h = \int \frac{\d p}{\rho} = c_s^2 \ln \rho
 \end{equation}
-because the flow is isothermal. Here, $c_s^2 = 2 \frac{k_b T}{m_H}$ is the sound speed.
+because the flow is isothermal. Here, $c_s^2 = 2 \frac{k_b T}{m_H}$ is
+the sound speed.
 
 The conservation equations are written as follow:
 \begin{equation}
-    \tcboxmath{
-        \begin{aligned}
-            \vv{\nabla}\cdot \left( \rho\vv{v} \right) = 0, \quad& \textrm{Mass conservation}\\
-            \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
-            p = c_s^2 \rho,\quad & \textrm{Equation of state}
-        \end{aligned}
-    }
+  \tcboxmath{
+    \begin{aligned}
+      \vv{\nabla}\cdot \left( \rho\vv{v} \right) = 0, \quad& \textrm{Mass conservation}\\
+      \rho v \frac{\d v}{\d r} = -\frac{\d p }{\d r} - \rho \frac{GM_\star}{r^2},\quad & \textrm{Euler equation}\\
+      p = c_s^2 \rho,\quad & \textrm{Equation of state}
+    \end{aligned}
+  }
 \end{equation}
 The mass conservation equation gives:
 \begin{equation}
-    \rho v r^2 = \textrm{constant} = \dot{m}, \quad \textrm{$\dot{m}$ is the accretion rate}
+  \rho v r^2 = \textrm{constant} = \dot{m}, \quad \textrm{$\dot{m}$ is the accretion rate}
 \end{equation}
 
 Rewriting the energy, we get :
 \begin{align}
-    E &= \frac{1}{2}v^2 + c_s^2 \ln \frac{\dot{m}}{vr^2} - \frac{GM}{r} \\
-      &= \frac{c_s^2}{2}\left[ \frac{v^2}{c_s^2} + 2\ln \frac{\dot{m}}{vr^2} - \frac{2GM}{c_s^2r}\right] \\
-      &= \frac{c_s^2}{2} \left[\frac{v^2}{c_s^2} + \ln \frac{c_s^2}{v^2} + 4\ln \frac{2GM}{c_s^2r} - \frac{2GM}{c_s^2r} + 2\ln \frac{\dot{m}c_s}{(2GM)^2} + 2\ln c_s^2\right]
+  E &= \frac{1}{2}v^2 + c_s^2 \ln \frac{\dot{m}}{vr^2} - \frac{GM}{r} \\
+    &= \frac{c_s^2}{2}\left[ \frac{v^2}{c_s^2} + 2\ln \frac{\dot{m}}{vr^2} - \frac{2GM}{c_s^2r}\right] \\
+    &= \frac{c_s^2}{2} \left[\frac{v^2}{c_s^2} + \ln \frac{c_s^2}{v^2} + 4\ln \frac{2GM}{c_s^2r} - \frac{2GM}{c_s^2r} + 2\ln \frac{\dot{m}c_s}{(2GM)^2} + 2\ln c_s^2\right]
 \end{align}
-Let $r_c = \frac{GM}{2c_s^2}$. The Bernoulli constant gives that the solutions are given implicitly by drawing the following isocontours:
+Let $r_c = \frac{GM}{2c_s^2}$. The Bernoulli constant gives that the
+solutions are given implicitly by drawing the following isocontours:
 \begin{equation}
-    \tcboxmath{
-        \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c} - 4 \frac{r_c }{r} = C
-    }
+  \tcboxmath{
+    \left( \frac{v}{c_s} \right)^2 - \ln \left( \frac{v}{c_s} \right)^2 - 4\ln \frac{r}{r_c} - 4 \frac{r_c }{r} = C
+  }
 \end{equation}
 where $C$ is a constant.
 
 By deriving this equation or directly from Euler equation,
 \begin{align}
-    \rho v \frac{\d v}{\d r}  &= -c_s^2 \frac{\d \rho}{\d r} - \rho \frac{GM}{r^2} \\
-    r \frac{v}{c_s^2} \frac{\d v}{\d r} &= \underbrace{-\frac{r}{\rho}\frac{\d \rho}{\d r}}_\textrm{mass conservation} - \frac{GM}{c_s^2r} \\
-                                        &= r \left( \frac{2}{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d r} \right) - \frac{2r_c }{r} \\
-    \frac{r}{r_c }\frac{v}{c_s }\frac{\d (v/c_s)}{\d (r/r_c)} & = \frac{r}{r_c} \left( \frac{2r_c }{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d(r/r_c )} \right) - \frac{2r_c }{r}
+  \rho v \frac{\d v}{\d r}  &= -c_s^2 \frac{\d \rho}{\d r} - \rho \frac{GM}{r^2} \\
+  r \frac{v}{c_s^2} \frac{\d v}{\d r} &= \underbrace{-\frac{r}{\rho}\frac{\d \rho}{\d r}}_\textrm{mass conservation} - \frac{GM}{c_s^2r} \\
+                            &= r \left( \frac{2}{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d r} \right) - \frac{2r_c }{r} \\
+  \frac{r}{r_c }\frac{v}{c_s }\frac{\d (v/c_s)}{\d (r/r_c)} & = \frac{r}{r_c} \left( \frac{2r_c }{r} + \frac{c_s}{v} \frac{\d(v/c_s)}{\d(r/r_c )} \right) - \frac{2r_c }{r}
 \end{align}
 
 \begin{equation}
-    \label{eq:speed_eq}
-    \tcboxmath{
-        \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)
-    }
+  \label{eq:speed_eq}
+  \tcboxmath{
+    \left( \frac{v}{c_s} - \frac{c_s}{v} \right) \frac{\d \left( \frac{v}{c_s} \right) }{\d \left( \frac{r}{r_c } \right) } = 2 \frac{r_c}{r} \left( 1 - \frac{r_c }{r} \right)
+  }
 \end{equation}
 
-The set of solutions of the previous equation is displayed on the two following figures. This is the topology of the solutions.
+The set of solutions of the previous equation is displayed on the two
+following figures. This is the topology of the solutions.
 
 We note $M = \frac{v}{c_s}$ the Mach number.
 
-We could show that for polytropic winds ($p = Kp^\gamma$), the topology of the Mach number doesn't change even though the sound speed is no longer a constant but depends on distance :
+We could show that for polytropic winds ($p = Kp^\gamma$), the
+topology of the Mach number doesn't change even though the sound speed
+is no longer a constant but depends on distance :
 \begin{equation}
-    c_s^2 = \frac{\d p}{\d \rho}
+  c_s^2 = \frac{\d p}{\d \rho}
 \end{equation}
 
-A few years before Parker, Bondi (1952) proposed that accretion onto a star or a black hole could become supersonic. This corresponds to one of the 2 critical solutions. Of course, supersonic accretion onto the star ends by a shock, which explains X-ray emissions of cataclysmic binaries.
+A few years before Parker, Bondi (1952) proposed that accretion onto a
+star or a black hole could become supersonic. This corresponds to one
+of the 2 critical solutions. Of course, supersonic accretion onto the
+star ends by a shock, which explains X-ray emissions of cataclysmic
+binaries.
 
-We can calculate for this solution the mass accretion rate, which is by definition
+We can calculate for this solution the mass accretion rate, which is
+by definition
 \begin{equation}
-    \dot{M} = 4\pi r^2 \rho (-v) = 4\pi r_c^2 \rho_s c_s
+  \dot{M} = 4\pi r^2 \rho (-v) = 4\pi r_c^2 \rho_s c_s
 \end{equation}
 Evaluating the energy at the critical point :
 \begin{equation}
-    E = \textrm{constant} = \frac{1}{2}v^2 + c_s^2 \ln\rho - \frac{GM}{r} = \frac{1}{2}c_s^2 + c_s^2 \ln \rho_s - \frac{GM}{r_c}
+  E = \textrm{constant} = \frac{1}{2}v^2 + c_s^2 \ln\rho - \frac{GM}{r} = \frac{1}{2}c_s^2 + c_s^2 \ln \rho_s - \frac{GM}{r_c}
 \end{equation}
 we get the velocity both at infinity and close to the star :
 \begin{align}
-    v^2 &= 2c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right)  + \frac{2GM}{r} \\
-        & \xrightarrow{r\to 0} \frac{2GM}{r} \\
-        & \xrightarrow{r\to\infty} 0\ \Rightarrow \rho_S = \rho_\infty e^{\nicefrac{3}{2}}
+  v^2 &= 2c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right)  + \frac{2GM}{r} \\
+      & \xrightarrow{r\to 0} \frac{2GM}{r} \\
+      & \xrightarrow{r\to\infty} 0\ \Rightarrow \rho_S = \rho_\infty e^{\nicefrac{3}{2}}
 \end{align}
 
-We see that close to the star, the fluid is in free fall. The mass accretion rate of the trans-sonic solution is thus:
+We see that close to the star, the fluid is in free fall. The mass
+accretion rate of the trans-sonic solution is thus:
 \begin{equation}
-    \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{\nicefrac{3}{2}} \frac{\rho_\infty}{c_s^3}
+  \dot{M}_\mathrm{transsonic} = \pi \left( GM \right)^2 e^{\nicefrac{3}{2}} \frac{\rho_\infty}{c_s^3}
 \end{equation}
 \subsubsection{Parker wind or thermally driven outflow}
 We now suppose that the ideal fluid around the star is out-flowing (wind). We assume spherical symmetry. Using the same spherical coordinates ($r, \theta, \phi$), we can derive the same equations with different boundary conditions. Here, conditions are given at the stellar surface and not at infinity. Again we have $\rho = \rho(r)$, $P = P(r)$, $\vv{v} = \vv{v}(r)$.
@@ -914,114 +1045,145 @@ The topology of the solutions is the same as previously but with a new interpret
 \end{equation*}} with two slopes. The saddle nature of the point is better seen in the 3D plot of the energy in phase space ($r, v$).
 
 \subsubsection{Solar wind (Parker 1958)}
-The breeze solutions have zero velocity asymptotically, but the pressure is non zero and cannot match the interstellar pressure :
+The breeze solutions have zero velocity asymptotically, but the
+pressure is non zero and cannot match the interstellar pressure :
 \begin{equation}
-    v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0\Rightarrow \rho_\infty = \rho_s e^{-\nicefrac{3}{2}} \neq 0 \Rightarrow \rho_\infty \neq 0
+  v^2 = 2 c_s^2 \left( -\frac{3}{2} + \ln \frac{\rho_s}{\rho} \right) + \frac{2GM}{r} \xrightarrow{r\to\infty} 0\Rightarrow \rho_\infty = \rho_s e^{-\nicefrac{3}{2}} \neq 0 \Rightarrow \rho_\infty \neq 0
 \end{equation}
-Thus they are very similar in behavior to the static solutions, which we have shown to be excluded. Parker showed that the only valid solution is the critical solution that becomes super sonic with zero pressure at infinity. It has then been confirmed observationnaly. Parker also showed studying the polytropic wind that acceleration can be obtained only if the polytropic index is $\gamma < \frac{3}{2}$. $\frac{c_p}{c_s} = \frac{5}{3}$ being the adiabatic value for a monoatomic gas, this means that the exists only because there is enough extended heating at the base of the solar corona.
+Thus they are very similar in behavior to the static solutions, which
+we have shown to be excluded. Parker showed that the only valid
+solution is the critical solution that becomes super sonic with zero
+pressure at infinity. It has then been confirmed
+observationnaly. Parker also showed studying the polytropic wind that
+acceleration can be obtained only if the polytropic index is
+$\gamma < \frac{3}{2}$. $\frac{c_p}{c_s} = \frac{5}{3}$ being the
+adiabatic value for a monoatomic gas, this means that the exists only
+because there is enough extended heating at the base of the solar
+corona.
 
-There are some breeze solutions with heat conduction, which have zero pressure at infinity. Thus the debate was really strong during the 60s, until observations confirmed Parker's theory. Nowadays, the problem has slightly shifted. In fact for a temperature of one million Kelvin, the speed at the earth orbit is of the order of \SI{500}{\km\per\s} with this model. From the measurements of Ulysses spacecraft, we know that this is effectively the speed of the slow equatorial wind, but this model is not sufficient to explain the \SI{800}{\km\per\s} of the fast polar wind. Thus, series of models have been developed which involve sophisticated not-so-well-known coronal heating, kinetic theories, etc... is still an open debate.
+There are some breeze solutions with heat conduction, which have zero
+pressure at infinity. Thus the debate was really strong during the
+60s, until observations confirmed Parker's theory. Nowadays, the
+problem has slightly shifted. In fact for a temperature of one million
+Kelvin, the speed at the earth orbit is of the order of
+\SI{500}{\km\per\s} with this model. From the measurements of Ulysses
+spacecraft, we know that this is effectively the speed of the slow
+equatorial wind, but this model is not sufficient to explain the
+\SI{800}{\km\per\s} of the fast polar wind. Thus, series of models
+have been developed which involve sophisticated not-so-well-known
+coronal heating, kinetic theories, etc... is still an open debate.
 
-Similarly to the accretion rate, one can calculate the mass loss rate from the star through the wind:
+Similarly to the accretion rate, one can calculate the mass loss rate
+from the star through the wind:
 \begin{align}
-    \dot{M} & = 4\pi r^2\rho v = 4\pi r^2_c\rho_sc_s \\
-    \dot{M}_\odot & = \SI{e-14}{M_\odot\per\s} \\
-    \dot{M}_\mathrm{TTauri} &= \SI{e-8}{M_\odot\per\s}
+  \dot{M} & = 4\pi r^2\rho v = 4\pi r^2_c\rho_sc_s \\
+  \dot{M}_\odot & = \SI{e-14}{M_\odot\per\s} \\
+  \dot{M}_\mathrm{TTauri} &= \SI{e-8}{M_\odot\per\s}
 \end{align}
 
 \subsection{More on 1D models}
 \subsubsection{Critical surfaces and Horizons}
 
-The critical point corresponds to sonic waves . The stellar surface losses mass in a steady
-way only if the mass flux  adapts itself to cross the critical surface. The sonic waves going
-upstream will make the ejection to evolve until it reaches the steady state. This critical surface
-is analogous to the event horizon around black holes. Beyond this surface, the wind is unable
-to propagate sound waves back to the source.
+The critical point corresponds to sonic waves . The stellar surface
+losses mass in a steady way only if the mass flux adapts itself to
+cross the critical surface. The sonic waves going upstream will make
+the ejection to evolve until it reaches the steady state. This
+critical surface is analogous to the event horizon around black
+holes. Beyond this surface, the wind is unable to propagate sound
+waves back to the source.
 
-There is a strong analogy between the sonic surface and apparent horizon in black holes,
-except that the sound speed  replaces the speed of light. This is illustrated in the following
-figures.
+There is a strong analogy between the sonic surface and apparent
+horizon in black holes, except that the sound speed replaces the speed
+of light. This is illustrated in the following figures.
 
 \fxnote{Missing figure}
 
-If the star rotates, in addition to the sonic surface/horizon there is also an acoustic ergosphere.
+If the star rotates, in addition to the sonic surface/horizon there is
+also an acoustic ergosphere.
 
 
 \subsubsection{De Laval Nozzle}
 
-There is a strong analogy between the Parker wind and a flow through a nozzle. A nozzle is a
-pipe with a variable cross section. It has a minimum and this minimum should coincide with the
-sonic point to have strong supersonic flow,
+There is a strong analogy between the Parker wind and a flow through a
+nozzle. A nozzle is a pipe with a variable cross section. It has a
+minimum and this minimum should coincide with the sonic point to have
+strong supersonic flow,
 
 \fxnote{Missing Figure}
 
 Mass conservation :
 
 \begin{equation}
-    \vv{\nabla}\cdot(\rho\vv{v}) \Rightarrow \int \rho\vv{v}\cdot \d \vv{S} = cst \Rightarrow \rho vS = cst
-    \Rightarrow \frac{\d \rho}{\rho} + \frac{\d \nu}{\nu} + \frac{\d S}{S} = 0
+  \vv{\nabla}\cdot(\rho\vv{v}) \Rightarrow \int \rho\vv{v}\cdot \d \vv{S} = cst \Rightarrow \rho vS = cst
+  \Rightarrow \frac{\d \rho}{\rho} + \frac{\d \nu}{\nu} + \frac{\d S}{S} = 0
 \end{equation}
 
 Euler equation:
 \begin{equation}
-    \rho v \frac{\d v}{\d x} = -\frac{\d p}{\d x}
+  \rho v \frac{\d v}{\d x} = -\frac{\d p}{\d x}
 \end{equation}
 Equation of state (energy) :
 \begin{equation}
-    p(x) = c_\mathrm{s}^2\rho(x)
+  p(x) = c_\mathrm{s}^2\rho(x)
 \end{equation}
 It follows:
 \begin{equation}
-    v\frac{\d v}{\d x} = -c_s^2\frac{\d\rho}{\rho \d x} = c_s^2\left(\frac{\d v}{v\d x}+\frac{\d S}{S\d x}\right)
-    \Rightarrow \left( v - \frac{c_s^2}{v} \right)\frac{\d v}{\d x} = c_s^2\frac{\d S}{S \d x}
+  v\frac{\d v}{\d x} = -c_s^2\frac{\d\rho}{\rho \d x} = c_s^2\left(\frac{\d v}{v\d x}+\frac{\d S}{S\d x}\right)
+  \Rightarrow \left( v - \frac{c_s^2}{v} \right)\frac{\d v}{\d x} = c_s^2\frac{\d S}{S \d x}
 \end{equation}
 
-The flow can be transsonic only if $\frac{\d S}{S\d x} = 0 $ which means that the cross section
-has an extremum. It is by default a minimum as at the entrance of the nozzle on the left,  $v<c_s$ and
-$\frac{\d v}{\d x} > 0$ thus $\frac{\d S}{\d x} > 0 $. If this minimum exists, to be transsonic the flow must
-attain the sound speed at the minimum cross section.
+The flow can be transsonic only if $\frac{\d S}{S\d x} = 0 $ which
+means that the cross section has an extremum. It is by default a
+minimum as at the entrance of the nozzle on the left, $v<c_s$ and
+$\frac{\d v}{\d x} > 0$ thus $\frac{\d S}{\d x} > 0 $. If this minimum
+exists, to be transsonic the flow must attain the sound speed at the
+minimum cross section.
 
 \paragraph{Spherical flow, Parker wind}
 
 For a spherical wind we have:
 \begin{equation}
-    \left( v - \frac{c_s^2}{v}  \right)\frac{\d v}{\d r} = c_s^2\frac{\d S}{S\d r}
-    = \frac{2c_s^2}{r} - \frac{GM}{r^2} \Rightarrow \frac{\d \ln S}{\d r} =
-    \frac{2}{r} - \frac{GM}{c_s^2 r2}
-    \Rightarrow \ln S = \ln r^2 +\frac{GM}{c_s^2r} + k
+  \left( v - \frac{c_s^2}{v}  \right)\frac{\d v}{\d r} = c_s^2\frac{\d S}{S\d r}
+  = \frac{2c_s^2}{r} - \frac{GM}{r^2} \Rightarrow \frac{\d \ln S}{\d r} =
+  \frac{2}{r} - \frac{GM}{c_s^2 r2}
+  \Rightarrow \ln S = \ln r^2 +\frac{GM}{c_s^2r} + k
 \end{equation}
 
 And finally:
 
 \begin{equation}
-    \tcboxmath{S = Cr^2 \exp\left(\frac{GM}{c_s^2 r}\right)}
+  \tcboxmath{S = Cr^2 \exp\left(\frac{GM}{c_s^2 r}\right)}
 \end{equation}
 
-Gravity plays the role of reducing the effective cross section as the radial flux tubes expands
-as $r^2$. There is no real throat just an effect of gravity.
+Gravity plays the role of reducing the effective cross section as the
+radial flux tubes expands as $r^2$. There is no real throat just an
+effect of gravity.
 
 \paragraph{Funnel ans 1D flow}
-The analogy has been used to explain jets both in the YSO  and the AGN contexts. The argument
-is to use the presence of the surrounding thick disk close to the central object has shaped in
-the form a funnel.
+The analogy has been used to explain jets both in the YSO and the AGN
+contexts. The argument is to use the presence of the surrounding thick
+disk close to the central object has shaped in the form a funnel.
 
-This is the case of the famous \textbf{ Exhaust Model for AGN Jets} suggested by
-Blandford  \&  Rees 1974 (see correct figure), used also in the Ion Supported Torus
-model of jet funnel by Phinney 1999 (see other correct figure).
+This is the case of the famous \textbf{ Exhaust Model for AGN Jets}
+suggested by Blandford \& Rees 1974 (see correct figure), used also in
+the Ion Supported Torus model of jet funnel by Phinney 1999 (see other
+correct figure).
 
 \fxnote{Missing Figure}
 
-Raga and Canto also used this model in 1989 for YSO, invoking a stellar wind to make
-the cavity.
+Raga and Canto also used this model in 1989 for YSO, invoking a
+stellar wind to make the cavity.
 
 \fxnote{Missing figure}
 
-These models suffer strong flaws. The shape of the funnel is somewhat given and
-not the result of a really consistent resolution of the MHD equations. The strongest argument
-is however that the throat of the funnel is always too far from the central object to maintain
-a very small opening angle for the jet.
+These models suffer strong flaws. The shape of the funnel is somewhat
+given and not the result of a really consistent resolution of the MHD
+equations. The strongest argument is however that the throat of the
+funnel is always too far from the central object to maintain a very
+small opening angle for the jet.
 
-This leads us to next chapter and to consider axisymmetric models ans not only 1D solutions.
+This leads us to next chapter and to consider axisymmetric models ans
+not only 1D solutions.
 
 \subsubsection{Vertical structure of a Thin Keplerian Disk}
 
@@ -1848,7 +2010,7 @@ Thus
 \end{align}
 So the sign of rotation is simply given by:
 \begin{equation}
-  \mathrm{sign}\left( V_\phi \right) = \mathrm{sign}\left( \frac{V_P}{V_*} - \frac{\varpi^2}{\varpi_*^2} \frac{\delta S_*}{\delta S} \right) 
+  \mathrm{sign}\left( V_\phi \right) = \mathrm{sign}\left( \frac{V_P}{V_*} - \frac{\varpi^2}{\varpi_*^2} \frac{\delta S_*}{\delta S} \right)
 \end{equation}
 and the jet can counter rotate if the jet velocity is below some threshold value
 \begin{equation}
@@ -1871,17 +2033,204 @@ Counter rotation may occur locally and sporadically in a jet. It will thus alway
 \section{Extra-Galactic Nuclei}
 \subsection{AGN Unified Scheme}
 \subsubsection{The zoology (before Urry \& Padovani)}
+There is a wide range of AGNs. Though we have now a good knowledge of the spectrum at all wavelengths and we measure its variability, it is still difficult to propose any evolution scenario because of the long time scales involved in such objects. However AGNs can be classified with two parameters. The first most obvious one is the line of sight and depending of the inclination angle, the observer see one class of object or another. The second parameter is not yet completely determined. It may be linked with the rotation of the central BH, the BH spin or to the accretion rate or the environment or a combination of all that.
+
+\FIXME{Missing table}
 \subsubsection{The Urry \& Padovani paradigm}
+The unified scheme proposed by Urry and Padovani (1995) is the first tentative of unification. Though it is still subject of debates, there is a general agreement on the general trend and the scenario is accepted within some details. One reason of the existence of various objects is the inclination. This is seen in radio quiet objects because of the osculation of the broad line region. In radio loud objects, this explains the relativistic beaming and Doppler factor.
+
+\FIXME{Missing figure}
+Hereafter another way to draw the classification in terms of luminosity and not only inclination.
+\FIXME{Missing another figure}
+
+A third way of drawing the same scenario. The horizontal axis is determined by the viewing angle. The vertical axis may be the efficiency of the magnetic rotator to collimate the jet (a combination of the spin/mass of the BH and the environment).
+
+\FIXME{Missing another another figure}
+
+A more recent sketch of the Urry \& Padovani classification (courtesy T. Buchert)
+\FIXME{Missing nice figure}
 \subsection{Types of Active Galactic Nuclei}
 \subsubsection{Radio quiet, Seyfert galaxies}
+
+Various Seyfert galaxies exist because some have only narrow line
+emission (Sey 2) while other have both narrow lines and broad line
+emissions (Sey 1). This can be explain is a dust-plasma torus in the
+equatorial plane can obscure the broad line region closer to the
+central BH when the disk is seen edge on. When the source is seen edge
+off, both the BLR and the NLR are seen. This is the first step towards
+the unification scheme we discuss below.
+
+One of the first HST images of such disk or torus (at this distance
+from the BH, this is not the Keplerian disk) is the following one.
+\FIXME{Missing figure of NGC 4258}
+
+The inner part of the disk has \ce{H2 0} clouds that emit as masers
+(molecular lasers). By measuring their proper motion, one can
+construct the orbits at various distances in the disks. The outer
+masers follow a curve, which is compatible with a Keplerian motion in
+the disk.
+
+The development of gamma ray observatories such as HESS allowed to show that radio quiet AGNs are also good gamma ray emitters.
+
+\FIXME{missing figure}
+
+As radio quiet objects represent $\sim 90\%$ of the ``average'' AGNs, they also represent a very large source for the gamma ray background emission at low level.
 \subsubsection{Radio Loud, Narrow Line Radio Galaxies}
+Radio loud sources are characterized by the presence of the jet in
+addition to the accretion disk. Temperatures in those jets are not
+well determined but could well be in the relativistic regime with
+values close to the mass energy of the particles
+($T \approx \SI{e9}{K}$ for electrons or positrons,
+$T\approx \SI{e12}{K}$ for protons). The jets are well collimated on
+parsec and kiloparsec scales or even mega-parsec scales with speed $V$
+close to the speed of light $c$. WE recall that bulk Lorentz factor
+$\Gamma = \frac{1}{\sqrt{1 - V^2/c^2}}$ of \numrange{3}{10} but
+superthermal particle may have even higher Lorentz factors.
+
+Radio loud galaxies are classified in Fnaroff-Riley I and II (FRI and
+FRII).
+
+The jet of FRI is visible on both sides, on the kpc scale terminated
+with two radio lobes. On the pc scale, we see one-sided jets with
+relativistic speeds. On the kpc, the jet is sub-relativistic and has
+decelerated. FRI are seen in rich host galaxies with a X-ray gas
+emitting at high temperatures.
+
+FRII radio galaxies are one sided and relativistic on the pc and kpc scales. They are more powerful and terminated with two hot spots. This implies that, although the visible jet is one sided, a counter jet exists but is invisible because it is not relativistically beamed. FRII are found in poor environments.
+
+HYMORS is an intermediate new class of FR galaxies, which are FRI on one side and FRII on the other side. This may be explained if the environment plays an important role.
+
+\paragraph{The case of M87}
+M87 is one of the best studied and well known example of a FRII galaxy because it is close by. It has been studied at all wavelength from radio to \si{TeV}. The first images were in radio and optical. The optical image of the jet is a zoom into the host galaxy. As in YSO, jets knots with proper motions are measured in AGN jets. The knots are probably bow shocks or internal shocks resulting from various instabilities of the same origin (Kelvin Helmholtz etc…). Once the resolution is improved the knots may appear as more complex filamentary structure.
+
+Moreover, M87 jet is also seen in X-rays and now $\gamma$-rays from sub parsec scales up to mega parsec ones.
+
+\FIXME{missing figures}
+
+For M87 emission there are three possible \si{TeV} emitting zones:
+\begin{itemize}
+\item the peculiar knot HST-1 at $\sim \SI{65}{pc}$ from the nucleus,
+\item the inner VLBI jet
+\item the central core an the black hole environment
+\end{itemize}
+As for the YSO jets, we are now able to measure proper motions following sources on a longer time scale. We see the variability of the parsec scale structure. Of course it is much more difficult to have an evolution scenario because the lifetime of AGNs is much longer than YSOs.
 \subsubsection{Quasars, BL Lac, QSO}
+There are radio quiet as well as radio loud quasars (QSOs). As for
+radio galaxies, proper motions could be measured in some quasars with
+jets. In all cases high relativistic velocities are deduced.
+
+Quasars, BL Lac and QSO appear to be pointing towards us, which
+explains -- because of the Doppler effect -- that they are more
+luminous than radio galaxies.
+
+\FIXME{missing things here}
+
+Another example of AGN is the class of BL Lac. Hereafter, the BL Lac
+object H 0323+022 ($z = 0.147$) imaged at ESO NTT (R filter). The host
+galaxy and close companions are visible.
+
+Above the figure shows a typical BL Lac with high variability and
+broad band spectrum. It requires a coordinated HE and multi-$\lambda$
+monitoring to constrain the SED and its evolution. Details of the
+various parts of the spectrum in quasars are given below.
 \subsection{Doppler Beaming and Orientation Effects}
 \subsubsection{Superluminal motions}
+In radio sources superluminal motions of the blobs of knots are
+observed. how is this possible? In fact it is just the Doppler effect
+of the electron population. The apparent time and spaces delays are:
+\begin{align}
+  \Delta t_\mathrm{app} & = \Delta t \left( 1 - \frac{v}{c}\cos\theta\right)  \\
+  \Delta x_\mathrm{app} &= v\Delta t\sin\theta
+\end{align}
+Thus the apparent speed is
+$v_\mathrm{app} = \frac{v\sin\theta}{1 - \frac{v}{c }\cos\theta}$. At
+maximum, the speed is given by
+\begin{equation}
+  \diffp{v_\mathrm{app}}{\theta} = 0 = \frac{v\cos\theta - \frac{v^2}{c }}{\left( 1 - \frac{v }{c} \cos\theta \right)^2} \Rightarrow V_\mathrm{max} = c\cos\theta
+\end{equation}
+\begin{equation}
+  v_\mathrm{app,max} = \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma v > v \sim c
+\end{equation}
+Thus the apparent speed larger than the speed of light, provided that
+the plasma is highly relativistic. Of course, the real speed of the
+plasma is not superluminal.
+
+For 3C120 a standard quasar, the typical velocity is
+$v\sim \SIrange{4}{5}{c}$. For GRS1915, which is a microquasar with
+$v\sim \SIrange{1}{2}{c }$. In addition to have superluminal motion
+the emission cone must be reduced because
+\begin{equation}
+  \frac{v}{c } = \frac{\frac{v_\mathrm{app}}{c}}{\sin\theta + \frac{v_\mathrm{app}}{c}\cos\theta} < 1 \Rightarrow \frac{\left( \frac{v_\mathrm{app}}{c} \right)^2 - 1 }{\left( \frac{v_\mathrm{app}}{c } \right)^2 + 1} < \cos\theta < 1
+\end{equation}
+Thus superluminal motions are observed only for small inclination
+angles. This implies that the jet is pointing towards us. This is a
+good argument in favor of having very well collimated jets.
 \subsubsection{Doppler boosting}
+Besides the superluminal motion, the Doppler effect also boosts the
+luminosity of the jet, which explains the one-sideness of some jets in
+particular FRII jets.
+
+Note the Doppler factor
+$\delta = \Gamma^{-1} \left( 1 - \frac{v}{c }\cos\theta \right)^{-1}$
+where $\Gamma$ is the bulk Lorentz factor,
+$\Gamma = \left( 1 - \frac{v^2}{c^2} \right)^{-\nicefrac{1}{2}}$. If
+the source is moving at speed $v$, with and angle $\theta$, is
+opticall thin , with a thickness $s$ and an area $A$, at a distance
+$D$ then the source has a volume and opening angle:
+\begin{align}
+  \d V &= \d As \\
+  \d\Omega &= \frac{\d A}{D^2}
+\end{align}
+Thus, the flux intensity is in the observer's frame:
+\begin{align}
+  S_v &= \int I_v\d \Omega = \int \frac{j_v}{D^2} \d V\\
+  j_v &= n \frac{\d W}{\d t\d \Omega \d v}
+\end{align}
+In the rest frame (denoted with a ${}'$) we have the following
+relationship:
+\begin{align}
+  \d v' &= \delta^{-1}\d v, &\quad \textrm{for the frequency} \\
+  \d W' &= \delta^{-1}\d W, &\quad \textrm{for the energy} \\
+  \d t' &= \Gamma^{-1}\d t, &\quad \textrm{for the time delay} \\
+  n'    &= \Gamma^{-1} n,   &\quad \textrm{for the density of the emitters}\\
+  \d\Omega' &= \delta^2\d\Omega, &\quad \textrm{for the solid angle}
+\end{align}
+As:
+\begin{equation}
+  \frac{\d\Omega'}{\d\Omega} = \frac{\d\cos\theta'}{\d\cos\theta}\frac{\d\phi'}{\d\phi}
+\end{equation}
+Then
+\begin{equation}
+ \cos\theta' = \frac{\cos\theta - \frac{v}{c}}{1 - \frac{v}{c}\cos\theta}
+\end{equation}
+If we further assume a power law (compatible with a synchrotron emission):
+\begin{align}
+  j_{v'}' &= \delta^{-2} j_v \propto (v')^\alpha \\
+  S_v    &= \delta^3 \int \frac{j_{v'}' (v')}{D^2} \d V' = \delta^{3+\alpha}\int \frac{j_{v'}' (v)}{D^2}\d V'
+\end{align}
+Assuming that the source is spherical, we obtain the luminosity:
+\begin{equation}
+  \tcboxmath{
+    L = \delta^4 L'
+  }
+\end{equation}
+\begin{align}
+  \tcboxmath{\textrm{For $\theta < \Gamma^{-1}$} \rightarrow \delta\approx\Gamma} \\
+  \tcboxmath{\textrm{For $\theta > 1$} \rightarrow \delta\approx\Gamma^{-1}}
+\end{align}
 \subsection{Multicomponent Radio Jets}
-\subsubsection{\texorpdfstring{Pair creation $e^+ e^-: \quad \gamma\gamma \rightarrow e^+ + e^-$}{Pair creation e⁺e⁻: γγ → e⁺ + e⁻}}
-\subsubsection{\texorpdfstring{Pair creation $e^+ e^-$ versus hadronic jets}{Pair creation e⁺e⁻ versus hadronic jets}}
+Multi components jets are a natural conjecture to explain the global
+observations. A component coming from the central corona explains the
+possible formation of positron-electron pairs. The iron \ce{K} line
+from the disk close to the central BH confirms that the BH is rotating
+and comforts the Blandofrt-Znajek mechanism. Simultaneously the
+hadronic component coming further out from the disk explains the total
+energy seen in the extended lobes.
+\subsubsection{\texorpdfstring{Pair creation
+    $e^+ e^-: \quad \gamma\gamma \rightarrow e^+ + e^-$}{Pair creation
+    e⁺e⁻: γγ → e⁺ + e⁻}}
+\subsubsection{\texorpdfstring{Pair creation $e^+ e^-$ versus hadronic
+    jets}{Pair creation e⁺e⁻ versus hadronic jets}}
 \subsubsection{Spine Jet and Disk Jet}
 \subsubsection{Magnetization and Counter rotation}
 
@@ -1889,22 +2238,46 @@ Counter rotation may occur locally and sporadically in a jet. It will thus alway
 \section{X-ray binaries and microquasars}
 \subsection{X-ray binaries}
 \subsubsection{Low Mass X-ray Binaries, Micro Quasars}
-Binary systems in our galaxy are long thought to be sources of accretion and also outflows. Ironically, though accretion of gas from the companion onto a white dwarf, a neutron star or a solar mass black hole has long been suspected (since the early 50's) to explain the X ray emission, such accretion disk remain invisible and only very few jets have been measured in those objects. The X ray emission comes from a hot spot. It is usually variable because the companion eclipses the hot spot.
+Binary systems in our galaxy are long thought to be sources of
+accretion and also outflows. Ironically, though accretion of gas from
+the companion onto a white dwarf, a neutron star or a solar mass black
+hole has long been suspected (since the early 50's) to explain the X
+ray emission, such accretion disk remain invisible and only very few
+jets have been measured in those objects. The X ray emission comes
+from a hot spot. It is usually variable because the companion eclipses
+the hot spot.
 
-Again various classes of objects have been observed. One such class is the Low Mass X-ray Binaries (LMXB). They can be represented with the following sketch (image).
+Again various classes of objects have been observed. One such class is
+the Low Mass X-ray Binaries (LMXB). They can be represented with the
+following sketch (image).
 
-For LMXB the eclipse rate is low, the disk is THICK and not thin. Thus the disk obscurs the central compact object which remains invisible. X-ray emission is seen through the diffusion by the photoionized corona (ex. Sagittarius X-7, V691 CrA).
+For LMXB the eclipse rate is low, the disk is THICK and not thin. Thus
+the disk obscurs the central compact object which remains
+invisible. X-ray emission is seen through the diffusion by the
+photoionized corona (ex. Sagittarius X-7, V691 CrA).
 
-GRS 1915+105 is a Low Mass X-ray Binary which is also a very well known micro-quasar. It is in fact the first galactic object where knots with relativistic motion (Mirabel, 1992) where measured. It appears as a down scaled version of a quasar. The spectrum undergoes various phases. Conversely to AGNs these can be interpreted in terms of evolution because we see a single object going through the various phases,
+GRS 1915+105 is a Low Mass X-ray Binary which is also a very well
+known micro-quasar. It is in fact the first galactic object where
+knots with relativistic motion (Mirabel, 1992) where measured. It
+appears as a down scaled version of a quasar. The spectrum undergoes
+various phases. Conversely to AGNs these can be interpreted in terms
+of evolution because we see a single object going through the various
+phases,
 
 \begin{itemize}
-    \item A low X-ray emission with a Hard spectral index (low/hard X-rays). This is thought to correspond to a phase where the disk build up and the plasma ejection is low.
-    \item A high X-ray emission with a Soft spectral index (high/soft X-rays). In this phase the disk has disrupted and the central corona emits a strong wind that collimates into a jet.
+\item A low X-ray emission with a Hard spectral index (low/hard
+  X-rays). This is thought to correspond to a phase where the disk
+  build up and the plasma ejection is low.
+\item A high X-ray emission with a Soft spectral index (high/soft
+  X-rays). In this phase the disk has disrupted and the central corona
+  emits a strong wind that collimates into a jet.
 \end{itemize}
 
-In fact a continuous jet is known to exist even between two emission of blobs.
+In fact a continuous jet is known to exist even between two emission
+of blobs.
 
-The analogy of microquasars with quasars can be seen in the comparison of the following two images: (figure).
+The analogy of microquasars with quasars can be seen in the comparison
+of the following two images: (figure).
 
 \subsubsection{High Mass X-ray Binaries, Micro Quasar Pulsar}
 Another class of X-ray Binaries are the HMXB or High Mass X-ray binaries. Cygnus X-3 is a good example with a central black hole:
