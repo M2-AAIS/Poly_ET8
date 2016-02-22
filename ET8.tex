@@ -2223,15 +2223,169 @@ Multi components jets are a natural conjecture to explain the global
 observations. A component coming from the central corona explains the
 possible formation of positron-electron pairs. The iron \ce{K} line
 from the disk close to the central BH confirms that the BH is rotating
-and comforts the Blandofrt-Znajek mechanism. Simultaneously the
+and comforts the Blandfort-Znajek mechanism. Simultaneously the
 hadronic component coming further out from the disk explains the total
 energy seen in the extended lobes.
 \subsubsection{\texorpdfstring{Pair creation
     $e^+ e^-: \quad \gamma\gamma \rightarrow e^+ + e^-$}{Pair creation
     e⁺e⁻: γγ → e⁺ + e⁻}}
+There is a threshold for the production of pairs. The photon energy in
+center-of-momentum rest frame must be at least equal to the rest mass
+of the $e^+,e^-$ pairs. Thus:
+\begin{equation}
+  \varepsilon' = \frac{\varepsilon_1\varepsilon_2}{2 \left( m_ec^2 \right)^2}\left( 1-\cos\theta \right) \leq 1
+\end{equation}
+For example, X-ray of \SI{1}{keV} can absorb $\gamma$-rays of
+\SI{300}{MeV}, \SI{10}{keV}X-ray can absorb \SI{30}{MeV}, etc… But the
+opacity may prevent the pairs from propagating. If we compute the
+photon-photon opacity we get:
+\begin{align}
+  \tau_{\gamma\gamma} (\varepsilon_2) = \frac{R}{4\pi}\int\d\varepsilon_1 n(\varepsilon_1) \int\d\Omega (1 - \cos\theta) \sigma_{\gamma\gamma} (\varepsilon') \\
+  L = 4\pi R^2 c\int\d\varepsilon \varepsilon n(\varepsilon)
+\end{align}
+
+We can compute the emission compactness:
+\begin{equation}
+  l = \frac{L\sigma_T}{4\pi Rm_ec^3}
+\end{equation}
+\begin{itemize}
+\item For AGN, the luminosity delay and compactness are
+  $L = \SI{e48}{\erg\per\s}$, $\Delta t = \SI{1}{day}$,
+  $l\approx \num{e3}$.
+\item For GRB, we have $L=\SI{e52}{\erg\per\s}$,
+  $\Delta t = \SI{1}{s}$, $l \approx \num{e12}$
+\end{itemize}
+
+Assuming that the photon spectrum follows a power law, we have:
+\begin{equation}
+  \varepsilon \in \left( \varepsilon_\mathrm{min}, \varepsilon_\mathrm{max} \right),\quad n(\varepsilon) = n_0 \varepsilon^{-s}
+\end{equation}
+If we now include a $\delta$ function for the pair production
+(assuming $\sigma_{\gamma\gamma}$ is small), the opacity becomes:
+\begin{align}
+  & \tau_{\gamma\gamma} \approx \frac{1}{4}\eta \left( \varepsilon_\mathrm{min}, \varepsilon_\mathrm{max}, s \right) \left( \frac{E_\gamma}{m_ec^2} \right)^{s-1} l \\
+  & \eta = \left\lbrace
+    \begin{array}{lr}
+      \frac{2-s}{\varepsilon_\mathrm{max}^{2-s} - \varepsilon_\mathrm{min}^{2-s}}, & s\neq 2 \\
+      \frac{1}{\ln\varepsilon_\mathrm{max}/\varepsilon_\mathrm{min}}, & s = 2
+    \end{array}\right.
+\end{align}
+For $s=2$, (which is the canonical value), we get $\eta \approx 0.1$.
+\begin{itemize}
+\item For AGN, the energy is $E_\gamma = \SI{10}{GeV}$ so
+  $\tau_{\gamma\gamma} \approx \num{e4}$.
+\item For GRB, $E_\gamma = \SI{10}{MeV}$, so
+  $\tau_{\gamma\gamma} \approx \num{e12}$
+\end{itemize}
+Does this definitively rules out the pairs? No because beaming and
+anisotropy must be taken into account.
+\begin{equation}
+  \left.\begin{split}
+      L_\mathrm{obs} & = \delta^4L_\mathrm{int} \\
+      \Delta t_\mathrm{obs} & = \delta^{-1} \Delta t_\mathrm{int} \\
+      E_{\gamma,\mathrm{obs}} & = \Delta E_{\gamma,\mathrm{int}}
+    \end{split}\right\rbrace
+  \Rightarrow l_\mathrm{obs} \propto \frac{L_\mathrm{obs}}{\Delta t_\mathrm{obs}} = \delta^5 l_\mathrm{int}
+\end{equation}
+So
+\begin{equation}
+  \tau_{\gamma\gamma,\mathrm{obs}} \propto l_\mathrm{obs} E_{\gamma,\mathrm{obs}} \propto \delta^6\tau_{\gamma\gamma,\mathrm{int}}
+\end{equation}
+We need
+\begin{equation}
+  \tau_{\gamma\gamma,\mathrm{int}} = \frac{\tau_{\gamma\gamma,\mathrm{obs}}}{\delta^6} < 1
+\end{equation}
+\begin{itemize}
+\item For AGN, $\delta < 5$
+\item For GRB, $\delta > 100$
+\end{itemize}
 \subsubsection{\texorpdfstring{Pair creation $e^+ e^-$ versus hadronic
     jets}{Pair creation e⁺e⁻ versus hadronic jets}}
+Conversely, the extended radio emission can be explained using
+hadronic jets (electrons-protons). Synthetic maps of synchrotron
+emission can be produced using disk wind models. An example of such a
+map using a disk wind simulation is given below.  \FIXME{missing
+  figure from gracia et al.}
+
+The opening angle of these models can be compared to the observed ones
+and fits relatively well. \FIXME{missing another figure from gracia et
+  al.}
+
+The hadronic part is need to give the total luminosity feeding the
+lobes. Thus two component models are at least required, see the
+following scheme: \FIXME{scheme}
+
+A spine jet coming from the vicinity of the central black hole is
+surrounded by an extended disk wind. This picture is quite similar to
+the picture for YSO jets.
 \subsubsection{Spine Jet and Disk Jet}
+Sol et al. (1989) already suggested 2-flows models with an inner pair
+jet and an outer hadronic jet. \FIXME{missing figure from Henri and
+  Pelletier, 1991}. Some recent simulations of the pair jet surrounded
+by the disk wind are shown below. \FIXME{McKinney Blandford,
+  2009}. The external disk jet is a classical hadronic disk wind. The
+main difference with a classical disk wind is that the temperature and
+the velocities reach relativistic values.
+
+The inner spine jet may be created by the BH magnetosphere itself
+through to main mechanism, Penrose or Blandford-Znajek mechanism. The
+general Penrose mechanism includes the classical original
+hydrodynamical mechanism and the Blandford-Znajek mechanism which is
+in the limit of a force free MHD flow where inertia is negligible.
+\FIXME{missing figure from lasota et al.}
+
+In the above figure \FIXME{ref}, the system has an energy $E_1$ at
+$t_1$ on $\Sigma_1$ when entering the ergosphere and $E_2$ at $t_2$ at
+the exit on $\Sigma_2$. Part of the particles must fall into the BH,
+which captures $\Delta E_H$ calculated along $\Delta H$. $\Dleta E_H$
+is the energy gained by the BH. $\Delta E_\mathrm{ext}$ is the loss of
+energy extracted from the system in the time interval, calculated
+along $\Sigma_\mathrm{ext}$. For an ideal system, energy conservation
+gives:
+\begin{equation}
+  E_2 - E_1 + \Delta E_\mathrm{ext} + \Delta E_H = 0
+\end{equation}
+The same calculation can be done, giving the angular momentum from the
+energy tensor:
+\begin{equation}
+  J_1 - J_1 + \Delta J_\mathrm{ext} + \Delta J_H = 0
+\end{equation}
+In a steady axisymmetric system we have:
+\begin{equation}
+  E_2 = E_1 \quad \textrm{and} \quad J_2 = J_1
+\end{equation}
+such that all the energy and angular momentum extracted from the BH is
+given away.
+
+The general Penrose condition to have extraction of energy and angular
+momentum from the BH is
+\begin{equation}
+  \omega_H \Delta J_H \leq \Delta E_H \leq 0
+\end{equation}
+where $\omega_H$ is uniform constant rotation frequency of the BH on
+the horizon. From this double inequality, we see that energy
+extraction is possible only around a rotating BH.  \FIXME{scheme from
+  Lasota et al.}
+
+The classical Penrose mechanism is the hydrodynamic limit of the
+system. The particles enter the system part of it fall into the BH and
+the remaining is extracted following the above sketch
+(\FIXME{ref}). For an ideal fluid the extraction condition implies
+that the particles cross the horizon with a rotation opposite to the
+BH rotation. No such process is known so far.
+
+The Blandford-Znajek mechanism is the general Penrose limit for a
+force-free magnetized plasma where all the energy and angular momentum
+is stored in the electromagnetic field. A necessary and sufficient
+condition to have extraction of energy from the BH in this limit is to
+have
+\begin{equation}
+  0 \leq \Omega \leq \omega_H
+\end{equation}
+where $\Omega$ is the isorotation frequency.
+
+Of course, in a real vicinity of a BH, the process is probably a
+mixture of Penrose and Blandford-Znajek mechanisms.
 \subsubsection{Magnetization and Counter rotation}
 
 
