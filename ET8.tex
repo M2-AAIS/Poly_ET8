@@ -1665,12 +1665,12 @@ The Eddington accretion rate luminosity can be calculated accordingly by :
 \end{equation}
 The black body flux corresponding to that solution is :
 \begin{equation}
-    F_{\nu} = \frac{2\pi \cos (i)}{D^2} \int_{R_\mathrm{in}}^{R_\mathrm{out}} I_{\nu}RdR \text{  ;  }
+    F_{\nu} = \frac{2\pi \cos{(i)}}{D^2} \int_{R_\mathrm{in}}^{R_\mathrm{out}} I_{\nu}RdR \text{  ;  }
     I_{\nu} = B_{\nu}\big[ T(R)\big] \\
 \end{equation}
 
 \begin{align}
-    F_{\nu} = \frac{4\pi \cos (i)h\nu}{c^2D^2} \int_{R_\mathrm{in}}^{R_\mathrm{out}}
+    F_{\nu} = \frac{4\pi \cos{(i)}h\nu}{c^2D^2} \int_{R_\mathrm{in}}^{R_\mathrm{out}}
     \frac{RdR}{e^{h\nu/kT(R)}-1}
     &\xrightarrow[\nu \ll \frac{kT(R_\mathrm{out})}{h}]{} \nu^2  \\
     & \xrightarrow[\nu \gg \frac{kT(R_\mathrm{in})}{h}]{} \frac{2\pi h \nu^3}{c^2} e^{-h\nu/kT(R)}  \\
@@ -2152,14 +2152,14 @@ In radio sources superluminal motions of the blobs of knots are
 observed. how is this possible? In fact it is just the Doppler effect
 of the electron population. The apparent time and spaces delays are:
 \begin{align}
-  \Delta t_\mathrm{app} & = \Delta t \left( 1 - \frac{v}{c}\cos\theta\right)  \\
+  \Delta t_\mathrm{app} & = \Delta t \left( 1 - \frac{v}{c}\cos{\theta}\right)  \\
   \Delta x_\mathrm{app} &= v\Delta t\sin\theta
 \end{align}
 Thus the apparent speed is
-$v_\mathrm{app} = \frac{v\sin\theta}{1 - \frac{v}{c }\cos\theta}$. At
+$v_\mathrm{app} = \frac{v\sin\theta}{1 - \frac{v}{c }\cos{\theta}}$. At
 maximum, the speed is given by
 \begin{equation}
-  \diffp{v_\mathrm{app}}{\theta} = 0 = \frac{v\cos\theta - \frac{v^2}{c }}{\left( 1 - \frac{v }{c} \cos\theta \right)^2} \Rightarrow V_\mathrm{max} = c\cos\theta
+  \diffp{v_\mathrm{app}}{\theta} = 0 = \frac{v\cos{\theta} - \frac{v^2}{c }}{\left( 1 - \frac{v }{c} \cos\theta \right)^2} \Rightarrow V_\mathrm{max} = c\cos{\theta}
 \end{equation}
 \begin{equation}
   v_\mathrm{app,max} = \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma v > v \sim c
@@ -2173,7 +2173,7 @@ $v\sim \SIrange{4}{5}{c}$. For GRS1915, which is a microquasar with
 $v\sim \SIrange{1}{2}{c }$. In addition to have superluminal motion
 the emission cone must be reduced because
 \begin{equation}
-  \frac{v}{c } = \frac{\frac{v_\mathrm{app}}{c}}{\sin\theta + \frac{v_\mathrm{app}}{c}\cos\theta} < 1 \Rightarrow \frac{\left( \frac{v_\mathrm{app}}{c} \right)^2 - 1 }{\left( \frac{v_\mathrm{app}}{c } \right)^2 + 1} < \cos\theta < 1
+  \frac{v}{c } = \frac{\frac{v_\mathrm{app}}{c}}{\sin\theta + \frac{v_\mathrm{app}}{c}\cos{\theta}} < 1 \Rightarrow \frac{\left( \frac{v_\mathrm{app}}{c} \right)^2 - 1 }{\left( \frac{v_\mathrm{app}}{c } \right)^2 + 1} < \cos{\theta} < 1
 \end{equation}
 Thus superluminal motions are observed only for small inclination
 angles. This implies that the jet is pointing towards us. This is a
@@ -2184,7 +2184,7 @@ luminosity of the jet, which explains the one-sideness of some jets in
 particular FRII jets.
 
 Note the Doppler factor
-$\delta = \Gamma^{-1} \left( 1 - \frac{v}{c }\cos\theta \right)^{-1}$
+$\delta = \Gamma^{-1} \left( 1 - \frac{v}{c }\cos{\theta} \right)^{-1}$
 where $\Gamma$ is the bulk Lorentz factor,
 $\Gamma = \left( 1 - \frac{v^2}{c^2} \right)^{-\nicefrac{1}{2}}$. If
 the source is moving at speed $v$, with and angle $\theta$, is
@@ -2210,11 +2210,11 @@ relationship:
 \end{align}
 As:
 \begin{equation}
-  \frac{\d\Omega'}{\d\Omega} = \frac{\d\cos\theta'}{\d\cos\theta}\frac{\d\phi'}{\d\phi}
+  \frac{\d\Omega'}{\d\Omega} = \frac{\d\cos{\theta'}}{\d\cos{\theta}}\frac{\d\phi'}{\d\phi}
 \end{equation}
 Then
 \begin{equation}
- \cos\theta' = \frac{\cos\theta - \frac{v}{c}}{1 - \frac{v}{c}\cos\theta}
+ \cos{\theta'} = \frac{\cos{\theta} - \frac{v}{c}}{1 - \frac{v}{c}\cos{\theta}}
 \end{equation}
 If we further assume a power law (compatible with a synchrotron emission):
 \begin{align}
@@ -2350,7 +2350,7 @@ in the limit of a force free MHD flow where inertia is negligible.
 In the above figure \FIXME{ref}, the system has an energy $E_1$ at
 $t_1$ on $\Sigma_1$ when entering the ergosphere and $E_2$ at $t_2$ at
 the exit on $\Sigma_2$. Part of the particles must fall into the BH,
-which captures $\Delta E_H$ calculated along $\Delta H$. $\Dleta E_H$
+which captures $\Delta E_H$ calculated along $\Delta H$. $\Delta E_H$
 is the energy gained by the BH. $\Delta E_\mathrm{ext}$ is the loss of
 energy extracted from the system in the time interval, calculated
 along $\Sigma_\mathrm{ext}$. For an ideal system, energy conservation
@@ -2400,8 +2400,90 @@ where $\Omega$ is the isorotation frequency.
 Of course, in a real vicinity of a BH, the process is probably a
 mixture of Penrose and Blandford-Znajek mechanisms.
 \subsubsection{Magnetization and Counter rotation}
+In AGN jets, we can measure the jet magnetic field via
+polarization. Thus conversely to YSO jets, we are able to know the
+structure of the magnetic field. However, we cannot measure directly
+its magnitude; Usually the magnitude is deduced from simple
+equipartition arguments by writing that the magnetic density density
+is equal to the kinetic energy density.
 
+Signatures of motions transverse to the jet axis and in opposite
+directions have recentrly been measured in M87 (Meyer et al. 2013). In
+the same paper, observations clearly indicate that the magnetic field
+is helicoidal in the jet. Komissarov et al. (2009) had already shown
+numerically that the counter-rotation appears in their simulation (hot
+jet of model B2H) as the result of transfer of angular momentum from
+the fluid to the magnetic component. Nakamura, Garofal \& Meier (2010)
+have also shown thath the complex structure of the quad relativistic
+MHD shock exhibits a reverse shock that flows upstream, rotating in
+the direction opposite to the forward shock.
 
+In relativistic ideal MHD and in Kerr metrics, we can write the
+conservation of angular momentum flux
+\begin{equation}
+  L = \xi\gamma\varpi V_\phi - \frac{\varpi B_\phi B_P}{4\pi\gamma\rho_0 V_P}
+\end{equation} of the iso-rotation law:
+\begin{equation}
+  \Omega - \omega = \frac{h}{\varpi}\left( V_\phi - \frac{V_P}{B_P}B_\phi \right)
+\end{equation}
+and of the total energy:
+\begin{equation}
+  E = \mu c^2 = h\gamma \xi c^2 + \xi \gamma \omega \varpi V_\phi - \frac{\varpi \Omega B_\phi B_P}{4\pi\gamma\rho_0 V_P}
+\end{equation}
+where $\xi$ is the enthalpy per mass unit, $\rho_0$ the mass density
+in the proper frame and $\gamma$ the Lorentz factor of the fluid. We
+use cylindrical coordinates where $\varpi$ is the cylindrical radius,
+$h$ is lapse function due to the pace curvature induced by the BH and
+$\omega$ the toroidal component of the shift vector due to the BH
+rotation.
+
+By combining the previous conservation laws for angular momentum,
+isorotation and energy we get the toroidal component of the enthalpy
+flux (and the toroidal velocity) -- see Cayatte et al. (2014) for
+details --
+\begin{equation}
+  \gamma\xi V_\phi = \frac{L}{\varpi} \frac{M^2 - \varpi^2 (\Omega - \omega) (\mu c^2 - L \Omega) / Lc^2 }{M^2 - h^2 + \varpi^2 (\Omega - \omega)^2 / c^2}
+\end{equation}
+The Alfvén Mach number is then:
+\begin{equation}
+  M^2 = \frac{4\pi\xi\rho_0 h^2\gamma^2 V_P^2}{B_P^2}
+\end{equation}
+and from the conditions of regularity through the Alfvén surface, the
+Alfvén Mach number at the critical Alfvén surface and Alfvén radius is
+\begin{align}
+  \frac{M_*^2}{h_*^2} & = \frac{\mu c^2 6 L\Omega}{\mu c^2 - L\omega_*}\\
+  \varpi_*^2 & = \frac{Lh_*^2 c^2}{(\Omega - \omega_*)(\mu c^2 - L\omega_*)}
+\end{align}
+We see that the toroidal velocity is negative
+\begin{equation}
+  \gamma\xi V_\phi < 0
+\end{equation}
+if
+\begin{equation}
+  \frac{h \xi\gamma V_P \delta S}{h_* \xi_* \gamma_* V_* \delta S_*} < \frac{\varpi^2 (\Omega - \omega)}{\varpi_*^2(\Omega - \omega_*)}
+\end{equation}
+In the jet far from the BH we can neglect the line elements and in
+special relativity the counter rotation condition is:
+\begin{equation}
+  \gamma\xi V_\phi < 0 \quad \textrm{if} \quad \frac{\xi\gamma V_P\delta S}{\xi_*\gamma_* V_* \delta S_*} < \frac{\varpi^2}{\varpi_*^2}
+\end{equation}
+If the jet is homogeneous:
+\begin{equation}
+  \delta S \propto \varpi^2
+\end{equation}
+and if the flow is relativistic we can assume that $V_P \approx c$,
+the counter rotation condition is then simply:
+\begin{equation}
+  \gamma\xi V_\phi < 0 \quad \textrm{if} \quad \frac{\xi\gamma}{\xi_*\gamma_*} < 1
+\end{equation}
+In relativistic flow, counter rotation occurs if the enthalpy is
+decreasing some threshold value. This decrease can have two origins, a
+deceleration of the flow as in the classical case or an energy loss
+like radiative loss. As a matter of fact, counter-rotation can occur
+only if the jet is magnetized, otherwise we would expect conservation
+for the angular momentum. It is the exchange of angular momentum
+between the flow and its magnetic field that makes the presence of
+counter rotation possible.
 \section{X-ray binaries and microquasars}
 \subsection{X-ray binaries}
 \subsubsection{Low Mass X-ray Binaries, Micro Quasars}
