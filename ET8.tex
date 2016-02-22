@@ -1,7 +1,7 @@
 \documentclass[10pt,a4paper,english]{article}
 
 % Document layout
-\usepackage[pdftex,
+\usepackage[xetex,
             margin=2cm,
             headheight=0.4cm,
             headsep=0.8cm,
@@ -25,9 +25,12 @@
 \usepackage[version=3]{mhchem}
 
 % Fonts settings
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{mathspec}
+\defaultfontfeatures{Ligatures=TeX,RawFeature={-calt,+tnum,+lnum}}
+\setmainfont[BoldFont={Adobe Garamond Pro Semibold},BoldItalicFont={Adobe Garamond Pro Semibold Italic}]{EB Garamond}
+\setmathfont(Digits){EB Garamond}
+\newfontfamily\NotoSans{Noto Sans}
+\newfontfamily\LatinModern{Latin Modern Math}
 
 % [english] is set globaly above
 \usepackage{babel}
@@ -137,7 +140,7 @@
 \maketitle
 
 \begin{center}
-    $M_{\odot}$ % C’est ironique, non ? – Un peu oui !
+    {\LatinModern M\textsubscript{\NotoSans ☺}} % C’est ironique, non ? – Un peu oui !
 \end{center}
 
 \section*{Preamble}
