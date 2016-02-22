@@ -1,18 +1,6 @@
 \documentclass[10pt,a4paper,english]{article}
 
-% Necessary to be able to compile with either xelatex or pdflatex
-\usepackage{ifxetex}
-
 % Document layout
-\ifxetex
-\usepackage[xetex,
-            margin=2cm,
-            headheight=0.4cm,
-            headsep=0.8cm,
-            footskip=1.2cm,
-            nomarginpar,
-            ]{geometry}
-\else
 \usepackage[pdftex,
             margin=2cm,
             headheight=0.4cm,
@@ -20,7 +8,6 @@
             footskip=1.2cm,
             nomarginpar,
             ]{geometry}
-\fi
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
@@ -38,18 +25,9 @@
 \usepackage[version=3]{mhchem}
 
 % Fonts settings
-\ifxetex
-    \usepackage{mathspec}
-    \defaultfontfeatures{Ligatures=TeX,RawFeature={-calt,+tnum,+lnum}}
-    % \setmainfont[BoldFont={Adobe Garamond Pro Semibold},BoldItalicFont={Adobe Garamond Pro Semibold Italic}]{EB Garamond}
-    % \setmathfont(Digits){EB Garamond}
-    % \newfontfamily\NotoSans{Noto Sans}
-    % \newfontfamily\LatinModern{Latin Modern Math}
-\else
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
-    \usepackage{lmodern}
-\fi
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 % [english] is set globaly above
 \usepackage{babel}
@@ -159,11 +137,7 @@
 \maketitle
 
 \begin{center}
-    \ifxetex
-        % {\LatinModern M\textsubscript{\NotoSans ☺}}
-    \else
-        $M_{\odot}$ % C’est ironique, non ? – Un peu oui !
-    \fi
+    $M_{\odot}$ % C’est ironique, non ? – Un peu oui !
 \end{center}
 
 \section*{Preamble}
