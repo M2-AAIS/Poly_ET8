@@ -1,13 +1,14 @@
 \documentclass[10pt,a4paper,english]{article}
 
 % Document layout
-\usepackage[pdftex,
-            margin=2cm,
-            headheight=0.4cm,
-            headsep=0.8cm,
-            footskip=1.2cm,
-            nomarginpar,
-            ]{geometry}
+\usepackage[
+    pdftex,
+    margin=2cm,
+    headheight=0.4cm,
+    headsep=0.8cm,
+    footskip=1.2cm,
+    nomarginpar
+]{geometry}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
@@ -45,19 +46,22 @@
 \paragraphfont{\color{dgreen}}
 
 % PDF properties
-\usepackage[unicode=true,
-            pdfstartview=FitV,
-            colorlinks=true,
-            citecolor=linkcolor,
-            linkcolor=linkcolor,
-            urlcolor=linkcolor,
-            hyperindex=true,
-            ]{hyperref}
+\usepackage[
+    unicode=true,
+    pdfstartview=FitV,
+    colorlinks=true,
+    citecolor=linkcolor,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    hyperindex=true
+]{hyperref}
 
-\hypersetup{pdfauthor={Christophe Sauty},
-            pdftitle={Accretion and Jets},
-            pdfsubject={Paris -- M2 AAIS ET8 / Porto -- Doctorate},
-            pdfkeywords={accretion, jets}}
+\hypersetup{
+    pdfauthor={Christophe Sauty},
+    pdftitle={Accretion and Jets},
+    pdfsubject={Paris -- M2 AAIS ET8 / Porto -- Doctorate},
+    pdfkeywords={accretion, jets}
+}
 
 % Custom header & footer
 \usepackage{fancyhdr}
@@ -73,6 +77,11 @@
 \usepackage{graphicx}
 %\usepackage[abs]{overpic}
 \graphicspath{{figures/}}
+\usepackage[
+    labelfont={sc,small},
+    textfont={small}
+]{caption}
+\usepackage{subcaption}
 
 % Units display
 \usepackage{siunitx}
@@ -99,7 +108,7 @@
 \usepackage{tabularx}
 
 % References
-\usepackage{natbib}
+\usepackage[round]{natbib}
 \newcommand{\apj}{The Astrophysical Journal}
 \newcommand{\apjl}{Astrophysical Journal, Letters}
 \newcommand{\mnras}{Monthly Notices of the Royal Astronomical Society}
@@ -136,6 +145,8 @@
 \begin{center}
     $M_{\odot}$ % C’est ironique, non ? – Un peu oui !
 \end{center}
+
+\FIXME{We need to harmonize notation of $v$ vs $V$, $r$ vs $R$}
 
 \section*{Preamble}
 \addcontentsline{toc}{section}{Preamble}
@@ -184,36 +195,66 @@ alive and make it yours.
 \newpage
 \pagenumbering{arabic} % 1, 2, 3, ...
 
-\FIXME{We need to harmonize notation of $v$ vs $V$, $r$ vs $R$}
-
 \section{The necessity of the Accretion-Jet Mechanism}
 
 \subsection{Active Galactic Nuclei}
 
 \subsubsection{Radio quiet, Seyfert galaxies}
 
-The first spectrum of a Seyfert galaxy was taken in 1943.
-
-\FIXME{Missing figure}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{1943CMWCI-671-7.jpg}
+    %\label{fig:}
+    \caption{
+        The first spectrum of a Seyfert galaxy was taken in 1943. Contributions
+        from the Mount Wilson Observatory / Carnegie Institution of Washington,
+        vol. 671, pp.7-7.
+    }
+\end{figure}
 
 In the catalog of 3C sources, it was first observed that there was a large
 population of highly blue “stars” with unknown large lines
-(\SI{8000}{\km\per\s}), like in 3C48 (\cite{Matthews1960}).
-Moreover it was noticed that those objects where redshifted. Greenstein and
-Schmidt, in 1964, for 3C48 and 3C273, measured redshifts of $z=0.45$ and
-$0.16$. Thus those objects have to be at cosmological distances but with very
-high luminosity.
+(\SI{8000}{\km\per\s}), like in 3C~48 (first detection: \citet{Matthews1960},
+identification: \citet{1963ApJ-138-30M}). Moreover it was noticed that those
+objects where redshifted. \citet{1964ApJ-140-1G}, measured redshifts of
+$z=0.45$ and $0.16$ for 3C~48 and 3C~273. Thus those objects have to be at
+cosmological distances but with very high luminosity.
 
-\FIXME{Make Matthews et al. a reference + missing figure x2}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth,clip,trim=50mm 130mm 50mm 260mm]{1964ApJ-140-1G_1.jpg} % FIXME: You probably want to shrink or crop this one
+    %\label{fig:}
+    \caption{
+        Enlarged portion of 200-inch photograph of 3C~273 (froam a 103a-D plate
+        taken by A.~R.~Sandage); north is up, east to left. The weak narrow jet
+        visible in position angle \SI{223}{\degree} reaches to about 20 inches
+        from the quasi-stellar object. From \cite{1964ApJ-140-1G}.
+    }
+\end{figure}
 
-Seyfert galaxies are usually spiral galaxies. They have a radio core, which
-fluctuates in brightness. Because of the intense radio core they are classified
-in the larger family of Active Galactic Nuclei. A long debate occurred
-initially to know if the radio emission could be constructed form star burst
-emission. Nowadays, the radio core and the whole spectrum (because we have
-multi-wavelength observations) is understood as the result of the emission of
-an accretion disk with or without outflows around a central supermassive black
-hole.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{1964ApJ-140-1G_2.jpg}
+    %\label{fig:}
+    \caption{
+        Spectrum of the quasi-stellar object 3C 273B,
+        \SI{400}{\angstrom\per\mm} original, 103a-F, January 23, 1963. The
+        comparison spectrum is H + He + Ne. Exposure over the upper half of
+        slit was three times that over the lower half. Redshifted emission
+        lines of H and [O \textsc{III}] are indicated; also the barely visible
+        line of Mg \textsc{II}, confirmed on denser exposures. From
+        \cite{1964ApJ-140-1G}.
+    }
+\end{figure}
+
+Seyfert galaxies are usually normal spiral galaxies. They have a radio core,
+which fluctuates in brightness. Because of the intense radio core they are
+classified in the larger family of Active Galactic Nuclei. A long debate
+occurred initially to know if the radio emission could be constructed form star
+burst emission. Nowadays, the radio core and the whole spectrum (because we
+have multi-wavelength observations) is understood as the result of the emission
+of an accretion disk with or without outflows around a central supermassive
+black hole.
 
 As radio-quiet objects represent $\sim \SI{90}{\percent}$ of the “average” AGN,
 they also represent a very large source for the gamma ray background emission
@@ -223,44 +264,46 @@ at low level.
     \noindent
     \begin{minipage}{.49\textwidth}
         %\includegraphics[width=\textwidth]{}
-        \FIXME{Missing figure?}
-        %\caption{}
+        \FIXME{Missing figure?} % There is a NGC4261 core pictures in the original document, but I can’t see any reason to include it here
         %\label{fig:}
+        %\caption{}
 
-        NGC 4258 is a Seyfert galaxy in the constellation Ursa major. It is
-        generally agreed to have at its heart a supermassive black hole some
-        39 million times more massive than the Sun. Gas orbiting this black
-        hole has formed a warped disk nearly two light years in diameter. By
-        measuring extremely small shifts in the positions of \ce{H_2O} masers
-        (water vapor that amplifies microwave radio emissions) located in this
-        disk, scientists have been able to measure the distance to this galaxy
-        as 23.5 million light years, a measurement the scientists say is
-        accurate to within a million light years.
-
-        The disk is viewed nearly edge-on from Earth and orbits the black hole
-        at a speed of more than 2 million miles per hour. Using the Very Long
-        Baseline Array, the astronomers observed the Doppler shift of the
-        masers at the disk's sides at 4 to 8 month intervals over more than
-        three years. This shift, or “proper motion”, combined with previous
-        observations in which astronomers had measured the speed of the
-        orbiting disk and ascertained the mass of the black hole, has enabled
-        the scientists to make the distance determination.
-
-        Previous observations using Cepheid variable stars and the Hubble Space
-        Telescope had set the distance at 27 or 29 million light years. The
-        difference in these two distance determinations will make a significant
-        impact on future calculations of the size and age of the Universe.
-
+        \vspace{1ex}
+        \caption{
+            NGC4258 Massive Black Hole \& Accretion Disk. Image courtesy of
+            NRAO/AUI and L. Greenhill (Harvard-Smithsonian Center for
+            Astrophysics).\vspace{1ex}\\
+            NGC 4258 is a Seyfert galaxy in the constellation Ursa major. It is
+            generally agreed to have at its heart a supermassive black hole
+            some 39 million times more massive than the Sun. Gas orbiting this
+            black hole has formed a warped disk nearly two light years in
+            diameter. By measuring extremely small shifts in the positions of
+            \ce{H_2O} masers (water vapor that amplifies microwave radio
+            emissions) located in this disk, scientists have been able to
+            measure the distance to this galaxy as 23.5 million light years, a
+            measurement the scientists say is accurate to within a million
+            light years.\vspace{1ex}\\
+            The disk is viewed nearly edge-on from Earth and orbits the black
+            hole at a speed of more than 2 million miles per hour. Using the
+            Very Long Baseline Array, the astronomers observed the Doppler
+            shift of the masers at the disk's sides at 4 to 8 month intervals
+            over more than three years. This shift, or “proper motion”,
+            combined with previous observations in which astronomers had
+            measured the speed of the orbiting disk and ascertained the mass of
+            the black hole, has enabled the scientists to make the distance
+            determination.\vspace{1ex}\\
+            Previous observations using Cepheid variable stars and the Hubble
+            Space Telescope had set the distance at 27 or 29 million light
+            years. The difference in these two distance determinations will
+            make a significant impact on future calculations of the size and
+            age of the Universe.
+        }
     \end{minipage}%
     \hfill
     \begin{minipage}{.49\textwidth}
         \includegraphics[width=\textwidth]{ngc4258_combo_hst_hi.jpg}
+        %\label{fig:}
     \end{minipage}
-        \caption{
-            NGC4258 Massive Black Hole \& Accretion Disk. Image courtesy of
-            NRAO/AUI and L. Greenhill (Harvard-Smithsonian Center for
-            Astrophysics).
-        }
 \end{figure}
 
 \subsubsection{Radio Loud, Narrow Line Radio Galaxies}
@@ -272,30 +315,29 @@ the most powerful sources as such are of course quasars and BL Lac objects.
 However the most striking structure is seen in radio galaxies of Fanaroff Riley
 types.
 
-
 \begin{figure}[!ht]
     \noindent
     \begin{minipage}{.6\textwidth}
         \centering
-        \includegraphics[width=0.9\textwidth]{eso0903a.jpg}
+        \includegraphics[width=0.8\textwidth]{eso0903a.jpg}
         %\label{fig:}
     \end{minipage}%
     \hfill
     \begin{minipage}{.4\textwidth}
-        Colour composite image of Centaurus A, revealing the lobes and jets
-        emanating from the active galaxy’s central black hole. This is a
-        composite of images obtained with three instruments, operating at very
-        different wavelengths. The 870-micron submillimetre data, from LABOCA
-        on APEX, are shown in orange. X-ray data from the Chandra X-ray
-        Observatory are shown in blue. Visible light data from the Wide Field
-        Imager (WFI) on the MPG/ESO \SI{2.2}{\m} telescope located at La Silla,
-        Chile, show the stars and the galaxy’s characteristic dust lane in
-        close to “true colour”.
+        \caption{
+            Centaurus A*. ESO/WFI (Optical); MPIfR/ESO/APEX/A.Weiss et al.
+            (Submillimetre); NASA/CXC/CfA/R.Kraft et al. (X-ray).\vspace{1ex}\\
+            Colour composite image of Centaurus A, revealing the lobes and jets
+            emanating from the active galaxy’s central black hole. This is a
+            composite of images obtained with three instruments, operating at
+            very different wavelengths. The 870-micron submillimetre data, from
+            LABOCA on APEX, are shown in orange. X-ray data from the Chandra
+            X-ray Observatory are shown in blue. Visible light data from the
+            Wide Field Imager (WFI) on the MPG/ESO \SI{2.2}{\m} telescope
+            located at La Silla, Chile, show the stars and the galaxy’s
+            characteristic dust lane in close to “true colour”.
+        }
     \end{minipage}
-    \caption{
-        Centaurus A*. ESO/WFI (Optical); MPIfR/ESO/APEX/A.Weiss et al.
-        (Submillimetre); NASA/CXC/CfA/R.Kraft et al. (X-ray).
-    }
 \end{figure}
 
 Radio loud sources and quasars have relativistic jets in addition to the
@@ -304,49 +346,106 @@ of 3 to 10 or possibly higher.
 
 \begin{figure}[!ht]
     \noindent
-    \begin{minipage}{.495\textwidth}
+    \begin{subfigure}[t]{.495\textwidth}
         \includegraphics[width=\textwidth]{3c31lbcd_6in_hi.jpg}
-        \caption{
-            3C31 radio galaxy, VLA (\SI{20}{\cm}), 1999.
-            Image courtesy of NRAO/AUI.
-        }
         %\label{fig:}
-
-        This image shows the radio morphology of the radio galaxy 3C31 (NGC
-        383), the dominant galaxy of a prominent chain of galaxies. This system
-        is a powerful radio source, with conical inner jets developing into
-        distorted plumes, which stretch to a distance of 300 kpc from the
-        center of the galaxy (980,000 light years, for a Hubble constant of 100
-        km/s/Mpc). The radio emission is due to relativistic streams of high
-        energy particles generated by the radio source at the center of the
-        radio galaxy. Astronomers believe that the jets are fueled by material
-        accreting onto a super-massive black hole. The high energy particles
-        are shot into extra-galactic space at speeds approaching the speed of
-        light, where they eventually balloon into massive radio plumes.
-    \end{minipage}%
+        \caption{
+            3C~31 radio galaxy, VLA (\SI{20}{\cm}), 1999.
+            Image courtesy of NRAO/AUI.\vspace{1ex}\\
+            This image shows the radio morphology of the radio galaxy 3C~31 (NGC
+            383), the dominant galaxy of a prominent chain of galaxies. This
+            system is a powerful radio source, with conical inner jets
+            developing into distorted plumes, which stretch to a distance of
+            300 kpc from the center of the galaxy (980,000 light years, for a
+            Hubble constant of 100 km/s/Mpc). The radio emission is due to
+            relativistic streams of high energy particles generated by the
+            radio source at the center of the radio galaxy. Astronomers believe
+            that the jets are fueled by material accreting onto a super-massive
+            black hole. The high energy particles are shot into extra-galactic
+            space at speeds approaching the speed of light, where they
+            eventually balloon into massive radio plumes.
+        }
+    \end{subfigure}%
     \hfill
-    \begin{minipage}{.495\textwidth}
-        %\includegraphics[width=\textwidth]{ngc4258_combo_hst_hi.jpg}
-        %\caption{Image courtesy of NRAO/AUI and L. Greenhill
-        %(Harvard-Smithsonian Center for Astrophysics)}
-    \end{minipage}
+    \begin{subfigure}[t]{.495\textwidth}
+        \includegraphics[width=\textwidth]{CygA-YellowOrange_hi.jpg}
+        %\label{fig:}
+        \caption{
+            Cygnus A, VLA (\SI{6}{\cm}), 1983. Image courtesy of
+            NRAO/AUI.\vspace{1ex}\\
+            The radio source Cygnus A is produced in a galaxy some 600 million
+            light-years away. The radio waves are coming from electrons
+            propelled at nearly the speed of light through a long, thin “jet”
+            at the core of the galaxy and deposited in giant “radio lobes”. It
+            is here where the speeding electrons are trapped by the magnetic
+            field around the galaxy to produce radio waves much like the Van
+            Allen radiation belts around the Earth. Where did all the electrons
+            come from? From the bright, small radio component in the center of
+            the galaxy -- the location of a black hole.
+        }
+    \end{subfigure}
+    \caption{
+        FRI and FRII galaxies with morphological differences. 3C~31 is a
+        typical FRI (left) and Cyg~A a typical FRII (right). The hot spots and
+        the radio lobes are clearly seen. The one sided jet of Cyg A is visible
+        as well as the two symmetric hot spots. The two jets of 3C~31 show that
+        despites the two sided structure, the counter jet is less visible due to
+        relativistic effects.
+    }
 \end{figure}
-
 
 They are two types of radio loud galaxies, FRI and FRII.
 \begin{itemize}
-    \item FRI radio galaxies show elongated jets on both sides, on the kpc
-          scale terminated with two radio lobes (spatially extended structure).
-          On the pc scale, we see one-sides jets with relativistic speeds. On
-          the kpc, the jet is sub-relativistic and has decelerated.
-    \item FRII radio galaxies are one sided and relativistic on the pc and the
-          kpc scales. The are more powerful and terminated with two hot spots.
-          This implies that, although the visible jet is one sided, counter jet
-          exist but is invisible because it is not relativistically beamed.
+    \item FRI radio galaxies show elongated jets on both sides, on the
+          \si{\kpc} scale terminated with two radio lobes (spatially extended
+          structure). On the \si{\pc} scale, we see one-sided jets with
+          relativistic speeds. On the \si{\kpc}, the jet is sub-relativistic
+          and has decelerated.
+    \item FRII radio galaxies are one sided and relativistic on the \si{\pc}
+          and the \si{\kpc} scales. The are more powerful and terminated with
+          two hot spots. This implies that, although the visible jet is one
+          sided, counter jet exist but is invisible because it is not
+          relativistically beamed.
     \item HYMORS is a new class of FR galaxies, which are FRI on one side and
           FRII on the other side. This may be explained if the environment
           plays an important role.
 \end{itemize}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{hs-1992-27-b-full.jpg}
+    %\label{fig:}
+    \caption{
+        NGC 4261 is another FRI.
+        National Radio Astronomy Observatory, California Institute of
+        Technology (left). Walter Jaffe/Leiden Observatory, Holland
+        Ford/JHU/STScI, and NASA (right).%\vspace{1ex}\\
+%        (Left) Ground-based Composite Optical/radio View of Elliptical Galaxy
+%        NGC 4261.\vspace{1ex}\\
+%        The giant elliptical galaxy NGC 4261 is one of the 12
+%        brightest galaxies in the Virgo Cluster, located 45 million light-years
+%        away. Photographed in visible light [white] the galaxy appears as a
+%        fuzzy disk of hundreds of billions of stars. A radio image [orange]
+%        shows a pair of opposed jets emanating from the nucleus and spanning a
+%        distance of 88,000 light-years.\vspace{1ex}\\
+%        (Right) HST Image of the Core of NGC 4261.\vspace{1ex}\\
+%        A Hubble Space Telescope image of a giant disk of cold gas and dust
+%        fueling a possible black hole at the core of the galaxy. Estimated to
+%        be 300 light years across, the disk is tipped enough (about 60 degrees)
+%        to provide astronomers with a clear view of its bright hub, which
+%        presumably harbors the black hole.
+%        The dark, dusty disk represents a cold outer region which extends
+%        inwards to an ultra hot accretion disk within a few hundred million
+%        miles of the suspected black hole. This disk feeds matter into the
+%        black hole, where gravity compresses and heats the material. Some hot
+%        gas squirts out from the blackhole's near- vicinity to create the radio
+%        jets. The jets are aligned perpendicular to the disk, like an axle
+%        through a wheel. This provides strong circumstantial evidence for the
+%        existence of a black hole "central" engine in NGC 4261.
+%        The image was taken at visible wavelengths with the Wide
+%        Field/Planetary Camera in PC mode.
+    }
+\end{figure}
 
 \subsubsection{Quasars, BL Lac, QSO}
 
@@ -356,6 +455,74 @@ radio galaxies, proper motions could be measured in some quasars with jets. In
 all cases high relativistic velocities are deduced. Quasars, BL Lac and QSO
 appear to be pointing towards us, which explains – because of the Doppler
 effect – that they are more luminous than radio galaxies.
+
+\begin{figure}[!ht]
+    \noindent
+    \begin{minipage}{.6\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{3c279_mosaic_hi.jpg}
+        %\label{fig:}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{.4\textwidth}
+        \caption{
+            % The original document says Quasar IRAS 17596+4221, but I haven’t found any evidence that those are the same objects
+            Apparent Superluminal Motion in 3C~279, VLA (\SI{1.2}{\cm}), 1998.
+            Image courtesy of NRAO/AUI.\vspace{1ex}\\
+            Superluminal motion in quasar 3C~279 is shown in a “movie” mosaic of
+            five radio images made over seven years. The stationary core is the
+            bright red spot to the left of each image. The observed location of
+            the rightmost blue-green blob moved about 25 light years from 1991
+            to 1998, hence the changes appear to an observer to be faster than
+            the speed of light or “superluminal”. The motion is not really
+            faster than light, the measured speed is due to light-travel-time
+            effects for a source moving near the speed of light almost directly
+            toward the observer. The blue-green blob is part of a jet pointing
+            within 2 degrees to our line of sight, and moving at a true speed
+            of 0.997 times the speed of light. These five images are part of a
+            larger set of twenty-eight images made with the VLBA and other
+            radio telescopes from 1991 to 1997 to study the detailed properties
+            of this energetic quasar.
+        }
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{H0323bl2.jpg}
+    %\label{fig:}
+    \caption{
+        The BL Lac object H~0323+022 ($z=0.147$) imaged at ESO NTT (R
+        filter). The host galaxy and close companions are visible.
+        \FIXME{Missing a part of the figure}
+    }
+\end{figure}
+
+\begin{figure}[!ht]
+    \noindent
+    \begin{subfigure}[t]{.495\textwidth}
+        %\includegraphics[width=\textwidth]{}
+        %\label{fig:}
+        %\caption{
+        %}
+        \FIXME{Missing figure}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[t]{.495\textwidth}
+        %\includegraphics[width=\textwidth]{}
+        %\label{fig:}
+        %\caption{
+        %}
+        \FIXME{Missing figure}
+    \end{subfigure}
+    \caption{
+        The figure on the left shows a typical BL Lac with high variability and
+        broad band spectra. It requires a coordinated HE and multi-lambda
+        monitoring to constrain the SED and its evolution. Similarly, details
+        of the various parts in the spectra of the 3C~279 quasar are on the
+        right.
+    }
+\end{figure}
 
 \subsection{Young Stellar Objects}
 
@@ -459,7 +626,7 @@ instruments like ALMA and Herschell (HIFI).
 
 \subsubsection{Luminosity: Only gravity can do it}
 
-Why do we need to have accretion ? After all the equilibrium of disk does not
+Why do we need to have accretion? After all the equilibrium of disk does not
 need any accretion, it could rapidly be under the action of the centrifugal
 force.
 
@@ -478,7 +645,7 @@ Accretion,
                     in low magnetization disk where there is no outflow. The
                     low magnetization also favors MRI magneto rotational
                     instabilities and thus the presence of highly turbulent
-                    accretion
+                    accretion.
               \item or because it induces a strong outflow. This would be the
                     case for highly magnetized disk where the
                     magnetocentrifugal driving can eject plasma. Magnetic
