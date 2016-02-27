@@ -1366,6 +1366,31 @@ We first consider negligible accretion. In this case the horizontal equilibrium 
 
 \FIXME{Missing figures}
 
+Horizontally: rotation (centrifugal force $\vec{f}_{\text{centrifugal}}$) balances gravity ($\rho \vec{g}$). In cylindrical coordinates ($r, \phi, z$), projecting horizontally gives to 0$^{th}$ order:
+\begin{equation}
+	\rho \frac{v_\phi^2}{r}\approx \rho\frac{Gm_\star}{r^2} \qquad \text{assuming a thin disk} \quad (z<H<<r)
+\end{equation}
+
+Keplerian velocity $\quad\tcboxmath{v_\phi = \sqrt{\frac{Gm_\star}{r}}} \quad$ and Keplerian angular frequency $\quad\tcboxmath{\Omega = \frac{v_\phi}{r} = \sqrt{\frac{Gm_\star}{r^3}}} \quad$.
+
+Vertically: vertical balance is of 1$^{st}$ order compared to the 0$^{th}$ order of the horizontal equilibrium. The vertical component of gravity balances gas pressure. At point $M(r,z)$:
+\begin{equation}
+-\frac{\d p}{\d z}-\rho \frac{Gm_\star}{r^2+z^2}\sin\theta = 0 \quad \text{and} \quad \sin\theta = \frac{z}{\sqrt{r^2+z^2}} \approx \frac{z}{r}
+\end{equation}
+\begin{equation}
+\implies \quad \frac{\d p}{\d z} = -\rho \frac{G m_\star z}{(r^2+z^2)^{3/2}} \approx -\rho \frac{G m_\star z}{r^3}
+\end{equation}
+
+\paragraph{Isothermal disk:} Isothermal ideal gas $p=\frac{\rho}{m_n}k_B T$, $T=\text{cst}$. Denoting $\rho_0$ density in the equatorial plane, we have (to the lowest order, $z<H<<r$),
+\begin{equation}
+\tcboxmath{\rho \approx \rho_0 \exp \left(-\frac{G m_\star z^2}{2 c_s^2 r^3} \right) \approx \rho_0 \exp \left(-\frac{z^2}{H^2} \right) \quad \text{with} \quad H = \sqrt{\frac{2 c_s^2 r^3}{G m_\star}}}
+\end{equation}
+
+The scale height varies like $r^{3/2}$ BUT is valid only for $H<<r$. Thus the thin disk approximation is only valid to some distance within the disk.
+
+\FIXME{Missing figures}
+
+\paragraph{Adiabatic disk (isothermal in the equatorial plane):} 
 
 \section{Theory of Standard Accretion Disks}
 
