@@ -1935,6 +1935,152 @@ frequency we are in the Wien regime
 \section{Theory of Magnetized Outflows}
 \subsection{Theory of Magnetized Jets}
 \subsubsection{Axisymmetric Steady Jets}
+
+Considering that the disk or the central source possess a wind, if this wind is steady and axisymmetric (possibly bipolar but not necessarily), we can decompose space into an azimuthal or toroidal component along the ignorable coordinate $\varphi$ and a meridional or poloidal plane. Thus we write
+
+\begin{align*}
+    \overrightarrow{V} = \overrightarrow{V}_{p} + V_{\varphi}\overrightarrow{e}_{\varphi} \\
+    \overrightarrow{B} = \overrightarrow{B}_{p} + B_{\varphi}\overrightarrow{e}_{\varphi}  \\
+\end{align*}
+
+Magnetic field lines and streamlines are roped on the same mass flux tube. In the co-rotating (locally with the disk) frame, we see that the toroidal component becomes important only at large distances, after crossing the Alfvén Mach number. 
+\\
+\FIXME{Missing figures}
+
+We use for the sound speed, the following,
+\begin{equation}
+   c^{2}_{s} = \frac{\partial P}{\partial\rho}\mid_{S,0} = \gamma \frac{k_{B}T_{0}}{m}
+\end{equation}
+
+When solving the momentum and Maxwell's equations, we face several problems amongst which the presence of three critical points. The three critical surfaces correspond to the Slow and Fast magneto-acoustic modes and the Alfvén one.
+\begin{align}
+   c^{2}_{A} = \frac{B^{2}_{0}}{\rho_{0}\mu_{0}} \\
+  c^{2}_{\substack{Slow- \\Fast+}} = \frac{\omega^{2}}{k^{2}}= \frac{1}{2}\lbrace c^{2}_{s} + c^{2}_{A} \pm \sqrt{(c^{2}_{s}+c^{2}_{A})^{2} - 4c^{2}_{s}c^{2}_{A}cos^{2}\theta}\rbrace \\
+\end{align}
+
+The last critical surface is causally disconnecting the outter medium and the overall jet. Thus in order to have strong accelerated winds, shocks are unavoidable.
+\\
+The equation of state of a fully ionized plasma is still,
+\begin{equation}
+   p = \frac{2\rho}{m_{H^{+}}} k_{B}T
+\end{equation}
+and when in a steady state, the total specific energy is conserved,
+\begin{equation}
+   E = \frac{V^{2}}{2}-\frac{B_{\varphi}B_{P}\Omega\varpi}{4\pi\rho\nu_{p}}+h+\Phi_{G}
+\end{equation}
+We write,
+
+\begin{align}
+   4\pi\rho\overrightarrow{V_{p}} = \vec\nabla \times (\frac{\Psi}{\varpi}\overrightarrow{e_{\phi}}) \\
+  \overrightarrow{B_{p}} = \vec\nabla \times (\frac{A}{\varpi}\overrightarrow{e_{\phi}}) \\
+  \vec \nabla \times (\overrightarrow{V} \times \overrightarrow{B}) = \overrightarrow{0} \Rightarrow \vec \nabla A \times \vec \nabla \Psi = 0 \Rightarrow 4\pi\rho\overrightarrow{V_{p}} = \frac{\d{\Psi}}{\d{A}}\overrightarrow{B_{p}} 
+\end{align}
+Thus
+\begin{align*}
+   V_{p} // B_{p}
+\end{align*}
+We note 
+\begin{align*}
+  \Psi_{A}(A) = \frac{\d{\Psi}}{\d{A}}
+\end{align*}
+
+Using the Flux Freezing theorem and Ohm's law for an ideal, infinitely conductive, plasma, we get,
+\begin{align*}
+   V_{\phi}B_{z}-B_{\phi}V_{z} = \frac{\partial \Phi}{\partial \varpi} \\
+   V_{\varphi}B_{z}-B_{\varphi}V_{z} = 0 \\
+   V_{\varphi}B_{\phi}-B_{\varphi}V_{\phi} = \frac{\partial \Phi}{\partial z} \\
+\end{align*} 
+That is,
+\begin{equation}
+   \overrightarrow{V} \times \overrightarrow{B} = -c\overrightarrow{E} = \vec \nabla \Phi = \Omega\vec \nabla A
+\end{equation}
+where $\Omega(A) = \frac{\d{\Phi}}{\d{A}} $
+\\
+\\
+This gives a third conserved integral, associated with the isorotation law,
+\begin{equation}
+   V_{\varphi} - \frac{\Psi_{A}}{4\pi\rho}B_{\varphi} = \varpi \Omega
+\end{equation} 
+Or
+\begin{equation}
+    \tcboxmath{
+       \Omega = \frac{(V_{\phi} - \frac{B_{\phi}V_{p}}{B_{p}})}{\varpi}
+    }
+\end{equation}
+
+From the momentum equation,
+\begin{equation}
+   \rho\frac{\partial\overrightarrow{V}}{\partial t} + \frac{1}{2}\rho \vec \nabla V^{2} + \rho (\vec \nabla \times \overrightarrow{V}) \times \overrightarrow{V} = - \rho \vec \nabla \Phi_{grav} + \frac{(\vec \nabla \times \overrightarrow{B})}{4\pi} \times \overrightarrow{B}-\vec \nabla p
+\end{equation}
+
+With an azimuthal projection (all the gradients are null due to axi-symmetry) and considering a steady state, we may also obtain,
+\begin{equation}
+   [ \rho(\vec \nabla \times \overrightarrow{V}) \times \overrightarrow{V}]\overrightarrow{e_{\varphi}} = [\frac{(\vec \nabla \times \overrightarrow{B})}{4\pi} \times \overrightarrow{B}]\overrightarrow{e_{\varphi}}
+\end{equation}
+which gives the conservation of the total angular momentum. The angular momentum includes both a magnetic and a fluid component,
+\begin{equation}
+   L(A) = \varpi (V_{\phi} - \frac{B_{\phi}}{\Psi_{A}}) 
+\end{equation}
+Or
+\begin{equation}
+    \tcboxmath{
+     L = \varpi (V_{\phi} - \frac{B_{\phi}B_{p}}{4\pi\rho V_{p}})  
+    }
+\end{equation}
+where the second term is the ratio of the Poynting flux density to the mass density. Thus when using these equations we get the azimuthal components of the fields :
+
+\begin{align}
+   B_{\varphi} = - \frac{L\Psi_{A}}{\varpi} \frac{(1-\varpi^{2} \frac{\Omega}{L})}{(1-M^{2})} \\
+  \frac{B_{\varphi}}{\sqrt{4\pi\rho}} = \frac{L}{\varpi}\frac{\nu_{p}}{\nu_{A}}\frac{(1-\varpi^{2}\frac{L}{\Omega})}{(1-\frac{\nu^{2}_{p}}{\nu^{2}_{A}})} = - \frac{L}{\varpi} \frac{\nu_{p}}{\nu_{A}}\frac{(1-\frac{\varpi^{2}}{\varpi^{2}_{A}})}{(1-M^{2})} \\
+  V_{\phi} = \frac{L}{\varpi} \frac{(\varpi^{2}\frac{\Omega}{L}-M^{2})}{(1-M^{2})} \\
+  V_{\phi} = \frac{L}{\varpi} \frac{(\varpi^{2}\frac{\Omega}{L}-\frac{\nu^{2}_{p})}{\nu^{2}_{A}}}{(1-{\frac{\nu^{2}_{p}}{\nu^{2}_{A})}}} = \frac{L}{\varpi} \frac{(\frac{\varpi^{2}}{\varpi^{2}_{A}}-M^{2})}{(1-M^{2})} \\ 
+\end{align}
+where the poloidal Alfvén Mach number is defined as
+\begin{align*}
+   M^{2} = \frac{\Psi^{2}_{A}}{4\pi\rho} = \frac{V^{2}_{p}}{V^{2}_{p,A}} \\
+   \varpi^{2}_{A} = \frac{L}{\Omega}
+\end{align*}
+
+Various quantities can be estimated with these laws. When in close proximity of the disk or the star, we have $V_{\varphi} \approx \varpi \Omega$
+\\
+Thus,
+\begin{align*}
+   \varpi_{0} < \varpi < \varpi_{A} \\
+   V_{\phi} >> \frac{B_{\phi}V_{p}}{B{p}}  \Rightarrow  \Omega = \frac{(V_{\phi}-\frac{B{\phi}V_{p}}{B_{p}})}{\varpi} \approx \frac{V_{\phi}}{\varpi}
+\end{align*}
+
+The angular accretion rate is calculated as
+\begin{equation}
+   \dot{J}_{disk} = \varpi^{2}_{0} \Omega \dot{M}_{disk}
+\end{equation}
+The angular loss rate is
+\begin{equation}
+   \dot{J}_{wind} = L_{wind} \frac{\d{m_{eject}}}{\d{t}}= \varpi^{2}_{A} \Omega \dot{M}_{wind}
+\end{equation}
+\\
+\\
+In general the wind does not have a 100 $\%$ efficiency , $\dot{J}_{wind} \leq \dot{J}_{disk}$
+\\
+Thus, the Alfvén lever arm is immediately given by the inequality 
+\begin{equation}
+    \tcboxmath{
+     \varpi_{A} \leq \varpi_{0} \sqrt{\frac{\dot{M}_{disk}}{\dot{M}_{wind}}}  
+    }
+\end{equation}
+\\
+For DG Tau, which is a bit atypical, with a very high luminosity but still a class 2 object, $\frac{\dot{M}_{disk}}{\dot{M}_{wind}} = 2.5$
+\\
+The magnetic lever arm is $\varpi_{A} = 1.6 \varpi_{0}$
+\\
+For all other AGNs and YSOs, most of the results are similar. Note that the efficiency of conversion is taken to its lowest value and is not a free parameter.
+\begin{align*}
+   \frac{\dot{M}_{disk}}{\dot{M}_{wind}} \sim 10 - 1000 \\
+   \varpi_{A} \sim 3-10 \varpi_{0} \\
+\end{align*}
+
+\FIXME{Equation references + alignment}
+
+
 \subsubsection{Magneto Centrifugally Driven Wind}
 \subsection{Acceleration and Collimation}
 \subsubsection{Magnetic Acceleration}
