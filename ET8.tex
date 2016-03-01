@@ -2126,6 +2126,102 @@ For all other AGNs and YSOs, most of the results are similar. Note that the effi
 
 
 \subsubsection{Magneto Centrifugally Driven Wind}
+
+The square of the magnetic lever arm is give by $\varpi^{2}_{A} = \frac{L}{\Omega}$ combined with the specific energy equation :
+\begin{equation}
+   E(A)=\frac{1}{2}V_{p}^{2} +\frac{1}{2}V_{\phi}^{2} + h + \Phi_{grav} - \frac{\varpi\Omega}{\Psi_{A}}B_{\phi}
+\end{equation}
+
+\FIXME{picture}
+
+In the co-rotating frame, we can rewrite the energy equation :
+\begin{equation}
+   F(A)=E(A)-L\Omega=\frac{1}{2}\nu_{p}^{2} +\frac{1}{2}(\nu_{\phi} - \varpi\Omega)^{2} + h + \Phi_{grav} - \frac{1}{2}(\varpi\Omega)^{2}
+\end{equation}
+For a cold plasma (cf. observations, this is too strict and heating is also quite important)
+\begin{equation}
+ h \approx 0 \; and \; \nu^{2}_{\infty} \approx \frac{GM_{*}}{\varpi_{0}}=\nu^{2}_{K}
+\end{equation}
+Close to the disk, if the plasma is completely frozen (which is a reasonable assumption), we get
+\begin{align*}
+   \nu_{\varphi} \approx \varpi\Omega = \varpi\Omega_{K} = \varpi \sqrt{\frac{GM_{*}}{\varpi^{3}_{0}}} \\
+   z << r \\
+   \frac{\varpi-\varpi_{0}}{z}=tan\theta \\
+\end{align*}
+Thus,
+\begin{equation}
+   \frac{1}{2}\nu^{2}_{p}-\frac{GM_{*}}{\varpi_{0}}-\frac{1}{2}\varpi^{2}\frac{GM_{*}}{\varpi_{0}} = -\frac{GM_{*}}{\varpi}-\frac{1}{2}\frac{GM_{*}}{\varpi_{0}}
+\end{equation}
+and finally 
+\begin{equation}
+    \tcboxmath{
+     \frac{\varpi-\varpi_{0}}{z} = tan \theta > \frac{1}{\sqrt{3}}
+     }
+\end{equation}
+In order to have an accretion, a minimum of 30$\%$ streamline inclination is required.
+\\
+\FIXME{figure+cref}
+In Fig.?, the stable region is shown in the sketch of the isopotentials (Blandford and Payne,1982).
+\\
+For a cold wind (Anderson et al.1993),conditions close to the source can be estimated when calculating the asymptotic behaviour of the outflow.
+\\
+The Keplerian velocty is given by,
+\begin{equation}
+   \Omega=\frac{\nu_{\varphi0}}{\varpi_{0}}=\frac{\nu_{Keplerian}}{\varpi_{0}}=\frac{Gm}{\varpi^{3}_{0}}=\Omega_{Keplerian}
+\end{equation}
+The specific energy is to be calculated properly at infinity and close to the source. We first compute the energy in the co-rotating frame of the fluid and not the fixed one,
+\begin{align}
+   F = E-L\Omega=\frac{\nu^{2}}{2}-\frac{B_{\phi}B_{p}\Omega\varpi}{4\pi\rho\nu_{p}}+\underbrace{h}_{=0}+\Phi_{G}-\varpi(\nu_{\varphi}-\frac{B_{\varphi}B_{p}}{4\pi\rho\nu_{p}})\Omega \\
+    = \frac{\nu^{2}}{2}-\varpi\nu_{\varphi}\Omega +\Phi_{G} -\frac{B_{\phi}B_{p}\Omega\varpi}{4\pi\rho\nu_{p}}+\varpi(\frac{B_{\varphi}B_{p}}{4\pi\rho\nu_{p}})\Omega \\
+    = \frac{\nu^{2}}{2}-\varpi\nu_{\varphi}\Omega +\Phi_{G} \\
+\end{align} 
+\begin{equation}
+  \Phi_{G} = -\frac{Gm}{\varpi_{0}}=-\nu_{Keplerian}^{2} 
+\end{equation}
+The energy, being constant of course, may be estimated when close to the source,
+\begin{equation}
+   F = \frac{\nu^{2}_{Keplerian}}{2}-\nu^{2}_{Keplerian}-\varpi_{0}\nu_{Keplerian}\Omega_{Keplerian}=(\frac{1}{2}-1-1)\nu^{2}_{Keplerian}=-\frac{3}{2}\nu^{2}_{Keplerian}
+\end{equation}
+At ing=finity, we also consider the following approximations,
+\begin{align*}
+   \Phi_{G\infty} << \nu_{\infty}^{2} \\
+   \nu_{p}=\nu_{\infty} \\
+   F = \frac{\nu_{\infty}^{2}}{2}-\varpi_{\infty}\nu_{\varphi\infty}\Omega
+\end{align*}
+Note that $(\Omega\varpi\nu_{\phi})_{\infty}$ is not negligible at infinity, $\varpi_{\infty} >> \varpi_{0}$, thought the asymptotic rotation speed is negligible itself when compared to the jet propagation velocity, $\nu_{}\phi\infty << \nu_{\infty}$, thus
+\begin{equation}
+   F = \frac{\nu_{\infty}^{2}}{2}-\varpi_{\infty}\nu_{\varphi\infty}\Omega=\frac{3}{2}\nu^{2}_{Keplerian}
+\end{equation}
+\begin{align*}
+   \frac{3}{2}\nu^{2}_{Keplerian} << \frac{1}{2}\nu^{2}_{\infty} \\
+   \frac{\nu^{2}_{\infty}}{2}=\varpi_{\infty}\nu_{\varphi\infty}\Omega \Rightarrow \Omega = \frac{\nu_{\infty}^{2}}{2\varpi_{\infty}\nu_{\varphi\infty}} \\
+   \Omega = \sqrt{\frac{Gm}{\varpi_{0}^{3}}}    
+\end{align*}
+Thus the field line is "anchored" into the source (most likely the disk) at 
+\begin{equation}
+    \tcboxmath{
+     \varpi_{0}=(\frac{4Gm\varpi^{2}_{\infty}\nu_{\varphi\infty}^{2}}{\nu_{\infty}^{4}})^{\frac{1}{3}}
+     }
+\end{equation}
+(note : 1 AU = 1.5 $10^{13}$ cm)
+\\
+For DG Tau, which is a particularly bright YSO jet, we get
+\begin{align*}
+&   m = 10^{33}g \\
+&   \nu_{\infty} = 300\:km.s^{-1} \\
+&   \nu_{\phi\infty} = 5\:km.s^{-1} \;\;\;\;\;\;\; \Rightarrow \;\;\;\;\;\;\; \varpi_{0}=0.46\:AU \\
+&   \varpi_{\infty} = 100\:AU \\
+\end{align*}
+\\
+For FRI in AGNs we get similar results but instead scaled up to the extragalactic :
+\begin{align*}
+&   m = 10^{42}g \\
+&   \nu_{\infty} = 300\:000\:km.s^{-1} \\
+&   \nu_{\phi\infty} = 10\:000\:km.s^{-1} \;\;\;\;\;\;\; \Rightarrow \;\;\;\;\;\;\; \varpi_{0}= ?\:pc \\
+&   \varpi_{\infty} = 0.1\:pc \\
+\end{align*}
+\FIXME{missing value?}
+
 \subsection{Acceleration and Collimation}
 \subsubsection{Magnetic Acceleration}
 \FIXME{mettre references correctes}
@@ -2339,7 +2435,7 @@ planetary nebulae.
 \begin{figure}[!ht]
   \begin{center}
     \includegraphics[]{figures/looney2007.jpg}
-    \caption{IRAC channel 4 gray‐scale image of L1157 overlaid with the CO 2–1 emission from \cite{Bachiller2001}. The upper left inset is the same gray scale without the contours. The lower right inset is a closeup ($\pm\ang{;;75}$) of the absorption structure with contours of $\numrange{1}{4} \times \SI{0.042}{MJy^{-1}.sr^{-1}}$. From \cite{Looney2007}.}
+    \caption{IRAC channel 4 gray-scale image of L1157 overlaid with the CO 2–1 emission from \cite{Bachiller2001}. The upper left inset is the same gray scale without the contours. The lower right inset is a closeup ($\pm\ang{;;75}$) of the absorption structure with contours of $\numrange{1}{4} \times \SI{0.042}{MJy^{-1}.sr^{-1}}$. From \cite{Looney2007}.}
   \end{center}
 \end{figure}
 
