@@ -2116,6 +2116,57 @@ At low frequency the flux reduces to the Rayleigh Jeans regime whereas at high
 frequency we are in the Wien regime
 
 \subsection{Advection Dominated disks and slim disks}
+
+\FIXME{Missing figure}
+
+In advection dominated disk close to the central object, we should have a quite
+high accretion rate $\dot{M} \approx \dot{M}_\mathrm{Edd}$:
+\begin{align*}
+    c_s^2 &= \frac{3 G M \dot{M} \tau}{8 \pi R^3 \rho c} \left(1 - \left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right)
+        \Rightarrow H = \frac{3 \dot{M} \sigma_\mathrm{T}}{8 \pi m_\mathrm{H} c} \left(1 - \left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right) \\
+    H &= \frac{3}{3} \frac{\dot{M} c^2}{L_\mathrm{Edd}} \frac{G M}{c^2} \left(1 - \left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right)
+\end{align*}
+
+Thus the scale height is given by:
+\begin{equation}
+    \tcboxmath{
+        \frac{H}{R} \approx \frac{3}{4} \frac{1}{\varepsilon} \frac{R_\mathrm{G}}{R} \left(1 - \left(\frac{R_\mathrm{in}}{R}\right)^{\nicefrac{1}{2}}\right)
+        \xrightarrow[\varepsilon \ll 1, L \approx L_\mathrm{Edd}]{} \approx 1
+    }
+\end{equation}
+
+Thus close to the central object, the thin disk approximation breaks and the
+disk should become thick. This justifies the existence of various Geometrically
+Thick disks:
+\begin{itemize}
+    \item ADAF, advection dominated accretion flow. In these models the opacity
+          is low and subEddington. In this case the luminosity is not very
+          different from the standard disk.
+    \item Slim disk have a super-Eddington luminosity and low radiation :
+          \begin{itemize}
+              \item For thin disks, there is:
+                    \begin{itemize}
+                        \item Keplerian rotation,
+                        \item The disk terminates at the inner stable orbit,
+                              ISCO (if the central object is a black hole),
+                        \item All locally released energy is radiated away.
+                    \end{itemize}
+              \item For slim disks, there is:
+                    \begin{itemize}
+                        \item Super-Keplerian rotation in the innermost part of
+                              the disk, otherwise sub-Keplerian,
+                        \item Inner disk edge can be closer than the ISCO (for
+                              higher accretion rates),
+                        \item A part of the dissipated energy is captured in
+                              the flow and advected inwards.
+                    \end{itemize}
+          \end{itemize}
+    \item In Inflow-Outflow structure (ADIOS, Advection Dominated In and
+          Out-Flow), the outflow replaces the radiation.
+\end{itemize}
+
+\FIXME{Three figures missing}
+
 \subsection{Magnetized Accretion disks}
 
 \section{Theory of Magnetized Outflows}
