@@ -2169,8 +2169,45 @@ Thick disks:
 
 \subsection{Magnetized Accretion disks}
 
+In a MHD structure, the momentum conservation gives a steady state,
+\begin{equation*}
+    \vv{\nabla} \cdot \left(
+        \rho \vv{v} \otimes \vv{v} +
+        \left( p + \frac{B^2}{2 \mu_0} + \varepsilon_0 \frac{E^2}{2} \right) \overleftrightarrow{I} -
+        \varepsilon_0 \vv{E} \otimes \vv{E} -
+        \frac{1}{\mu_0} \vv{B} \otimes \vv{B} -
+        \overleftrightarrow{T}_\mathrm{visc}
+    \right) = \rho \vv{g}
+\end{equation*}
+
+In cold plasma (no radiation, heat flux, heating or enthalpy), where the
+rotation speed is $V_\phi = \varpi \Omega$, it gives in the azimuthal direction
+the conservation law of angular momentum,
+\begin{equation}
+    \tcboxmath{
+        \vv{\nabla} \cdot \left(
+            \rho \varpi^2 \Omega \vv{V_\mathrm{P}} -
+            \varpi \overleftrightarrow{T}_\mathrm{visc} \cdot \vv{e_\phi} +
+            \frac{\varpi B_\phi \vv{B_\mathrm{P}}}{\mu_0}
+        \right) = 0
+    }
+\end{equation}
+
+This is very comparable to the equations of conservation of angular momentum
+given in next chapter. However, here the specific angular momentum flux is not
+conserved as there is a transfer to the disk via the viscous torque. The
+magnetic field can extract angular momentum if the magnetic torque reverses,
+\begin{equation}
+    \tcboxmath{
+        \left( \vv{J} \times \vv{B} \right) \bullet \vv{B_\mathrm{P}} = - \left( \vv{J} \times \vv{B} \right) \bullet \vv{B_\phi}
+    }
+\end{equation}
+\FIXME{Not sure about the use of \textbackslash{bullet} here, maybe it’s just \textbackslash{otimes}}
+
 \section{Theory of Magnetized Outflows}
+
 \subsection{Theory of Magnetized Jets}
+
 \subsubsection{Axisymmetric Steady Jets}
 
 Considering that the disk or the central source possess a wind, if this wind is steady and axisymmetric (possibly bipolar but not necessarily), we can decompose space into an azimuthal or toroidal component along the ignorable coordinate $\varphi$ and a meridional or poloidal plane. Thus we write
