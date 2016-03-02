@@ -7,3 +7,5 @@
 *.synctex.gz
 *.pdf
 *.tif
+*.emf
+*.wmf
