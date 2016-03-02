@@ -1002,7 +1002,26 @@ Nevertheless, the velocity is much higher than the local sonic speed and only
 jets can explain supersonic speeds. Typical values in YSO jets are a few
 hundreds of \si{\km\per\s}.
 
-\fxnote{Missing figure of proper motion}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{proper_motion.jpg}
+  \caption{\label{fig:proper_motion} Proper motion seen in the HH 34 optical jet (HST). Credit: NASA/ESA/P. Hartigan (Rice University).}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{3c279_mosaic_hi.jpg}
+  \caption{\label{fig:iras17596+4221} Quasar IRAS 17596+4221. Example of super luminal motions 3C279. Image courtesy of NRAO/AUI.}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{3C111.jpg}
+  \caption{\label{fig:3C111} The image contains a series of radio images at successive epochs using the VLBA of the jet in the broad-line radio galaxy 3C 111. Credit: M. Kadler, E. Ros, M. Perucho, Y. Y. Kovalev, D. C. Homan, I. Agudo, K. I. Kellermann, M. F. Aller, H. D. Aller, M. L. Lister, and J. A. Zensus.}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{GRS1915.jpg}
+  \caption{\label{fig:GRS1915} This image shows a pair of objects ejected from GRS 1915+105 moving apart at an apparently superluminal speed. Credit: Felix Mirabe, Saclay, France, and Luis Rodriguez, the National Autonomous University, Mexico City.}
+\end{figure}
 
 In AGN jets, we see apparent superluminal motions that can be explained only if
 the shocks and the jets are moving at (nearly) the speed of light. Superluminal
@@ -1038,14 +1057,53 @@ For a typical T Tauri star, the break up value is one to a few hundreds
 The stellar rotation is an order of magnitude bellow the break up velocity.
 
 Here are some recent \textbf{Kepler} mission measurements of rotation in
-clusters.  \fxnote{Missing figure} These results can be compared to Bouvier et
-al. (\FIXME{Make a ref of that}) results hereafter, showing plots of the
+clusters.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{rotation_clusters.png}
+  \caption{From \cite{Aigrain2013}.}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{rotation_age.png}
+  \caption{\label{fig:rotation_age} Figure from \cite{Gallet2013}.}
+\end{figure}
+
+These results can be compared to \cite{2008sf2a.conf..391B} results hereafter, showing plots of the
 evolution of the rotation as a function of time for Fast Rotators (blue lines)
 and Slow Rotators (red lines). The envelope velocity is always slower than the
 core velocity. The circle on the right is the position of our Sun. The curves
 correspond to evolutionary tracks and are model dependent.
 
-\fxnote{Missing plots}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{rotation_bouvier.png}
+  \caption{\label{fig:rotation_bouvier}
+    Rotational models for slow and fast solar-mass rotators.
+    Data : The 10th and 75th percentiles of the observed
+    rotational period distributions of solar-type stars (\SIrange{0.8}{1.1}{Msun})
+    were converted to angular velocity and are plotted as
+    direct and inverted triangles as a function of time. Individ
+    ual measurements of rotational periods converted to angular
+    velocities are also shown in order to illustrate the statistical
+    significance of the various samples. Models :
+    Rotational evolution models are shown for slow and fast \SI{1}{Msun}
+    rotators. For each model in the upper panel, surface rotation is
+    shown as a solid line, and the rotation of the radiative core by
+    a dashed line. With a core-envelope coupling timescale $\tau_c$
+    of only 10 Myr, little differential rotation develops in fast
+    rotators. In contrast, the \SI{100}{Myr} core-envelope coupling
+    timescale in slow rotators results in a large velocity gradient
+    at the base of the convective zone. A disk lifetime of \SI{5}{Myr}
+    is assumed for both models. Lower panels :
+    The velocity shear at the base of the convective zone
+    $(\omega_\textrm{rad} - \omega_\mathrm{conv})/w_\mathrm{conv}$,
+    and the angular momentum transport rate $\Delta J/\tau_c$
+    (\si{\g\cm\squared\per\s\squared})
+    from the core to the envelope are shown for slow (solid
+    line) and fast (dotted-dashed line) rotators. (from \cite{2008sf2a.conf..391B})}
+\end{figure}
 
 In the case of a Keplerian disk, to the first order, the centrifugal force
 balances gravity $\rho \frac{v_\phi^2}{r} \approx \rho \frac{GM_\star}{r^2}$.
@@ -1302,6 +1360,13 @@ original Parker model (\cite{1958ApJ...128..664P}) for the solar wind already
 contained all the necessary ingredients; it assumed the flow to be isothermal
 close to the sun and adiabatic farther away where the wind is accelerated.
 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{1991_eclipse.jpg}
+  \caption{\label{fig:1991_eclipse} Image of the solar corona and the solar wind during the 1991 eclispe (Albers et al. Boulder).}
+\end{figure}
+\FIXME{missing scheme}
+
 The final set of equation is the same. Basically we solve:
 \begin{equation}
     \tcboxmath{
@@ -1453,7 +1518,11 @@ Torus model of jet funnel by Phinney 1999 (see other correct figure).
 Raga and Canto also used this model in 1989 for YSO, invoking a stellar wind to
 make the cavity.
 
-\fxnote{Missing figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[]{funnel.png}
+\end{figure}
+
 
 These models suffer strong flaws. The shape of the funnel is somewhat given and
 not the result of a really consistent resolution of the MHD equations. The
@@ -1465,6 +1534,21 @@ This leads us to next chapter and to consider axisymmetric models and not only
 
 \subsubsection{Vertical structure of a Thin Keplerian Disk}
 We first consider negligible accretion. In this case the horizontal equilibrium is just the balance between gravity and the centrifugal force. This leads to Keplerian rotation of the disk, which gives its name. We can calculate the vertical equilibrium and deduce the vertical structure of the disk atmosphere. The basic features are kept even if there is accretion because in a thin disk rotation is much larger than the speed of accretion. This is not the case in a thick disk where advection dominates.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{YSO_IR.jpg}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{NGC_4261.jpg}
+  \caption{This is a Hubble Space Telescope image of an 800-light-year-wide spiral-shaped disk of dust fueling a massive black hole in the centreof galaxy, NGC 4261, located 100 million light-years away in the direction of the constellation Virgo.. L. Ferrarese (Johns Hopkins University) and NASA/ESA}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{HH30.jpg}
+\end{figure}
+
 
 \FIXME{Missing figures}
 
