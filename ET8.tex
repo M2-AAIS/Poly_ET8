@@ -490,12 +490,16 @@ effect – that they are more luminous than radio galaxies.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{H0323bl2.jpg}
+    \begin{subfigure}[t]{.495\textwidth}
+          \includegraphics[width=\textwidth]{H0323bl2.jpg}
+    \end{subfigure}
+    \begin{subfigure}[t]{.495\textwidth}
+          \includegraphics[width=\textwidth]{H0323bl2_2.png}
+    \end{subfigure}
     %\label{fig:}
     \caption{
         The BL Lac object H~0323+022 ($z=0.147$) imaged at ESO NTT (R
         filter). The host galaxy and close companions are visible.
-        \FIXME{Missing a part of the figure}
     }
 \end{figure}
 
@@ -545,11 +549,34 @@ new instruments (in particular the HST), they appear as complex structure and
 often internal shocks or bow shocks. Bow shocks are characterized by the
 C-Shock front as seen on the extremity of HH34 below (right).
 
+\begin{figure}[!ht]
+  \begin{subfigure}[t]{0.495\textwidth}
+    \includegraphics[width=\textwidth]{HH30.jpg}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.495\textwidth}
+    \includegraphics[width=\textwidth]{HH34_in_orion.jpg}
+  \end{subfigure}
+\end{figure}
+
 In HH34 (and many other HH objects), the evolution seen from various successive
 observations allows to measure proper motion of the knots. Typical values of a
 few hundreds of km/s are usually inferred. However some knots may be standing
 shocks and the proper motion of the shocks is not directly the speed of the
 underlying jets though similar velocities are measured by other means.
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{HH34_optical_1.jpg}
+  % \includegraphics[width=\textwidth]{HH34_optical_2.jpg}
+  % \includegraphics[width=\textwidth]{HH34_optical_3.jpg}
+  % \includegraphics[width=\textwidth]{HH34_optical_4.jpg}
+  % \includegraphics[width=\textwidth]{HH34_optical_5.jpg}
+  \caption{HH 34 optical jet (HST)}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{PRC95_24a.png}
+  \caption{PRC95-24a, HST. Image courtesy of J. Hester (Arizona State University), the WFPC 2 Investigation Definition Team, and NASA}
+\end{figure}
 
 These premain stars have accretion-ejection systems with typical accretion
 rates of $\dot{M}_\mathrm{accr}=\SIrangeto{e-7}{e-6}{\Msun\per\yr}$. Around
@@ -566,6 +593,12 @@ a multi-wavelength picture with dark clouds illuminated and ionized by stars.
 Clouds are clumps resulting from the Parker \FIXME{Jeans?} instability in the
 Milky Way. They are themselves unstable and because of gravitational collapse
 they contract forming accretion torii and disks.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.7\textwidth]{birth_death_MW.jpg}
+  \caption{Birth and Death in the Milky Way. Image courtesy of NRAO/AUI and (Rick White, STScI) (Bob Becker, IGPP/LLNL \& UC-Davis) (David Helfand, Columbia). }
+\end{figure}
 
 Some disks (seen in infra red, red contours in next figure) show very powerful
 molecular outflows sometimes associated with the previous HH objects and
@@ -590,6 +623,15 @@ The accretion process is always present even if outflows are not. This means
 either that the ejection is episodic or (more likely) that accretion does not
 necessarily require all the time the formation of a collimated source.
 
+\begin{figure}[!ht]
+  \begin{subfigure}[t]{0.395\textwidth}
+    \includegraphics[width=\textwidth]{protoplanetary_disks_orion.jpg}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.595\textwidth}
+    \includegraphics[width=\textwidth]{YSO_IR.jpg}
+  \end{subfigure}
+\end{figure}
+
 Before having disk images, the presence of an accretion disk was deduced from
 the infrared excess measured by the Spectral Index.
 
@@ -602,6 +644,12 @@ the infrared excess measured by the Spectral Index.
 
 For disks in YSO, the spectral index is calculated in the wavelength interval
 of \SIrange{2.2}{10}{\um} (near infrared region).
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[]{SZ_53.png}
+  \caption{\label{fig:SZ_53} Spectrum of source SZ 53. You can see the contribution from the disk interior and the inner rim as well as the star.}
+\end{figure}
 
 In 1986 Lada C.J. and Wilking B.A. were the first to established the existence
 of various classes now known as Class I,II,III. \cite{1993ApJ...406..122A}
@@ -861,7 +909,7 @@ rays.
 Each component is explained by the composition of the disk and the jet. The
 central BH is surrounded by a cold accretion disk of gas and dust. On top of
 the disk, close to the central object, a hot corona must be present. The radio
-levels depend on the presence or of a central jet. 
+levels depend on the presence or of a central jet.
 \begin{figure}[!ht]
   \begin{center}
     \includegraphics{figures/Mannheim1993.jpg}
@@ -1987,7 +2035,7 @@ Considering that the disk or the central source possess a wind, if this wind is 
     \overrightarrow{B} = \overrightarrow{B}_{p} + B_{\varphi}\overrightarrow{e}_{\varphi}  \\
 \end{align*}
 
-Magnetic field lines and streamlines are roped on the same mass flux tube. In the co-rotating (locally with the disk) frame, we see that the toroidal component becomes important only at large distances, after crossing the Alfvén Mach number. 
+Magnetic field lines and streamlines are roped on the same mass flux tube. In the co-rotating (locally with the disk) frame, we see that the toroidal component becomes important only at large distances, after crossing the Alfvén Mach number.
 \\
 \FIXME{Missing figures}
 
@@ -2017,13 +2065,13 @@ We write,
 \begin{align}
    4\pi\rho\overrightarrow{V_{p}} = \vec\nabla \times (\frac{\Psi}{\varpi}\overrightarrow{e_{\phi}}) \\
   \overrightarrow{B_{p}} = \vec\nabla \times (\frac{A}{\varpi}\overrightarrow{e_{\phi}}) \\
-  \vec \nabla \times (\overrightarrow{V} \times \overrightarrow{B}) = \overrightarrow{0} \Rightarrow \vec \nabla A \times \vec \nabla \Psi = 0 \Rightarrow 4\pi\rho\overrightarrow{V_{p}} = \frac{\d{\Psi}}{\d{A}}\overrightarrow{B_{p}} 
+  \vec \nabla \times (\overrightarrow{V} \times \overrightarrow{B}) = \overrightarrow{0} \Rightarrow \vec \nabla A \times \vec \nabla \Psi = 0 \Rightarrow 4\pi\rho\overrightarrow{V_{p}} = \frac{\d{\Psi}}{\d{A}}\overrightarrow{B_{p}}
 \end{align}
 Thus
 \begin{align*}
    V_{p} // B_{p}
 \end{align*}
-We note 
+We note
 \begin{align*}
   \Psi_{A}(A) = \frac{\d{\Psi}}{\d{A}}
 \end{align*}
@@ -2033,7 +2081,7 @@ Using the Flux Freezing theorem and Ohm's law for an ideal, infinitely conductiv
    V_{\phi}B_{z}-B_{\phi}V_{z} = \frac{\partial \Phi}{\partial \varpi} \\
    V_{\varphi}B_{z}-B_{\varphi}V_{z} = 0 \\
    V_{\varphi}B_{\phi}-B_{\varphi}V_{\phi} = \frac{\partial \Phi}{\partial z} \\
-\end{align*} 
+\end{align*}
 That is,
 \begin{equation}
    \overrightarrow{V} \times \overrightarrow{B} = -c\overrightarrow{E} = \vec \nabla \Phi = \Omega\vec \nabla A
@@ -2044,7 +2092,7 @@ where $\Omega(A) = \frac{\d{\Phi}}{\d{A}} $
 This gives a third conserved integral, associated with the isorotation law,
 \begin{equation}
    V_{\varphi} - \frac{\Psi_{A}}{4\pi\rho}B_{\varphi} = \varpi \Omega
-\end{equation} 
+\end{equation}
 Or
 \begin{equation}
     \tcboxmath{
@@ -2063,12 +2111,12 @@ With an azimuthal projection (all the gradients are null due to axi-symmetry) an
 \end{equation}
 which gives the conservation of the total angular momentum. The angular momentum includes both a magnetic and a fluid component,
 \begin{equation}
-   L(A) = \varpi (V_{\phi} - \frac{B_{\phi}}{\Psi_{A}}) 
+   L(A) = \varpi (V_{\phi} - \frac{B_{\phi}}{\Psi_{A}})
 \end{equation}
 Or
 \begin{equation}
     \tcboxmath{
-     L = \varpi (V_{\phi} - \frac{B_{\phi}B_{p}}{4\pi\rho V_{p}})  
+     L = \varpi (V_{\phi} - \frac{B_{\phi}B_{p}}{4\pi\rho V_{p}})
     }
 \end{equation}
 where the second term is the ratio of the Poynting flux density to the mass density. Thus when using these equations we get the azimuthal components of the fields :
@@ -2077,7 +2125,7 @@ where the second term is the ratio of the Poynting flux density to the mass dens
    B_{\varphi} = - \frac{L\Psi_{A}}{\varpi} \frac{(1-\varpi^{2} \frac{\Omega}{L})}{(1-M^{2})} \\
   \frac{B_{\varphi}}{\sqrt{4\pi\rho}} = \frac{L}{\varpi}\frac{\nu_{p}}{\nu_{A}}\frac{(1-\varpi^{2}\frac{L}{\Omega})}{(1-\frac{\nu^{2}_{p}}{\nu^{2}_{A}})} = - \frac{L}{\varpi} \frac{\nu_{p}}{\nu_{A}}\frac{(1-\frac{\varpi^{2}}{\varpi^{2}_{A}})}{(1-M^{2})} \\
   V_{\phi} = \frac{L}{\varpi} \frac{(\varpi^{2}\frac{\Omega}{L}-M^{2})}{(1-M^{2})} \\
-  V_{\phi} = \frac{L}{\varpi} \frac{(\varpi^{2}\frac{\Omega}{L}-\frac{\nu^{2}_{p})}{\nu^{2}_{A}}}{(1-{\frac{\nu^{2}_{p}}{\nu^{2}_{A})}}} = \frac{L}{\varpi} \frac{(\frac{\varpi^{2}}{\varpi^{2}_{A}}-M^{2})}{(1-M^{2})} \\ 
+  V_{\phi} = \frac{L}{\varpi} \frac{(\varpi^{2}\frac{\Omega}{L}-\frac{\nu^{2}_{p})}{\nu^{2}_{A}}}{(1-{\frac{\nu^{2}_{p}}{\nu^{2}_{A})}}} = \frac{L}{\varpi} \frac{(\frac{\varpi^{2}}{\varpi^{2}_{A}}-M^{2})}{(1-M^{2})} \\
 \end{align}
 where the poloidal Alfvén Mach number is defined as
 \begin{align*}
@@ -2105,10 +2153,10 @@ The angular loss rate is
 \\
 In general the wind does not have a 100 $\%$ efficiency , $\dot{J}_{wind} \leq \dot{J}_{disk}$
 \\
-Thus, the Alfvén lever arm is immediately given by the inequality 
+Thus, the Alfvén lever arm is immediately given by the inequality
 \begin{equation}
     \tcboxmath{
-     \varpi_{A} \leq \varpi_{0} \sqrt{\frac{\dot{M}_{disk}}{\dot{M}_{wind}}}  
+     \varpi_{A} \leq \varpi_{0} \sqrt{\frac{\dot{M}_{disk}}{\dot{M}_{wind}}}
     }
 \end{equation}
 \\
@@ -2152,7 +2200,7 @@ Thus,
 \begin{equation}
    \frac{1}{2}\nu^{2}_{p}-\frac{GM_{*}}{\varpi_{0}}-\frac{1}{2}\varpi^{2}\frac{GM_{*}}{\varpi_{0}} = -\frac{GM_{*}}{\varpi}-\frac{1}{2}\frac{GM_{*}}{\varpi_{0}}
 \end{equation}
-and finally 
+and finally
 \begin{equation}
     \tcboxmath{
      \frac{\varpi-\varpi_{0}}{z} = tan \theta > \frac{1}{\sqrt{3}}
@@ -2174,9 +2222,9 @@ The specific energy is to be calculated properly at infinity and close to the so
    F = E-L\Omega=\frac{\nu^{2}}{2}-\frac{B_{\phi}B_{p}\Omega\varpi}{4\pi\rho\nu_{p}}+\underbrace{h}_{=0}+\Phi_{G}-\varpi(\nu_{\varphi}-\frac{B_{\varphi}B_{p}}{4\pi\rho\nu_{p}})\Omega \\
     = \frac{\nu^{2}}{2}-\varpi\nu_{\varphi}\Omega +\Phi_{G} -\frac{B_{\phi}B_{p}\Omega\varpi}{4\pi\rho\nu_{p}}+\varpi(\frac{B_{\varphi}B_{p}}{4\pi\rho\nu_{p}})\Omega \\
     = \frac{\nu^{2}}{2}-\varpi\nu_{\varphi}\Omega +\Phi_{G} \\
-\end{align} 
+\end{align}
 \begin{equation}
-  \Phi_{G} = -\frac{Gm}{\varpi_{0}}=-\nu_{Keplerian}^{2} 
+  \Phi_{G} = -\frac{Gm}{\varpi_{0}}=-\nu_{Keplerian}^{2}
 \end{equation}
 The energy, being constant of course, may be estimated when close to the source,
 \begin{equation}
@@ -2195,9 +2243,9 @@ Note that $(\Omega\varpi\nu_{\phi})_{\infty}$ is not negligible at infinity, $\v
 \begin{align*}
    \frac{3}{2}\nu^{2}_{Keplerian} << \frac{1}{2}\nu^{2}_{\infty} \\
    \frac{\nu^{2}_{\infty}}{2}=\varpi_{\infty}\nu_{\varphi\infty}\Omega \Rightarrow \Omega = \frac{\nu_{\infty}^{2}}{2\varpi_{\infty}\nu_{\varphi\infty}} \\
-   \Omega = \sqrt{\frac{Gm}{\varpi_{0}^{3}}}    
+   \Omega = \sqrt{\frac{Gm}{\varpi_{0}^{3}}}
 \end{align*}
-Thus the field line is "anchored" into the source (most likely the disk) at 
+Thus the field line is "anchored" into the source (most likely the disk) at
 \begin{equation}
     \tcboxmath{
      \varpi_{0}=(\frac{4Gm\varpi^{2}_{\infty}\nu_{\varphi\infty}^{2}}{\nu_{\infty}^{4}})^{\frac{1}{3}}
